@@ -15,7 +15,7 @@
         android:layout_above="@+id/tl_ac_main_bottom_menu">
     </androidx.viewpager.widget.ViewPager>
 
-
+/*
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tl_ac_main_bottom_menu"

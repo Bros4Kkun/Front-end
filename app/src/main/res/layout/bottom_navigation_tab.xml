@@ -5,7 +5,7 @@
     android:background="#ffffff"
     android:elevation="5dp"
     android:orientation="horizontal">
-
+/* 바텀 내비게이션 디자인 코드 */
     <RelativeLayout
         android:id="@+id/btn_bottom_navi_home_tab"
         android:layout_width="match_parent"
