@@ -1,0 +1,2 @@
+com/example/runtyou/BuildConfig.java
+ com.example.runtyou.BuildConfig
