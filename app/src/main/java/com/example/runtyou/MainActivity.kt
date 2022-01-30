@@ -3,6 +3,7 @@ package com.example.runtyou
 import android.app.Activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.view.View
 import android.widget.ListAdapter
 import android.widget.RelativeLayout
@@ -16,6 +17,7 @@ class MainActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        setTheme(R.style.Theme_Runtyou)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
