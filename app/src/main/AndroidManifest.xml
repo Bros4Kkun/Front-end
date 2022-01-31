@@ -16,8 +16,9 @@
         android:theme="@style/Theme.Runtyou"
         android:usesCleartextTraffic="true">
 
-        <activity android:name=".MainActivity"
-            android:theme="@android:style/Theme.NoTitleBar">
+        <activity android:name=".LoginActivity"
+            android:theme="@style/SplashTheme">
+
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,6 +26,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity"/>
         <meta-data android:name="com.kakao.sdk.AppKey" android:value="e65891468706ac7d59680f5e0202bfff"/>
     </application>
 
