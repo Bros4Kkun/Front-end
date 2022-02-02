@@ -27,6 +27,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity"/>
+        <activity android:name=".SingupActivity"/>
         <meta-data android:name="com.kakao.sdk.AppKey" android:value="e65891468706ac7d59680f5e0202bfff"/>
     </application>
 

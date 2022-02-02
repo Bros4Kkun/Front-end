@@ -34,10 +34,10 @@
                 android:text="@string/signup_id"/>
             <EditText
                 android:id="@+id/si_id"
-                android:layout_marginLeft="45dp"
-                android:layout_width="wrap_content"
+                android:layout_marginLeft="55dp"
+                android:layout_width="200dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"/>
+                />
 
             <Button
                 android:id="@+id/si_ch"
@@ -60,9 +60,9 @@
                 android:text="@string/signup_pw"/>
             <EditText
                 android:id="@+id/si_pw"
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_marginLeft="13dp"
                 android:inputType="textPassword"
                 android:layout_marginRight="90dp"/>
         </LinearLayout>
@@ -79,10 +79,10 @@
                 android:text="@string/signup_pwch"/>
             <EditText
                 android:id="@+id/si_pwch"
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="match_parent"
                 android:inputType="textPassword"
-                android:layout_weight="1"/>
+                />
 
             <Button
                 android:id="@+id/si_pwch_bu"
@@ -105,7 +105,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:orientation="horizontal">
-            <androidx.appcompat.widget.AppCompatSpinner
+            <Spinner
                 android:id="@+id/si_ve_sp"
                 android:layout_width="wrap_content"
                 android:layout_weight="2"
