@@ -38,7 +38,7 @@ class SingupActivity : AppCompatActivity() {
         but2!!.setOnClickListener (object : View.OnClickListener{
             override fun onClick(p0: View?) {
                 pw = si_pw.toString()
-                pwch = si_pw.toString()
+                pwch = si_pwch.toString()
                 if(pw.equals(pwch)){
                     pw_check =1
                     Toast.makeText(this@SingupActivity,"비밀번호와 비밀번호 확인이 같습니다.",Toast.LENGTH_SHORT).show()
