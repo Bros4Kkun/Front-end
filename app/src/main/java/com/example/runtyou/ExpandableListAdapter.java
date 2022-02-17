@@ -37,7 +37,7 @@ public class ExpandableListAdapter extends RecyclerView.Adapter<RecyclerView.Vie
                 LayoutInflater inflaterChild = (LayoutInflater) parent.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                 view = inflaterChild.inflate(R.layout.list_child, parent, false);
                 ListChildViewHolder child = new ListChildViewHolder(view);
-                
+
                 return child;
 
         }
