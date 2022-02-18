@@ -5,6 +5,8 @@ import android.os.PersistableBundle
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import com.example.runtyou.volleyService.VolleyService.testVolley
+import com.google.android.gms.common.api.Response
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthOptions
@@ -13,6 +15,8 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_singup.*
 import java.util.concurrent.TimeUnit
+
+
 
 class SingupActivity : AppCompatActivity() {
 
@@ -23,6 +27,7 @@ class SingupActivity : AppCompatActivity() {
     private var id_check : Int = 1
     private var pw_check : Int = 0
     private val tele_list : Array<String> = arrayOf("KT","SKT","LGT")
+
 
 
     private fun testPhoneVerify() {
@@ -71,12 +76,12 @@ class SingupActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_singup)
-       val adapters = ArrayAdapter(this,android.R.layout.simple_spinner_dropdown_item,tele_list)
+        val adapters = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, tele_list)
         adapters.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         si_ve_sp.adapter = adapters
-        si_ve_sp.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+        si_ve_sp.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-                var sele_item : String? = tele_list[p2]
+                var sele_item: String? = tele_list[p2]
             }
 
             override fun onNothingSelected(p0: AdapterView<*>?) {
@@ -86,25 +91,42 @@ class SingupActivity : AppCompatActivity() {
 
         val but1 = si_ch as Button
         val but2 = si_pwch_bu as Button
-        but2!!.setOnClickListener (object : View.OnClickListener{
+        but2!!.setOnClickListener(object : View.OnClickListener {
             override fun onClick(p0: View?) {
                 pw = si_pw.toString()
                 pwch = si_pwch.toString()
-                if(pw.equals(pwch)){
-                    pw_check =1
-                    Toast.makeText(this@SingupActivity,"비밀번호와 비밀번호 확인이 같습니다.",Toast.LENGTH_SHORT).show()
-                }
-                else{
-                    Toast.makeText(this@SingupActivity,"비밀번호와 비밀번호 확인이 다릅니다.",Toast.LENGTH_SHORT).show()
+                if (pw.equals(pwch)) {
+                    pw_check = 1
+                    Toast.makeText(this@SingupActivity, "비밀번호와 비밀번호 확인이 같습니다.", Toast.LENGTH_SHORT)
+                        .show()
+                } else {
+                    Toast.makeText(this@SingupActivity, "비밀번호와 비밀번호 확인이 다릅니다.", Toast.LENGTH_SHORT)
+                        .show()
                 }
             }
         })
         val but3 = si_ve_ch as Button
-        but3!!.setOnClickListener { object : View.OnClickListener{
-            override fun onClick(p0: View?) {
+        but3!!.setOnClickListener {
+            object : View.OnClickListener {
+                override fun onClick(p0: View?) {
 
+                }
             }
-        } }
+        }
 
-    }
-}
+        val but4 = si_com_bt as Button
+        but4.setOnClickListener {
+            object : View.OnClickListener {
+                override fun onClick(p0: View?) {
+                    testVolley(this@SingupActivity) { testSuccess ->
+                        if (testSuccess) {
+                            Toast.makeText(this@SingupActivity, "!!", Toast.LENGTH_LONG).show()
+                        } else {
+                            Toast.makeText(this@SingupActivity, "네트워크 연결을 확인해주세요", Toast.LENGTH_LONG).show()
+                        }
+                    }
+                    }}
+                }
+            }
+        }
+
