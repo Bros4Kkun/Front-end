@@ -59,5 +59,10 @@
             android:text="계약서 펼치기"
             android:textColor="@color/black"
             android:textStyle="bold"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvVeri"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
     </LinearLayout>
 </LinearLayout>

@@ -4,12 +4,11 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
-import android.provider.DocumentsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class reviewFragment extends Fragment {
+public class revrecFragment extends Fragment {
 
     View view;
 
@@ -17,7 +16,7 @@ public class reviewFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view = inflater.inflate(R.layout.fragment_review, container, false);
+        view = inflater.inflate(R.layout.fragment_revrec, container, false);
         return view;
     }
 }

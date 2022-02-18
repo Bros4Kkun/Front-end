@@ -19,7 +19,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".reviewActivity"/>
-        <activity android:name=".noticeActivity"/>
 
     </application>
 

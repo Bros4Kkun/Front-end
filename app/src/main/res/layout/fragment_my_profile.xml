@@ -7,8 +7,7 @@
     android:background="#FAFAFA"
     android:orientation="vertical"
     android:weightSum="8"
-    tools:context=".MainActivity"
-    android:id="@+id/profileLayout">
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,7 +21,6 @@
             android:gravity="right">
 
             <ImageButton
-                android:id="@+id/btnNotice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -75,46 +73,28 @@
             android:layout_height="wrap_content"
             android:gravity="top|center">
 
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <ImageButton
-                    android:id="@+id/btnMessage"
+                    android:id="@+id/btnDetInfo"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:background="@android:color/transparent"
-                    android:src="@drawable/message" />
+                    android:src="@drawable/detinfo"
+                    />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="메세지"
-                    android:textColor="@color/black"
-                    android:textSize="15sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingLeft="40dp"
-                android:paddingRight="40dp">
-
-                <ImageButton
-                    android:id="@+id/btnReview"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:src="@drawable/review" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:text="상세 정보"
                     android:layout_gravity="center"
-                    android:text="리뷰"
                     android:textColor="@color/black"
                     android:textSize="15sp" />
             </LinearLayout>
@@ -125,17 +105,65 @@
                 android:orientation="vertical">
 
                 <ImageButton
-                    android:id="@+id/btnReport"
+                    android:id="@+id/btnJob"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
-                    android:src="@drawable/report" />
+                    android:src="@drawable/jobrec"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="신고"
+                    android:text="이력"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/btnMyList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/report"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="관심 목록"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/btnSetting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/setting" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="설정"
+                    android:layout_gravity="center"
                     android:textColor="@color/black"
                     android:textSize="15sp" />
             </LinearLayout>
