@@ -20,10 +20,10 @@ import java.util.concurrent.TimeUnit
 
 class SingupActivity : AppCompatActivity() {
 
-    private var id : String? = null
-    private var pw : String? = null
-    private var pwch : String? = null
-    private var ph_nu : String? = null
+    private var sid : String = si_id.text.toString()
+    private var pw : String = si_pw.text.toString()
+    private var pwch : String = si_pwch.text.toString()
+    private var ph_nu : String = si_ve_nu.text.toString()
     private var id_check : Int = 1
     private var pw_check : Int = 0
     private val tele_list : Array<String> = arrayOf("KT","SKT","LGT")
@@ -118,8 +118,8 @@ class SingupActivity : AppCompatActivity() {
         but4.setOnClickListener {
             object : View.OnClickListener {
                 override fun onClick(p0: View?) {
-                    testVolley(this@SingupActivity) { testSuccess ->
-                        if (testSuccess) {
+                    testVolley(this@SingupActivity,sid,"skybell",pw,ph_nu,"213443") { success ->
+                        if (success) {
                             Toast.makeText(this@SingupActivity, "!!", Toast.LENGTH_LONG).show()
                         } else {
                             Toast.makeText(this@SingupActivity, "네트워크 연결을 확인해주세요", Toast.LENGTH_LONG).show()
