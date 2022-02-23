@@ -20,6 +20,8 @@ import java.util.concurrent.TimeUnit
 
 class SingupActivity : AppCompatActivity() {
 
+        val auth = Firebase.auth
+        var verificationId = ""
         private var sid: String = ""
         private var pw: String = ""
         private var pwch: String = ""
@@ -29,6 +31,14 @@ class SingupActivity : AppCompatActivity() {
         private val tele_list: Array<String> = arrayOf("KT", "SKT", "LGT")
 
 
+
+    private fun signInWithPhoneAuthCredential(credential: PhoneAuthCredential) {
+        auth.signInWithCredential(credential)
+        .addOnCompleteListener(this) { task ->
+            if (task.isSuccessful) { }
+            else {  }
+        }
+    }
 
 
 
@@ -74,17 +84,42 @@ class SingupActivity : AppCompatActivity() {
             }
         })
         val but3 = si_ve_ch as Button
-        but3!!.setOnClickListener {
-            object : View.OnClickListener {
+        but3!!.setOnClickListener (object : View.OnClickListener {
                 override fun onClick(p0: View?) {
+                    val callbacks = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+                        override fun onVerificationCompleted(credential: PhoneAuthCredential) { }
+                        override fun onVerificationFailed(e: FirebaseException) { }
+                        override fun onCodeSent(verificationId: String, token: PhoneAuthProvider.ForceResendingToken){
+                            this@SingupActivity.verificationId= verificationId
+
+                        }
+                    }
+
+                    val optionsCompat = PhoneAuthOptions.newBuilder(auth)
+                        .setPhoneNumber("+821026752644")
+                        .setTimeout(60L, TimeUnit.SECONDS)
+                        .setActivity(this@SingupActivity)
+                        .setCallbacks(callbacks)
+                        .build()
+
+                    PhoneAuthProvider.verifyPhoneNumber(optionsCompat)
+                    auth.setLanguageCode("kr")
+                }
+            })
+
+        val but5 = si_ve_check as Button
+        but5!!.setOnClickListener (object : View.OnClickListener{
+                override fun onClick(p0: View?) {
+                    val credential = PhoneAuthProvider.getCredential(verificationId, si_ve_nu.text.toString())
+                    signInWithPhoneAuthCredential(credential)
+
 
                 }
-            }
-        }
+            })
+
 
         val but4 = si_com_bt as Button
-        but4.setOnClickListener {
-            object : View.OnClickListener {
+        but4.setOnClickListener(object : View.OnClickListener {
 
                 override fun onClick(p0: View?) {
                     testVolley(this@SingupActivity,sid,"skybell",pw,ph_nu,"213443") { success ->
@@ -96,49 +131,10 @@ class SingupActivity : AppCompatActivity() {
                     }
                     }
 
-            }
-                }
-            }
-    private fun testPhoneVerify() {
-        // [START auth_test_phone_verify]
-        val phoneNum = "+16505554567"
-        val testVerificationCode = "123456"
-
-        // Whenever verification is triggered with the whitelisted number,
-        // provided it is not set for auto-retrieval, onCodeSent will be triggered.
-        val options = PhoneAuthOptions.newBuilder(Firebase.auth)
-            .setPhoneNumber(phoneNum)
-            .setTimeout(30L, TimeUnit.SECONDS)
-            .setActivity(this)
-            .setCallbacks(object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
-
-                override fun onCodeSent(
-                    verificationId: String,
-                    forceResendingToken: PhoneAuthProvider.ForceResendingToken
-                ) {
-                    // Save the verification id somewhere
-                    // ...
-
-                    // The corresponding whitelisted code above should be used to complete sign-in.
-                    this@SingupActivity.enableUserManuallyInputCode()
-                }
-
-                override fun onVerificationCompleted(phoneAuthCredential: PhoneAuthCredential) {
-                    Toast.makeText(this@SingupActivity,"인증코드가 전송되었습니다. 60초 이내 입력해주세요",Toast.LENGTH_SHORT).show()
-
-                }
-
-                override fun onVerificationFailed(e: FirebaseException) {
-                    Toast.makeText(this@SingupActivity,"인증에 실패했습니다. 다시 시도해주세요.",Toast.LENGTH_SHORT).show()
-
-                }
             })
-            .build()
-        PhoneAuthProvider.verifyPhoneNumber(options)
-        // [END auth_test_phone_verify]
-    }
-    private fun enableUserManuallyInputCode() {
-        // No-op
-    }
+
+            }
+
+
         }
 

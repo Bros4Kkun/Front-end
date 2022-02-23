@@ -128,6 +128,14 @@
         </LinearLayout>
 
         <Button
+            android:id="@+id/si_ve_check"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="인증번호 확인"/>
+
+        <Button
             android:id="@+id/si_com_bt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
