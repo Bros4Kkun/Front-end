@@ -11,6 +11,7 @@
     <string name="sign_up">회원가입</string>
     <string name="signup">SIGN-UP</string>
     <string name = "signup_id">ID</string>
+    <string name = "signup_ni">닉네임</string>
     <string name ="idcheck">중복체크</string>
     <string name = "signup_pw">비밀번호</string>
     <string name="signup_pwch">비밀번호 확인</string>

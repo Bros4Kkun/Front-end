@@ -24,6 +24,7 @@ class SingupActivity : AppCompatActivity() {
         var verificationId = ""
         private var sid: String = ""
         private var pw: String = ""
+        private var nick: String = ""
         private var pwch: String = ""
         private var ph_nu: String = ""
         private var id_check: Int = 1
@@ -51,18 +52,7 @@ class SingupActivity : AppCompatActivity() {
 
 
 
-        val adapters = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, tele_list)
-        adapters.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        si_ve_sp.adapter = adapters
-        si_ve_sp.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-                var sele_item: String? = tele_list[p2]
-            }
 
-            override fun onNothingSelected(p0: AdapterView<*>?) {
-
-            }
-        }
 
         val but1 = si_ch as Button
         val but2 = si_pwch_bu as Button
@@ -72,6 +62,7 @@ class SingupActivity : AppCompatActivity() {
                 pw = si_pw.text.toString()
                 pwch = si_pwch.text.toString()
                 ph_nu= si_ve_nu.text.toString()
+                nick=si_nick.text.toString()
                 if (pw.equals(pwch)) {
 
                     pw_check = 1
@@ -96,7 +87,7 @@ class SingupActivity : AppCompatActivity() {
                     }
 
                     val optionsCompat = PhoneAuthOptions.newBuilder(auth)
-                        .setPhoneNumber("+821026752644")
+                        .setPhoneNumber("+82"+ph_nu.substring(1))
                         .setTimeout(60L, TimeUnit.SECONDS)
                         .setActivity(this@SingupActivity)
                         .setCallbacks(callbacks)
@@ -110,7 +101,7 @@ class SingupActivity : AppCompatActivity() {
         val but5 = si_ve_check as Button
         but5!!.setOnClickListener (object : View.OnClickListener{
                 override fun onClick(p0: View?) {
-                    val credential = PhoneAuthProvider.getCredential(verificationId, si_ve_nu.text.toString())
+                    val credential = PhoneAuthProvider.getCredential(verificationId, si_ve_code.text.toString())
                     signInWithPhoneAuthCredential(credential)
 
 
@@ -122,7 +113,7 @@ class SingupActivity : AppCompatActivity() {
         but4.setOnClickListener(object : View.OnClickListener {
 
                 override fun onClick(p0: View?) {
-                    testVolley(this@SingupActivity,sid,"skybell",pw,ph_nu,"213443") { success ->
+                    testVolley(this@SingupActivity,sid,nick,pw,ph_nu,"2134243") { success ->
                         if (success) {
                             Toast.makeText(this@SingupActivity, "!!", Toast.LENGTH_LONG).show()
                         } else {

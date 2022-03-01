@@ -25,6 +25,7 @@ class volleyService {
             val SignupReuqest = object : StringRequest(Method.POST, url, Response.Listener { response ->
                 println("서버수신 : $response")
                 success(true)
+                println(requestBody)
             }, Response.ErrorListener { error ->
                 println("Error : $error")
                 success(false)
@@ -38,6 +39,8 @@ class volleyService {
                 }
             }
             Volley.newRequestQueue(context).add(SignupReuqest)
+
+
         }
     }
 }

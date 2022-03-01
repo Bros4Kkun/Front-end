@@ -56,6 +56,33 @@
                 android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:textSize="25sp"
+                android:inputType="text"
+                android:text="@string/signup_ni"/>
+            <EditText
+                android:id="@+id/si_nick"
+                android:layout_marginLeft="15dp"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                />
+
+            <Button
+                android:id="@+id/si_ni_ch"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/idcheck"
+                app:backgroundTint="@color/teal_700" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
                 android:textSize="20sp"
                 android:text="@string/signup_pw"/>
             <EditText
@@ -105,17 +132,13 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:orientation="horizontal">
-            <Spinner
-                android:id="@+id/si_ve_sp"
-                android:layout_width="wrap_content"
-                android:layout_weight="2"
-                android:layout_height="match_parent"/>
+
             <EditText
                 android:id="@+id/si_ve_nu"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="10"
-                android:hint="인증번호 입력"
+                android:hint="핸드폰 번호"
                 />
 
             <Button
@@ -126,7 +149,15 @@
                 android:layout_weight="3"
                 app:backgroundTint="@color/teal_200" />
         </LinearLayout>
+        <EditText
+            android:id="@+id/si_ve_code"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:layout_height="wrap_content"
 
+            android:hint="인증번호 입력"
+            />
         <Button
             android:id="@+id/si_ve_check"
             android:layout_width="match_parent"
