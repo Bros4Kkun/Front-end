@@ -5,7 +5,9 @@ import android.os.PersistableBundle
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import com.example.runtyou.volleyService.VolleyService.testVolley
+import com.example.runtyou.volleyService.VolleyService.signVolley
+import com.example.runtyou.idvolley.idvolley.idcheckVolley
+
 import com.google.android.gms.common.api.Response
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.PhoneAuthCredential
@@ -30,7 +32,8 @@ class SingupActivity : AppCompatActivity() {
         private var id_check: Int = 1
         private var pw_check: Int? = 0
         private val tele_list: Array<String> = arrayOf("KT", "SKT", "LGT")
-
+        var idcheckbool = 0
+        var nickcheckbool = 0
 
 
     private fun signInWithPhoneAuthCredential(credential: PhoneAuthCredential) {
@@ -55,14 +58,43 @@ class SingupActivity : AppCompatActivity() {
 
 
         val but1 = si_ch as Button
+        but1.setOnClickListener (object :View.OnClickListener{
+            override fun onClick(p0: View?) {
+                sid = si_id.text.toString()
+                idcheckVolley(this@SingupActivity,sid){duplicatedNickname ->
+                    if(duplicatedNickname){
+                        Toast.makeText(this@SingupActivity, "중복된 ID입니다.", Toast.LENGTH_LONG).show()
+                    } else {
+                        Toast.makeText(this@SingupActivity, "사용 가능한 ID입니다.", Toast.LENGTH_LONG).show()
+                        idcheckbool=1
+                    }
+
+                }
+
+            }
+        })
+        val butt1 = si_ni_ch as Button
+        butt1.setOnClickListener (object : View.OnClickListener{
+            override fun onClick(p0: View?) {
+                nick=si_nick.text.toString()
+                nickvolley.nickvolley.nickcheckVolley(this@SingupActivity,nick){duplicatedNickname ->
+                    if(duplicatedNickname){
+                        Toast.makeText(this@SingupActivity, "중복된 닉네임입니다.", Toast.LENGTH_LONG).show()
+                    } else {
+                        Toast.makeText(this@SingupActivity, "사용 가능한 닉네임입니다.", Toast.LENGTH_LONG).show()
+                        nickcheckbool=1
+                    }
+                }
+            }
+        })
         val but2 = si_pwch_bu as Button
         but2!!.setOnClickListener(object : View.OnClickListener {
             override fun onClick(p0: View?) {
-                sid = si_id.text.toString()
+
                 pw = si_pw.text.toString()
                 pwch = si_pwch.text.toString()
                 ph_nu= si_ve_nu.text.toString()
-                nick=si_nick.text.toString()
+
                 if (pw.equals(pwch)) {
 
                     pw_check = 1
@@ -110,10 +142,15 @@ class SingupActivity : AppCompatActivity() {
 
 
         val but4 = si_com_bt as Button
+        but4.setEnabled(false)
+        if(nickcheckbool ==1 && idcheckbool ==1 && pw_check==1) {
+            but4.setEnabled(true)
+        }
+        
         but4.setOnClickListener(object : View.OnClickListener {
 
                 override fun onClick(p0: View?) {
-                    testVolley(this@SingupActivity,sid,nick,pw,ph_nu,"2134243") { success ->
+                    signVolley(this@SingupActivity,sid,nick,pw,ph_nu,"2134243") { success ->
                         if (success) {
                             Toast.makeText(this@SingupActivity, "!!", Toast.LENGTH_LONG).show()
                         } else {

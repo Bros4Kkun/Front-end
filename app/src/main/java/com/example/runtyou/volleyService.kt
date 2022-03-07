@@ -1,17 +1,21 @@
 package com.example.runtyou
 
 import android.content.Context
+import android.util.Log
+import com.android.volley.Request
 import com.android.volley.Response
+import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import org.json.JSONObject
+import java.lang.reflect.Method
 
 
 class volleyService {
     object VolleyService {
         val url = "http://3.38.254.41/api/user/signup"
 
-        fun testVolley(context: Context,account: String, nickname : String,password : String,phonenumber : String, accountnum : String, success: (Boolean) -> Unit ) {
+        fun signVolley(context: Context,account: String, nickname : String,password : String,phonenumber : String, accountnum : String, success: (Boolean) -> Unit ) {
             val myJson = JSONObject()
 
             myJson.put("accountId",account)
@@ -42,5 +46,14 @@ class volleyService {
 
 
         }
+
+
+
     }
+
+
+
+
+
 }
+
