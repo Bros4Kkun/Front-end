@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.ItemViewHolder> {
 
-    private ArrayList<veriData> listData = new ArrayList<>();
+    private ArrayList<veriData> listData;
 
     @NonNull
     @Override
@@ -57,9 +57,7 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.ItemVi
         }
 
         void onBind(veriData data){
-            text1.setText(data.getTitle());
-            text2.setText(data.getContent());
-            imageView.setImageResource(data.getResId());
+
         }
     }
 }

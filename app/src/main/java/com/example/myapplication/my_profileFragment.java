@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -49,7 +50,7 @@ public class my_profileFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                Fragment fragment= new Fragment(R.layout.fragment_jobrec); // 객체 생성
+                Fragment fragment= new Fragment(R.layout.fragment_short_jobrec); // 객체 생성
                 getFragmentManager().beginTransaction().add(R.id.infoFrag, fragment).commit();
 
                 btnIntroduce.setBackgroundColor(Color.WHITE);
@@ -74,13 +75,28 @@ public class my_profileFragment extends Fragment {
             }
         });
 
-//        btnSetting.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Fragment fragment= new Fragment(R.layout.fragment_setting); // 객체 생성
-//                getFragmentManager().beginTransaction().add(, fragment).commit();
-//            }
-//        });
+
+        btnJob.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), jobrecActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnSetting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), settingActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnDetInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), edit_introduceActivity.class);
+                startActivity(intent);
+            }
+        });
 
         return rootView;
     }

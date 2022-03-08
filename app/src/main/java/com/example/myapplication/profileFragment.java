@@ -32,22 +32,22 @@ public class profileFragment extends Fragment {
         btnMessage = rootView.findViewById(R.id.btnMessage);
         btnNotice = rootView.findViewById(R.id.btnNotice);
 
-//        btnMessage.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
+        btnMessage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 //                Intent intent = new Intent(getActivity(), Activity.class);
 //                startActivity(intent);
-//            }
-//        });
+            }
+        });
 
-//        btnReport.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
+        btnReport.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 //                Intent intent = new Intent(getActivity(), Activity.class);
 //                startActivity(intent);
-//            }
-//        });
-        //종민님 화면
+            }
+        });
+//        종민님 화면
 
 
         btnReview.setOnClickListener(new View.OnClickListener() {
@@ -85,7 +85,7 @@ public class profileFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                Fragment fragment= new Fragment(R.layout.fragment_jobrec); // 객체 생성
+                Fragment fragment= new Fragment(R.layout.fragment_short_jobrec); // 객체 생성
                 getFragmentManager().beginTransaction().add(R.id.infoFrag, fragment).commit();
 
                 btnIntroduce.setBackgroundColor(Color.WHITE);

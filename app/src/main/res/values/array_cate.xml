@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cate">
+        <item>--선택--</item>
+        <item>배달</item>
+        <item>청소</item>
+        <item>돌봄</item>
+        <item>벌레/쥐</item>
+        <item>기타</item>
+    </string-array>
+</resources>

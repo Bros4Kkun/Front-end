@@ -7,12 +7,12 @@ import androidx.fragment.app.FragmentStatePagerAdapter
 class MainFragmentStatePagerAdapter(fm : FragmentManager, val fragmentCount : Int) : FragmentStatePagerAdapter(fm) {
     override fun getItem(position: Int): Fragment {
         when(position){
-            0 -> return HomeFragment()
+            0 -> return workFragment()
             1 -> return LogFragment()
             2 -> return MsgFragment()
-            3 -> return profileFragment()
+            3 -> return my_profileFragment()
 
-            else -> return HomeFragment()
+            else -> return workFragment()
         }
     }
 

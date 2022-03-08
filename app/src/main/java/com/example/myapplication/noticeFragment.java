@@ -26,7 +26,7 @@ public class noticeFragment extends Fragment {
                 Fragment Fragment = new Fragment();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
 
-                transaction.replace(R.id.fragment_container, Fragment);
+                transaction.replace(R.id.profileLayout, Fragment);
                 transaction.addToBackStack(null);
                 transaction.commit();
             }

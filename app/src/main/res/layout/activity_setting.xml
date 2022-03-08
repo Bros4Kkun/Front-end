@@ -3,8 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".settingFragment"
+    tools:context=".settingActivity"
+    android:id="@+id/settingLayout"
     android:orientation="vertical">
+
+    //피그마 이미지대로 버튼을 생성할까? (텍스트를 이미지 버튼으로 가져오기)
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,7 +18,7 @@
             android:layout_height="wrap_content">
             <ImageButton
                 android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
                 android:id="@+id/btnBack"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

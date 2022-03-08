@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".verificationFragment"
+    tools:context=".verificationActivity"
     android:orientation="vertical">
 
     <LinearLayout
@@ -15,7 +15,7 @@
             android:layout_height="wrap_content">
             <ImageButton
                 android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
                 android:id="@+id/btnBack"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -51,18 +51,27 @@
         android:layout_height="550dp"
         android:background="@drawable/settingbg"
         android:orientation="vertical">
-        <Button
+        <ImageButton
+            android:id="@+id/btnExpand"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:background="@drawable/titlebg"
-            android:text="계약서 펼치기"
-            android:textColor="@color/black"
-            android:textStyle="bold"/>
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvVeri"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:background="@null"
+            android:src="@drawable/expandbtn"
             />
+        <ImageView
+            android:id="@+id/iv_Contract"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/contract"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="25dp"
+            android:linksClickable="true"
+            android:autoLink="web"
+            android:text="https://www.youtube.com/watch?v=9zMgbilESr4"/>
     </LinearLayout>
 </LinearLayout>
