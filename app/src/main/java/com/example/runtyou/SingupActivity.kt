@@ -93,7 +93,7 @@ class SingupActivity : AppCompatActivity() {
 
                 pw = si_pw.text.toString()
                 pwch = si_pwch.text.toString()
-                ph_nu= si_ve_nu.text.toString()
+
 
                 if (pw.equals(pwch)) {
 
@@ -109,6 +109,7 @@ class SingupActivity : AppCompatActivity() {
         val but3 = si_ve_ch as Button
         but3!!.setOnClickListener (object : View.OnClickListener {
                 override fun onClick(p0: View?) {
+                    ph_nu= si_ve_nu.text.toString()
                     val callbacks = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
                         override fun onVerificationCompleted(credential: PhoneAuthCredential) { }
                         override fun onVerificationFailed(e: FirebaseException) { }
@@ -142,20 +143,37 @@ class SingupActivity : AppCompatActivity() {
 
 
         val but4 = si_com_bt as Button
-        but4.setEnabled(false)
-        if(nickcheckbool ==1 && idcheckbool ==1 && pw_check==1) {
-            but4.setEnabled(true)
-        }
+
+
         
         but4.setOnClickListener(object : View.OnClickListener {
 
+
                 override fun onClick(p0: View?) {
-                    signVolley(this@SingupActivity,sid,nick,pw,ph_nu,"2134243") { success ->
-                        if (success) {
-                            Toast.makeText(this@SingupActivity, "!!", Toast.LENGTH_LONG).show()
-                        } else {
-                            Toast.makeText(this@SingupActivity, "네트워크 연결을 확인해주세요", Toast.LENGTH_LONG).show()
+                    if(nickcheckbool ==1 && idcheckbool ==1 && pw_check==1) {
+
+
+                        signVolley(
+                            this@SingupActivity,
+                            sid,
+                            nick,
+                            pw,
+                            ph_nu,
+                            "2134243"
+                        ) { success ->
+                            if (success) {
+                                Toast.makeText(this@SingupActivity, "!!", Toast.LENGTH_LONG).show()
+                            } else {
+                                Toast.makeText(
+                                    this@SingupActivity,
+                                    "네트워크 연결을 확인해주세요",
+                                    Toast.LENGTH_LONG
+                                ).show()
+                            }
                         }
+                    }
+                    else{
+                        Toast.makeText(this@SingupActivity, "중복확인과 비밀번호 확인을 먼저 체크해주세요", Toast.LENGTH_LONG).show()
                     }
                     }
 
