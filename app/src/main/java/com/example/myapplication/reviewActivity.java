@@ -25,6 +25,7 @@ public class reviewActivity extends AppCompatActivity {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_review);
+        setTitle("리뷰");
 
         recyclerView = findViewById(R.id.rvReview);
         linearLayoutManager = new LinearLayoutManager(this);

@@ -25,7 +25,7 @@ public class workFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = (ViewGroup) inflater.inflate(R.layout.fragment_work, container, false);
-
+        getActivity().setTitle("심부름");
 
         recyclerView = view.findViewById(R.id.rvWork);
         linearLayoutManager = new LinearLayoutManager(getContext());

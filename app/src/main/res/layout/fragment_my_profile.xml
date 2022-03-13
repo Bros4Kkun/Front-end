@@ -182,7 +182,6 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/white"
                 android:text="자기소개"
-
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
