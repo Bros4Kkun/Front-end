@@ -13,13 +13,13 @@ import java.lang.reflect.Method
 
 class nickvolley {
     object nickvolley{
-        val url =  "http://3.38.254.41/api/user/nickname"
+        val url =  "http://3.38.254.41/api/user/signup/nickname"
         fun nickcheckVolley(context: Context, nick : String, duplicatedNickname: (Boolean) -> Unit)
         {
 
             val idJson = JSONObject()
-            idJson.put("accountid",nick)
-
+            idJson.put("nickname",nick)
+            var result = String()
             val requestBody= idJson.toString()
 
 
@@ -27,7 +27,14 @@ class nickvolley {
                 Method.POST,
                 url, Response.Listener { response ->
                     println("서버수신 : $response")
-                    duplicatedNickname(true)
+                    result = response.substring(22)
+                    println(result)
+                    if(result == "true}"){
+                        duplicatedNickname(true)
+                    }
+                    else{
+                        duplicatedNickname(false)
+                    }
                     println(requestBody)
                 }, Response.ErrorListener { error ->
                     println("Error : $error")

@@ -31,7 +31,7 @@ class SingupActivity : AppCompatActivity() {
         private var ph_nu: String = ""
         private var id_check: Int = 1
         private var pw_check: Int? = 0
-        private val tele_list: Array<String> = arrayOf("KT", "SKT", "LGT")
+
         var idcheckbool = 0
         var nickcheckbool = 0
 
@@ -61,8 +61,8 @@ class SingupActivity : AppCompatActivity() {
         but1.setOnClickListener (object :View.OnClickListener{
             override fun onClick(p0: View?) {
                 sid = si_id.text.toString()
-                idcheckVolley(this@SingupActivity,sid){duplicatedNickname ->
-                    if(duplicatedNickname){
+                idcheckVolley(this@SingupActivity,sid){duplicatedAccountId ->
+                    if(duplicatedAccountId){
                         Toast.makeText(this@SingupActivity, "중복된 ID입니다.", Toast.LENGTH_LONG).show()
                     } else {
                         Toast.makeText(this@SingupActivity, "사용 가능한 ID입니다.", Toast.LENGTH_LONG).show()
@@ -162,7 +162,8 @@ class SingupActivity : AppCompatActivity() {
                             "2134243"
                         ) { success ->
                             if (success) {
-                                Toast.makeText(this@SingupActivity, "!!", Toast.LENGTH_LONG).show()
+                                Toast.makeText(this@SingupActivity, "회원가입에 성공했습니다.", Toast.LENGTH_LONG).show()
+                                finish()
                             } else {
                                 Toast.makeText(
                                     this@SingupActivity,
