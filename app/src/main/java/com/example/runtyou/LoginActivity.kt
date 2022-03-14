@@ -30,17 +30,19 @@ class LoginActivity : AppCompatActivity() {
 
                 userid = log_id.text.toString()
                 userpw = log_pw.text.toString()
-                if (userid.equals("test") && userpw.equals("test") ) {
-                    user = 1
-                    Toast.makeText(this@LoginActivity, "수행자 로그인 성공", Toast.LENGTH_LONG).show()
-                    val intent1 = Intent(this@LoginActivity, MainActivity::class.java)
-                    startActivity(intent1)
+                loginvolley.loginvolley.loginvolley(this@LoginActivity,userid.toString(),userpw.toString(),"ORDERER"){success->
+                    if (success)  {
+                        user = 1
+                        Toast.makeText(this@LoginActivity, "요청자 로그인 성공", Toast.LENGTH_LONG).show()
+                        val intent1 = Intent(this@LoginActivity, MainActivity::class.java)
+                        startActivity(intent1)
+                        finish()
+                    } else {
+                        Toast.makeText(this@LoginActivity, "아이디 또는 비밀번호가 잘못됐습니다.", Toast.LENGTH_LONG).show()
+                    }
 
-                } else {
-                    Toast.makeText(this@LoginActivity, "아이디 혹은 비밀번호가 잘못됐습니다.", Toast.LENGTH_LONG).show()
-                }
             }
-        })
+        }})
 
         val but2 = ord_login as Button
         but2!!.setOnClickListener (object: View.OnClickListener{
@@ -49,14 +51,16 @@ class LoginActivity : AppCompatActivity() {
 
                 userid = log_id.text.toString()
                 userpw = log_pw.text.toString()
-                if (userid.equals("test") && userpw.equals("test") ) {
-                    user = 2
-                    Toast.makeText(this@LoginActivity, "요청자 로그인 성공", Toast.LENGTH_SHORT).show()
-                    val intent1 = Intent(this@LoginActivity, MainActivity::class.java)
-                    startActivity(intent1)
-
-                } else {
-                    Toast.makeText(this@LoginActivity, "아이디 혹은 비밀번호가 잘못됐습니다.", Toast.LENGTH_SHORT).show()
+                loginvolley.loginvolley.loginvolley(this@LoginActivity,userid.toString(),userpw.toString(),"ORDERER"){success->
+                    if (success)  {
+                        user = 1
+                        Toast.makeText(this@LoginActivity, "요청자 로그인 성공", Toast.LENGTH_LONG).show()
+                        val intent1 = Intent(this@LoginActivity, MainActivity::class.java)
+                        startActivity(intent1)
+                        finish()
+                    } else {
+                        Toast.makeText(this@LoginActivity, "아이디 또는 비밀번호가 잘못됐습니다.", Toast.LENGTH_LONG).show()
+                    }
                 }
             }
         })
