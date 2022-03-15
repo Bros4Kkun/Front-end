@@ -33,12 +33,12 @@ class LoginActivity : AppCompatActivity() {
                 loginvolley.loginvolley.loginvolley(this@LoginActivity,userid.toString(),userpw.toString(),"ORDERER"){success->
                     if (success)  {
                         user = 1
-                        Toast.makeText(this@LoginActivity, "요청자 로그인 성공", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this@LoginActivity, "요청자 로그인 성공", Toast.LENGTH_SHORT).show()
                         val intent1 = Intent(this@LoginActivity, MainActivity::class.java)
                         startActivity(intent1)
                         finish()
                     } else {
-                        Toast.makeText(this@LoginActivity, "아이디 또는 비밀번호가 잘못됐습니다.", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this@LoginActivity, "아이디 또는 비밀번호가 잘못됐습니다.", Toast.LENGTH_SHORT).show()
                     }
 
             }
@@ -54,12 +54,12 @@ class LoginActivity : AppCompatActivity() {
                 loginvolley.loginvolley.loginvolley(this@LoginActivity,userid.toString(),userpw.toString(),"ORDERER"){success->
                     if (success)  {
                         user = 1
-                        Toast.makeText(this@LoginActivity, "요청자 로그인 성공", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this@LoginActivity, "요청자 로그인 성공", Toast.LENGTH_SHORT).show()
                         val intent1 = Intent(this@LoginActivity, MainActivity::class.java)
                         startActivity(intent1)
                         finish()
                     } else {
-                        Toast.makeText(this@LoginActivity, "아이디 또는 비밀번호가 잘못됐습니다.", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this@LoginActivity, "아이디 또는 비밀번호가 잘못됐습니다.", Toast.LENGTH_SHORT).show()
                     }
                 }
             }

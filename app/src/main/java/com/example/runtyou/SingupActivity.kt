@@ -63,9 +63,9 @@ class SingupActivity : AppCompatActivity() {
                 sid = si_id.text.toString()
                 idcheckVolley(this@SingupActivity,sid){duplicatedAccountId ->
                     if(duplicatedAccountId){
-                        Toast.makeText(this@SingupActivity, "중복된 ID입니다.", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this@SingupActivity, "중복된 ID입니다.", Toast.LENGTH_SHORT).show()
                     } else {
-                        Toast.makeText(this@SingupActivity, "사용 가능한 ID입니다.", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this@SingupActivity, "사용 가능한 ID입니다.", Toast.LENGTH_SHORT).show()
                         idcheckbool=1
                     }
 
@@ -79,9 +79,9 @@ class SingupActivity : AppCompatActivity() {
                 nick=si_nick.text.toString()
                 nickvolley.nickvolley.nickcheckVolley(this@SingupActivity,nick){duplicatedNickname ->
                     if(duplicatedNickname){
-                        Toast.makeText(this@SingupActivity, "중복된 닉네임입니다.", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this@SingupActivity, "중복된 닉네임입니다.", Toast.LENGTH_SHORT).show()
                     } else {
-                        Toast.makeText(this@SingupActivity, "사용 가능한 닉네임입니다.", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this@SingupActivity, "사용 가능한 닉네임입니다.", Toast.LENGTH_SHORT).show()
                         nickcheckbool=1
                     }
                 }
@@ -162,19 +162,19 @@ class SingupActivity : AppCompatActivity() {
                             "2134243"
                         ) { success ->
                             if (success) {
-                                Toast.makeText(this@SingupActivity, "회원가입에 성공했습니다.", Toast.LENGTH_LONG).show()
+                                Toast.makeText(this@SingupActivity, "회원가입에 성공했습니다.", Toast.LENGTH_SHORT).show()
                                 finish()
                             } else {
                                 Toast.makeText(
                                     this@SingupActivity,
                                     "네트워크 연결을 확인해주세요",
-                                    Toast.LENGTH_LONG
+                                    Toast.LENGTH_SHORT
                                 ).show()
                             }
                         }
                     }
                     else{
-                        Toast.makeText(this@SingupActivity, "중복확인과 비밀번호 확인을 먼저 체크해주세요", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this@SingupActivity, "중복확인과 비밀번호 확인을 먼저 체크해주세요", Toast.LENGTH_SHORT).show()
                     }
                     }
 
