@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center_horizontal"
+
+        android:text="@string/signup"
+        android:textSize="40sp"
+        android:textColor="@color/teal_700"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="30sp"
+                android:inputType="text"
+                android:text="@string/signup_id"/>
+            <EditText
+                android:id="@+id/si_id"
+                android:layout_marginLeft="55dp"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                />
+
+            <Button
+                android:id="@+id/si_ch"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/idcheck"
+                app:backgroundTint="@color/teal_700" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="25sp"
+                android:inputType="text"
+                android:text="@string/signup_ni"/>
+            <EditText
+                android:id="@+id/si_nick"
+                android:layout_marginLeft="15dp"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                />
+
+            <Button
+                android:id="@+id/si_ni_ch"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/idcheck"
+                app:backgroundTint="@color/teal_700" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="20sp"
+                android:text="@string/signup_pw"/>
+            <EditText
+                android:id="@+id/si_pw"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="13dp"
+                android:inputType="textPassword"
+                android:layout_marginRight="90dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="15sp"
+                android:text="@string/signup_pwch"/>
+            <EditText
+                android:id="@+id/si_pwch"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:inputType="textPassword"
+                />
+
+            <Button
+                android:id="@+id/si_pwch_bu"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/signup_pwch"
+                app:backgroundTint="@color/teal_700" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/si_ve"
+            android:gravity="center_horizontal"
+            android:textSize="40sp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/si_ve_nu"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:hint="핸드폰 번호"
+                />
+
+            <Button
+                android:id="@+id/si_ve_ch"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/si_ve_se"
+                android:layout_weight="3"
+                app:backgroundTint="@color/teal_200" />
+        </LinearLayout>
+        <EditText
+            android:id="@+id/si_ve_code"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:layout_height="wrap_content"
+
+            android:hint="인증번호 입력"
+            />
+        <Button
+            android:id="@+id/si_ve_check"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="인증번호 확인"/>
+
+        <Button
+            android:id="@+id/si_com_bt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="60dp"
+            android:text="@string/si_com"
+            app:backgroundTint="@color/purple_200" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-<<<<<<< HEAD
+
   <component name="ProjectRootManager">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
-=======
+
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/USER/StudioProjects/Front-end/app/src/main/res/layout/activity_singup.xml" value="0.15806159420289856" />
+      </map>
+    </option>
+  </component>
+
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
   </component>
->>>>>>> e5aa87b58454ca29ca88380a38c316da53a7413d
+
 </project>
