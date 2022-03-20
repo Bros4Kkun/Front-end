@@ -8,11 +8,16 @@
   "variantName": "processDebugResources",
   "elements": [
     {
-      "type": "SINGLE",
-      "filters": [],
+      "type": "ONE_OF_MANY",
+      "filters": [
+        {
+          "filterType": "ABI",
+          "value": "armeabi-v7a"
+        }
+      ],
       "versionCode": 1,
       "versionName": "1.0",
-      "outputFile": "resources-debug.ap_"
+      "outputFile": "resources-armeabi-v7aDebug.ap_"
     }
   ]
 }

@@ -1,2 +1,44 @@
+com/example/runtyou/databinding/ActivitySingupBinding.java
+ com.example.runtyou.databinding.ActivitySingupBinding
 com/example/runtyou/BuildConfig.java
  com.example.runtyou.BuildConfig
+com/example/runtyou/databinding/FragmentHomeBinding.java
+ com.example.runtyou.databinding.FragmentHomeBinding
+com/example/runtyou/databinding/FragmentPfBinding.java
+ com.example.runtyou.databinding.FragmentPfBinding
+androidx/databinding/DataBinderMapperImpl.java
+ androidx.databinding.DataBinderMapperImpl
+com/example/runtyou/BR.java
+ com.example.runtyou.BR
+com/example/runtyou/databinding/BottomNavigationTabBinding.java
+ com.example.runtyou.databinding.BottomNavigationTabBinding
+com/example/runtyou/ExpandableListAdapter.java
+ com.example.runtyou.ExpandableListAdapter
+ com.example.runtyou.ExpandableListAdapter$1
+ com.example.runtyou.ExpandableListAdapter$Item
+ com.example.runtyou.ExpandableListAdapter$ListChildViewHolder
+ com.example.runtyou.ExpandableListAdapter$ListHeaderViewHolder
+androidx/databinding/library/baseAdapters/BR.java
+ androidx.databinding.library.baseAdapters.BR
+com/example/runtyou/databinding/FragmentMsgBinding.java
+ com.example.runtyou.databinding.FragmentMsgBinding
+com/example/runtyou/DataBinderMapperImpl.java
+ com.example.runtyou.DataBinderMapperImpl
+ com.example.runtyou.DataBinderMapperImpl$InnerBrLookup
+ com.example.runtyou.DataBinderMapperImpl$InnerLayoutIdLookup
+com/example/runtyou/databinding/ActivityLoginBinding.java
+ com.example.runtyou.databinding.ActivityLoginBinding
+com/example/runtyou/databinding/ActivityMainBinding.java
+ com.example.runtyou.databinding.ActivityMainBinding
+com/example/runtyou/DataBindingTriggerClass.java
+ com.example.runtyou.DataBindingTriggerClass
+com/example/runtyou/databinding/ListHeaderBinding.java
+ com.example.runtyou.databinding.ListHeaderBinding
+com/example/runtyou/databinding/ListChildBinding.java
+ com.example.runtyou.databinding.ListChildBinding
+androidx/databinding/DataBindingComponent.java
+ androidx.databinding.DataBindingComponent
+com/example/runtyou/databinding/ActivityDetailsBinding.java
+ com.example.runtyou.databinding.ActivityDetailsBinding
+com/example/runtyou/databinding/FragmentLogBinding.java
+ com.example.runtyou.databinding.FragmentLogBinding
