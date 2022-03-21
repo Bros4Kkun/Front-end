@@ -9,14 +9,14 @@ apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 31
-    buildToolsVersion "30.0.3"
+    buildToolsVersion "28.0.2"
     buildFeatures{
         viewBinding = true
     }
     defaultConfig {
         applicationId "com.example.runtyou"
         minSdkVersion 19
-        targetSdkVersion 31 
+        targetSdkVersion 31
         versionCode 1
         versionName "1.0"
         multiDexEnabled true

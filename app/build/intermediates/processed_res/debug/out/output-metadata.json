@@ -12,12 +12,12 @@
       "filters": [
         {
           "filterType": "ABI",
-          "value": "armeabi-v7a"
+          "value": "x86_64"
         }
       ],
       "versionCode": 1,
       "versionName": "1.0",
-      "outputFile": "resources-armeabi-v7aDebug.ap_"
+      "outputFile": "resources-x86_64Debug.ap_"
     }
   ]
 }
