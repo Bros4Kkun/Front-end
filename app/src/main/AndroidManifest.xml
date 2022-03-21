@@ -20,6 +20,7 @@
 
         <activity android:name="com.example.RunToU.LoginActivity"
             android:theme="@style/SplashTheme"
+
             android:exported="true">
            <intent-filter>
 
@@ -31,8 +32,10 @@
             </intent-filter>
         </activity>
 
-
-        <activity android:name="com.example.RunToU.SingupActivity"/>
+        <activity android:name=".MainActivity"
+            android:theme="@style/Theme.AppCompat"/>
+        <activity android:name="com.example.RunToU.SingupActivity"
+            android:theme="@style/Theme.AppCompat"/>
         <meta-data android:name="com.kakao.sdk.AppKey" android:value="e65891468706ac7d59680f5e0202bfff"/>
         <activity android:name="com.example.RunToU.reviewActivity"/>
         <activity android:name="com.example.RunToU.settingActivity"/>

@@ -1,44 +1,151 @@
-com/example/RunToU/databinding/FragmentLogBinding.java
- com.example.RunToU.databinding.FragmentLogBinding
-com/example/RunToU/DataBindingTriggerClass.java
- com.example.RunToU.DataBindingTriggerClass
 com/example/RunToU/databinding/FragmentHomeBinding.java
  com.example.RunToU.databinding.FragmentHomeBinding
-com/example/RunToU/databinding/BottomNavigationTabBinding.java
- com.example.RunToU.databinding.BottomNavigationTabBinding
-com/example/RunToU/databinding/ListChildBinding.java
- com.example.RunToU.databinding.ListChildBinding
 androidx/databinding/DataBinderMapperImpl.java
  androidx.databinding.DataBinderMapperImpl
-com/example/RunToU/databinding/ActivityLoginBinding.java
- com.example.RunToU.databinding.ActivityLoginBinding
+com/example/RunToU/databinding/ActivityWriteBinding.java
+ com.example.RunToU.databinding.ActivityWriteBinding
 com/example/RunToU/databinding/FragmentMsgBinding.java
  com.example.RunToU.databinding.FragmentMsgBinding
 androidx/databinding/library/baseAdapters/BR.java
  androidx.databinding.library.baseAdapters.BR
-com/example/RunToU/databinding/ActivitySingupBinding.java
- com.example.RunToU.databinding.ActivitySingupBinding
-com/example/RunToU/BR.java
- com.example.RunToU.BR
-com/example/RunToU/databinding/FragmentPfBinding.java
- com.example.RunToU.databinding.FragmentPfBinding
-com/example/RunToU/databinding/ActivityMainBinding.java
- com.example.RunToU.databinding.ActivityMainBinding
-com/example/RunToU/databinding/ListHeaderBinding.java
- com.example.RunToU.databinding.ListHeaderBinding
-com/example/RunToU/DataBinderMapperImpl.java
- com.example.RunToU.DataBinderMapperImpl
- com.example.RunToU.DataBinderMapperImpl$InnerBrLookup
- com.example.RunToU.DataBinderMapperImpl$InnerLayoutIdLookup
+com/example/RunToU/my_profileFragment.java
+ com.example.RunToU.my_profileFragment
+ com.example.RunToU.my_profileFragment$1
+ com.example.RunToU.my_profileFragment$2
+ com.example.RunToU.my_profileFragment$3
+ com.example.RunToU.my_profileFragment$4
+ com.example.RunToU.my_profileFragment$5
+ com.example.RunToU.my_profileFragment$6
+com/example/RunToU/databinding/ItemVerificationBinding.java
+ com.example.RunToU.databinding.ItemVerificationBinding
+com/example/RunToU/workFragment.java
+ com.example.RunToU.workFragment
+ com.example.RunToU.workFragment$1
+com/example/RunToU/databinding/ActivityJobrecBinding.java
+ com.example.RunToU.databinding.ActivityJobrecBinding
+com/example/RunToU/databinding/ActivityDetailsBinding.java
+ com.example.RunToU.databinding.ActivityDetailsBinding
 com/example/RunToU/ExpandableListAdapter.java
  com.example.RunToU.ExpandableListAdapter
  com.example.RunToU.ExpandableListAdapter$1
  com.example.RunToU.ExpandableListAdapter$Item
  com.example.RunToU.ExpandableListAdapter$ListChildViewHolder
  com.example.RunToU.ExpandableListAdapter$ListHeaderViewHolder
-com/example/RunToU/databinding/ActivityDetailsBinding.java
- com.example.RunToU.databinding.ActivityDetailsBinding
-androidx/databinding/DataBindingComponent.java
- androidx.databinding.DataBindingComponent
+com/example/RunToU/jobAdapter.java
+ com.example.RunToU.jobAdapter
+ com.example.RunToU.jobAdapter$1
+ com.example.RunToU.jobAdapter$CustomViewHolder
+com/example/RunToU/revrecFragment.java
+ com.example.RunToU.revrecFragment
+com/example/RunToU/databinding/FragmentRevrecBinding.java
+ com.example.RunToU.databinding.FragmentRevrecBinding
+com/example/RunToU/verificationActivity.java
+ com.example.RunToU.verificationActivity
+com/example/RunToU/jobData.java
+ com.example.RunToU.jobData
+com/example/RunToU/purchaseActivity.java
+ com.example.RunToU.purchaseActivity
+ com.example.RunToU.purchaseActivity$1
+ com.example.RunToU.purchaseActivity$2
+com/example/RunToU/settingActivity.java
+ com.example.RunToU.settingActivity
+com/example/RunToU/databinding/FragmentIntroduceBinding.java
+ com.example.RunToU.databinding.FragmentIntroduceBinding
+com/example/RunToU/reviewAdapter.java
+ com.example.RunToU.reviewAdapter
+ com.example.RunToU.reviewAdapter$1
+ com.example.RunToU.reviewAdapter$CustomViewHolder
+com/example/RunToU/writeActivity.java
+ com.example.RunToU.writeActivity
+ com.example.RunToU.writeActivity$1
+com/example/RunToU/databinding/ItemReviewBinding.java
+ com.example.RunToU.databinding.ItemReviewBinding
+com/example/RunToU/databinding/ListHeaderBinding.java
+ com.example.RunToU.databinding.ListHeaderBinding
+com/example/RunToU/DataBinderMapperImpl.java
+ com.example.RunToU.DataBinderMapperImpl
+ com.example.RunToU.DataBinderMapperImpl$InnerBrLookup
+ com.example.RunToU.DataBinderMapperImpl$InnerLayoutIdLookup
+com/example/RunToU/databinding/FragmentNoticeBinding.java
+ com.example.RunToU.databinding.FragmentNoticeBinding
+com/example/RunToU/databinding/FragmentWorkBinding.java
+ com.example.RunToU.databinding.FragmentWorkBinding
+com/example/RunToU/databinding/ActivitySettingBinding.java
+ com.example.RunToU.databinding.ActivitySettingBinding
+com/example/RunToU/databinding/BottomNavigationTabBinding.java
+ com.example.RunToU.databinding.BottomNavigationTabBinding
+com/example/RunToU/databinding/ActivityEditIntroduceBinding.java
+ com.example.RunToU.databinding.ActivityEditIntroduceBinding
+com/example/RunToU/databinding/ActivityLoginBinding.java
+ com.example.RunToU.databinding.ActivityLoginBinding
+com/example/RunToU/BR.java
+ com.example.RunToU.BR
+com/example/RunToU/databinding/FragmentProfileBinding.java
+ com.example.RunToU.databinding.FragmentProfileBinding
+com/example/RunToU/databinding/ActivityVerificationBinding.java
+ com.example.RunToU.databinding.ActivityVerificationBinding
+com/example/RunToU/introduceFragment.java
+ com.example.RunToU.introduceFragment
+com/example/RunToU/databinding/ActivityMainBinding.java
+ com.example.RunToU.databinding.ActivityMainBinding
+com/example/RunToU/reviewData.java
+ com.example.RunToU.reviewData
+com/example/RunToU/noticeFragment.java
+ com.example.RunToU.noticeFragment
+ com.example.RunToU.noticeFragment$1
+com/example/RunToU/PFFragment.java
+ com.example.RunToU.PFFragment
+ com.example.RunToU.PFFragment$1
+ com.example.RunToU.PFFragment$2
+ com.example.RunToU.PFFragment$3
+ com.example.RunToU.PFFragment$4
+ com.example.RunToU.PFFragment$5
+ com.example.RunToU.PFFragment$6
+ com.example.RunToU.PFFragment$7
+com/example/RunToU/databinding/ActivityReviewBinding.java
+ com.example.RunToU.databinding.ActivityReviewBinding
 com/example/RunToU/BuildConfig.java
  com.example.RunToU.BuildConfig
+com/example/RunToU/databinding/FragmentShortJobrecBinding.java
+ com.example.RunToU.databinding.FragmentShortJobrecBinding
+com/example/RunToU/databinding/FragmentLogBinding.java
+ com.example.RunToU.databinding.FragmentLogBinding
+com/example/RunToU/veriData.java
+ com.example.RunToU.veriData
+com/example/RunToU/DataBindingTriggerClass.java
+ com.example.RunToU.DataBindingTriggerClass
+com/example/RunToU/workAdapter.java
+ com.example.RunToU.workAdapter
+ com.example.RunToU.workAdapter$1
+ com.example.RunToU.workAdapter$CustomViewHolder
+com/example/RunToU/databinding/ItemWorkBinding.java
+ com.example.RunToU.databinding.ItemWorkBinding
+com/example/RunToU/databinding/ItemJobBinding.java
+ com.example.RunToU.databinding.ItemJobBinding
+com/example/RunToU/databinding/ListChildBinding.java
+ com.example.RunToU.databinding.ListChildBinding
+com/example/RunToU/databinding/FragmentMyProfileBinding.java
+ com.example.RunToU.databinding.FragmentMyProfileBinding
+com/example/RunToU/databinding/ActivitySingupBinding.java
+ com.example.RunToU.databinding.ActivitySingupBinding
+com/example/RunToU/workData.java
+ com.example.RunToU.workData
+com/example/RunToU/reviewActivity.java
+ com.example.RunToU.reviewActivity
+ com.example.RunToU.reviewActivity$1
+ com.example.RunToU.reviewActivity$2
+com/example/RunToU/databinding/ActivityPurchaseBinding.java
+ com.example.RunToU.databinding.ActivityPurchaseBinding
+com/example/RunToU/recyclerAdapter.java
+ com.example.RunToU.recyclerAdapter
+ com.example.RunToU.recyclerAdapter$ItemViewHolder
+com/example/RunToU/jobrecActivity.java
+ com.example.RunToU.jobrecActivity
+ com.example.RunToU.jobrecActivity$1
+ com.example.RunToU.jobrecActivity$2
+com/example/RunToU/edit_introduceActivity.java
+ com.example.RunToU.edit_introduceActivity
+ com.example.RunToU.edit_introduceActivity$1
+ com.example.RunToU.edit_introduceActivity$2
+androidx/databinding/DataBindingComponent.java
+ androidx.databinding.DataBindingComponent
