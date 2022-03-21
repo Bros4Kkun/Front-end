@@ -4,7 +4,7 @@
     "type": "PROCESSED_RES",
     "kind": "Directory"
   },
-  "applicationId": "com.example.runtyou",
+  "applicationId": "com.example.RunToU",
   "variantName": "processDebugResources",
   "elements": [
     {
@@ -12,12 +12,12 @@
       "filters": [
         {
           "filterType": "ABI",
-          "value": "armeabi-v7a"
+          "value": "x86"
         }
       ],
       "versionCode": 1,
       "versionName": "1.0",
-      "outputFile": "resources-armeabi-v7aDebug.ap_"
+      "outputFile": "resources-x86Debug.ap_"
     }
   ]
 }

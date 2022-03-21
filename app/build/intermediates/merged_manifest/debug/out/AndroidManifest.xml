@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.runtyou"
+    package="com.example.RunToU"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -30,7 +30,7 @@
         android:theme="@style/Theme.Runtyou"
         android:usesCleartextTraffic="true" >
         <activity
-            android:name="com.example.runtyou.LoginActivity"
+            android:name="com.example.RunToU.LoginActivity"
             android:exported="true"
             android:theme="@style/SplashTheme" >
             <intent-filter>
@@ -39,8 +39,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.runtyou.MainActivity" />
-        <activity android:name="com.example.runtyou.SingupActivity" />
+        <activity android:name="com.example.RunToU.MainActivity" />
+        <activity android:name="com.example.RunToU.SingupActivity" />
 
         <meta-data
             android:name="com.kakao.sdk.AppKey"
@@ -135,7 +135,7 @@
 
         <provider
             android:name="com.google.firebase.provider.FirebaseInitProvider"
-            android:authorities="com.example.runtyou.firebaseinitprovider"
+            android:authorities="com.example.RunToU.firebaseinitprovider"
             android:directBootAware="true"
             android:exported="false"
             android:initOrder="100" />
@@ -167,7 +167,7 @@
 
         <provider
             android:name="androidx.startup.InitializationProvider"
-            android:authorities="com.example.runtyou.androidx-startup"
+            android:authorities="com.example.RunToU.androidx-startup"
             android:exported="false" >
             <meta-data
                 android:name="androidx.emoji2.text.EmojiCompatInitializer"

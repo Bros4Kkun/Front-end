@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.runtyou">
+    package="com.example.RunToU">
     <uses-permission android:name="android.permission.INTERNET">
     </uses-permission>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
@@ -17,7 +17,7 @@
         android:usesCleartextTraffic="true">
 
 
-        <activity android:name=".LoginActivity"
+        <activity android:name="com.example.RunToU.LoginActivity"
             android:theme="@style/SplashTheme"
             android:exported="true">
            <intent-filter>
@@ -26,8 +26,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"/>
-        <activity android:name=".SingupActivity"/>
+        <activity android:name="com.example.RunToU.MainActivity"/>
+        <activity android:name="com.example.RunToU.SingupActivity"/>
         <meta-data android:name="com.kakao.sdk.AppKey" android:value="e65891468706ac7d59680f5e0202bfff"/>
     </application>
 

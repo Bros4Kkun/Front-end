@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_rectangle_1.png.flat",
-        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\rectangle_1.png"
-    },
-    {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_arrow_upward_black_24dp.png.flat",
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_arrow_upward_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_rectangle_1.png.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\rectangle_1.png"
     },
     {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_home.xml.flat",

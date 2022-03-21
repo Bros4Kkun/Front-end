@@ -1,6 +1,6 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="com.example.runtyou"
+3    package="com.example.RunToU"
 4    android:versionCode="1"
 5    android:versionName="1.0" >
 6
@@ -54,8 +54,8 @@
 31-->C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:17:9-44
 32        <activity
 32-->C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:20:9-28:20
-33            android:name="com.example.runtyou.LoginActivity"
-33-->C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:20:19-48
+33            android:name="com.example.RunToU.LoginActivity"
+33-->C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:20:19-66
 34            android:exported="true"
 34-->C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:22:13-36
 35            android:theme="@style/SplashTheme" >
@@ -71,12 +71,12 @@
 39-->C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:26:27-74
 40            </intent-filter>
 41        </activity>
-42        <activity android:name="com.example.runtyou.MainActivity" />
-42-->C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:29:9-49
-42-->C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:29:19-47
-43        <activity android:name="com.example.runtyou.SingupActivity" />
-43-->C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:30:9-51
-43-->C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:30:19-49
+42        <activity android:name="com.example.RunToU.MainActivity" />
+42-->C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:29:9-67
+42-->C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:29:19-65
+43        <activity android:name="com.example.RunToU.SingupActivity" />
+43-->C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:30:9-69
+43-->C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:30:19-67
 44
 45        <meta-data
 45-->C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:31:9-106
@@ -251,7 +251,7 @@
 136-->[com.google.firebase:firebase-common:20.0.0] C:\Users\whdal\.gradle\caches\transforms-2\files-2.1\6a5d7c4922bc81c615fe628902eaa782\jetified-firebase-common-20.0.0\AndroidManifest.xml:26:9-31:39
 137            android:name="com.google.firebase.provider.FirebaseInitProvider"
 137-->[com.google.firebase:firebase-common:20.0.0] C:\Users\whdal\.gradle\caches\transforms-2\files-2.1\6a5d7c4922bc81c615fe628902eaa782\jetified-firebase-common-20.0.0\AndroidManifest.xml:27:13-77
-138            android:authorities="com.example.runtyou.firebaseinitprovider"
+138            android:authorities="com.example.RunToU.firebaseinitprovider"
 138-->[com.google.firebase:firebase-common:20.0.0] C:\Users\whdal\.gradle\caches\transforms-2\files-2.1\6a5d7c4922bc81c615fe628902eaa782\jetified-firebase-common-20.0.0\AndroidManifest.xml:28:13-72
 139            android:directBootAware="true"
 139-->[com.google.firebase:firebase-common:20.0.0] C:\Users\whdal\.gradle\caches\transforms-2\files-2.1\6a5d7c4922bc81c615fe628902eaa782\jetified-firebase-common-20.0.0\AndroidManifest.xml:29:13-43
@@ -309,7 +309,7 @@
 168-->[androidx.emoji2:emoji2:1.0.0] C:\Users\whdal\.gradle\caches\transforms-2\files-2.1\3cf579308d4f2e3fd974a4515462adba\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
 169            android:name="androidx.startup.InitializationProvider"
 169-->[androidx.emoji2:emoji2:1.0.0] C:\Users\whdal\.gradle\caches\transforms-2\files-2.1\3cf579308d4f2e3fd974a4515462adba\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
-170            android:authorities="com.example.runtyou.androidx-startup"
+170            android:authorities="com.example.RunToU.androidx-startup"
 170-->[androidx.emoji2:emoji2:1.0.0] C:\Users\whdal\.gradle\caches\transforms-2\files-2.1\3cf579308d4f2e3fd974a4515462adba\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
 171            android:exported="false" >
 171-->[androidx.emoji2:emoji2:1.0.0] C:\Users\whdal\.gradle\caches\transforms-2\files-2.1\3cf579308d4f2e3fd974a4515462adba\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
