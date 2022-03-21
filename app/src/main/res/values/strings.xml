@@ -1,4 +1,5 @@
 <resources>
+
     <string name="app_name">runtyou</string>
     <string name="logtext">
 
@@ -18,4 +19,9 @@
     <string name="si_ve">SMS 인증</string>
     <string name="si_ve_se">인증번호 전송</string>
 <string name="si_com">회원가입 완료</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

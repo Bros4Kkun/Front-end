@@ -12,10 +12,7 @@
         android:id="@+id/vp_ac_main_frag_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/tl_ac_main_bottom_menu">
-    </androidx.viewpager.widget.ViewPager>
-
-/*
+        android:layout_above="@+id/tl_ac_main_bottom_menu"/>
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tl_ac_main_bottom_menu"
@@ -26,8 +23,5 @@
         android:layout_height="72dp"
         android:layout_alignParentBottom="true">
     </com.google.android.material.tabs.TabLayout>
-
-
-
 
 </RelativeLayout>

@@ -1,7 +1,6 @@
 package com.example.RunToU
 
 
-
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,14 +11,17 @@ import com.example.RunToU.databinding.FragmentLogBinding
 import kotlinx.android.synthetic.main.fragment_log.*
 import kotlinx.android.synthetic.main.list_child.*
 import net.daum.mf.map.api.MapView
+import java.util.*
 
 
-class LogFragment : Fragment(){
+class LogFragment : Fragment() {
     private lateinit var binding: FragmentLogBinding
 
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         return inflater.inflate(R.layout.fragment_log, container, false)
     }
 
@@ -30,7 +32,8 @@ class LogFragment : Fragment(){
         map_view.addView(mapView)
 
 
-        recyclerview.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
+        recyclerview.layoutManager =
+            LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
         val data: MutableList<ExpandableListAdapter.Item> = ArrayList() // 데이터를 담을 List
 
 

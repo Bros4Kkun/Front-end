@@ -46,6 +46,7 @@
         app:layout_constraintTop_toTopOf="@+id/rectangle_1" />
 
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/map_view"
         android:layout_width="match_parent"
