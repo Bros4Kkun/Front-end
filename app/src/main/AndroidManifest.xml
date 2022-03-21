@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.myapplication">
+    package="com.example.RunToU">
 
 
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -14,7 +14,7 @@
         android:theme="@style/Theme.MyApplication"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.RunToU.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,13 +22,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".reviewActivity"/>
-        <activity android:name=".settingActivity"/>
-        <activity android:name=".purchaseActivity"/>
-        <activity android:name=".edit_introduceActivity"/>
-        <activity android:name=".writeActivity"/>
-        <activity android:name=".verificationActivity"/>
-        <activity android:name=".jobrecActivity"/>
+        <activity android:name="com.example.RunToU.reviewActivity"/>
+        <activity android:name="com.example.RunToU.settingActivity"/>
+        <activity android:name="com.example.RunToU.purchaseActivity"/>
+        <activity android:name="com.example.RunToU.edit_introduceActivity"/>
+        <activity android:name="com.example.RunToU.writeActivity"/>
+        <activity android:name="com.example.RunToU.verificationActivity"/>
+        <activity android:name="com.example.RunToU.jobrecActivity"/>
     </application>
 
 </manifest>

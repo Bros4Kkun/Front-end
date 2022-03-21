@@ -11,8 +11,8 @@ android {
         viewBinding true }
 
     defaultConfig {
-        applicationId "com.example.myapplication"
-        minSdk 30
+        applicationId "com.example.RunToU"
+        minSdk 25
         targetSdk 32
         versionCode 1
         versionName "1.0"

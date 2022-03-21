@@ -1,7 +1,5 @@
-package com.example.myapplication
+package com.example.RunToU
 
-import android.app.Activity
-import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

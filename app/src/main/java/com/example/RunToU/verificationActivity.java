@@ -1,9 +1,6 @@
-package com.example.myapplication;
+package com.example.RunToU;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageButton;
-import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
