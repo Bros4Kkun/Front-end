@@ -70,17 +70,17 @@
 39            </intent-filter>
 40        </activity>
 41        <activity
-41-->C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:35:9-36:53
+41-->C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:35:9-36:51
 42            android:name="com.example.RunToU.MainActivity"
 42-->C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:35:19-47
-43            android:theme="@style/Theme.AppCompat" />
-43-->C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:36:13-51
+43            android:theme="@style/Theme.Runtyou" />
+43-->C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:36:13-49
 44        <activity
-44-->C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:37:9-38:53
+44-->C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:37:9-38:52
 45            android:name="com.example.RunToU.SingupActivity"
 45-->C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:37:19-67
-46            android:theme="@style/Theme.AppCompat" />
-46-->C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:38:13-51
+46            android:theme="@style/Theme.Runtyou" />
+46-->C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:38:13-49
 47
 48        <meta-data
 48-->C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:39:9-106

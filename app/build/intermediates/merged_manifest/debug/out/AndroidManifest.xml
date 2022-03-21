@@ -40,10 +40,10 @@
         </activity>
         <activity
             android:name="com.example.RunToU.MainActivity"
-            android:theme="@style/Theme.AppCompat" />
+            android:theme="@style/Theme.Runtyou" />
         <activity
             android:name="com.example.RunToU.SingupActivity"
-            android:theme="@style/Theme.AppCompat" />
+            android:theme="@style/Theme.Runtyou" />
 
         <meta-data
             android:name="com.kakao.sdk.AppKey"

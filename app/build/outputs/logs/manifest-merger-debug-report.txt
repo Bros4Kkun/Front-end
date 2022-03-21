@@ -210,15 +210,15 @@ ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidMani
 	android:name
 		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:31:27-74
 activity#com.example.RunToU.MainActivity
-ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:35:9-36:53
+ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:35:9-36:51
 	android:theme
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:36:13-51
+		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:36:13-49
 	android:name
 		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:35:19-47
 activity#com.example.RunToU.SingupActivity
-ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:37:9-38:53
+ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:37:9-38:52
 	android:theme
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:38:13-51
+		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:38:13-49
 	android:name
 		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:37:19-67
 meta-data#com.kakao.sdk.AppKey
