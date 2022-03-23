@@ -37,13 +37,20 @@
         <activity android:name="com.example.RunToU.SingupActivity"
             android:theme="@style/Theme.Runtyou" />
         <meta-data android:name="com.kakao.sdk.AppKey" android:value="e65891468706ac7d59680f5e0202bfff"/>
-        <activity android:name="com.example.RunToU.reviewActivity"/>
-        <activity android:name="com.example.RunToU.settingActivity"/>
-        <activity android:name="com.example.RunToU.purchaseActivity"/>
-        <activity android:name="com.example.RunToU.edit_introduceActivity"/>
-        <activity android:name="com.example.RunToU.writeActivity"/>
-        <activity android:name="com.example.RunToU.verificationActivity"/>
-        <activity android:name="com.example.RunToU.jobrecActivity"/>
+        <activity android:name="com.example.RunToU.reviewActivity"
+            android:theme="@style/Theme.Runtyou"/>
+        <activity android:name="com.example.RunToU.settingActivity"
+            android:theme="@style/Theme.Runtyou"/>
+        <activity android:name="com.example.RunToU.purchaseActivity"
+            android:theme="@style/Theme.Runtyou"/>
+        <activity android:name="com.example.RunToU.edit_introduceActivity"
+            android:theme="@style/Theme.Runtyou"/>
+        <activity android:name="com.example.RunToU.writeActivity"
+            android:theme="@style/Theme.Runtyou"/>
+        <activity android:name="com.example.RunToU.verificationActivity"
+            android:theme="@style/Theme.Runtyou"/>
+        <activity android:name="com.example.RunToU.jobrecActivity"
+            android:theme="@style/Theme.Runtyou"/>
 
     </application>
 
