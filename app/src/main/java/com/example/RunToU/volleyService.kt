@@ -10,12 +10,13 @@ import java.sql.DriverManager.println
 
 class volleyService {
     object VolleyService {
-        val url = "http://3.38.254.41/api/user/signup"
+        val url = "http://3.39.87.103/api/user/signup"
 
         fun signVolley(context: Context,account: String, nickname : String,password : String,phonenumber : String, accountnum : String, success: (Boolean) -> Unit ) {
             val myJson = JSONObject()
 
             myJson.put("accountId",account)
+            myJson.put("realName","test")
             myJson.put("nickname",nickname)
             myJson.put("password",password)
             myJson.put("phoneNumber",phonenumber)

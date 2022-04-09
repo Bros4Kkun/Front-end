@@ -10,7 +10,7 @@ import java.sql.DriverManager.println
 
 class loginvolley {
     object loginvolley{
-        val url = "http://3.38.254.41/api/user/signin"
+        val url = "http://3.39.87.103/api/user/signin"
         fun loginvolley(context: Context, id : String, pw : String, role : String, success: (Boolean) -> Unit){
             val logJson = JSONObject()
             logJson.put("accountId",id)
