@@ -61,8 +61,9 @@ class loginvolley {
                     val cookiesinfo : java.util.TreeMap<String,String> = response?.headers as TreeMap<String, String>
                     val cookie = cookiesinfo.get("Set-Cookie")
                     println(cookie)
-                    return super.parseNetworkResponse(response)
                     SessionControl.SessionControl.sess=cookie
+                    println("TEST!!!!!!!!: ${SessionControl.SessionControl.sess}")
+                    return super.parseNetworkResponse(response)
 
 
 
