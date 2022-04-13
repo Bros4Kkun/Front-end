@@ -1,9 +1,9 @@
 package com.example.RunToU
 
 
-
+/*
 class UserAPIMethods {
-
+    
     companion object {
 
         fun signUpCheck(
@@ -12,15 +12,8 @@ class UserAPIMethods {
             callback: (response: SignUpOkResponse?) -> Unit
         ) {
 
-            RetrofitService.test.signUpCheck(
-                email,
-                password
-            ).enqueue(
-                MethodCallback.generalCallback<SignUpCheckResponse, SignUpCheckOkResponse, SignUpCheckErrorResponse>(
-                    callback
-                )
-            )
+
         }
     }
 
-}
+}*/

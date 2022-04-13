@@ -6,7 +6,7 @@ import retrofit2.*
 
 
 class MethodCallback {
-    companion object {
+/*    companion object {
 
         inline fun <G, O : G, reified E : G> generalCallback(crossinline callback: (response: G?) -> Unit): Callback<O> {
 
@@ -44,5 +44,6 @@ class MethodCallback {
                 }
             }
         }
+    }*/
     }
-}
+

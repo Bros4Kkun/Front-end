@@ -2,11 +2,19 @@ package com.example.RunToU
 
 
 import android.content.Context
+import com.android.volley.NetworkResponse
+import com.android.volley.ParseError
+import com.android.volley.Request
 import com.android.volley.Response
-import com.android.volley.toolbox.HttpHeaderParser
-import com.android.volley.toolbox.StringRequest
-import com.android.volley.toolbox.Volley
+import com.android.volley.toolbox.*
+import com.google.gson.JsonObject
+import org.json.JSONException
 import org.json.JSONObject
+import java.io.UnsupportedEncodingException
+import java.net.CookieManager
+import java.net.CookieStore
+import java.util.*
+import kotlin.collections.HashMap
 
 
 class loginvolley {
@@ -26,34 +34,42 @@ class loginvolley {
             logJson.put("rawPassword", pw)
             logJson.put("role", role)
 
-            val requestBody = logJson.toString()
+            val requestBody = logJson
 
-            val LoginRequest = object : StringRequest(Method.POST,
-                url, Response.Listener { response ->
-                    println("serverresponse : $response")
+            val request = object : JsonObjectRequest(
+                Request.Method.POST,
+                url,
+                logJson,
+                Response.Listener<JSONObject> {response ->
+                    print(response)
                     success(true)
-                    println(requestBody)
 
 
-                }, Response.ErrorListener { error ->
+                },
+                Response.ErrorListener { error ->
                     println("Error : $error")
                     success(false)
-                })
-
-            {
-
-                override fun getBodyContentType(): String {
-                    return "application/json; charset=utf-8"
+                }
+            ) {
+                override fun getHeaders(): Map<String, String> {
+                    val headers = HashMap<String,String>()
+                    headers.put("Content-Type", "application/json")
+                    return headers
                 }
 
-                override fun getBody(): ByteArray{
-                    return requestBody.toByteArray()
+                override fun parseNetworkResponse(response: NetworkResponse?): Response<JSONObject> {
+                    val cookiesinfo : java.util.TreeMap<String,String> = response?.headers as TreeMap<String, String>
+                    val cookie = cookiesinfo.get("Set-Cookie")
+                    println(cookie)
+                    return super.parseNetworkResponse(response)
+                    SessionControl.SessionControl.sess=cookie
+
+
+
                 }
+
             }
-            Volley.newRequestQueue(context).add(LoginRequest)
-
-
-
+            val queue = Volley.newRequestQueue(context).add(request)
         }
     }
 }

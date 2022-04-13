@@ -33,9 +33,7 @@ class LoginActivity : AppCompatActivity() {
             override fun onClick(v: View?) {
                 userid = log_id.text.toString()
                 userpw = log_pw.text.toString()
-                login_hashMap.put("accountId",log_id.text.toString())
-                login_hashMap.put("rawPassword",log_pw.text.toString())
-                login_hashMap.put("role","PERFORMER")
+
                 loginvolley.loginvolley.loginvolley(
                     this@LoginActivity,
                     userid.toString(),
@@ -50,7 +48,7 @@ class LoginActivity : AppCompatActivity() {
 
 
                         startActivity(intent1)
-                        login_hashMap.clear()
+
                         finish()
                     } else {
                         Toast.makeText(
@@ -59,7 +57,7 @@ class LoginActivity : AppCompatActivity() {
                             Toast.LENGTH_SHORT
 
                         ).show()
-                            login_hashMap.clear()
+
                     }
 
                 }
@@ -73,9 +71,7 @@ class LoginActivity : AppCompatActivity() {
 
                 userid = log_id.text.toString()
                 userpw = log_pw.text.toString()
-                login_hashMap.put("accountId",log_id.text.toString())
-                login_hashMap.put("rawPassword",log_pw.text.toString())
-                login_hashMap.put("role","ORDERER")
+
                 loginvolley.loginvolley.loginvolley(
                     this@LoginActivity,
                     userid.toString(),
@@ -87,7 +83,7 @@ class LoginActivity : AppCompatActivity() {
                         Toast.makeText(this@LoginActivity, "요청자 로그인 성공", Toast.LENGTH_SHORT).show()
                         val intent1 = Intent(this@LoginActivity, MainActivity::class.java)
                         startActivity(intent1)
-                        login_hashMap.clear()
+
                         finish()
                     } else {
                         Toast.makeText(
@@ -95,7 +91,7 @@ class LoginActivity : AppCompatActivity() {
                             "아이디 또는 비밀번호가 잘못됐습니다.",
                             Toast.LENGTH_SHORT
                         ).show()
-                        login_hashMap.clear()
+
                     }
                 }
             }
