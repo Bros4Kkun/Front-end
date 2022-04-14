@@ -1,0 +1,27 @@
+<resources>
+
+    <string name="app_name">runtyou</string>
+    <string name="logtext">
+
+현황
+</string>
+<string name ="login_text">LOG-IN</string>
+<string name ="or_login">요청자로 로그인</string>
+<string name ="pe_login">수행자로 로그인</string>
+<string name = "login_guess">아직 계정이 없으십니까?</string>
+    <string name="sign_up">회원가입</string>
+    <string name="signup">SIGN-UP</string>
+    <string name = "signup_id">ID</string>
+    <string name = "signup_ni">닉네임</string>
+    <string name ="idcheck">중복체크</string>
+    <string name = "signup_pw">비밀번호</string>
+    <string name="signup_pwch">비밀번호 확인</string>
+    <string name="si_ve">SMS 인증</string>
+    <string name="si_ve_se">인증번호 전송</string>
+<string name="si_com">회원가입 완료</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

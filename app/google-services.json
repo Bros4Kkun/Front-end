@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "679119704395",
+    "project_id": "runtou-9bc71",
+    "storage_bucket": "runtou-9bc71.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:679119704395:android:eb530d5312f620e5b7d8ce",
+        "android_client_info": {
+          "package_name": "com.example.RunToU"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "679119704395-kt9i5tdv63c0sb4ac6iehpdefdej8bta.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.RunToU",
+            "certificate_hash": "fb3b90da17d1c500033f835dea9e1831e562dfec"
+          }
+        },
+        {
+          "client_id": "679119704395-guv4bsdh2svasksfk0ud4dj7oipgnsmh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9b1-y0w9XeNaBp50CZsHgtjf_kIq-DnU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "679119704395-guv4bsdh2svasksfk0ud4dj7oipgnsmh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
