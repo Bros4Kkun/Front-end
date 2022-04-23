@@ -23,6 +23,7 @@ class SingupActivity : AppCompatActivity() {
         val auth = Firebase.auth
         var verificationId = ""
         private var sid: String = ""
+        private var realName: String=""
         private var pw: String = ""
         private var nick: String = ""
         private var pwch: String = ""
@@ -58,6 +59,7 @@ class SingupActivity : AppCompatActivity() {
         val but1 = si_ch as Button
         but1.setOnClickListener (object :View.OnClickListener{
             override fun onClick(p0: View?) {
+                realName=si_real.toString()
                 sid = si_id.text.toString()
                 idcheckVolley(this@SingupActivity,sid){duplicatedAccountId ->
                     if(duplicatedAccountId){
@@ -154,6 +156,7 @@ class SingupActivity : AppCompatActivity() {
                         signVolley(
                             this@SingupActivity,
                             sid,
+                            realName,
                             nick,
                             pw,
                             ph_nu,

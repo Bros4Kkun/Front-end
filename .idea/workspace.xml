@@ -28,7 +28,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e622e22-edbd-4287-9e1b-f8bf83b59e65" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,13 +77,13 @@
       <list>
         <option value="Kotlin File" />
         <option value="valueResourceFile" />
-        <option value="resourceFile" />
         <option value="layoutResourceFile" />
         <option value="Kotlin Object" />
         <option value="Kotlin Interface" />
         <option value="Kotlin Data Class" />
         <option value="Class" />
         <option value="Kotlin Class" />
+        <option value="resourceFile" />
       </list>
     </option>
   </component>
@@ -103,8 +103,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ApkExportedModule" value="My_Application.app" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="R3CRC0T4NSF" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2022-03-21T22:07:05.037Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="ce10160a2cb8bd2d03" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2022-04-23T07:53:41.086Z" />
     <property name="ExportApk.ApkPath" value="C:\Users\whdal\AndroidStudioProjects\runtyou\app" />
     <property name="ExportApk.BuildVariants" value="release" />
     <property name="ExportApk.SignV1" value="true" />
@@ -229,34 +229,34 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="132" y="199" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1647794251241" />
-    <state x="398" y="288" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1642778644831">
+    <state x="398" y="288" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1650342574350">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="398" y="288" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1642778644831" />
-    <state x="601" y="429" key="AndroidCreateResourceFileDialog" timestamp="1649693153733">
+    <state x="398" y="288" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1650342574350" />
+    <state x="601" y="429" key="AndroidCreateResourceFileDialog" timestamp="1650696660663">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="601" y="429" key="AndroidCreateResourceFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1649693153733" />
+    <state x="601" y="429" key="AndroidCreateResourceFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1650696660663" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1648405537769">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1648405537769" />
-    <state width="1876" height="282" key="GridCell.Tab.0.bottom" timestamp="1649866411149">
+    <state width="1876" height="282" key="GridCell.Tab.0.bottom" timestamp="1649867094539">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1649866411149" />
-    <state width="1876" height="282" key="GridCell.Tab.0.center" timestamp="1649866411149">
+    <state width="1876" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1649867094539" />
+    <state width="1876" height="282" key="GridCell.Tab.0.center" timestamp="1649867094539">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1649866411149" />
-    <state width="1876" height="282" key="GridCell.Tab.0.left" timestamp="1649866411149">
+    <state width="1876" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1649867094539" />
+    <state width="1876" height="282" key="GridCell.Tab.0.left" timestamp="1649867094539">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1649866411149" />
-    <state width="1876" height="282" key="GridCell.Tab.0.right" timestamp="1649866411149">
+    <state width="1876" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1649867094539" />
+    <state width="1876" height="282" key="GridCell.Tab.0.right" timestamp="1649867094539">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1649866411149" />
+    <state width="1876" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1649867094539" />
     <state x="524" y="189" width="998" height="708" key="SettingsEditor" timestamp="1649526009008">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -24,19 +24,24 @@
     <EditText
         android:id="@+id/log_id"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_marginTop="20dp"
-        android:autofillHints="ID"
+        android:hint="ID"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
         android:inputType="text"
+        android:background="@drawable/edittext"
         />
 
         <EditText
         android:id="@+id/log_pw"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_marginTop="15dp"
-
-        android:autofillHints="Password"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/edittext"
+            android:hint="Password"
         android:inputType="textPassword"
             />
 
@@ -66,7 +71,7 @@
             android:layout_weight="1"
             android:text="@string/or_login"
             android:onClick="onclick1"
-            app:backgroundTint="@color/teal_200" />
+            app:backgroundTint="@color/green" />
 
     </LinearLayout>
     <LinearLayout
