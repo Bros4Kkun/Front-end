@@ -44,7 +44,6 @@ public class workFragment extends Fragment {
 //                getFragmentManager().beginTransaction().add(R.id.workLayout, fragment).commit();
                 Intent intent = new Intent(getActivity(), writeActivity.class);
                 startActivity(intent);
-                //ispaid가 체크되어있을때 노출되게
             }
         });
 

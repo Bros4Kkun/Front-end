@@ -2,10 +2,12 @@
 <resources>
     <string-array name="cate">
         <item>--선택--</item>
-        <item>배달</item>
-        <item>청소</item>
-        <item>돌봄</item>
-        <item>벌레/쥐</item>
-        <item>기타</item>
+        <item>DELIVERY_AND_SHOPPING</item>//배달 및 장보기
+        <item>CLEANING_AND_HOUSEWORK</item>//청소 및 집안일
+        <item>DELIVERY_AND_INSTALLATION</item>//설치 조립 운반
+        <item>ACCOMPANY</item>//동행 및 돌봄
+        <item>ANTI_BUG</item>//벌레 퇴치
+        <item>ROLE_ACTING</item>//역할 대행
+        <item>ETC</item>//기타
     </string-array>
 </resources>
