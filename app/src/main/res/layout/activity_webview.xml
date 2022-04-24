@@ -4,17 +4,10 @@
     android:layout_height="match_parent">
 
     <WebView
-<<<<<<< HEAD
         android:id="@+id/webView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true" />
-=======
-        android:id="@+id/webview_write"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:autofillHints="도로명 주소 검색"/>
->>>>>>> ac4ac6e76d452ebb3a3f528b1dec28434dfc823f
 
 </androidx.constraintlayout.widget.ConstraintLayout>

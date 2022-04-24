@@ -48,29 +48,18 @@ import net.daum.mf.map.api.MapView;
 public class writeActivity extends AppCompatActivity {
     //왜인진 모르겠으나 fragment로 했을 때는 오류가나고 안넘어감 -> (activity로 만들었음)
 
-<<<<<<< HEAD
     private static final int SEARCH_ADDRESS_ACTIVITY = 10000;
-=======
->>>>>>> ac4ac6e76d452ebb3a3f528b1dec28434dfc823f
 
     private Spinner cateSpinner;
     private ArrayAdapter cateAdapter;
 
-<<<<<<< HEAD
-=======
-    //private TextView txt_address;
-    //private Handler handler;
->>>>>>> ac4ac6e76d452ebb3a3f528b1dec28434dfc823f
     private RequestQueue queue;
     private String cookie;
 
     String url = "http://3.39.87.103/api/ordersheet";
 
     Button btnRoad;
-<<<<<<< HEAD
     TextView address_write;
-=======
->>>>>>> ac4ac6e76d452ebb3a3f528b1dec28434dfc823f
     EditText title_write, price_write, detail_write, context_write;     //액티비티가 종료되면서 데이터를 넘겨주나? or 서버에 올라가나?
     ImageButton btnGotopur;
     LocalDateTime deadLine = LocalDateTime.now();
@@ -85,14 +74,7 @@ public class writeActivity extends AppCompatActivity {
         queue = Volley.newRequestQueue(this);
         cookie = SessionControl.SessionControl.INSTANCE.getSess();
 
-<<<<<<< HEAD
         address_write = findViewById(R.id.address_write);
-=======
-//        MapView mapView = new MapView(this);
-//        ViewGroup mapViewContainer = findViewById(R.id.webview_write);
-//        mapViewContainer.addView(mapView);
-
->>>>>>> ac4ac6e76d452ebb3a3f528b1dec28434dfc823f
         title_write = findViewById(R.id.title_write);
         price_write = findViewById(R.id.price_write);
         detail_write = findViewById(R.id.detail_write);
@@ -104,11 +86,7 @@ public class writeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplication(), WebView_Adress.class);
-<<<<<<< HEAD
                 startActivityForResult(intent, SEARCH_ADDRESS_ACTIVITY);
-=======
-                startActivity(intent);
->>>>>>> ac4ac6e76d452ebb3a3f528b1dec28434dfc823f
             }
         });
 
@@ -119,21 +97,13 @@ public class writeActivity extends AppCompatActivity {
                 try {
                     int price = Integer.parseInt(price_write.getText().toString());
                     //
-<<<<<<< HEAD
                     if (title_write.getText().toString().length() <= 4) {
-=======
-                    if(title_write.getText().toString().length()<= 4){
->>>>>>> ac4ac6e76d452ebb3a3f528b1dec28434dfc823f
                         Toast.makeText(getApplication(), "제목을 5자 이상 작성해주세요", Toast.LENGTH_SHORT).show();
                     } else if (cateSpinner.getSelectedItem().toString().equals("--선택--")) {
                         Toast.makeText(getApplication(), "카테고리를 선택해주세요.", Toast.LENGTH_SHORT).show();
                     } else if (price <= 0 || price > 100000) {
                         Toast.makeText(getApplication(), "금액을 정확히 작성해주세요.", Toast.LENGTH_SHORT).show();
-<<<<<<< HEAD
                     } else {
-=======
-                    }else{
->>>>>>> ac4ac6e76d452ebb3a3f528b1dec28434dfc823f
                         Intent intent = new Intent(view.getContext(), purchaseActivity.class);
 
                         final JSONObject object = new JSONObject();
@@ -154,22 +124,12 @@ public class writeActivity extends AppCompatActivity {
                             public void onErrorResponse(VolleyError error) {
                                 System.out.print("error");
                             }
-<<<<<<< HEAD
                         }) {
-=======
-                        })
-
-                        {
->>>>>>> ac4ac6e76d452ebb3a3f528b1dec28434dfc823f
                             @Override
                             public Map<String, String> getHeaders() throws AuthFailureError {
                                 Map<String, String> headers = new HashMap<>();
                                 headers.put("Cookie", SessionControl.SessionControl.INSTANCE.getSess());
-<<<<<<< HEAD
                                 headers.put("Content-Type", "application/json");
-=======
-                                headers.put("Content-Type","application/json");
->>>>>>> ac4ac6e76d452ebb3a3f528b1dec28434dfc823f
                                 return headers;
                             }
 
@@ -202,23 +162,14 @@ public class writeActivity extends AppCompatActivity {
 //                                params.put("wishedDeadline", day);
 //                                return params;
 //                            }
-<<<<<<< HEAD
                         };
-=======
-                        }
-                        ;
->>>>>>> ac4ac6e76d452ebb3a3f528b1dec28434dfc823f
 
                         request.setShouldCache(false);
                         queue.add(request);
                         //Toast.makeText(getApplication(), request.toString(),Toast.LENGTH_LONG).show();
                         startActivity(intent);
                     }
-<<<<<<< HEAD
                 } catch (NumberFormatException | JSONException e) {
-=======
-                }catch(NumberFormatException | JSONException e){
->>>>>>> ac4ac6e76d452ebb3a3f528b1dec28434dfc823f
                     Toast.makeText(getApplication(), "요청서를 다시 확인해주세요.", Toast.LENGTH_SHORT).show();
                 }
             }
@@ -230,7 +181,6 @@ public class writeActivity extends AppCompatActivity {
         cateAdapter = ArrayAdapter.createFromResource(this, R.array.cate, R.layout.support_simple_spinner_dropdown_item);
         cateSpinner.setAdapter(cateAdapter);
     }
-<<<<<<< HEAD
 
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
         super.onActivityResult(requestCode, resultCode, intent);
@@ -246,6 +196,3 @@ public class writeActivity extends AppCompatActivity {
         }
     }
 }
-=======
-}
->>>>>>> ac4ac6e76d452ebb3a3f528b1dec28434dfc823f
