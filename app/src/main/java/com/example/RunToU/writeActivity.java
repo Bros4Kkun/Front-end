@@ -97,70 +97,46 @@ public class writeActivity extends AppCompatActivity {
                     } else {
                         Intent intent = new Intent(view.getContext(), purchaseActivity.class);
 
-                        final JSONObject object = new JSONObject();
-                        object.put("title", title_write.getText().toString());
-                        object.put("content", context_write.getText().toString());
-                        object.put("category", cateSpinner.getSelectedItem().toString());
-                        object.put("destination", detail_write.getText().toString());
-                        object.put("cost", Integer.parseInt(price_write.getText().toString()));
-                        object.put("wishedDeadline", deadLine.toString());
+//                        intent.putExtra("title",title_write.getText().toString());
+//                        intent.putExtra("content", context_write.getText().toString());
+//                        intent.putExtra("category", cateSpinner.getSelectedItem().toString());
+//                        intent.putExtra("destination", detail_write.getText().toString());
+//                        intent.putExtra("cost", price);
 
-                        final JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, url, object, new Response.Listener<JSONObject>() {
-                            @Override
-                            public void onResponse(JSONObject response) {
-                                System.out.print("ok");
-                            }
-                        }, new Response.ErrorListener() {
-                            @Override
-                            public void onErrorResponse(VolleyError error) {
-                                System.out.print("error");
-                            }
-                        }) {
-                            @Override
-                            public Map<String, String> getHeaders() throws AuthFailureError {
-                                Map<String, String> headers = new HashMap<>();
-                                headers.put("Cookie", SessionControl.SessionControl.INSTANCE.getSess());
-                                headers.put("Content-Type", "application/json");
-                                return headers;
-                            }
-
-//                            protected Map<String, String> getParams() throws AuthFailureError{
-//                            Map<String, String> params = new HashMap<>();
-//                            params.put("title", title_write.getText().toString());
-//                            params.put("content", context_write.getText().toString());
-//                            params.put("category", cateSpinner.getSelectedItem().toString());
-//                            params.put("destination", detail_write.getText().toString());
-//                            params.put("cost", price_write.getText().toString());
-//                            params.put("wishedDeadline", day.toString());//추후 변경
-//                                return params;
-//                            }
-
+//                        final JSONObject object = new JSONObject();
+//                        object.put("title", title_write.getText().toString());
+//                        object.put("content", context_write.getText().toString());
+//                        object.put("category", cateSpinner.getSelectedItem().toString());
+//                        object.put("destination", detail_write.getText().toString());
+//                        object.put("cost", Integer.parseInt(price_write.getText().toString()));
+//                        object.put("wishedDeadline", deadLine.toString());
+//
+//                        final JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, url, object, new Response.Listener<JSONObject>() {
 //                            @Override
-//                            public String getBodyContentType() {
-//                                return "application/json; charset=UTF8";
+//                            public void onResponse(JSONObject response) {
+//                                System.out.print("ok");
 //                            }
-
-//                            protected Map<String, Integer> getPar() throws AuthFailureError{
-//                                Map<String, Integer> params = new HashMap<>();
-//                                params.put("cost", Integer.parseInt(price_write.getText().toString()));
-//                                return params;
+//                        }, new Response.ErrorListener() {
+//                            @Override
+//                            public void onErrorResponse(VolleyError error) {
+//                                System.out.print("error");
 //                            }
-////
-//                            @RequiresApi(api = Build.VERSION_CODES.O)
-//                            protected Map<String, LocalDateTime> getPara() throws AuthFailureError{
-//                                Map<String, LocalDateTime> params = new HashMap<>();
-//                                LocalDateTime day = LocalDateTime.now();
-//                                params.put("wishedDeadline", day);
-//                                return params;
+//                        }) {
+//                            @Override
+//                            public Map<String, String> getHeaders() throws AuthFailureError {
+//                                Map<String, String> headers = new HashMap<>();
+//                                headers.put("Cookie", SessionControl.SessionControl.INSTANCE.getSess());
+//                                headers.put("Content-Type", "application/json");
+//                                return headers;
 //                            }
-                        };
-
-                        request.setShouldCache(false);
-                        queue.add(request);
-                        //Toast.makeText(getApplication(), request.toString(),Toast.LENGTH_LONG).show();
+//                        };
+//
+//                        request.setShouldCache(false);
+//                        queue.add(request);
                         startActivity(intent);
+
                     }
-                } catch (NumberFormatException | JSONException e) {
+                } catch (NumberFormatException e) {
                     Toast.makeText(getApplication(), "요청서를 다시 확인해주세요.", Toast.LENGTH_SHORT).show();
                 }
             }
@@ -173,17 +149,4 @@ public class writeActivity extends AppCompatActivity {
         cateSpinner.setAdapter(cateAdapter);
     }
 
-//    public void onActivityResult(int requestCode, int resultCode, Intent intent) {
-//        super.onActivityResult(requestCode, resultCode, intent);
-//        switch (requestCode) {
-//            case SEARCH_ADDRESS_ACTIVITY:
-//                if (resultCode == RESULT_OK) {
-//                    String data = intent.getExtras().getString("data");
-//                    if (data != null) {
-//                        address_write.setText(data);
-//                    }
-//                }
-//                break;
-//        }
-//    }
 }

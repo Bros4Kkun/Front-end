@@ -44,9 +44,9 @@ public class workFragment extends Fragment {
 //                getFragmentManager().beginTransaction().add(R.id.workLayout, fragment).commit();
                 Intent intent = new Intent(getActivity(), writeActivity.class);
                 startActivity(intent);
+                getActivity().finish();
             }
         });
-
         return view;
     }
 }
