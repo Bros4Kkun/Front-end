@@ -128,6 +128,7 @@ class SingupActivity : AppCompatActivity() {
 
                     PhoneAuthProvider.verifyPhoneNumber(optionsCompat)
                     auth.setLanguageCode("kr")
+                    Toast.makeText(this@SingupActivity,"코드가 전송됐습니다..",Toast.LENGTH_SHORT).show()
                 }
             })
 
@@ -136,7 +137,7 @@ class SingupActivity : AppCompatActivity() {
                 override fun onClick(p0: View?) {
                     val credential = PhoneAuthProvider.getCredential(verificationId, si_ve_code.text.toString())
                     signInWithPhoneAuthCredential(credential)
-
+                    Toast.makeText(this@SingupActivity,"SMS인증이 완료됐습니다.",Toast.LENGTH_SHORT).show()
 
                 }
             })
