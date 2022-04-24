@@ -1,5 +1,6 @@
 package com.example.RunToU;
 
+<<<<<<< HEAD
 import android.annotation.TargetApi;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -11,17 +12,27 @@ import android.util.Log;
 import android.webkit.JavascriptInterface;
 import android.webkit.PermissionRequest;
 import android.webkit.SslErrorHandler;
+=======
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.PersistableBundle;
+import android.util.Log;
+>>>>>>> ac4ac6e76d452ebb3a3f528b1dec28434dfc823f
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 import androidx.annotation.Nullable;
+<<<<<<< HEAD
 import androidx.appcompat.app.AlertDialog;
+=======
+>>>>>>> ac4ac6e76d452ebb3a3f528b1dec28434dfc823f
 import androidx.appcompat.app.AppCompatActivity;
 
 public class WebView_Adress extends AppCompatActivity {
 
+<<<<<<< HEAD
 
     WebView webView;
 
@@ -37,12 +48,17 @@ public class WebView_Adress extends AppCompatActivity {
             finish();
         }
     }
+=======
+    WebView webView;
+    //String url = "C:\\Users\\YoungseoJeon\\Documents\\vscode\\addressPage.html";
+>>>>>>> ac4ac6e76d452ebb3a3f528b1dec28434dfc823f
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_webview);
 
+<<<<<<< HEAD
         webView = findViewById(R.id.webView);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.addJavascriptInterface(new MyJavaScriptInterface(), "Android");
@@ -94,6 +110,13 @@ public class WebView_Adress extends AppCompatActivity {
         webView.loadUrl("file:///android_asset/daum.html");
 
 
+=======
+        webView = findViewById(R.id.webview_write);
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.loadUrl("file:///android_asset/addressPage.html");
+        webView.setWebChromeClient(new WebChromeClient());
+        webView.setWebViewClient(new WebViewClient());
+>>>>>>> ac4ac6e76d452ebb3a3f528b1dec28434dfc823f
 
 //        {
 //            @Override

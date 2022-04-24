@@ -27,7 +27,11 @@ public class purchaseActivity extends AppCompatActivity {
 
     ImageButton btnBack, btnPay;
     TextView tv_Money;
+<<<<<<< HEAD
     JSONObject mTemp;
+=======
+    String mTemp;
+>>>>>>> ac4ac6e76d452ebb3a3f528b1dec28434dfc823f
     private RequestQueue queue;
     int pk = 12;//게시물 pk
     int temp = 0; //입금 구분자
@@ -46,6 +50,7 @@ public class purchaseActivity extends AppCompatActivity {
 //            final JSONObject object = new JSONObject();
 //            object.put("title",mTemp);
 
+<<<<<<< HEAD
             final JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
                 @Override
                 public void onResponse(JSONObject response) {
@@ -56,6 +61,17 @@ public class purchaseActivity extends AppCompatActivity {
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
+=======
+        try {
+            final JSONObject object = new JSONObject();
+            object.put("cost",mTemp);
+
+            final JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, object, new Response.Listener<JSONObject>() {
+                @Override
+                public void onResponse(JSONObject response) {
+                    mTemp = response.getString("cost");
+                    System.out.print("Test%%%%%%%%%%%%%%%%" + response);
+>>>>>>> ac4ac6e76d452ebb3a3f528b1dec28434dfc823f
                 }
             }, new Response.ErrorListener() {
                 @Override
@@ -63,6 +79,7 @@ public class purchaseActivity extends AppCompatActivity {
                     System.out.print("error" + error);
                 }
             })
+<<<<<<< HEAD
 
             {
                 @Override
@@ -80,6 +97,29 @@ public class purchaseActivity extends AppCompatActivity {
             queue.add(request);
 
         //tv_Money.setText(mTemp);
+=======
+            {
+                @Override
+                public Map<String, String> getHeaders() throws AuthFailureError {
+                    Map<String, String> headers = new HashMap<>();
+                    headers.put("Cookie", SessionControl.SessionControl.INSTANCE.getSess());
+                    headers.put("Content-Type","application/json");
+                    return headers;
+                }
+            };
+
+//            String cost = getText(mTemp).toString();
+//            Toast.makeText(this, cost, Toast.LENGTH_LONG).show();
+            request.setShouldCache(false);
+            queue.add(request);
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        //tv_Money.setText(mTemp);
+
+>>>>>>> ac4ac6e76d452ebb3a3f528b1dec28434dfc823f
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
