@@ -112,6 +112,7 @@ public class purchaseActivity extends AppCompatActivity {
                     Toast.makeText(getApplication(), "아직 입금이 확인되지 않았습니다!!!", Toast.LENGTH_SHORT).show();
                 }else{
                     Toast.makeText(getApplication(), "입금 완료!!!", Toast.LENGTH_SHORT).show();
+
                     finish();
                 }
             }

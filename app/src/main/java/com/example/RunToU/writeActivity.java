@@ -134,10 +134,12 @@ public class writeActivity extends AppCompatActivity {
 //                        request.setShouldCache(false);
 //                        queue.add(request);
                         startActivity(intent);
+                        finish();
 
                     }
                 } catch (NumberFormatException e) {
                     Toast.makeText(getApplication(), "요청서를 다시 확인해주세요.", Toast.LENGTH_SHORT).show();
+
                 }
             }
         });

@@ -40,11 +40,11 @@ public class workFragment extends Fragment {
         btn_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Fragment fragment= new Fragment(R.layout.fragment_write); // 객체 생성
-//                getFragmentManager().beginTransaction().add(R.id.workLayout, fragment).commit();
                 Intent intent = new Intent(getActivity(), writeActivity.class);
                 startActivity(intent);
-                getActivity().finish();
+
+//                Fragment fragment= new Fragment(R.layout.fragment_write); // 객체 생성
+//                getFragmentManager().beginTransaction().add(R.id.workLayout, fragment).commit();
             }
         });
         return view;
