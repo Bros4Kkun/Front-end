@@ -48,8 +48,6 @@ import net.daum.mf.map.api.MapView;
 public class writeActivity extends AppCompatActivity {
     //왜인진 모르겠으나 fragment로 했을 때는 오류가나고 안넘어감 -> (activity로 만들었음)
 
-    private static final int SEARCH_ADDRESS_ACTIVITY = 10000;
-
     private Spinner cateSpinner;
     private ArrayAdapter cateAdapter;
 
@@ -79,16 +77,9 @@ public class writeActivity extends AppCompatActivity {
         price_write = findViewById(R.id.price_write);
         detail_write = findViewById(R.id.detail_write);
         context_write = findViewById(R.id.context_write);
-        btnRoad = findViewById(R.id.btnRoad);
         btnGotopur = findViewById(R.id.btnGotopur);
 
-        btnRoad.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplication(), WebView_Adress.class);
-                startActivityForResult(intent, SEARCH_ADDRESS_ACTIVITY);
-            }
-        });
+
 
         btnGotopur.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -182,17 +173,17 @@ public class writeActivity extends AppCompatActivity {
         cateSpinner.setAdapter(cateAdapter);
     }
 
-    public void onActivityResult(int requestCode, int resultCode, Intent intent) {
-        super.onActivityResult(requestCode, resultCode, intent);
-        switch (requestCode) {
-            case SEARCH_ADDRESS_ACTIVITY:
-                if (resultCode == RESULT_OK) {
-                    String data = intent.getExtras().getString("data");
-                    if (data != null) {
-                        address_write.setText(data);
-                    }
-                }
-                break;
-        }
-    }
+//    public void onActivityResult(int requestCode, int resultCode, Intent intent) {
+//        super.onActivityResult(requestCode, resultCode, intent);
+//        switch (requestCode) {
+//            case SEARCH_ADDRESS_ACTIVITY:
+//                if (resultCode == RESULT_OK) {
+//                    String data = intent.getExtras().getString("data");
+//                    if (data != null) {
+//                        address_write.setText(data);
+//                    }
+//                }
+//                break;
+//        }
+//    }
 }

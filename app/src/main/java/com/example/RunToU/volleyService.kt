@@ -16,6 +16,7 @@ class volleyService {
         fun signVolley(
             context: Context,
             account: String,
+            realName : String,
             nickname: String,
             password: String,
             phonenumber: String,
@@ -25,7 +26,7 @@ class volleyService {
             val myJson = JSONObject()
 
             myJson.put("accountId", account)
-            myJson.put("realName", "test")
+            myJson.put("realName", realName)
             myJson.put("nickname", nickname)
             myJson.put("password", password)
             myJson.put("phoneNumber", phonenumber)

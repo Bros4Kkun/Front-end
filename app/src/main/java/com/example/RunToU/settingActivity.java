@@ -11,8 +11,5 @@ public class settingActivity extends AppCompatActivity {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle("설정");
-        actionBar.setDisplayHomeAsUpEnabled(true);
     }
 }

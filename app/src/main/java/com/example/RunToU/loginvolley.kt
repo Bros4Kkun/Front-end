@@ -34,7 +34,7 @@ class loginvolley {
             logJson.put("rawPassword", pw)
             logJson.put("role", role)
 
-            val requestBody = logJson
+
 
             val request = object : JsonObjectRequest(
                 Request.Method.POST,
@@ -54,6 +54,7 @@ class loginvolley {
                 override fun getHeaders(): Map<String, String> {
                     val headers = HashMap<String,String>()
                     headers.put("Content-Type", "application/json")
+
                     return headers
                 }
 
@@ -64,6 +65,9 @@ class loginvolley {
                     SessionControl.SessionControl.sess=cookie
                     println("TEST!!!!!!!!: ${SessionControl.SessionControl.sess}")
                     return super.parseNetworkResponse(response)
+
+
+
                 }
 
             }
