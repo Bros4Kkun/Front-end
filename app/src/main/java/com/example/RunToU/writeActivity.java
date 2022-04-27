@@ -96,48 +96,43 @@ public class writeActivity extends AppCompatActivity {
                         Toast.makeText(getApplication(), "금액을 정확히 작성해주세요.", Toast.LENGTH_SHORT).show();
                     } else {
                         Intent intent = new Intent(view.getContext(), purchaseActivity.class);
+                        intent.putExtra("cost", price);
 
-//                        intent.putExtra("title",title_write.getText().toString());
-//                        intent.putExtra("content", context_write.getText().toString());
-//                        intent.putExtra("category", cateSpinner.getSelectedItem().toString());
-//                        intent.putExtra("destination", detail_write.getText().toString());
-//                        intent.putExtra("cost", price);
+                        final JSONObject object = new JSONObject();
+                        object.put("title", title_write.getText().toString());
+                        object.put("content", context_write.getText().toString());
+                        object.put("category", cateSpinner.getSelectedItem().toString());
+                        object.put("destination", detail_write.getText().toString());
+                        object.put("cost", Integer.parseInt(price_write.getText().toString()));
+                        object.put("wishedDeadline", deadLine.toString());
 
-//                        final JSONObject object = new JSONObject();
-//                        object.put("title", title_write.getText().toString());
-//                        object.put("content", context_write.getText().toString());
-//                        object.put("category", cateSpinner.getSelectedItem().toString());
-//                        object.put("destination", detail_write.getText().toString());
-//                        object.put("cost", Integer.parseInt(price_write.getText().toString()));
-//                        object.put("wishedDeadline", deadLine.toString());
-//
-//                        final JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, url, object, new Response.Listener<JSONObject>() {
-//                            @Override
-//                            public void onResponse(JSONObject response) {
-//                                System.out.print("ok");
-//                            }
-//                        }, new Response.ErrorListener() {
-//                            @Override
-//                            public void onErrorResponse(VolleyError error) {
-//                                System.out.print("error");
-//                            }
-//                        }) {
-//                            @Override
-//                            public Map<String, String> getHeaders() throws AuthFailureError {
-//                                Map<String, String> headers = new HashMap<>();
-//                                headers.put("Cookie", SessionControl.SessionControl.INSTANCE.getSess());
-//                                headers.put("Content-Type", "application/json");
-//                                return headers;
-//                            }
-//                        };
-//
-//                        request.setShouldCache(false);
-//                        queue.add(request);
+                        final JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, url, object, new Response.Listener<JSONObject>() {
+                            @Override
+                            public void onResponse(JSONObject response) {
+                                Log.d("onResponse","OK" );
+                            }
+                        }, new Response.ErrorListener() {
+                            @Override
+                            public void onErrorResponse(VolleyError error) {
+                                Log.d("onError","errrrrrrr");
+                            }
+                        }) {
+                            @Override
+                            public Map<String, String> getHeaders() throws AuthFailureError {
+                                Map<String, String> headers = new HashMap<>();
+                                headers.put("Cookie", SessionControl.SessionControl.INSTANCE.getSess());
+                                headers.put("Content-Type", "application/json");
+                                return headers;
+                            }
+                        };
+
+                        request.setShouldCache(false);
+                        queue.add(request);
                         startActivity(intent);
                         finish();
 
                     }
-                } catch (NumberFormatException e) {
+                } catch (NumberFormatException | JSONException e) {
                     Toast.makeText(getApplication(), "요청서를 다시 확인해주세요.", Toast.LENGTH_SHORT).show();
 
                 }

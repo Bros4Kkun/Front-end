@@ -1,5 +1,6 @@
 package com.example.RunToU;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -33,71 +34,63 @@ public class purchaseActivity extends AppCompatActivity {
 
     ImageButton btnBack, btnPay;
     TextView tv_Money;
-    JSONObject mTemp;
+    JSONObject jsonTemp;
     private RequestQueue queue;
+    static Context context_pur;
     int pk = 12;//게시물 pk 변수 예정
-    int temp = 1; //입금 구분자
-    String url = "http://3.39.87.103/api/ordersheet/12";
+    static int temp = 0; //입금 구분자
+    int cost = 0;
+    String url = "http://3.39.87.103/api/ordersheet/"+ String.valueOf(pk);  //얼마인지만 작성되니까 로컬데이터(intent)로 이동시키면 될듯
+
+    //로컬데이터만 이동한다면 사실상 api 통신은 필요없는...걸지더
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_purchase);
 
+        context_pur = this;
+
         queue = Volley.newRequestQueue(this);
         tv_Money = findViewById(R.id.tv_Money);
         btnBack = findViewById(R.id.btnBack);
         btnPay = findViewById(R.id.btnPay);
 
-        Fragment fragment = new Fragment();
+        final JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
 
+                //아래의 코드는 특정 주문서를 눌렀을때로 가자
+//                    jsonTemp = response.getJSONObject("orderSheetItem");
+//                    cost = jsonTemp.getInt("cost");
+//                    Log.d("test", " mTemp.get(\"cost\")" +cost);
+//                    tv_Money.setText(String.valueOf(cost)+"원");
 
-//        Intent i = getIntent();
-//         String title = i.getStringExtra("title");
-//         String content = i.getStringExtra("content");
-//         String category = i.getStringExtra("category");
-//         String destination = i.getStringExtra("destination");
-//         int cost = i.getIntExtra("cost", -1);
-//         tv_Money.setText(cost);
+                Intent i = getIntent();
+                cost = i.getIntExtra("cost", -1);
+                tv_Money.setText(String.valueOf(cost));
 
-//        Bundle bundle = getIntent().getExtras();
-//        long cost = bundle.getLong("cost", -1);
-//        tv_Money;
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                System.out.print("error" + error);
+            }
+        })
 
+        {
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                Map<String, String> headers = new HashMap<>();
+                headers.put("Cookie", SessionControl.SessionControl.INSTANCE.getSess());
+                headers.put("Content-Type","application/json");
+                return headers;
+            }
+        };
 
-//            final JSONObject object = new JSONObject();
-//            object.put("title",mTemp);
-
-//        final JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
-//            @Override
-//            public void onResponse(JSONObject response) {
-//                try {
-//                    mTemp = response.getJSONObject("orderSheetItem");
-//                    temp = mTemp.getInt("cost");
-//                    tv_Money.setText(temp);
-//                } catch (JSONException e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        }, new Response.ErrorListener() {
-//            @Override
-//            public void onErrorResponse(VolleyError error) {
-//                System.out.print("error" + error);
-//            }
-//        })
-//
-//        {
-//            @Override
-//            public Map<String, String> getHeaders() throws AuthFailureError {
-//                Map<String, String> headers = new HashMap<>();
-//                //headers.put("Cookie", SessionControl.SessionControl.INSTANCE.getSess());
-//                headers.put("Content-Type","application/json");
-//                return headers;
-//            }
-//        };
-//
-//        request.setShouldCache(false);
-//        queue.add(request);
+        request.setShouldCache(false);
+        queue.add(request);
+        temp += 1;
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -114,6 +107,7 @@ public class purchaseActivity extends AppCompatActivity {
                 }else{
                     Toast.makeText(getApplication(), "입금 완료!!!", Toast.LENGTH_SHORT).show();
                     finish();
+                    //        http://3.39.87.103/api/ordersheet/test/pay/{orderSheetId} 써보기
                 }
             }
         });
