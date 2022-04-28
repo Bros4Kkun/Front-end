@@ -14,12 +14,19 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 
 import com.android.volley.AuthFailureError;
+import com.android.volley.Cache;
+import com.android.volley.Network;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.BasicNetwork;
+import com.android.volley.toolbox.DiskBasedCache;
+import com.android.volley.toolbox.HurlStack;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.google.gson.Gson;
+import com.google.gson.JsonElement;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -39,6 +46,9 @@ public class workFragment extends Fragment {
     private LinearLayoutManager linearLayoutManager;
 
     int temp = 0;
+    JSONArray jsonArray;
+    jsonData jsonData;
+
 
     String url = "http://3.39.87.103/api/ordersheet/list/ALL/1";
 
@@ -59,12 +69,17 @@ public class workFragment extends Fragment {
         getActivity().setTitle("심부름");
         ImageButton btn_add = view.findViewById(R.id.btn_add);
 
-        //http://3.39.87.103/api/ordersheet/list/{category}/{nowPage}
-
-        final JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
+        btn_add.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onResponse(JSONArray response) {
-                Log.d("TAG", response.toString());
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), writeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        final JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
 
                 recyclerView = getActivity().findViewById(R.id.rvWork);
                 linearLayoutManager = new LinearLayoutManager(getContext());
@@ -74,37 +89,9 @@ public class workFragment extends Fragment {
                 recyclerView.setAdapter(workAdapter);
 
                 try {
-                    JSONArray jsonArray = new JSONArray(response);
-                    Log.e("check", jsonArray.toString());
-                    for (int i = 0; i < jsonArray.length(); i++) {
-                        JSONObject jsonTemp = jsonArray.getJSONObject(i);
-
-                        title = jsonTemp.getString("title");
-                        content = jsonTemp.getString("content");
-                        cate = jsonTemp.getString("category");
-                        destination = jsonTemp.getString("destination");
-                        cost = jsonTemp.getInt("cost");
-
-//                        if(cate.equals("DELIVERY_AND_SHOPPING")){
-//                            image = R.drawable.cate_deli;
-//                        }else if(cate.equals("CLEANING_AND_HOUSEWORK")){
-//                            image = R.drawable.cate_clean;
-//                        }else if(cate.equals("DELIVERY_AND_INSTALLATION")){
-//                            image = R.drawable.cate_help;
-//                        }else if(cate.equals("ACCOMPANY")){
-//                            image = R.drawable.cate_help;
-//                        }else if(cate.equals("ANTI_BUG")){
-//                            image = R.drawable.cate_hunt;
-//                        }else if(cate.equals("ROLE_ACTING")){
-//                            image = R.drawable.cate_help;
-//                        }else{
-//                            image = R.drawable.cate_all;
-//                        }
-//
-                        workData workData = new workData(image, String.valueOf(cost), destination, content);
-                        arrayList.add(workData);
-                        workAdapter.notifyDataSetChanged();
-                    }
+                    jsonArray = response.getJSONArray("orderSheetItemSampleList");
+                    Log.d("tag", jsonArray.toString());
+                    jsonData.setJsonArrays(jsonArray);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -112,10 +99,9 @@ public class workFragment extends Fragment {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.d("fail", "errorrrrrrr");
+
             }
-        })
-        {
+        }){
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 Map<String, String> headers = new HashMap<>();
@@ -125,26 +111,53 @@ public class workFragment extends Fragment {
             }
         };
 
+        // Instantiate the cache
+        Cache cache = new DiskBasedCache(getContext().getCacheDir(), 1024 * 1024);
+        // Set up the network to use HttpURLConnection as the HTTP client.
+        Network network = new BasicNetwork(new HurlStack());
+        // Instantiate the RequestQueue with the cache and network.
+        queue = new RequestQueue(cache, network);
+        // Start the queue
+        queue.start();
+
         request.setShouldCache(false);
         queue.add(request);
 
-      //-----------------------------------------------------------------------------------------
-//                    jsonTemp = response.getJSONObject("orderSheetItem");
-//                    cate = jsonTemp.getString("category");
-//                    cost = jsonTemp.getInt("cost");
-//                    destination = jsonTemp.getString("destination");
-//                    content = jsonTemp.getString("content");
+        jsonArray = jsonData.getJsonArrays();
+        Log.d("tag", jsonArray.toString());
+        JSONObject jsonObject = null;
+        for(int i = 0; i < jsonArray.length(); i++){
+            try {
+                jsonObject = jsonArray.getJSONObject(i);
+                title = jsonObject.getString("title");
+                content = jsonObject.getString("content");
+                cate = jsonObject.getString("category");
+                destination = jsonObject.getString("destination");
+                cost = jsonObject.getInt("cost");
 
+                if(cate.equals("DELIVERY_AND_SHOPPING")){
+                    image = R.drawable.cate_deli;
+                }else if(cate.equals("CLEANING_AND_HOUSEWORK")){
+                    image = R.drawable.cate_clean;
+                }else if(cate.equals("DELIVERY_AND_INSTALLATION")){
+                    image = R.drawable.cate_help;
+                }else if(cate.equals("ACCOMPANY")){
+                    image = R.drawable.cate_help;
+                }else if(cate.equals("ANTI_BUG")){
+                    image = R.drawable.cate_hunt;
+                }else if(cate.equals("ROLE_ACTING")){
+                    image = R.drawable.cate_help;
+                }else{
+                    image = R.drawable.cate_all;
+                }
 
-        //JSON배열로 받아와서 까야하나?
-
-        btn_add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), writeActivity.class);
-                startActivity(intent);
+                workData workData = new workData(image, String.valueOf(cost), destination, content);
+                arrayList.add(workData);
+                workAdapter.notifyDataSetChanged();
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
-        });
+        }
         return view;
     }
 }
