@@ -3,95 +3,100 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-
-    <TextView
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:gravity="center_horizontal"
-        app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="@string/login_text"
-        android:textSize="40sp"
-        android:textColor="@color/teal_700"/>
-
-    <EditText
-        android:id="@+id/log_id"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:autofillHints="ID"
-        android:inputType="text"
-        />
-
-        <EditText
-        android:id="@+id/log_pw"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-
-        android:autofillHints="Password"
-        android:inputType="textPassword"
-            />
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <Button
-            android:id="@+id/per_login"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="30dp"
-
-            android:layout_marginRight="30dp"
-            android:layout_weight="1"
-            android:text="@string/pe_login"
-            app:backgroundTint="@color/teal_700" />
-
-        <Button
-            android:id="@+id/ord_login"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_weight="1"
-            android:text="@string/or_login"
-            android:onClick="onclick1"
-            app:backgroundTint="@color/teal_200" />
-
-    </LinearLayout>
-    <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="40dp"
-        android:layout_marginTop="25dp"
-        android:orientation="horizontal">
         <TextView
 
-            android:layout_marginLeft="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/login_guess"
-            android:textSize="20sp"
-            android:layout_weight="1"/>
+            android:layout_marginTop="40dp"
+            android:gravity="center_horizontal"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Run To U"
+            android:textSize="40sp"
+            android:textColor="@color/teal_700"/>
 
-        <Button
-            android:id="@+id/signup_button"
+        <EditText
+            android:id="@+id/log_id"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:hint="ID"
             android:layout_marginRight="15dp"
-            android:layout_weight="1.2"
-            android:text="@string/sign_up"
-            app:backgroundTint="@color/wgray" />
+            android:layout_marginLeft="15dp"
+            android:inputType="text"
+            android:background="@drawable/edittext"
+            />
+
+        <EditText
+            android:id="@+id/log_pw"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/edittext"
+            android:hint="Password"
+            android:inputType="textPassword"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/per_login"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:text="@string/pe_login"
+                app:backgroundTint="@color/teal_700" />
+
+            <Button
+                android:id="@+id/ord_login"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:text="@string/or_login"
+                android:onClick="onclick1"
+                app:backgroundTint="@color/green" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal">
+            <TextView
+
+                android:layout_marginLeft="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/login_guess"
+                android:textSize="20sp"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/signup_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1.2"
+                android:text="@string/sign_up"
+                app:backgroundTint="@color/wgray" />
+        </LinearLayout>
     </LinearLayout>
-</LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
