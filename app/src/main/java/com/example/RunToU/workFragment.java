@@ -46,7 +46,7 @@ public class workFragment extends Fragment {
     private LinearLayoutManager linearLayoutManager;
 
     int temp = 0;
-    JSONArray jsonArray;
+    JSONArray jsonArray = new JSONArray();
     jsonData jsonData;
 
 
@@ -55,7 +55,7 @@ public class workFragment extends Fragment {
     //받아와서 뿌리는 사용자 정보
     String title;
     String content;
-    String cate;
+    String cate = "string";
     String destination;
     int cost = 0;
 
@@ -89,17 +89,48 @@ public class workFragment extends Fragment {
                 recyclerView.setAdapter(workAdapter);
 
                 try {
-                    jsonArray = response.getJSONArray("orderSheetItemSampleList");
-                    Log.d("tag", jsonArray.toString());
-                    jsonData.setJsonArrays(jsonArray);
+                    //jsonObject = response.getJSONObject("");
+                    JSONObject jsonObject = new JSONObject(String.valueOf(response));
+                    jsonArray = jsonObject.getJSONArray("orderSheetItemSampleList");
+                    Log.d("tag", "jsonArray : " + jsonArray.toString());
+
+                    for(int i = 0; i < jsonArray.length(); i++)
+                    {
+                        JSONObject jTemp  = jsonArray.getJSONObject(i);
+                        title = jTemp.getString("title");
+                        content = jTemp.getString("contentSample");
+                        cate = jTemp.getString("category");
+                        destination = jTemp.getString("destination");
+                        cost = jTemp.getInt("cost");
+
+                        if(cate.equals("DELIVERY_AND_SHOPPING")){
+                            image = R.drawable.cate_deli;
+                        }else if(cate.equals("CLEANING_AND_HOUSEWORK")){
+                            image = R.drawable.cate_clean;
+                        }else if(cate.equals("DELIVERY_AND_INSTALLATION")){
+                            image = R.drawable.cate_help;
+                        }else if(cate.equals("ACCOMPANY")){
+                            image = R.drawable.cate_help;
+                        }else if(cate.equals("ANTI_BUG")){
+                            image = R.drawable.cate_hunt;
+                        }else if(cate.equals("ROLE_ACTING")){
+                            image = R.drawable.cate_help;
+                        }else{
+                            image = R.drawable.cate_all;
+                        }
+                        workData workData = new workData(image, String.valueOf(cost), destination, content);
+                        arrayList.add(workData);
+                        workAdapter.notifyDataSetChanged();
+                    }
                 } catch (JSONException e) {
                     e.printStackTrace();
+                    Log.e("error", "error from jsonSet try/catch");
                 }
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-
+                Log.e("error", "error!!!!");
             }
         }){
             @Override
@@ -110,6 +141,8 @@ public class workFragment extends Fragment {
                 return headers;
             }
         };
+
+        //requestQueue가 Deprecated됨을 해결하기 위한 코드
 
         // Instantiate the cache
         Cache cache = new DiskBasedCache(getContext().getCacheDir(), 1024 * 1024);
@@ -122,42 +155,6 @@ public class workFragment extends Fragment {
 
         request.setShouldCache(false);
         queue.add(request);
-
-        jsonArray = jsonData.getJsonArrays();
-        Log.d("tag", jsonArray.toString());
-        JSONObject jsonObject = null;
-        for(int i = 0; i < jsonArray.length(); i++){
-            try {
-                jsonObject = jsonArray.getJSONObject(i);
-                title = jsonObject.getString("title");
-                content = jsonObject.getString("content");
-                cate = jsonObject.getString("category");
-                destination = jsonObject.getString("destination");
-                cost = jsonObject.getInt("cost");
-
-                if(cate.equals("DELIVERY_AND_SHOPPING")){
-                    image = R.drawable.cate_deli;
-                }else if(cate.equals("CLEANING_AND_HOUSEWORK")){
-                    image = R.drawable.cate_clean;
-                }else if(cate.equals("DELIVERY_AND_INSTALLATION")){
-                    image = R.drawable.cate_help;
-                }else if(cate.equals("ACCOMPANY")){
-                    image = R.drawable.cate_help;
-                }else if(cate.equals("ANTI_BUG")){
-                    image = R.drawable.cate_hunt;
-                }else if(cate.equals("ROLE_ACTING")){
-                    image = R.drawable.cate_help;
-                }else{
-                    image = R.drawable.cate_all;
-                }
-
-                workData workData = new workData(image, String.valueOf(cost), destination, content);
-                arrayList.add(workData);
-                workAdapter.notifyDataSetChanged();
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        }
         return view;
     }
 }
