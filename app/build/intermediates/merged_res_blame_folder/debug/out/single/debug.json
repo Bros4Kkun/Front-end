@@ -20,12 +20,20 @@
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\drawable\\writebg.jpg"
     },
     {
-        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_rectangle_2.png.flat",
-        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\rectangle_2.png"
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_del123.png.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\del123.png"
+    },
+    {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\layout_room_right_list_items.xml.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\layout\\room_right_list_items.xml"
     },
     {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_message.jpg.flat",
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\drawable-v24\\message.jpg"
+    },
+    {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_rectangle_2.png.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\rectangle_2.png"
     },
     {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable_chat_bubble.xml.flat",
@@ -52,6 +60,10 @@
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_del123.png.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\del123.png"
+    },
+    {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_write.xml.flat",
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\layout\\activity_write.xml"
     },
@@ -64,8 +76,20 @@
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\layout\\fragment_work.xml"
     },
     {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_del123_round.png.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\mipmap-hdpi\\del123_round.png"
+    },
+    {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable_selectorbottom_navi_search_icon.png.flat",
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\drawable\\selectorbottom_navi_search_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_del123_round.xml.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\mipmap-anydpi-v26\\del123_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_del123_foreground.png.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\del123_foreground.png"
     },
     {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_log.xml.flat",
@@ -76,8 +100,16 @@
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\drawable\\btnremove.jpg"
     },
     {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_del123_foreground.png.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\del123_foreground.png"
+    },
+    {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable_jobrec.jpg.flat",
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\drawable\\jobrec.jpg"
+    },
+    {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_del123_foreground.xml.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\del123_foreground.xml"
     },
     {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_setting.xml.flat",
@@ -90,6 +122,10 @@
     {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_spider.jpg.flat",
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\drawable-v24\\spider.jpg"
+    },
+    {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\layout_room2.xml.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\layout\\room2.xml"
     },
     {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_arrow_upward_black_24dp.png.flat",
@@ -144,6 +180,10 @@
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_submit.jpg.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\drawable-v24\\submit.jpg"
+    },
+    {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable_workbg.jpg.flat",
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\drawable\\workbg.jpg"
     },
@@ -158,6 +198,14 @@
     {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_del123.png.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\del123.png"
+    },
+    {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_del123_round.png.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\mipmap-mdpi\\del123_round.png"
     },
     {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable_selector_bottom_navi_msg_icon.png.flat",
@@ -180,6 +228,10 @@
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\drawable\\btnpay.jpg"
     },
     {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_del123_round.png.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\mipmap-xhdpi\\del123_round.png"
+    },
+    {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_rectangle_2.xml.flat",
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\rectangle_2.xml"
     },
@@ -192,6 +244,10 @@
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\drawable\\expandbtn.jpg"
     },
     {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_del123.png.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\mipmap-mdpi\\del123.png"
+    },
+    {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
@@ -202,6 +258,10 @@
     {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable_cate_hunt.jpg.flat",
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\drawable\\cate_hunt.jpg"
+    },
+    {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_del123_round.png.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\mipmap-xxhdpi\\del123_round.png"
     },
     {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_arrow_upward_black_24dp.png.flat",
@@ -296,16 +356,36 @@
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
     },
     {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_del123.xml.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\del123.xml"
+    },
+    {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_rectangle_2.xml.flat",
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\rectangle_2.xml"
+    },
+    {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_del123.png.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\del123.png"
     },
     {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_checked.jpg.flat",
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\drawable-v24\\checked.jpg"
     },
     {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_del123.png.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\mipmap-xxxhdpi\\del123.png"
+    },
+    {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_msg.xml.flat",
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\layout\\fragment_msg.xml"
+    },
+    {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_del123_round.png.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\mipmap-xxxhdpi\\del123_round.png"
+    },
+    {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_del123_foreground.png.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\del123_foreground.png"
     },
     {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_my_profile.xml.flat",
@@ -348,6 +428,14 @@
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\drawable-v24\\selectorbottom_navi_search_icon.png"
     },
     {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\layout_room_center_list_items.xml.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\layout\\room_center_list_items.xml"
+    },
+    {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_del123_foreground.png.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\del123_foreground.png"
+    },
+    {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
@@ -356,20 +444,24 @@
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\rectangle_2.png"
     },
     {
-        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_background.xml"
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_del123.png.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\del123.png"
     },
     {
-        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_arrow_downward_black_24dp.png.flat",
-        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\drawable-mdpi\\ic_arrow_downward_black_24dp.png"
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_short_jobrec.xml.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\layout\\fragment_short_jobrec.xml"
     },
     {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_review.jpg.flat",
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\drawable-v24\\review.jpg"
     },
     {
-        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_short_jobrec.xml.flat",
-        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\layout\\fragment_short_jobrec.xml"
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_arrow_downward_black_24dp.png.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\drawable-mdpi\\ic_arrow_downward_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_background.xml"
     },
     {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_purchase.xml.flat",
@@ -380,8 +472,20 @@
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\drawable\\jobrec_title.jpg"
     },
     {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_del123.xml.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\mipmap-anydpi-v26\\del123.xml"
+    },
+    {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_job.xml.flat",
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\layout\\item_job.xml"
+    },
+    {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_edittext.xml.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\drawable-xxhdpi\\edittext.xml"
+    },
+    {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_del123.png.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\del123.png"
     },
     {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_background.png.flat",
@@ -392,12 +496,16 @@
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_background.png"
     },
     {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_chat_bubble.xml.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\drawable-v24\\chat_bubble.xml"
+    },
+    {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_back.jpg.flat",
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\drawable-v24\\back.jpg"
     },
     {
-        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_chat_bubble.xml.flat",
-        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\drawable-v24\\chat_bubble.xml"
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_del123_foreground.png.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\del123_foreground.png"
     },
     {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btnadd.jpg.flat",
@@ -426,6 +534,14 @@
     {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\layout_bottom_navigation_tab.xml.flat",
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\layout\\bottom_navigation_tab.xml"
+    },
+    {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_del123.png.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\mipmap-xxhdpi\\del123.png"
+    },
+    {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_del123.png.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\mipmap-xhdpi\\del123.png"
     },
     {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable_categoriesbar.jpg.flat",
@@ -460,12 +576,20 @@
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\layout\\item_work.xml"
     },
     {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_del123.png.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\mipmap-hdpi\\del123.png"
+    },
+    {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_child.xml.flat",
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\layout\\list_child.xml"
     },
     {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_verification.xml.flat",
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\layout\\activity_verification.xml"
+    },
+    {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\layout_room_left_list_items.xml.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\layout\\room_left_list_items.xml"
     },
     {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_selector_bottom_navi_home_icon.png.flat",
@@ -482,6 +606,10 @@
     {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_rectangle_1.png.flat",
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\rectangle_1.png"
+    },
+    {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_del123_foreground.png.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\del123_foreground.png"
     },
     {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_details.xml.flat",
@@ -516,12 +644,12 @@
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\drawable\\cate_clean.jpg"
     },
     {
-        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
-    },
-    {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\drawable_plus.jpg.flat",
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\drawable\\plus.jpg"
+    },
+    {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
     },
     {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_introduce.xml.flat",

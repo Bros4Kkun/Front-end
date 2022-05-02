@@ -9,7 +9,7 @@ import java.sql.DriverManager.println
 
 class idvolley {
     object idvolley{
-    val url =  "http://3.38.254.41/api/user/signup/accountid"
+    val url =  "http://3.39.87.103/api/user/signup/accountid"
     fun idcheckVolley(context: Context, id : String, duplicatedAccountId: (Boolean) -> Unit)
     {
 

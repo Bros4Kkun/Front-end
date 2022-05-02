@@ -9,7 +9,7 @@ import java.sql.DriverManager.println
 
 class nickvolley {
     object nickvolley{
-        val url =  "http://3.38.254.41/api/user/signup/nickname"
+        val url =  "http://3.39.87.103/api/user/signup/nickname"
         fun nickcheckVolley(context: Context, nick : String, duplicatedNickname: (Boolean) -> Unit)
         {
 

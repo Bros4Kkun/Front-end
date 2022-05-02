@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:2:1-57:12
-INJECTED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:2:1-57:12
-INJECTED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:2:1-57:12
-INJECTED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:2:1-57:12
+ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:2:1-59:12
+INJECTED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:2:1-59:12
+INJECTED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:2:1-59:12
+INJECTED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:2:1-59:12
 MERGED from [androidx.databinding:databinding-adapters:4.1.1] C:\Users\whdal\.gradle\caches\transforms-3\5aac12db0775f1aea58df004dac13e3f\transformed\databinding-adapters-4.1.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.databinding:databinding-runtime:4.1.1] C:\Users\whdal\.gradle\caches\transforms-3\62231a3381fb50ec0141bdbbd0f5910f\transformed\databinding-runtime-4.1.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.databinding:viewbinding:4.1.1] C:\Users\whdal\.gradle\caches\transforms-3\031262d2a5ca5e7c5c353f7ed75dd919\transformed\jetified-viewbinding-4.1.1\AndroidManifest.xml:17:1-22:12
@@ -19,6 +19,8 @@ MERGED from [com.google.android.gms:play-services-auth:20.1.0] C:\Users\whdal\.g
 MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\whdal\.gradle\caches\transforms-3\6feeed4234385d13bd8b23f6a3973a27\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:17:1-83:12
 MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.1] C:\Users\whdal\.gradle\caches\transforms-3\ff4af92a948e668ee9e8fdd7e15a1898\transformed\jetified-play-services-auth-api-phone-18.0.1\AndroidManifest.xml:2:1-7:12
 MERGED from [com.android.volley:volley:1.1.0] C:\Users\whdal\.gradle\caches\transforms-3\eb47c5e3a85f70b731578509764eb3cd\transformed\jetified-volley-1.1.0\AndroidManifest.xml:2:1-11:12
+MERGED from [io.reactivex.rxjava2:rxandroid:2.1.0] C:\Users\whdal\.gradle\caches\transforms-3\61429ffd08aab738ffa76dddfa9b3aae\transformed\jetified-rxandroid-2.1.0\AndroidManifest.xml:15:1-20:12
+MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\whdal\.gradle\caches\transforms-3\fa1ba9cf519542b008243b6bf62d2a8f\transformed\jetified-circleimageview-3.1.0\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.firebase:firebase-analytics:20.1.0] C:\Users\whdal\.gradle\caches\transforms-3\686ca65d371a5ad9482dff693c799c8f\transformed\jetified-firebase-analytics-20.1.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-measurement-api:20.1.0] C:\Users\whdal\.gradle\caches\transforms-3\8bf5dc047c3ce44dff485d3b158fe1ff\transformed\jetified-play-services-measurement-api-20.1.0\AndroidManifest.xml:17:1-36:12
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\whdal\.gradle\caches\transforms-3\4d55918eede5f3ce1c8a6c341a4a964f\transformed\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:2:1-10:12
@@ -80,20 +82,20 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\whdal\.gradle\ca
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\whdal\.gradle\caches\transforms-3\5c6b4ed95b94625836f57799a753d510\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\whdal\.gradle\caches\transforms-3\2441050f909539ec1e67a4df3c29c86a\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\whdal\.gradle\caches\transforms-3\23c8fca7bdcb0a67b93617f6c6dcb191\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:2:1-57:12
-INJECTED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:2:1-57:12
-INJECTED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:2:1-59:12
+INJECTED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:2:1-59:12
+INJECTED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:2:1-59:12
 	package
 		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:3:5-33
 		INJECTED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:2:1-57:12
+		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:2:1-59:12
 		INJECTED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:2:1-57:12
+		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:2:1-59:12
 		INJECTED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:2:11-69
@@ -118,7 +120,7 @@ ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidMani
 	android:name
 		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:7:22-76
 application
-ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:11:5-55:19
+ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:11:5-57:19
 MERGED from [com.google.firebase:firebase-analytics-ktx:20.1.0] C:\Users\whdal\.gradle\caches\transforms-3\59dae0bb0d5a431949c51bc826572604\transformed\jetified-firebase-analytics-ktx-20.1.0\AndroidManifest.xml:7:5-15:19
 MERGED from [com.google.firebase:firebase-analytics-ktx:20.1.0] C:\Users\whdal\.gradle\caches\transforms-3\59dae0bb0d5a431949c51bc826572604\transformed\jetified-firebase-analytics-ktx-20.1.0\AndroidManifest.xml:7:5-15:19
 MERGED from [com.google.firebase:firebase-auth-ktx:21.0.1] C:\Users\whdal\.gradle\caches\transforms-3\a3d36230e68a1e10f6a4bc87f7680caf\transformed\jetified-firebase-auth-ktx-21.0.1\AndroidManifest.xml:7:5-15:19
@@ -135,6 +137,8 @@ MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\whdal\.gradle\ca
 MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\whdal\.gradle\caches\transforms-3\6feeed4234385d13bd8b23f6a3973a27\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:26:5-81:19
 MERGED from [com.android.volley:volley:1.1.0] C:\Users\whdal\.gradle\caches\transforms-3\eb47c5e3a85f70b731578509764eb3cd\transformed\jetified-volley-1.1.0\AndroidManifest.xml:9:5-20
 MERGED from [com.android.volley:volley:1.1.0] C:\Users\whdal\.gradle\caches\transforms-3\eb47c5e3a85f70b731578509764eb3cd\transformed\jetified-volley-1.1.0\AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\whdal\.gradle\caches\transforms-3\fa1ba9cf519542b008243b6bf62d2a8f\transformed\jetified-circleimageview-3.1.0\AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\whdal\.gradle\caches\transforms-3\fa1ba9cf519542b008243b6bf62d2a8f\transformed\jetified-circleimageview-3.1.0\AndroidManifest.xml:9:5-20
 MERGED from [com.google.firebase:firebase-analytics:20.1.0] C:\Users\whdal\.gradle\caches\transforms-3\686ca65d371a5ad9482dff693c799c8f\transformed\jetified-firebase-analytics-20.1.0\AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-analytics:20.1.0] C:\Users\whdal\.gradle\caches\transforms-3\686ca65d371a5ad9482dff693c799c8f\transformed\jetified-firebase-analytics-20.1.0\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-measurement-api:20.1.0] C:\Users\whdal\.gradle\caches\transforms-3\8bf5dc047c3ce44dff485d3b158fe1ff\transformed\jetified-play-services-measurement-api-20.1.0\AndroidManifest.xml:26:5-34:19
@@ -269,6 +273,12 @@ ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidMani
 		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:53:13-49
 	android:name
 		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:52:19-67
+activity#com.example.RunToU.ChatRoomActivity2
+ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:54:9-55:51
+	android:theme
+		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:55:13-49
+	android:name
+		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:54:19-52
 uses-sdk
 INJECTED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml
@@ -303,6 +313,10 @@ MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.1] C:\User
 MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.1] C:\Users\whdal\.gradle\caches\transforms-3\ff4af92a948e668ee9e8fdd7e15a1898\transformed\jetified-play-services-auth-api-phone-18.0.1\AndroidManifest.xml:5:5-44
 MERGED from [com.android.volley:volley:1.1.0] C:\Users\whdal\.gradle\caches\transforms-3\eb47c5e3a85f70b731578509764eb3cd\transformed\jetified-volley-1.1.0\AndroidManifest.xml:7:5-43
 MERGED from [com.android.volley:volley:1.1.0] C:\Users\whdal\.gradle\caches\transforms-3\eb47c5e3a85f70b731578509764eb3cd\transformed\jetified-volley-1.1.0\AndroidManifest.xml:7:5-43
+MERGED from [io.reactivex.rxjava2:rxandroid:2.1.0] C:\Users\whdal\.gradle\caches\transforms-3\61429ffd08aab738ffa76dddfa9b3aae\transformed\jetified-rxandroid-2.1.0\AndroidManifest.xml:18:5-43
+MERGED from [io.reactivex.rxjava2:rxandroid:2.1.0] C:\Users\whdal\.gradle\caches\transforms-3\61429ffd08aab738ffa76dddfa9b3aae\transformed\jetified-rxandroid-2.1.0\AndroidManifest.xml:18:5-43
+MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\whdal\.gradle\caches\transforms-3\fa1ba9cf519542b008243b6bf62d2a8f\transformed\jetified-circleimageview-3.1.0\AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\whdal\.gradle\caches\transforms-3\fa1ba9cf519542b008243b6bf62d2a8f\transformed\jetified-circleimageview-3.1.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.firebase:firebase-analytics:20.1.0] C:\Users\whdal\.gradle\caches\transforms-3\686ca65d371a5ad9482dff693c799c8f\transformed\jetified-firebase-analytics-20.1.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-analytics:20.1.0] C:\Users\whdal\.gradle\caches\transforms-3\686ca65d371a5ad9482dff693c799c8f\transformed\jetified-firebase-analytics-20.1.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-measurement-api:20.1.0] C:\Users\whdal\.gradle\caches\transforms-3\8bf5dc047c3ce44dff485d3b158fe1ff\transformed\jetified-play-services-measurement-api-20.1.0\AndroidManifest.xml:20:5-44

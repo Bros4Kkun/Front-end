@@ -51,6 +51,8 @@
             android:theme="@style/Theme.Runtyou"/>
         <activity android:name="com.example.RunToU.jobrecActivity"
             android:theme="@style/Theme.Runtyou"/>
+        <activity android:name=".ChatRoomActivity2"
+            android:theme="@style/Theme.Runtyou"/>
 
     </application>
 

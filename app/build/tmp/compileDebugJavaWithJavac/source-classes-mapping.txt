@@ -31,6 +31,8 @@ com/example/RunToU/ExpandableListAdapter.java
  com.example.RunToU.ExpandableListAdapter$Item
  com.example.RunToU.ExpandableListAdapter$ListChildViewHolder
  com.example.RunToU.ExpandableListAdapter$ListHeaderViewHolder
+androidx/databinding/DataBindingComponent.java
+ androidx.databinding.DataBindingComponent
 com/example/RunToU/jobAdapter.java
  com.example.RunToU.jobAdapter
  com.example.RunToU.jobAdapter$1
@@ -39,6 +41,8 @@ com/example/RunToU/revrecFragment.java
  com.example.RunToU.revrecFragment
 com/example/RunToU/databinding/FragmentRevrecBinding.java
  com.example.RunToU.databinding.FragmentRevrecBinding
+com/example/RunToU/databinding/RoomLeftListItemsBinding.java
+ com.example.RunToU.databinding.RoomLeftListItemsBinding
 com/example/RunToU/verificationActivity.java
  com.example.RunToU.verificationActivity
 com/example/RunToU/jobData.java
@@ -49,8 +53,13 @@ com/example/RunToU/purchaseActivity.java
  com.example.RunToU.purchaseActivity$2
 com/example/RunToU/settingActivity.java
  com.example.RunToU.settingActivity
+com/example/RunToU/databinding/RoomRightListItemsBinding.java
+ com.example.RunToU.databinding.RoomRightListItemsBinding
 com/example/RunToU/databinding/FragmentIntroduceBinding.java
  com.example.RunToU.databinding.FragmentIntroduceBinding
+com/example/RunToU/Code.java
+ com.example.RunToU.Code
+ com.example.RunToU.Code$ViewType
 com/example/RunToU/reviewAdapter.java
  com.example.RunToU.reviewAdapter
  com.example.RunToU.reviewAdapter$1
@@ -68,6 +77,11 @@ com/example/RunToU/DataBinderMapperImpl.java
  com.example.RunToU.DataBinderMapperImpl$InnerLayoutIdLookup
 com/example/RunToU/databinding/FragmentNoticeBinding.java
  com.example.RunToU.databinding.FragmentNoticeBinding
+com/example/RunToU/ChatAdpater.java
+ com.example.RunToU.ChatAdpater
+ com.example.RunToU.ChatAdpater$CenterViewHolder
+ com.example.RunToU.ChatAdpater$LeftViewHolder
+ com.example.RunToU.ChatAdpater$RightViewHolder
 com/example/RunToU/databinding/FragmentWorkBinding.java
  com.example.RunToU.databinding.FragmentWorkBinding
 com/example/RunToU/databinding/ActivitySettingBinding.java
@@ -84,10 +98,14 @@ com/example/RunToU/databinding/FragmentProfileBinding.java
  com.example.RunToU.databinding.FragmentProfileBinding
 com/example/RunToU/databinding/ActivityVerificationBinding.java
  com.example.RunToU.databinding.ActivityVerificationBinding
+com/example/RunToU/databinding/Room2Binding.java
+ com.example.RunToU.databinding.Room2Binding
 com/example/RunToU/introduceFragment.java
  com.example.RunToU.introduceFragment
 com/example/RunToU/databinding/ActivityMainBinding.java
  com.example.RunToU.databinding.ActivityMainBinding
+com/example/RunToU/databinding/RoomCenterListItemsBinding.java
+ com.example.RunToU.databinding.RoomCenterListItemsBinding
 com/example/RunToU/reviewData.java
  com.example.RunToU.reviewData
 com/example/RunToU/noticeFragment.java
@@ -128,6 +146,8 @@ com/example/RunToU/databinding/FragmentMyProfileBinding.java
  com.example.RunToU.databinding.FragmentMyProfileBinding
 com/example/RunToU/databinding/ActivitySingupBinding.java
  com.example.RunToU.databinding.ActivitySingupBinding
+com/example/RunToU/Dataitem.java
+ com.example.RunToU.Dataitem
 com/example/RunToU/workData.java
  com.example.RunToU.workData
 com/example/RunToU/reviewActivity.java
@@ -147,5 +167,6 @@ com/example/RunToU/edit_introduceActivity.java
  com.example.RunToU.edit_introduceActivity
  com.example.RunToU.edit_introduceActivity$1
  com.example.RunToU.edit_introduceActivity$2
-androidx/databinding/DataBindingComponent.java
- androidx.databinding.DataBindingComponent
+com/example/RunToU/ChatRoomActivity2.java
+ com.example.RunToU.ChatRoomActivity2
+ com.example.RunToU.ChatRoomActivity2$1

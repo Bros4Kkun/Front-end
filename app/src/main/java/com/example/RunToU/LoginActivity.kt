@@ -22,19 +22,7 @@ class LoginActivity : AppCompatActivity() {
     private var user : Int = 1
     private var userid : String? = null
     private var userpw : String? = null
-    val logger = Logger.getLogger("STOMP")
 
-    lateinit var stompConnection : Disposable
-    lateinit var topic : Disposable
-
-    val url1 = "ws://3.39.87.103/ws-stomp"
-    val intervalMillis = 1000L
-    val client = OkHttpClient.Builder()
-        .readTimeout(10,TimeUnit.SECONDS)
-        .writeTimeout(10,TimeUnit.SECONDS)
-        .connectTimeout(10,TimeUnit.SECONDS)
-        .build()
-    val stomp = StompClient(client, intervalMillis).apply { this@apply.url = url1 }
 
 
 
@@ -100,21 +88,7 @@ class LoginActivity : AppCompatActivity() {
                         Toast.makeText(this@LoginActivity, "요청자 로그인 성공", Toast.LENGTH_SHORT).show()
                         val intent1 = Intent(this@LoginActivity, MainActivity::class.java)
                         startActivity(intent1)
-                        stompConnection = stomp.connect().subscribe(){
-                            when(it.type){
-                                Event.Type.OPENED -> {
-                                    topic = stomp.join("/queue/orderer")
-                                        .subscribe { logger.log(Level.INFO, it) }
 
-                                }
-                                Event.Type.CLOSED -> {
-
-                                }
-                                Event.Type.ERROR -> {
-
-                                }
-                            }
-                        }
                         finish()
                     } else {
                         Toast.makeText(
