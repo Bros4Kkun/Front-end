@@ -1,20 +1,12 @@
 package com.example.RunToU
 
 import android.content.Intent
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.gmail.bishoybasily.stomp.lib.*
-import io.reactivex.disposables.Disposable
-
 import kotlinx.android.synthetic.main.activity_login.*
-import okhttp3.OkHttpClient
-import java.util.concurrent.TimeUnit
-import java.util.logging.Level
-import java.util.logging.Logger
 
 
 class LoginActivity : AppCompatActivity() {
@@ -22,10 +14,10 @@ class LoginActivity : AppCompatActivity() {
     private var user : Int = 1
     private var userid : String? = null
     private var userpw : String? = null
-
-
-
-
+    private val SET_COOKIE_KEY = "Set-Cookie"
+    private val COOKIE_KEY = "Cookie"
+    private val SESSION_COOKIE = "JSESSIONID"
+    var login_hashMap = HashMap<String,Any>()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,7 +25,7 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        val but1 = per_login as Button
+       val but1 = per_login as Button
         but1!!.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
                 userid = log_id.text.toString()
@@ -110,9 +102,9 @@ class LoginActivity : AppCompatActivity() {
             }
         })
 
-    }
+        }
 
-}
+    }
 
 
 

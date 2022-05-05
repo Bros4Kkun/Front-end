@@ -20,27 +20,27 @@ import java.util.concurrent.TimeUnit
 
 class SingupActivity : AppCompatActivity() {
 
-    val auth = Firebase.auth
-    var verificationId = ""
-    private var sid: String = ""
-    private var realName: String=""
-    private var pw: String = ""
-    private var nick: String = ""
-    private var pwch: String = ""
-    private var ph_nu: String = ""
-    private var id_check: Int = 1
-    private var pw_check: Int? = 0
+        val auth = Firebase.auth
+        var verificationId = ""
+        private var sid: String = ""
+        private var realName: String=""
+        private var pw: String = ""
+        private var nick: String = ""
+        private var pwch: String = ""
+        private var ph_nu: String = ""
+        private var id_check: Int = 1
+        private var pw_check: Int? = 0
 
-    var idcheckbool = 0
-    var nickcheckbool = 0
+        var idcheckbool = 0
+        var nickcheckbool = 0
 
 
     private fun signInWithPhoneAuthCredential(credential: PhoneAuthCredential) {
         auth.signInWithCredential(credential)
-            .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful) { }
-                else {  }
-            }
+        .addOnCompleteListener(this) { task ->
+            if (task.isSuccessful) { }
+            else {  }
+        }
     }
 
 
@@ -108,81 +108,82 @@ class SingupActivity : AppCompatActivity() {
         })
         val but3 = si_ve_ch as Button
         but3!!.setOnClickListener (object : View.OnClickListener {
-            override fun onClick(p0: View?) {
-                ph_nu= si_ve_nu.text.toString()
-                val callbacks = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
-                    override fun onVerificationCompleted(credential: PhoneAuthCredential) { }
-                    override fun onVerificationFailed(e: FirebaseException) { }
-                    override fun onCodeSent(verificationId: String, token: PhoneAuthProvider.ForceResendingToken){
-                        this@SingupActivity.verificationId= verificationId
+                override fun onClick(p0: View?) {
+                    ph_nu= si_ve_nu.text.toString()
+                    val callbacks = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+                        override fun onVerificationCompleted(credential: PhoneAuthCredential) { }
+                        override fun onVerificationFailed(e: FirebaseException) { }
+                        override fun onCodeSent(verificationId: String, token: PhoneAuthProvider.ForceResendingToken){
+                            this@SingupActivity.verificationId= verificationId
 
+                        }
                     }
+
+                    val optionsCompat = PhoneAuthOptions.newBuilder(auth)
+                        .setPhoneNumber("+82"+ph_nu.substring(1))
+                        .setTimeout(60L, TimeUnit.SECONDS)
+                        .setActivity(this@SingupActivity)
+                        .setCallbacks(callbacks)
+                        .build()
+
+                    PhoneAuthProvider.verifyPhoneNumber(optionsCompat)
+                    auth.setLanguageCode("kr")
+                    Toast.makeText(this@SingupActivity,"코드가 전송됐습니다..",Toast.LENGTH_SHORT).show()
                 }
-
-                val optionsCompat = PhoneAuthOptions.newBuilder(auth)
-                    .setPhoneNumber("+82"+ph_nu.substring(1))
-                    .setTimeout(60L, TimeUnit.SECONDS)
-                    .setActivity(this@SingupActivity)
-                    .setCallbacks(callbacks)
-                    .build()
-
-                PhoneAuthProvider.verifyPhoneNumber(optionsCompat)
-                auth.setLanguageCode("kr")
-            }
-        })
+            })
 
         val but5 = si_ve_check as Button
         but5!!.setOnClickListener (object : View.OnClickListener{
-            override fun onClick(p0: View?) {
-                val credential = PhoneAuthProvider.getCredential(verificationId, si_ve_code.text.toString())
-                signInWithPhoneAuthCredential(credential)
-                Toast.makeText(this@SingupActivity,"SMS인증에 성공했습니다!",Toast.LENGTH_SHORT).show()
+                override fun onClick(p0: View?) {
+                    val credential = PhoneAuthProvider.getCredential(verificationId, si_ve_code.text.toString())
+                    signInWithPhoneAuthCredential(credential)
+                    Toast.makeText(this@SingupActivity,"SMS인증이 완료됐습니다.",Toast.LENGTH_SHORT).show()
 
-            }
-        })
+                }
+            })
 
 
         val but4 = si_com_bt as Button
 
 
-
+        
         but4.setOnClickListener(object : View.OnClickListener {
 
 
-            override fun onClick(p0: View?) {
-                if(nickcheckbool ==1 && idcheckbool ==1 && pw_check==1) {
+                override fun onClick(p0: View?) {
+                    if(nickcheckbool ==1 && idcheckbool ==1 && pw_check==1) {
 
 
-                    signVolley(
-                        this@SingupActivity,
-                        sid,
-                        realName,
-                        nick,
-                        pw,
-                        ph_nu,
-                        "2134243"
-                    ) { success ->
-                        if (success) {
-                            Toast.makeText(this@SingupActivity, "회원가입에 성공했습니다.", Toast.LENGTH_SHORT).show()
-                            finish()
-                        } else {
-                            Toast.makeText(
-                                this@SingupActivity,
-                                "네트워크 연결을 확인해주세요",
-                                Toast.LENGTH_SHORT
-                            ).show()
+                        signVolley(
+                            this@SingupActivity,
+                            sid,
+                            realName,
+                            nick,
+                            pw,
+                            ph_nu,
+                            "2134243"
+                        ) { success ->
+                            if (success) {
+                                Toast.makeText(this@SingupActivity, "회원가입에 성공했습니다.", Toast.LENGTH_SHORT).show()
+                                finish()
+                            } else {
+                                Toast.makeText(
+                                    this@SingupActivity,
+                                    "네트워크 연결을 확인해주세요",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            }
                         }
                     }
-                }
-                else{
-                    Toast.makeText(this@SingupActivity, "중복확인과 비밀번호 확인을 먼저 체크해주세요", Toast.LENGTH_SHORT).show()
-                }
+                    else{
+                        Toast.makeText(this@SingupActivity, "중복확인과 비밀번호 확인을 먼저 체크해주세요", Toast.LENGTH_SHORT).show()
+                    }
+                    }
+
+            })
+
             }
 
-        })
 
-    }
-
-
-}
+        }
 

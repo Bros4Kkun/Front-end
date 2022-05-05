@@ -31,8 +31,9 @@ com/example/RunToU/ExpandableListAdapter.java
  com.example.RunToU.ExpandableListAdapter$Item
  com.example.RunToU.ExpandableListAdapter$ListChildViewHolder
  com.example.RunToU.ExpandableListAdapter$ListHeaderViewHolder
-androidx/databinding/DataBindingComponent.java
- androidx.databinding.DataBindingComponent
+com/example/RunToU/ChatRoomActivity2.java
+ com.example.RunToU.ChatRoomActivity2
+ com.example.RunToU.ChatRoomActivity2$1
 com/example/RunToU/jobAdapter.java
  com.example.RunToU.jobAdapter
  com.example.RunToU.jobAdapter$1
@@ -167,6 +168,5 @@ com/example/RunToU/edit_introduceActivity.java
  com.example.RunToU.edit_introduceActivity
  com.example.RunToU.edit_introduceActivity$1
  com.example.RunToU.edit_introduceActivity$2
-com/example/RunToU/ChatRoomActivity2.java
- com.example.RunToU.ChatRoomActivity2
- com.example.RunToU.ChatRoomActivity2$1
+androidx/databinding/DataBindingComponent.java
+ androidx.databinding.DataBindingComponent

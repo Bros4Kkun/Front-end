@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.RunToU.databinding.FragmentLogBinding
 import kotlinx.android.synthetic.main.fragment_log.*
-import kotlinx.android.synthetic.main.list_child.*
 import net.daum.mf.map.api.MapView
 import java.util.*
 
