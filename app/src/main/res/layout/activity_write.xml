@@ -49,6 +49,7 @@
             android:layout_height="50dp"
             android:layout_marginLeft="60dp"
             android:layout_marginTop="5dp"
+            android:hint="5글자 이상으로 작성"
             android:background="@null"
             />
         <Spinner
@@ -71,14 +72,14 @@
             android:layout_width="250dp"
             android:layout_height="50dp"
             android:layout_marginLeft="60dp"
+            android:gravity="right"
             android:orientation="horizontal">
-            <WebView
-                android:id="@+id/webview_write"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:autofillHints="도로명 주소 검색"/>
             <TextView
                 android:id="@+id/address_write"
+                android:text=""
+                android:textSize="12sp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
@@ -90,7 +91,7 @@
             android:layout_height="50dp"
             android:layout_marginLeft="60dp"
             android:background="@null"
-            android:hint="세부주소를 입력해주세요!"
+            android:hint="상세주소 입력"
             />
 
         <LinearLayout
