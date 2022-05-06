@@ -78,6 +78,13 @@ class LoginActivity : AppCompatActivity() {
                     if (success) {
                         user = 1
                         Toast.makeText(this@LoginActivity, "요청자 로그인 성공", Toast.LENGTH_SHORT).show()
+                        jwtVolley.jwtVolley.jwtvolley(context = this@LoginActivity){
+                                success->
+                            if(success)
+                                print("suacess!")
+                            else
+                                print("wrong")
+                        }
                         val intent1 = Intent(this@LoginActivity, MainActivity::class.java)
                         startActivity(intent1)
 

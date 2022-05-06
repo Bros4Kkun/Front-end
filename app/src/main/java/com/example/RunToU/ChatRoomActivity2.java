@@ -39,6 +39,7 @@ public class ChatRoomActivity2 extends Activity {
             @Override
             public void onClick(View view) {
                 chtmsg = chatmsg.getText().toString();
+
                 Stompclass.Stomclass.INSTANCE.connect(chtmsg);
                 rightData(chtmsg);
                 try
