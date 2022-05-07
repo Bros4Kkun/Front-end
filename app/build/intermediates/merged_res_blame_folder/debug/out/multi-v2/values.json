@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
                     "source": "C:\\Users\\whdal\\.gradle\\caches\\transforms-3\\4eea7090519e134f724974ce5c3921a5\\transformed\\transition-1.2.0\\res\\values\\values.xml",
@@ -112,6 +112,23 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end\\app\\build\\generated\\res\\google-services\\debug\\values\\values.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "55,199,281,385,494,614,710",
+                        "endColumns": "143,81,103,108,119,95,72",
+                        "endOffsets": "194,276,380,489,609,705,778"
+                    },
+                    "to": {
+                        "startLines": "1653,1658,1659,1660,1661,1662,1762",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "102042,102654,102736,102840,102949,103069,116715",
+                        "endColumns": "143,81,103,108,119,95,72",
+                        "endOffsets": "102181,102731,102835,102944,103064,103160,116783"
+                    }
+                },
+                {
                     "source": "C:\\Users\\whdal\\.gradle\\caches\\transforms-3\\b2faa265119883a144c95f5fa148dcba\\transformed\\core-1.7.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,89,90,94,95,96,97,104,114,162,194,231",
@@ -128,6 +145,25 @@
                         "endLines": "420,588,589,815,816,938,939,940,941,942,943,944,1398,1399,1400,1401,1402,1403,1404,1405,1406,1407,1408,1409,1410,1411,1412,1436,1437,1438,1439,1440,1441,1442,1443,1444,1445,1446,1447,1448,1449,1450,1451,1452,1453,1454,1455,1456,1457,1458,1459,1460,1461,1462,1463,1464,1465,1466,1467,1468,1469,1470,1481,1482,1511,1512,1513,1514,1515,1516,1517,1518,1519,1520,1521,1522,1523,1524,1525,1534,1593,1773,5338,5342,5343,5347,5348,6295,6296,8985,9389,10325,10357,10409,10416",
                         "endColumns": "59,71,87,68,62,69,67,71,69,60,73,72,60,60,61,63,61,60,67,99,59,65,72,68,56,51,61,71,75,64,58,58,59,59,59,59,59,59,59,59,59,59,58,59,59,59,59,59,59,59,59,59,59,58,59,59,58,58,58,58,58,58,34,34,54,62,54,57,57,60,62,56,50,49,60,56,65,33,34,34,69,70,116,12,109,12,128,71,66,24,24,24,24,24,24",
                         "endOffsets": "20727,29588,29676,45958,46021,53938,54006,54078,54148,54209,54283,54356,85034,85095,85157,85221,85283,85344,85412,85512,85572,85638,85711,85780,85837,85889,85951,87575,87651,87716,87775,87834,87894,87954,88014,88074,88134,88194,88254,88314,88374,88434,88493,88553,88613,88673,88733,88793,88853,88913,88973,89033,89093,89152,89212,89272,89331,89390,89449,89508,89567,89626,90151,90186,91733,91796,91851,91909,91967,92028,92091,92148,92199,92249,92310,92367,92433,92467,92502,92925,96446,117294,365132,365333,365443,365644,365773,433964,434031,595780,616819,662928,664993,667389,667766"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end\\app\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "57",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "207"
+                    },
+                    "to": {
+                        "startLines": "5227",
+                        "startColumns": "4",
+                        "startOffsets": "355712",
+                        "endLines": "5230",
+                        "endColumns": "12",
+                        "endOffsets": "355859"
                     }
                 },
                 {
@@ -167,25 +203,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\values\\array_cate.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "57",
-                        "endLines": "9",
-                        "endColumns": "19",
-                        "endOffsets": "260"
-                    },
-                    "to": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "150",
-                        "endLines": "9",
-                        "endColumns": "19",
-                        "endOffsets": "346"
-                    }
-                },
-                {
                     "source": "C:\\Users\\whdal\\.gradle\\caches\\transforms-3\\668bc88dcb5d8d9ceef86d614e153320\\transformed\\drawerlayout-1.1.1\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5",
@@ -205,39 +222,22 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\values\\colors.xml",
+                    "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end\\app\\src\\main\\res\\values\\strings.xml",
                     "from": {
-                        "startLines": "7,10,2,3,4,13,14,15,16,5,6,11,8",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "293,381,57,105,153,467,507,547,587,201,247,423,336",
-                        "endColumns": "41,40,46,46,46,38,38,38,38,44,44,40,41",
-                        "endOffsets": "330,417,99,147,195,501,541,581,621,241,287,459,373"
+                        "startLines": "2,24,15,10,7,3,8,9,20,18,19,11,12,13,14,16,17",
+                        "startColumns": "4,4,4,0,0,4,0,0,0,4,4,4,4,4,4,4,4",
+                        "startOffsets": "19,800,471,239,107,65,151,195,693,609,651,296,338,382,426,514,560",
+                        "endLines": "2,24,15,10,7,6,8,9,20,18,19,11,12,13,14,16,17",
+                        "endColumns": "44,69,41,51,42,9,42,42,38,40,44,40,42,42,43,44,47",
+                        "endOffsets": "59,865,508,290,149,105,193,237,731,645,691,332,376,420,465,554,603"
                     },
                     "to": {
-                        "startLines": "594,662,825,826,827,834,835,836,837,842,843,847,848",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "30000,34821,46614,46661,46708,47166,47205,47244,47283,47608,47653,47861,47902",
-                        "endColumns": "41,39,46,46,46,38,38,38,38,44,44,40,41",
-                        "endOffsets": "30037,34856,46656,46703,46750,47200,47239,47278,47317,47648,47693,47897,47939"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\values\\themes.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "102",
-                        "endLines": "24",
-                        "endColumns": "12",
-                        "endOffsets": "952"
-                    },
-                    "to": {
-                        "startLines": "5760",
-                        "startColumns": "4",
-                        "startOffsets": "395036",
-                        "endLines": "5782",
-                        "endColumns": "12",
-                        "endOffsets": "395860"
+                        "startLines": "1626,1663,1666,1668,1669,1670,1755,1761,1764,1765,1766,1767,1768,1769,1770,1771,1772",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "98720,103165,103542,103642,103696,103742,115821,116669,116841,116884,116925,116970,117011,117054,117095,117137,117180",
+                        "endLines": "1626,1663,1666,1668,1669,1673,1755,1761,1764,1765,1766,1767,1768,1769,1770,1771,1772",
+                        "endColumns": "44,69,40,53,45,9,45,45,42,40,44,40,42,40,41,42,47",
+                        "endOffsets": "98760,103230,103578,103691,103737,103779,115862,116710,116879,116920,116965,117006,117049,117090,117132,117175,117223"
                     }
                 },
                 {
@@ -313,25 +313,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\values\\strings.xml",
-                    "from": {
-                        "startLines": "2,24,15,10,7,3,8,9,20,18,19,11,12,13,14,16,17",
-                        "startColumns": "4,4,4,0,0,4,0,0,0,4,4,4,4,4,4,4,4",
-                        "startOffsets": "19,800,471,239,107,65,151,195,693,609,651,296,338,382,426,514,560",
-                        "endLines": "2,24,15,10,7,6,8,9,20,18,19,11,12,13,14,16,17",
-                        "endColumns": "44,69,41,51,42,9,42,42,38,40,44,40,42,42,43,44,47",
-                        "endOffsets": "59,865,508,290,149,105,193,237,731,645,691,332,376,420,465,554,603"
-                    },
-                    "to": {
-                        "startLines": "1626,1663,1666,1668,1669,1670,1755,1761,1764,1765,1766,1767,1768,1769,1770,1771,1772",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "98720,103165,103542,103642,103696,103742,115821,116669,116841,116884,116925,116970,117011,117054,117095,117137,117180",
-                        "endLines": "1626,1663,1666,1668,1669,1673,1755,1761,1764,1765,1766,1767,1768,1769,1770,1771,1772",
-                        "endColumns": "44,69,40,53,45,9,45,45,42,40,44,40,42,40,41,42,47",
-                        "endOffsets": "98760,103230,103578,103691,103737,103779,115862,116710,116879,116920,116965,117006,117049,117090,117132,117175,117223"
-                    }
-                },
-                {
                     "source": "C:\\Users\\whdal\\.gradle\\caches\\transforms-3\\00795274963a9f8ec7ce9e5e69d9b045\\transformed\\recyclerview-1.1.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
@@ -404,39 +385,22 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\generated\\res\\google-services\\debug\\values\\values.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "55,199,281,385,494,614,710",
-                        "endColumns": "143,81,103,108,119,95,72",
-                        "endOffsets": "194,276,380,489,609,705,778"
-                    },
-                    "to": {
-                        "startLines": "1653,1658,1659,1660,1661,1662,1762",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "102042,102654,102736,102840,102949,103069,116715",
-                        "endColumns": "143,81,103,108,119,95,72",
-                        "endOffsets": "102181,102731,102835,102944,103064,103160,116783"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\src\\main\\res\\values\\styles.xml",
+                    "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end\\app\\src\\main\\res\\values\\themes.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
-                        "startOffsets": "57",
-                        "endLines": "5",
+                        "startOffsets": "102",
+                        "endLines": "24",
                         "endColumns": "12",
-                        "endOffsets": "207"
+                        "endOffsets": "952"
                     },
                     "to": {
-                        "startLines": "5227",
+                        "startLines": "5760",
                         "startColumns": "4",
-                        "startOffsets": "355712",
-                        "endLines": "5230",
+                        "startOffsets": "395036",
+                        "endLines": "5782",
                         "endColumns": "12",
-                        "endOffsets": "355859"
+                        "endOffsets": "395860"
                     }
                 },
                 {
@@ -478,6 +442,23 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end\\app\\src\\main\\res\\values\\colors.xml",
+                    "from": {
+                        "startLines": "7,10,2,3,4,13,14,15,16,5,6,11,8",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "293,381,57,105,153,467,507,547,587,201,247,423,336",
+                        "endColumns": "41,40,46,46,46,38,38,38,38,44,44,40,41",
+                        "endOffsets": "330,417,99,147,195,501,541,581,621,241,287,459,373"
+                    },
+                    "to": {
+                        "startLines": "594,662,825,826,827,834,835,836,837,842,843,847,848",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "30000,34821,46614,46661,46708,47166,47205,47244,47283,47608,47653,47861,47902",
+                        "endColumns": "41,39,46,46,46,38,38,38,38,44,44,40,41",
+                        "endOffsets": "30037,34856,46656,46703,46750,47200,47239,47278,47317,47648,47693,47897,47939"
+                    }
+                },
+                {
                     "source": "C:\\Users\\whdal\\.gradle\\caches\\transforms-3\\c13a50edc7b3c32f2ed07308bcc34012\\transformed\\jetified-play-services-basement-18.0.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "4,7",
@@ -511,6 +492,25 @@
                         "endLines": "611,612,613,614,615,616,617,618,1635,1636,1637,1638,1639,1640,1641,1642,1644,1645,1646,1647,1648,1649,1650,1651,1652,10752,11663",
                         "endColumns": "89,79,89,89,79,80,79,79,104,180,124,106,179,122,115,102,187,104,180,124,174,147,62,61,78,20,20",
                         "endOffsets": "31266,31346,31436,31526,31606,31687,31767,31847,99809,99990,100115,100222,100402,100525,100641,100744,101099,101204,101385,101510,101685,101833,101896,101958,102037,682641,728067"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end\\app\\src\\main\\res\\values\\array_cate.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "57",
+                        "endLines": "9",
+                        "endColumns": "19",
+                        "endOffsets": "260"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "150",
+                        "endLines": "9",
+                        "endColumns": "19",
+                        "endOffsets": "346"
                     }
                 }
             ]
