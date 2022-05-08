@@ -10,6 +10,10 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/StompCleint" />
+            <option value="$PROJECT_DIR$/StompClient" />
+            <option value="$PROJECT_DIR$/StompClient1" />
+            <option value="$PROJECT_DIR$/StompClient2" />
             <option value="$PROJECT_DIR$/app" />
           </set>
         </option>

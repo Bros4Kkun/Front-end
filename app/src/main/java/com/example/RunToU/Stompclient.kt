@@ -1,5 +1,6 @@
 package com.gmail.bishoybasily.stomp.lib
 
+
 import com.gmail.bishoybasily.stomp.lib.constants.Codes
 import com.gmail.bishoybasily.stomp.lib.constants.Commands
 import com.gmail.bishoybasily.stomp.lib.constants.Headers
@@ -16,6 +17,7 @@ import java.util.logging.Logger
 class StompClient(private val okHttpClient: OkHttpClient,
                   private val reconnectAfter: Long) :
     WebSocketListener() {
+
 
     private val logger = Logger.getLogger(javaClass.name)
 
@@ -215,6 +217,5 @@ class StompClient(private val okHttpClient: OkHttpClient,
         }
         logger.log(Level.INFO, "onMessage payload: ${message.payload}, heaaders:${message.headers}, command: ${message.command}")
     }
-
 
 }

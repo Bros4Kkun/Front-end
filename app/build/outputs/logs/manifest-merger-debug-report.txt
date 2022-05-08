@@ -9,6 +9,7 @@ MERGED from [androidx.databinding:databinding-runtime:4.1.1] C:\Users\whdal\.gra
 MERGED from [androidx.databinding:viewbinding:4.1.1] C:\Users\whdal\.gradle\caches\transforms-3\031262d2a5ca5e7c5c353f7ed75dd919\transformed\jetified-viewbinding-4.1.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\whdal\.gradle\caches\transforms-3\0c73f74dcfe92d78e886d3bc54580339\transformed\multidex-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-analytics-ktx:20.1.0] C:\Users\whdal\.gradle\caches\transforms-3\59dae0bb0d5a431949c51bc826572604\transformed\jetified-firebase-analytics-ktx-20.1.0\AndroidManifest.xml:2:1-17:12
+MERGED from [:StompClient2] C:\Users\whdal\AndroidStudioProjects\Front-end\StompClient2\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.core:core-ktx:1.7.0] C:\Users\whdal\.gradle\caches\transforms-3\f9850ac7f3f8009007da964a2ce15f9f\transformed\jetified-core-ktx-1.7.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-auth-ktx:21.0.1] C:\Users\whdal\.gradle\caches\transforms-3\a3d36230e68a1e10f6a4bc87f7680caf\transformed\jetified-firebase-auth-ktx-21.0.1\AndroidManifest.xml:2:1-17:12
 MERGED from [com.google.firebase:firebase-common-ktx:20.0.0] C:\Users\whdal\.gradle\caches\transforms-3\9d35e34e65657347d191168c25e2a2fc\transformed\jetified-firebase-common-ktx-20.0.0\AndroidManifest.xml:2:1-21:12
@@ -293,6 +294,8 @@ MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\whdal\.gradle\caches\tra
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\whdal\.gradle\caches\transforms-3\0c73f74dcfe92d78e886d3bc54580339\transformed\multidex-2.0.0\AndroidManifest.xml:20:5-43
 MERGED from [com.google.firebase:firebase-analytics-ktx:20.1.0] C:\Users\whdal\.gradle\caches\transforms-3\59dae0bb0d5a431949c51bc826572604\transformed\jetified-firebase-analytics-ktx-20.1.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-analytics-ktx:20.1.0] C:\Users\whdal\.gradle\caches\transforms-3\59dae0bb0d5a431949c51bc826572604\transformed\jetified-firebase-analytics-ktx-20.1.0\AndroidManifest.xml:5:5-44
+MERGED from [:StompClient2] C:\Users\whdal\AndroidStudioProjects\Front-end\StompClient2\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:StompClient2] C:\Users\whdal\AndroidStudioProjects\Front-end\StompClient2\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.core:core-ktx:1.7.0] C:\Users\whdal\.gradle\caches\transforms-3\f9850ac7f3f8009007da964a2ce15f9f\transformed\jetified-core-ktx-1.7.0\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.core:core-ktx:1.7.0] C:\Users\whdal\.gradle\caches\transforms-3\f9850ac7f3f8009007da964a2ce15f9f\transformed\jetified-core-ktx-1.7.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.firebase:firebase-auth-ktx:21.0.1] C:\Users\whdal\.gradle\caches\transforms-3\a3d36230e68a1e10f6a4bc87f7680caf\transformed\jetified-firebase-auth-ktx-21.0.1\AndroidManifest.xml:5:5-44
