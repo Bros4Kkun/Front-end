@@ -34,33 +34,33 @@ public class ChatRoomActivity2 extends Activity {
 
         chatmsg = findViewById(R.id.editText1);
         but1 = findViewById(R.id.btn_send1);
-
+        leftData(Stompclass.Stomclass.INSTANCE.subscribe(chatRoomAdapter.INSTANCE.getChRo()));
         but1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 chtmsg = chatmsg.getText().toString();
-
-                Stompclass.Stomclass.INSTANCE.connect(chtmsg);
                 rightData(chtmsg);
-                try
-                {
-                    Thread.sleep(1000);
-                } catch (InterruptedException e)
-                {
-                    e.printStackTrace();
-                }
-                
+                Stompclass.Stomclass.INSTANCE.send(chtmsg,chatRoomAdapter.INSTANCE.getChRo());
+
             }
         });
         RecyclerView recyvlerv= findViewById(R.id.recyvlerv);
         LinearLayoutManager manager = new LinearLayoutManager(this,RecyclerView.VERTICAL,false);
         recyvlerv.setLayoutManager(manager);
         recyvlerv.setAdapter(new ChatAdpater(datalist));
+
+            try{
+            inputmsg = chatRecieve.chatRecieve.INSTANCE.getMsgquee().remove();} catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        rightData(inputmsg);
+
     }
 
     private void initData(){
 
-        datalist.add(new Dataitem("에코 채팅 서버에 입장했습니다.",null,Code.ViewType.CENTER_CONTENT));
+        datalist.add(new Dataitem("채팅에 입장했습니다.",null,Code.ViewType.CENTER_CONTENT));
     }
     private void leftData(String msg){
         datalist.add(new Dataitem(msg,null,Code.ViewType.LEFT_CONTENT));

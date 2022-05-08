@@ -1,7 +1,9 @@
 package com.example.RunToU
 
+import java.util.*
+
 class chatRecieve{
     object chatRecieve{
-        var recieveMsg  : String? = null
+        var msgquee : Queue<String> = LinkedList()
     }
 }

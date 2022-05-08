@@ -1,5 +1,6 @@
 package com.example.RunToU
 
+import android.annotation.SuppressLint
 import com.example.RunToU.SessionControl.SessionControl.token
 import com.example.stompclient2.Event
 import com.example.stompclient2.Message
@@ -18,11 +19,15 @@ import java.util.logging.Level
 import java.util.logging.Logger
 import kotlin.collections.HashMap
 import com.example.stompclient2.StompClient
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
 
 class Stompclass: WebSocketListener() {
     object Stomclass : WebSocketListener() {
         lateinit var stompConnection: Disposable
-        lateinit var topic: Disposable
+        var resultString: String = ""
+        var recivecheck: Boolean = false
         private lateinit var webSocket: WebSocket
 
         val logger = Logger.getLogger("STOMP")
@@ -50,75 +55,73 @@ class Stompclass: WebSocketListener() {
             .writeTimeout(10000, TimeUnit.MINUTES)
             .connectTimeout(1000, TimeUnit.SECONDS)
             .build()
+
         val stomp = StompClient(client, intervalMillis).apply { this@apply.url = url1 }
 
-        fun connect(msg: String) {
+        fun connect() {
             stompConnection = stomp.connect().subscribe() {   //연결
                 when (it.type) {
                     Event.Type.OPENED -> {
                         print("connected succcccc!")
 
+
                     }
-                    Event.Type.CLOSED -> {
+                    Event.Type.CLOSED -> { // log보고 반복메시지 보내는 이유 분석
 
                     }
                     Event.Type.ERROR -> {
 
                     }
-                }
-                topic = stomp.join("/topic/chatroom/69") // 응답받기 위한 구독
-                    .subscribe {
-                        logger.log(Level.INFO, it)
-
-                        chatRecieve.chatRecieve.recieveMsg = it
-                        print(it)
-
-                    }
-                stomp.send("/app/chat/chatroom/69", msg,"Bearer " + SessionControl.SessionControl.token).subscribe() { echo -> // send
-
-                    if (echo) {
-                        println("test!!!!!!!!!!" + echo.toString())
-
-                    }
 
                 }
+
 
             }
 
-
         }
+        @SuppressLint("CheckResult")
+        fun send(msg: String?, int: Int){
+            if(!msg.isNullOrEmpty()){
+                stomp.send(
+                    "/app/chat/chatroom/"+int.toString(),
+                    msg.toString(),
+                    "Bearer " + SessionControl.SessionControl.token
+                ).subscribe() { echo -> // send
 
-        fun subscribe() {
+                    if (echo) {
+                        println("test!!!!!!!3!!!" + msg + int.toString())
 
-        }
 
-        fun send(topic: String, msg: String): Observable<Boolean> {
-            return Observable
-                .create<Boolean> {
-                    val headers = HashMap<String, String>()
-                    headers.put(Headers.DESTINATION, topic)
-                    headers.put("Authentication", "Bearer " + SessionControl.SessionControl.token)
-                    it.onNext(webSocket.send(compileMessage(Message(Commands.SEND, headers, msg))))
-                    it.onComplete()
+                    }
                 }
+            }
         }
 
-        private fun compileMessage(message: Message): String {
-            val builder = StringBuilder()
 
-            if (message.command != null)
-                builder.append(message.command).append('\n')
 
-            for ((key, value) in message.headers)
-                builder.append(key).append(':').append(value).append('\n')
-            builder.append('\n')
 
-            if (message.payload != null)
-                builder.append(message.payload).append("\n\n")
 
-            builder.append(Message.TERMINATE_MESSAGE_SYMBOL)
+            fun subscribe(int: Int): String {
+                CoroutineScope(Dispatchers.Default).async {
+                    val def = async {
+                        stomp.join("/topic/chatroom/" + int.toString()) // 응답받기 위한 구독
+                            .subscribe {
 
-            return builder.toString()
-        }
+                                logger.log(Level.INFO, it)
+
+
+
+                                print(it)
+
+
+                            }
+                    }
+                    resultString = def.await().toString()
+                    print(resultString)
+                }
+                return resultString
+            }
+
+
     }
 }

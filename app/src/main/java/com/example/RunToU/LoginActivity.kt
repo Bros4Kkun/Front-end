@@ -35,13 +35,14 @@ class LoginActivity : AppCompatActivity() {
                     this@LoginActivity,
                     userid.toString(),
                     userpw.toString(),
-                    "ORDERER"
+                    "PERFORMER"
                 ) { success ->
                     if (success) {
                         user = 1
-                        Toast.makeText(this@LoginActivity, "요청자 로그인 성공", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@LoginActivity, "수행자 로그인 성공", Toast.LENGTH_SHORT).show()
+                        jwtVolley.jwtVolley.jwtvolley(context = this@LoginActivity)
                         val intent1 = Intent(this@LoginActivity, MainActivity::class.java)
-
+                        Stompclass.Stomclass.connect()
 
 
                         startActivity(intent1)
@@ -78,13 +79,10 @@ class LoginActivity : AppCompatActivity() {
                     if (success) {
                         user = 1
                         Toast.makeText(this@LoginActivity, "요청자 로그인 성공", Toast.LENGTH_SHORT).show()
-                        jwtVolley.jwtVolley.jwtvolley(context = this@LoginActivity){
-                                success->
-                            if(success)
-                                print("suacess!")
-                            else
-                                print("wrong")
-                        }
+                        jwtVolley.jwtVolley.jwtvolley(context = this@LoginActivity)
+                        Stompclass.Stomclass.connect()
+                        Stompclass.Stomclass.subscribe(2)
+
                         val intent1 = Intent(this@LoginActivity, MainActivity::class.java)
                         startActivity(intent1)
 
