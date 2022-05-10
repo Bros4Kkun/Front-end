@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_height="60dp">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -14,6 +14,7 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
         android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"
@@ -42,7 +43,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="나와의 거리 : "/>
+                    android:text="위치 : "/>
+                //나와의 거리로 들어갈 예정임
                 <TextView
                     android:id="@+id/tv_Far"
                     android:layout_width="wrap_content"
@@ -60,6 +62,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="blank"/>//Response
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right">
+                <TextView
+                    android:id="@+id/txtNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No.1"
+                    android:layout_marginRight="5dp"/>
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 
