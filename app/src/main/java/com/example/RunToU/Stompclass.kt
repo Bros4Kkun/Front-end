@@ -1,35 +1,37 @@
 package com.example.RunToU
 
 import android.annotation.SuppressLint
-import com.example.RunToU.SessionControl.SessionControl.token
+import android.os.Handler
+
 import com.example.stompclient2.Event
-import com.example.stompclient2.Message
 
 
-import com.example.stompclient2.constants.Commands
-import com.example.stompclient2.constants.Headers
+
+
 import io.reactivex.disposables.Disposable
 import okhttp3.*
-import io.reactivex.Observable
-import io.reactivex.ObservableEmitter
-import java.nio.channels.AsynchronousChannel
+
 import java.util.*
 import java.util.concurrent.TimeUnit
-import java.util.logging.Level
+
 import java.util.logging.Logger
-import kotlin.collections.HashMap
+
 import com.example.stompclient2.StompClient
+
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
+import okhttp3.internal.http2.Http2Reader
+
+
 
 class Stompclass: WebSocketListener() {
     object Stomclass : WebSocketListener() {
         lateinit var stompConnection: Disposable
-        var resultString: String = ""
-        var recivecheck: Boolean = false
-        private lateinit var webSocket: WebSocket
 
+        var resultString: String? =""
+
+        val handler : Handler = MyHandler()
         val logger = Logger.getLogger("STOMP")
         val url1 = "ws://3.39.87.103/ws-stomp"
         val intervalMillis = 1000L
@@ -56,13 +58,14 @@ class Stompclass: WebSocketListener() {
             .connectTimeout(1000, TimeUnit.SECONDS)
             .build()
 
-        val stomp = StompClient(client, intervalMillis).apply { this@apply.url = url1 }
+        val stomp = StompClient(client, intervalMillis,handler).apply { this@apply.url = url1 }
 
         fun connect() {
             stompConnection = stomp.connect().subscribe() {   //연결
                 when (it.type) {
                     Event.Type.OPENED -> {
                         print("connected succcccc!")
+
 
 
                     }
@@ -101,27 +104,24 @@ class Stompclass: WebSocketListener() {
 
 
 
-            fun subscribe(int: Int): String {
-                CoroutineScope(Dispatchers.Default).async {
+            fun subscribe(int: Int) {
+                CoroutineScope(Dispatchers.IO).async {
                     val def = async {
-                        stomp.join("/topic/chatroom/" + int.toString()) // 응답받기 위한 구독
+                          val join = stomp.join("/topic/chatroom/" + int.toString(),) // 응답받기 위한 구독
                             .subscribe {
-
-                                logger.log(Level.INFO, it)
-
-
-
-                                print(it)
-
-
+                                chatRecieve.chatRecieve.recivemsg = it.toString()
                             }
+
                     }
-                    resultString = def.await().toString()
-                    print(resultString)
+
+
                 }
-                return resultString
+
             }
 
 
+
+        }
+
+
     }
-}

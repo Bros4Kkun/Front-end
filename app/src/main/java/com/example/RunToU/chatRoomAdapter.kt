@@ -6,4 +6,6 @@ object chatRoomAdapter {
     var or_sh_pk : Int = 0
     var chRo : Int = 0
     var bool : Boolean = true
+
+
 }

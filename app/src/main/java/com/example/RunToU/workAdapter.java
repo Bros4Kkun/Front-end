@@ -1,5 +1,7 @@
 package com.example.RunToU;
 
+import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,9 +17,19 @@ import java.util.ArrayList;
 
 public class workAdapter extends RecyclerView.Adapter<workAdapter.CustomViewHolder>{
 
+    //아이템 클릭 리스너 인터페이스
+    interface OnItemClickListener{
+        void onItemClick(View v, int position); //뷰와 포지션값
+    }
+
+    private OnItemClickListener onItemClickListener = null;
+
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        this.onItemClickListener = listener;
+    }
+
     private ArrayList<workData> arrayList;
     public workAdapter(ArrayList<workData> arrayList) {this.arrayList = arrayList;}
-
 
     @NonNull
     @Override
@@ -36,16 +48,9 @@ public class workAdapter extends RecyclerView.Adapter<workAdapter.CustomViewHold
         holder.tv_Money.setText(arrayList.get(position).getTv_Money());
         holder.tv_Far.setText(arrayList.get(position).getTv_Far());
         holder.tv_Res.setText(arrayList.get(position).getTv_Res());
+        holder.txtNum.setText("No."+arrayList.get(position).getTxtNum());
 
         holder.itemView.setTag(position);
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String curName = holder.tv_Money.getText().toString();
-                Toast.makeText(view.getContext(), curName, Toast.LENGTH_SHORT).show();
-            }
-        });
-
     }
 
     @Override
@@ -59,6 +64,7 @@ public class workAdapter extends RecyclerView.Adapter<workAdapter.CustomViewHold
         protected TextView tv_Money;
         protected TextView tv_Far;
         protected TextView tv_Res;
+        protected TextView txtNum;
 
         public CustomViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -66,6 +72,20 @@ public class workAdapter extends RecyclerView.Adapter<workAdapter.CustomViewHold
             this.tv_Money = itemView.findViewById(R.id.tv_Money);
             this.tv_Far = itemView.findViewById(R.id.tv_Far);
             this.tv_Res = itemView.findViewById(R.id.tv_Res);
+            this.txtNum = itemView.findViewById(R.id.txtNum);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    int position = getAdapterPosition();
+                    if(position != RecyclerView.NO_POSITION){
+                        if(onItemClickListener != null){
+                            onItemClickListener.onItemClick(view,position);
+                        }
+                    }
+                }
+            });
+
 
         }
     }

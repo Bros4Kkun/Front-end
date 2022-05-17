@@ -23,16 +23,12 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.BasicNetwork;
 import com.android.volley.toolbox.DiskBasedCache;
 import com.android.volley.toolbox.HurlStack;
-import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.google.gson.Gson;
-import com.google.gson.JsonElement;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -45,29 +41,77 @@ public class workFragment extends Fragment {
     private RecyclerView recyclerView;
     private LinearLayoutManager linearLayoutManager;
 
-    int temp = 0;
     JSONArray jsonArray = new JSONArray();
     jsonData jsonData;
-
 
     String url = "http://3.39.87.103/api/ordersheet/list/ALL/1";
 
     //받아와서 뿌리는 사용자 정보
     String title;
     String content;
-    String cate = "string";
+    String cate;
     String destination;
+    String sheetId;
     int cost = 0;
 
+    ImageButton btn_add, btnAll, btnHelp, btnDeli, btnClean, btnBug;
+
     //기본 이미지 변수
-    int image = R.drawable.cate_deli;
+    int image = R.drawable.cate_all;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = (ViewGroup) inflater.inflate(R.layout.fragment_work, container, false);
         getActivity().setTitle("심부름");
-        ImageButton btn_add = view.findViewById(R.id.btn_add);
+        btn_add = view.findViewById(R.id.btn_add);
+        btnAll = view.findViewById(R.id.btnAll);
+        btnHelp = view.findViewById(R.id.btnHelp);
+        btnDeli = view.findViewById(R.id.btnDeli);
+        btnClean = view.findViewById(R.id.btnClean);
+        btnBug = view.findViewById(R.id.btnBug);
+
+        cateView(url);
+
+        btnAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "http://3.39.87.103/api/ordersheet/list/ALL/1";
+                cateView(url);
+            }
+        });
+
+        btnDeli.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "http://3.39.87.103/api/ordersheet/list/DELIVERY_AND_SHOPPING/1";
+                cateView(url);
+            }
+        });
+
+        btnHelp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "http://3.39.87.103/api/ordersheet/list/ACCOMPANY/1";
+                cateView(url);
+            }
+        });
+
+        btnClean.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "http://3.39.87.103/api/ordersheet/list/CLEANING_AND_HOUSEWORK/1";
+                cateView(url);
+            }
+        });
+
+        btnBug.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "http://3.39.87.103/api/ordersheet/list/ANTI_BUG/1";
+                cateView(url);
+            }
+        });
 
         btn_add.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,6 +121,10 @@ public class workFragment extends Fragment {
             }
         });
 
+        return view;
+    }
+
+    public void cateView(String url){
         final JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
@@ -89,9 +137,8 @@ public class workFragment extends Fragment {
                 recyclerView.setAdapter(workAdapter);
 
                 try {
-                    //jsonObject = response.getJSONObject("");
                     JSONObject jsonObject = new JSONObject(String.valueOf(response));
-                    jsonArray = jsonObject.getJSONArray("orderSheetItemSampleList");
+                    jsonArray = jsonObject.getJSONArray("simpOrderSheetInfoList");
                     Log.d("tag", "jsonArray : " + jsonArray.toString());
 
                     for(int i = 0; i < jsonArray.length(); i++)
@@ -102,6 +149,9 @@ public class workFragment extends Fragment {
                         cate = jTemp.getString("category");
                         destination = jTemp.getString("destination");
                         cost = jTemp.getInt("cost");
+                        sheetId = jTemp.getString("orderSheetId");
+
+                        String[] str = destination.split(",");
 
                         if(cate.equals("DELIVERY_AND_SHOPPING")){
                             image = R.drawable.cate_deli;
@@ -112,15 +162,29 @@ public class workFragment extends Fragment {
                         }else if(cate.equals("ACCOMPANY")){
                             image = R.drawable.cate_help;
                         }else if(cate.equals("ANTI_BUG")){
-                            image = R.drawable.cate_hunt;
+                            image = R.drawable.cate_bug;
                         }else if(cate.equals("ROLE_ACTING")){
                             image = R.drawable.cate_help;
                         }else{
                             image = R.drawable.cate_all;
                         }
-                        workData workData = new workData(image, String.valueOf(cost), destination, content);
+
+                        workData workData = new workData(image, String.valueOf(cost)+"원", str[0], title, sheetId);
                         arrayList.add(workData);
                         workAdapter.notifyDataSetChanged();
+
+                        workAdapter.setOnItemClickListener(new workAdapter.OnItemClickListener() {
+                            @Override
+                            public void onItemClick(View v, int position) {
+                                sheetId  = arrayList.get(position).getTxtNum();
+                                Intent intent = new Intent(getContext(), ordersheetActivity.class);
+                                intent.putExtra("sheetId",sheetId);
+                                startActivity(intent);
+                            }
+                        });
+
+                        Log.d("check", workAdapter.toString());
+
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -155,6 +219,5 @@ public class workFragment extends Fragment {
 
         request.setShouldCache(false);
         queue.add(request);
-        return view;
     }
 }

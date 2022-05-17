@@ -1,5 +1,7 @@
 package com.example.stompclient2
 
+import android.os.Bundle
+import android.os.Handler
 import com.example.stompclient2.constants.Headers
 import com.example.stompclient2.constants.Codes
 import com.example.stompclient2.constants.Commands
@@ -14,8 +16,9 @@ import java.util.logging.Level
 import java.util.logging.Logger
 
 class StompClient(private val okHttpClient: OkHttpClient,
-                  private val reconnectAfter: Long) :
-        WebSocketListener() {
+                  private val reconnectAfter: Long,
+                  val handler: Handler) :
+    WebSocketListener() {
 
     private val logger = Logger.getLogger(javaClass.name)
 
@@ -27,6 +30,7 @@ class StompClient(private val okHttpClient: OkHttpClient,
 
     private var shouldBeConnected: Boolean = false
     private var connected = false
+    lateinit var msg : android.os.Message
 
     private lateinit var webSocket: WebSocket
 
@@ -36,68 +40,68 @@ class StompClient(private val okHttpClient: OkHttpClient,
 
     fun connect(): Observable<Event> {
         return Observable
-                .create<Event> {
-                    emitter = it
-                    shouldBeConnected = true
-                    open()
-                }
-                .doOnDispose {
-                    close()
-                    shouldBeConnected = false
-                }
+            .create<Event> {
+                emitter = it
+                shouldBeConnected = true
+                open()
+            }
+            .doOnDispose {
+                close()
+                shouldBeConnected = false
+            }
     }
 
     fun join(topic: String): Observable<String> {
         return Observable
-                .create<String> {
+            .create<String> {
 
-                    val topicId = UUID.randomUUID().toString()
+                val topicId = UUID.randomUUID().toString()
 
-                    val headers = HashMap<String, String>()
-                    headers[Headers.ID] = topicId
-                    headers[Headers.DESTINATION] = topic
-                    headers[Headers.ACK] = DEFAULT_ACK
-                    webSocket.send(compileMessage(Message(Commands.SUBSCRIBE, headers)))
+                val headers = HashMap<String, String>()
+                headers[Headers.ID] = topicId
+                headers[Headers.DESTINATION] = topic
+                headers[Headers.ACK] = DEFAULT_ACK
+                webSocket.send(compileMessage(Message(Commands.SUBSCRIBE, headers)))
 
-                    emitters[topic] = it
-                    topics[topic] = topicId
+                emitters[topic] = it
+                topics[topic] = topicId
 
-                    logger.log(Level.INFO, "Subscribed to: $topic id: $topicId")
+                logger.log(Level.INFO, "Subscribed to: $topic id: $topicId")
 
-                }
-                .doOnDispose {
+            }
+            .doOnDispose {
 
-                    val topicId = topics[topic]
+                val topicId = topics[topic]
 
-                    val headers = HashMap<String, String>()
-                    headers[Headers.ID] = topicId!!
-                    webSocket.send(compileMessage(Message(Commands.UNSUBSCRIBE, headers)))
+                val headers = HashMap<String, String>()
+                headers[Headers.ID] = topicId!!
+                webSocket.send(compileMessage(Message(Commands.UNSUBSCRIBE, headers)))
 
-                    emitters.remove(topic)
-                    topics.remove(topicId)
+                emitters.remove(topic)
+                topics.remove(topicId)
 
-                    logger.log(Level.INFO, "Unsubscribed from: $topic id: $topicId")
+                logger.log(Level.INFO, "Unsubscribed from: $topic id: $topicId")
 
-                }
+            }
     }
 
     fun send(topic: String, msg: String, token:String): Observable<Boolean> {
         return Observable
-                .create<Boolean> {
-                    val headers = HashMap<String, String>()
-                    headers[Headers.DESTINATION] = topic
-                    headers["Authentication"]= token
-                    it.onNext(webSocket.send(compileMessage(Message(Commands.SEND, headers, msg))))
-                    it.onComplete()
-                }
+            .create<Boolean> {
+                val headers = HashMap<String, String>()
+                headers[Headers.DESTINATION] = topic
+                headers["Authentication"]= token
+                it.onNext(webSocket.send(compileMessage(Message(Commands.SEND, headers, msg))))
+                it.onComplete()
+            }
     }
 
     private fun open() {
         if (!connected) {
             logger.log(Level.INFO, "Connecting...")
             val request = Request.Builder()
-                    .url(url)
-                    .build()
+                .url(url)
+                .build()
             webSocket = okHttpClient.newWebSocket(request, this)
             connected = true
         } else {
@@ -185,7 +189,16 @@ class StompClient(private val okHttpClient: OkHttpClient,
     }
 
     override fun onMessage(webSocket: WebSocket, text: String) {
-        handleMessage(parseMessage(text))
+        var result = handleMessage(parseMessage(text))
+        if(result.contains("content")){
+        msg = handler.obtainMessage(2)
+
+        handler.handleMessage(msg)}
+        else{
+            msg = handler.obtainMessage(4)
+
+            handler.handleMessage(msg)
+        }
     }
 
     override fun onClosing(webSocket: WebSocket, code: Int, reason: String) {
@@ -199,7 +212,7 @@ class StompClient(private val okHttpClient: OkHttpClient,
         reconnect()
     }
 
-    private fun handleMessage(message: Message) {
+    private fun handleMessage(message: Message):String {
         when (message.command) {
             Commands.CONNECTED -> {
                 emitter.onNext(Event(Event.Type.OPENED))
@@ -215,6 +228,7 @@ class StompClient(private val okHttpClient: OkHttpClient,
             }
         }
         logger.log(Level.INFO, "onMessage payload: ${message.payload}, heaaders:${message.headers}, command: ${message.command}")
+        return message.payload.toString()
     }
 
 

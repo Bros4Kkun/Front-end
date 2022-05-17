@@ -46,19 +46,19 @@ class MsgFragment : Fragment(){
         val but2 = materialButton2 as Button?
         but2?.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
-                chatroomVolley.chatroomVolley.chatroomVolley(mainAC){
-                    it->
+               /* chatroomVolley.chatroomVolley.chatroomVolley(mainAC){
+                   it->
                     if(it){
-                        if(chatRoomAdapter.bool){
+                       if(chatRoomAdapter.bool){*/
 
                             val intent = Intent(activity,ChatRoomActivity2::class.java)
                             startActivity(intent)
-                        }
+                      /*  }
                         else{
                             //채팅방이 있을 경우 연결
                         }
                     }
-                }
+                }*/
             }
 
         })

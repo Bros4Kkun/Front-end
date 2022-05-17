@@ -1,3 +1,5 @@
+com/example/RunToU/chatlog.java
+ com.example.RunToU.chatlog
 com/example/RunToU/databinding/FragmentHomeBinding.java
  com.example.RunToU.databinding.FragmentHomeBinding
 androidx/databinding/DataBinderMapperImpl.java
@@ -88,11 +90,6 @@ com/example/RunToU/DataBinderMapperImpl.java
  com.example.RunToU.DataBinderMapperImpl$InnerLayoutIdLookup
 com/example/RunToU/databinding/FragmentNoticeBinding.java
  com.example.RunToU.databinding.FragmentNoticeBinding
-com/example/RunToU/ChatAdpater.java
- com.example.RunToU.ChatAdpater
- com.example.RunToU.ChatAdpater$CenterViewHolder
- com.example.RunToU.ChatAdpater$LeftViewHolder
- com.example.RunToU.ChatAdpater$RightViewHolder
 com/example/RunToU/databinding/FragmentWorkBinding.java
  com.example.RunToU.databinding.FragmentWorkBinding
 com/example/RunToU/databinding/ActivitySettingBinding.java
@@ -185,3 +182,4 @@ com/example/RunToU/edit_introduceActivity.java
 com/example/RunToU/ChatRoomActivity2.java
  com.example.RunToU.ChatRoomActivity2
  com.example.RunToU.ChatRoomActivity2$1
+ com.example.RunToU.ChatRoomActivity2$2
