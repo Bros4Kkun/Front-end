@@ -138,7 +138,7 @@ public class workFragment extends Fragment {
 
                 try {
                     JSONObject jsonObject = new JSONObject(String.valueOf(response));
-                    jsonArray = jsonObject.getJSONArray("orderSheetItemSampleList");
+                    jsonArray = jsonObject.getJSONArray("simpOrderSheetInfoList");
                     Log.d("tag", "jsonArray : " + jsonArray.toString());
 
                     for(int i = 0; i < jsonArray.length(); i++)
@@ -151,6 +151,7 @@ public class workFragment extends Fragment {
                         cost = jTemp.getInt("cost");
                         sheetId = jTemp.getString("orderSheetId");
 
+                        String[] str = destination.split(",");
 
                         if(cate.equals("DELIVERY_AND_SHOPPING")){
                             image = R.drawable.cate_deli;
@@ -168,7 +169,7 @@ public class workFragment extends Fragment {
                             image = R.drawable.cate_all;
                         }
 
-                        workData workData = new workData(image, String.valueOf(cost)+"원", destination, title, sheetId);
+                        workData workData = new workData(image, String.valueOf(cost)+"원", str[0], title, sheetId);
                         arrayList.add(workData);
                         workAdapter.notifyDataSetChanged();
 

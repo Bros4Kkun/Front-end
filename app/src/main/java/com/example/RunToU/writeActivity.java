@@ -3,6 +3,7 @@ package com.example.RunToU;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -25,6 +26,9 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -54,6 +58,9 @@ import net.daum.mf.map.api.MapView;
 public class writeActivity extends AppCompatActivity {
     //왜인진 모르겠으나 fragment로 했을 때는 오류가나고 안넘어감 -> (activity로 만들었음)
 
+    private static final int SEARCH_ADDRESS_ACTIVITY = 10000;
+    //곧 삭제
+
     private Spinner cateSpinner;
     private ArrayAdapter cateAdapter;
 
@@ -69,12 +76,13 @@ public class writeActivity extends AppCompatActivity {
 
     Button btnDate, btnTime;
     TextView address_write;
-    EditText title_write, price_write, detail_write, context_write;     //액티비티가 종료되면서 데이터를 넘겨주나? or 서버에 올라가나?
+    EditText title_write, price_write, doro_write, context_write;     //액티비티가 종료되면서 데이터를 넘겨주나? or 서버에 올라가나?
     ImageButton btnGotopur;
     LocalDateTime nowTime = LocalDateTime.now();
     LocalDateTime deadLine;
 
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+    ActivityResultLauncher<Intent> activityResultLauncher;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -84,16 +92,35 @@ public class writeActivity extends AppCompatActivity {
         setViews();
         InitializeListener();
 
+        int status = NetworkStatus.getConnectivityStatus(getApplicationContext());
+
         queue = Volley.newRequestQueue(this);
 
-        address_write = findViewById(R.id.address_write);
         title_write = findViewById(R.id.title_write);
         price_write = findViewById(R.id.price_write);
-        detail_write = findViewById(R.id.address_write);
+        address_write = findViewById(R.id.address_write);
+        doro_write = findViewById(R.id.doro_write);
+
         context_write = findViewById(R.id.context_write);
         btnDate = findViewById(R.id.btnDate);
         btnTime = findViewById(R.id.btnTime);
         btnGotopur = findViewById(R.id.btnGotopur);
+
+        // 터치 안되게 막기
+        doro_write.setFocusable(false);
+        doro_write.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Log.i("주소설정페이지", "주소입력창 클릭");
+                Intent i = new Intent(getApplicationContext(), addressActivity.class);
+                // 화면전환 애니메이션 없애기
+                overridePendingTransition(0, 0);
+                // 주소결과
+                activityResultLauncher.launch(i);
+//                    startActivityForResult(i, SEARCH_ADDRESS_ACTIVITY);
+            }
+        });
 
         btnGotopur.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,31 +133,31 @@ public class writeActivity extends AppCompatActivity {
                         Toast.makeText(getApplication(), "제목을 5자 이상 작성해주세요", Toast.LENGTH_SHORT).show();
                     } else if (cateSpinner.getSelectedItem().toString().equals("--선택--")) {
                         Toast.makeText(getApplication(), "카테고리를 선택해주세요.", Toast.LENGTH_SHORT).show();
-                    } else if (price <= 0 || price > 100000) {
+                    } else if (price <= 0 || price > 100001) {
                         Toast.makeText(getApplication(), "금액을 정확히 작성해주세요.", Toast.LENGTH_SHORT).show();
                     } else {
                         Intent intent = new Intent(view.getContext(), purchaseActivity.class);
                         intent.putExtra("cost", price);
 
-                        deadLine = LocalDateTime.parse(getDate()+" "+getTime()+":10",formatter);
+                        deadLine = LocalDateTime.parse(getDate() + " " + getTime() + ":10", formatter);
 
                         final JSONObject object = new JSONObject();
                         object.put("title", title_write.getText().toString());
                         object.put("content", context_write.getText().toString());
                         object.put("category", cateSpinner.getSelectedItem().toString());
-                        object.put("destination", detail_write.getText().toString());
+                        object.put("destination", doro_write.getText().toString()+","+address_write.getText().toString());
                         object.put("cost", Integer.parseInt(price_write.getText().toString()));
                         object.put("wishedDeadline", deadLine);
 
                         final JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, url, object, new Response.Listener<JSONObject>() {
                             @Override
                             public void onResponse(JSONObject response) {
-                                Log.d("onResponse","OK" );
+                                Log.d("onResponse", "OK");
                             }
                         }, new Response.ErrorListener() {
                             @Override
                             public void onErrorResponse(VolleyError error) {
-                                Log.d("onError","errrrrrrr");
+                                Log.d("onError", "errrrrrrr");
                             }
                         }) {
                             @Override
@@ -154,6 +181,22 @@ public class writeActivity extends AppCompatActivity {
                 }
             }
         });
+
+        if (status == NetworkStatus.TYPE_MOBILE || status == NetworkStatus.TYPE_WIFI) {
+            activityResultLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
+                if (result.getResultCode() == RESULT_OK) {
+                    Intent intent = result.getData();
+                    String data = intent.getExtras().getString("data");
+                    if (data != null) {
+                        Log.i("test", "data:" + data);
+                        doro_write.setText(data);
+                    }
+                }
+            });
+
+        } else {
+            Toast.makeText(getApplicationContext(), "인터넷 연결을 확인해주세요.", Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void setViews(){

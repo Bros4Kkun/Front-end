@@ -54,6 +54,8 @@
             android:theme="@style/Theme.Runtyou"/>
         <activity android:name="com.example.RunToU.ordersheetActivity"
             android:theme="@style/Theme.Runtyou"/>
+        <activity android:name="com.example.RunToU.addressActivity"
+            android:theme="@style/Theme.Runtyou"/>
 
     </application>
 
