@@ -1,6 +1,9 @@
 package com.example.RunToU;
 
+import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -15,12 +18,17 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -39,28 +47,43 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 import net.daum.mf.map.api.MapView;
 
+@RequiresApi(api = Build.VERSION_CODES.O)
 public class writeActivity extends AppCompatActivity {
     //왜인진 모르겠으나 fragment로 했을 때는 오류가나고 안넘어감 -> (activity로 만들었음)
+
+    private static final int SEARCH_ADDRESS_ACTIVITY = 10000;
+    //곧 삭제
 
     private Spinner cateSpinner;
     private ArrayAdapter cateAdapter;
 
     private RequestQueue queue;
-    private String cookie;
 
     String url = "http://3.39.87.103/api/ordersheet";
 
-    Button btnRoad;
+    private DatePickerDialog.OnDateSetListener d_callbackMethod;
+    private TimePickerDialog.OnTimeSetListener t_callbackMethod;
+
+    String date;
+    String time;
+    String cate = null;
+
+    Button btnDate, btnTime;
     TextView address_write;
-    EditText title_write, price_write, detail_write, context_write;     //액티비티가 종료되면서 데이터를 넘겨주나? or 서버에 올라가나?
+    EditText title_write, price_write, doro_write, context_write;     //액티비티가 종료되면서 데이터를 넘겨주나? or 서버에 올라가나?
     ImageButton btnGotopur;
-    LocalDateTime deadLine = LocalDateTime.now();
+    LocalDateTime nowTime = LocalDateTime.now();
+    LocalDateTime deadLine;
+
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+    ActivityResultLauncher<Intent> activityResultLauncher;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -68,18 +91,37 @@ public class writeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_write);
         setTitle("요청서 작성");
         setViews();
+        InitializeListener();
+
+        int status = NetworkStatus.getConnectivityStatus(getApplicationContext());
 
         queue = Volley.newRequestQueue(this);
-        cookie = SessionControl.SessionControl.INSTANCE.getSess();
 
-        address_write = findViewById(R.id.address_write);
         title_write = findViewById(R.id.title_write);
         price_write = findViewById(R.id.price_write);
-        detail_write = findViewById(R.id.detail_write);
+        address_write = findViewById(R.id.address_write);
+        doro_write = findViewById(R.id.doro_write);
+
         context_write = findViewById(R.id.context_write);
+        btnDate = findViewById(R.id.btnDate);
+        btnTime = findViewById(R.id.btnTime);
         btnGotopur = findViewById(R.id.btnGotopur);
 
+        // 터치 안되게 막기
+        doro_write.setFocusable(false);
+        doro_write.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                Log.i("주소설정페이지", "주소입력창 클릭");
+                Intent i = new Intent(getApplicationContext(), addressActivity.class);
+                // 화면전환 애니메이션 없애기
+                overridePendingTransition(0, 0);
+                // 주소결과
+                activityResultLauncher.launch(i);
+//                    startActivityForResult(i, SEARCH_ADDRESS_ACTIVITY);
+            }
+        });
 
         btnGotopur.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,29 +134,50 @@ public class writeActivity extends AppCompatActivity {
                         Toast.makeText(getApplication(), "제목을 5자 이상 작성해주세요", Toast.LENGTH_SHORT).show();
                     } else if (cateSpinner.getSelectedItem().toString().equals("--선택--")) {
                         Toast.makeText(getApplication(), "카테고리를 선택해주세요.", Toast.LENGTH_SHORT).show();
-                    } else if (price <= 0 || price > 100000) {
+                    } else if (price <= 0 || price > 100001) {
                         Toast.makeText(getApplication(), "금액을 정확히 작성해주세요.", Toast.LENGTH_SHORT).show();
                     } else {
                         Intent intent = new Intent(view.getContext(), purchaseActivity.class);
                         intent.putExtra("cost", price);
 
+                        String date = getDate();
+                        String time = getTime();
+                        Log.d("time" , "Time :" + time);
+                        deadLine = LocalDateTime.parse(date + " " + time + ":10", formatter);
+
+                        if(cateSpinner.getSelectedItem().toString().equals("배달 및 장보기")){
+                            cate="DELIVERY_AND_SHOPPING";
+                        }else if(cateSpinner.getSelectedItem().toString().equals("청소 및 집안일")){
+                            cate="CLEANING_AND_HOUSEWORK";
+                        }else if(cateSpinner.getSelectedItem().toString().equals("설치 조립 운반")){
+                            cate="DELIVERY_AND_INSTALLATION";
+                        }else if(cateSpinner.getSelectedItem().toString().equals("동행 및 돌봄")){
+                            cate="ACCOMPANY";
+                        }else if(cateSpinner.getSelectedItem().toString().equals("벌레 퇴치")){
+                            cate="ANTI_BUG";
+                        }else if(cateSpinner.getSelectedItem().toString().equals("역할 대행")){
+                            cate="ROLE_ACTING";
+                        }else if(cateSpinner.getSelectedItem().toString().equals("기타")){
+                            cate="ETC";
+                        }
+
                         final JSONObject object = new JSONObject();
                         object.put("title", title_write.getText().toString());
                         object.put("content", context_write.getText().toString());
-                        object.put("category", cateSpinner.getSelectedItem().toString());
-                        object.put("destination", detail_write.getText().toString());
+                        object.put("category", cate);
+                        object.put("destination", doro_write.getText().toString()+","+address_write.getText().toString());
                         object.put("cost", Integer.parseInt(price_write.getText().toString()));
-                        object.put("wishedDeadline", deadLine.toString());
+                        object.put("wishedDeadline", deadLine);
 
                         final JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, url, object, new Response.Listener<JSONObject>() {
                             @Override
                             public void onResponse(JSONObject response) {
-                                Log.d("onResponse","OK" );
+                                Log.d("onResponse", "OK");
                             }
                         }, new Response.ErrorListener() {
                             @Override
                             public void onErrorResponse(VolleyError error) {
-                                Log.d("onError","errrrrrrr");
+                                Log.d("onError", "errrrrrrr");
                             }
                         }) {
                             @Override
@@ -138,12 +201,103 @@ public class writeActivity extends AppCompatActivity {
                 }
             }
         });
+
+        if (status == NetworkStatus.TYPE_MOBILE || status == NetworkStatus.TYPE_WIFI) {
+            activityResultLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
+                if (result.getResultCode() == RESULT_OK) {
+                    Intent intent = result.getData();
+                    String data = intent.getExtras().getString("data");
+                    if (data != null) {
+                        Log.i("test", "data:" + data);
+                        doro_write.setText(data);
+                    }
+                }
+            });
+
+        } else {
+            Toast.makeText(getApplicationContext(), "인터넷 연결을 확인해주세요.", Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void setViews(){
         cateSpinner = findViewById(R.id.cate_write);
         cateAdapter = ArrayAdapter.createFromResource(this, R.array.cate, R.layout.support_simple_spinner_dropdown_item);
         cateSpinner.setAdapter(cateAdapter);
+    }
+
+    public void InitializeListener()
+    {
+        d_callbackMethod = new DatePickerDialog.OnDateSetListener()
+        {
+            @Override
+            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth)
+            {
+                if(monthOfYear < 10){
+                    btnDate.setText(year + "년" + "0"+(monthOfYear+1) + "월" + dayOfMonth + "일");
+                    setDate(year + "-" + "0"+ (monthOfYear+1) + "-" + dayOfMonth);
+                }else{
+                    btnDate.setText(year + "년" + (monthOfYear+1) + "월" + dayOfMonth + "일");
+                    setDate(year + "-" + (monthOfYear+1) + "-" + dayOfMonth);
+                }
+            }
+        };
+
+        t_callbackMethod = new TimePickerDialog.OnTimeSetListener()
+        {
+            @Override
+            public void onTimeSet(TimePicker view, int hourOfDay, int minute)
+            {
+                Log.d("Tag", String.valueOf(hourOfDay));
+                if(hourOfDay < 10 && minute < 10){
+                    btnTime.setText("0" + hourOfDay + "시" + "0" + minute + "분");
+                    setTime("0" + hourOfDay + ":" +  "0" + minute);
+                }else if(hourOfDay < 10){
+                    btnTime.setText("0" + hourOfDay + "시" + minute + "분");
+                    setTime("0" + hourOfDay + ":" + minute);
+                }else if(minute < 10){
+                    btnTime.setText(hourOfDay + "시" + "0"+ minute + "분");
+                    setTime(hourOfDay + ":" +  "0"+ minute);
+                }else{
+                    btnTime.setText(hourOfDay + "시" + minute + "분");
+                    setTime(hourOfDay + ":" + minute);
+                }
+            }
+        };
+    }
+
+    public void d_OnClickHandler(View view)
+    {
+        String temp = nowTime.toString().substring(0,10);
+        String arr[] = temp.split("-");
+
+        DatePickerDialog d_dialog = new DatePickerDialog(this, d_callbackMethod, Integer.parseInt(arr[0]),
+                Integer.parseInt(arr[1])-1, Integer.parseInt(arr[2]));//왜 월은 0부터 셀까?
+        d_dialog.show();
+    }
+
+    public void t_OnClickHandler(View view)
+    {
+        String temp = nowTime.toString().substring(11,18);
+        String arr[] = temp.split(":");
+
+        TimePickerDialog t_dialog = new TimePickerDialog(this, t_callbackMethod, Integer.parseInt(arr[0]), Integer.parseInt(arr[1]), true);
+        t_dialog.show();
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 
 }

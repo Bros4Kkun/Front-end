@@ -73,6 +73,12 @@
         <activity
             android:name="com.example.RunToU.ChatRoomActivity2"
             android:theme="@style/Theme.Runtyou" />
+        <activity
+            android:name="com.example.RunToU.addressActivity"
+            android:theme="@style/Theme.Runtyou" />
+        <activity
+            android:name="com.example.RunToU.ordersheetActivity"
+            android:theme="@style/Theme.Runtyou" />
 
         <service
             android:name="com.google.firebase.components.ComponentDiscoveryService"
