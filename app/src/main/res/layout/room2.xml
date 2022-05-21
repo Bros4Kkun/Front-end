@@ -23,6 +23,17 @@
         android:layout_alignParentBottom="true"
         android:gravity="center"
         android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="매칭 요청"
+            android:id="@+id/matchingok"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="매칭 수락"
+            android:id="@+id/gomatching"/>
+
         <EditText
             android:id="@+id/editText1"
             android:background="#ffffff"
@@ -43,5 +54,15 @@
             android:foreground="?attr/selectableItemBackground"
             android:scaleType="fitXY"
             android:layout_gravity="center_horizontal"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id = "@+id/btn_check"
+            android:text="완료처리"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/com"
+            android:text="완료"/>
     </LinearLayout>
 </RelativeLayout>

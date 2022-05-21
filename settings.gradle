@@ -1,3 +1,7 @@
+include ':StompClient2'
+include ':StompClient1'
+include ':StompClient'
+include ':StompCleint'
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {

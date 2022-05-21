@@ -1,14 +1,15 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:2:1-59:12
-INJECTED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:2:1-59:12
-INJECTED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:2:1-59:12
-INJECTED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:2:1-59:12
+ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:2:1-59:12
+INJECTED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:2:1-59:12
+INJECTED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:2:1-59:12
+INJECTED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:2:1-59:12
 MERGED from [androidx.databinding:databinding-adapters:4.1.1] C:\Users\whdal\.gradle\caches\transforms-3\5aac12db0775f1aea58df004dac13e3f\transformed\databinding-adapters-4.1.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.databinding:databinding-runtime:4.1.1] C:\Users\whdal\.gradle\caches\transforms-3\62231a3381fb50ec0141bdbbd0f5910f\transformed\databinding-runtime-4.1.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.databinding:viewbinding:4.1.1] C:\Users\whdal\.gradle\caches\transforms-3\031262d2a5ca5e7c5c353f7ed75dd919\transformed\jetified-viewbinding-4.1.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\whdal\.gradle\caches\transforms-3\0c73f74dcfe92d78e886d3bc54580339\transformed\multidex-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-analytics-ktx:20.1.0] C:\Users\whdal\.gradle\caches\transforms-3\59dae0bb0d5a431949c51bc826572604\transformed\jetified-firebase-analytics-ktx-20.1.0\AndroidManifest.xml:2:1-17:12
+MERGED from [:StompClient2] C:\Users\whdal\AndroidStudioProjects\Front-end1\StompClient2\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.core:core-ktx:1.7.0] C:\Users\whdal\.gradle\caches\transforms-3\f9850ac7f3f8009007da964a2ce15f9f\transformed\jetified-core-ktx-1.7.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-auth-ktx:21.0.1] C:\Users\whdal\.gradle\caches\transforms-3\a3d36230e68a1e10f6a4bc87f7680caf\transformed\jetified-firebase-auth-ktx-21.0.1\AndroidManifest.xml:2:1-17:12
 MERGED from [com.google.firebase:firebase-common-ktx:20.0.0] C:\Users\whdal\.gradle\caches\transforms-3\9d35e34e65657347d191168c25e2a2fc\transformed\jetified-firebase-common-ktx-20.0.0\AndroidManifest.xml:2:1-21:12
@@ -82,25 +83,25 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\whdal\.gradle\ca
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\whdal\.gradle\caches\transforms-3\5c6b4ed95b94625836f57799a753d510\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\whdal\.gradle\caches\transforms-3\2441050f909539ec1e67a4df3c29c86a\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\whdal\.gradle\caches\transforms-3\23c8fca7bdcb0a67b93617f6c6dcb191\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:2:1-59:12
-INJECTED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:2:1-59:12
-INJECTED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:2:1-59:12
+INJECTED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:2:1-59:12
+INJECTED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:2:1-59:12
+INJECTED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:2:1-59:12
 	package
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:3:5-33
-		INJECTED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:3:5-33
+		INJECTED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:2:1-59:12
-		INJECTED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:2:1-59:12
+		INJECTED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:2:1-59:12
-		INJECTED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:2:1-59:12
+		INJECTED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:5:5-6:23
+ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:5:5-6:23
 MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\whdal\.gradle\caches\transforms-3\6feeed4234385d13bd8b23f6a3973a27\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:23:5-67
 MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\whdal\.gradle\caches\transforms-3\6feeed4234385d13bd8b23f6a3973a27\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:23:5-67
 MERGED from [com.google.android.gms:play-services-measurement-api:20.1.0] C:\Users\whdal\.gradle\caches\transforms-3\8bf5dc047c3ce44dff485d3b158fe1ff\transformed\jetified-play-services-measurement-api-20.1.0\AndroidManifest.xml:22:5-67
@@ -114,13 +115,13 @@ MERGED from [com.google.android.gms:play-services-measurement-impl:20.1.0] C:\Us
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.0] C:\Users\whdal\.gradle\caches\transforms-3\65cf6c17030926862123e6fb80a9fe9f\transformed\jetified-play-services-measurement-sdk-api-20.1.0\AndroidManifest.xml:23:5-67
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.0] C:\Users\whdal\.gradle\caches\transforms-3\65cf6c17030926862123e6fb80a9fe9f\transformed\jetified-play-services-measurement-sdk-api-20.1.0\AndroidManifest.xml:23:5-67
 	android:name
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:5:22-64
+		ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:5:22-64
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:7:5-8:23
+ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:7:5-8:23
 	android:name
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:7:22-76
+		ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:7:22-76
 application
-ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:11:5-57:19
+ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:11:5-57:19
 MERGED from [com.google.firebase:firebase-analytics-ktx:20.1.0] C:\Users\whdal\.gradle\caches\transforms-3\59dae0bb0d5a431949c51bc826572604\transformed\jetified-firebase-analytics-ktx-20.1.0\AndroidManifest.xml:7:5-15:19
 MERGED from [com.google.firebase:firebase-analytics-ktx:20.1.0] C:\Users\whdal\.gradle\caches\transforms-3\59dae0bb0d5a431949c51bc826572604\transformed\jetified-firebase-analytics-ktx-20.1.0\AndroidManifest.xml:7:5-15:19
 MERGED from [com.google.firebase:firebase-auth-ktx:21.0.1] C:\Users\whdal\.gradle\caches\transforms-3\a3d36230e68a1e10f6a4bc87f7680caf\transformed\jetified-firebase-auth-ktx-21.0.1\AndroidManifest.xml:7:5-15:19
@@ -184,105 +185,105 @@ MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\whdal\.gradle\cach
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.7.0] C:\Users\whdal\.gradle\caches\transforms-3\b2faa265119883a144c95f5fa148dcba\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:16:9-35
+		ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:16:9-35
 	android:label
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:14:9-41
+		ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:14:9-41
 	android:roundIcon
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:15:9-54
+		ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:15:9-54
 	android:icon
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:13:9-43
+		ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:13:9-43
 	android:allowBackup
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:12:9-35
+		ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:12:9-35
 	android:usesCleartextTraffic
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:18:9-44
+		ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:18:9-44
 activity#com.example.RunToU.LoginActivity
-ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:21:9-33:20
+ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:21:9-33:20
 	android:exported
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:24:13-36
+		ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:24:13-36
 	android:theme
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:22:13-47
+		ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:22:13-47
 	android:name
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:21:19-66
+		ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:21:19-66
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:25:12-32:29
+ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:25:12-32:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:29:17-69
+ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:29:17-69
 	android:name
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:29:25-66
+		ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:29:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:31:17-77
+ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:31:17-77
 	android:name
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:31:27-74
+		ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:31:27-74
 activity#com.example.RunToU.MainActivity
-ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:35:9-36:51
+ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:35:9-36:51
 	android:theme
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:36:13-49
+		ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:36:13-49
 	android:name
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:35:19-47
+		ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:35:19-47
 activity#com.example.RunToU.SingupActivity
-ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:37:9-38:52
+ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:37:9-38:52
 	android:theme
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:38:13-49
+		ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:38:13-49
 	android:name
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:37:19-67
+		ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:37:19-67
 meta-data#com.kakao.sdk.AppKey
-ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:39:9-106
+ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:39:9-106
 	android:value
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:39:56-104
+		ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:39:56-104
 	android:name
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:39:20-55
+		ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:39:20-55
 activity#com.example.RunToU.reviewActivity
-ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:40:9-41:51
+ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:40:9-41:51
 	android:theme
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:41:13-49
+		ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:41:13-49
 	android:name
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:40:19-67
+		ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:40:19-67
 activity#com.example.RunToU.settingActivity
-ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:42:9-43:51
+ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:42:9-43:51
 	android:theme
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:43:13-49
+		ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:43:13-49
 	android:name
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:42:19-68
+		ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:42:19-68
 activity#com.example.RunToU.purchaseActivity
-ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:44:9-45:51
+ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:44:9-45:51
 	android:theme
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:45:13-49
+		ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:45:13-49
 	android:name
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:44:19-69
+		ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:44:19-69
 activity#com.example.RunToU.edit_introduceActivity
-ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:46:9-47:51
+ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:46:9-47:51
 	android:theme
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:47:13-49
+		ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:47:13-49
 	android:name
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:46:19-75
+		ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:46:19-75
 activity#com.example.RunToU.writeActivity
-ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:48:9-49:51
+ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:48:9-49:51
 	android:theme
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:49:13-49
+		ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:49:13-49
 	android:name
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:48:19-66
+		ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:48:19-66
 activity#com.example.RunToU.verificationActivity
-ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:50:9-51:51
+ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:50:9-51:51
 	android:theme
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:51:13-49
+		ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:51:13-49
 	android:name
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:50:19-73
+		ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:50:19-73
 activity#com.example.RunToU.jobrecActivity
-ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:52:9-53:51
+ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:52:9-53:51
 	android:theme
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:53:13-49
+		ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:53:13-49
 	android:name
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:52:19-67
+		ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:52:19-67
 activity#com.example.RunToU.ChatRoomActivity2
-ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:54:9-55:51
+ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:54:9-55:51
 	android:theme
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:55:13-49
+		ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:55:13-49
 	android:name
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml:54:19-52
+		ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml:54:19-52
 uses-sdk
-INJECTED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml
 MERGED from [androidx.databinding:databinding-adapters:4.1.1] C:\Users\whdal\.gradle\caches\transforms-3\5aac12db0775f1aea58df004dac13e3f\transformed\databinding-adapters-4.1.1\AndroidManifest.xml:22:5-44
 MERGED from [androidx.databinding:databinding-adapters:4.1.1] C:\Users\whdal\.gradle\caches\transforms-3\5aac12db0775f1aea58df004dac13e3f\transformed\databinding-adapters-4.1.1\AndroidManifest.xml:22:5-44
 MERGED from [androidx.databinding:databinding-runtime:4.1.1] C:\Users\whdal\.gradle\caches\transforms-3\62231a3381fb50ec0141bdbbd0f5910f\transformed\databinding-runtime-4.1.1\AndroidManifest.xml:22:5-44
@@ -293,6 +294,8 @@ MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\whdal\.gradle\caches\tra
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\whdal\.gradle\caches\transforms-3\0c73f74dcfe92d78e886d3bc54580339\transformed\multidex-2.0.0\AndroidManifest.xml:20:5-43
 MERGED from [com.google.firebase:firebase-analytics-ktx:20.1.0] C:\Users\whdal\.gradle\caches\transforms-3\59dae0bb0d5a431949c51bc826572604\transformed\jetified-firebase-analytics-ktx-20.1.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-analytics-ktx:20.1.0] C:\Users\whdal\.gradle\caches\transforms-3\59dae0bb0d5a431949c51bc826572604\transformed\jetified-firebase-analytics-ktx-20.1.0\AndroidManifest.xml:5:5-44
+MERGED from [:StompClient2] C:\Users\whdal\AndroidStudioProjects\Front-end1\StompClient2\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:StompClient2] C:\Users\whdal\AndroidStudioProjects\Front-end1\StompClient2\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.core:core-ktx:1.7.0] C:\Users\whdal\.gradle\caches\transforms-3\f9850ac7f3f8009007da964a2ce15f9f\transformed\jetified-core-ktx-1.7.0\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.core:core-ktx:1.7.0] C:\Users\whdal\.gradle\caches\transforms-3\f9850ac7f3f8009007da964a2ce15f9f\transformed\jetified-core-ktx-1.7.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.firebase:firebase-auth-ktx:21.0.1] C:\Users\whdal\.gradle\caches\transforms-3\a3d36230e68a1e10f6a4bc87f7680caf\transformed\jetified-firebase-auth-ktx-21.0.1\AndroidManifest.xml:5:5-44
@@ -439,16 +442,16 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\whdal\.gradle\caches\transform
 MERGED from [androidx.print:print:1.0.0] C:\Users\whdal\.gradle\caches\transforms-3\2441050f909539ec1e67a4df3c29c86a\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\whdal\.gradle\caches\transforms-3\23c8fca7bdcb0a67b93617f6c6dcb191\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\whdal\.gradle\caches\transforms-3\23c8fca7bdcb0a67b93617f6c6dcb191\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
-INJECTED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\whdal\AndroidStudioProjects\runtyou\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\whdal\AndroidStudioProjects\Front-end1\app\src\main\AndroidManifest.xml
 service#com.google.firebase.components.ComponentDiscoveryService
 ADDED from [com.google.firebase:firebase-analytics-ktx:20.1.0] C:\Users\whdal\.gradle\caches\transforms-3\59dae0bb0d5a431949c51bc826572604\transformed\jetified-firebase-analytics-ktx-20.1.0\AndroidManifest.xml:8:9-14:19
 MERGED from [com.google.firebase:firebase-auth-ktx:21.0.1] C:\Users\whdal\.gradle\caches\transforms-3\a3d36230e68a1e10f6a4bc87f7680caf\transformed\jetified-firebase-auth-ktx-21.0.1\AndroidManifest.xml:8:9-14:19

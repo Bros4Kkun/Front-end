@@ -32,7 +32,7 @@
                 android:layout_marginBottom="10dp"
                 android:orientation="horizontal">
                 <TextView
-                    android:id="@+id/textv_nicname"
+                    android:id="@+id/textv_nicname1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="#ffffff"
@@ -44,7 +44,7 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/textv_msg"
+                android:id="@+id/textv_msg1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#ffffff"
@@ -56,7 +56,7 @@
                 android:textSize="15dp" />
 
             <TextView
-                android:id="@+id/textv_time"
+                android:id="@+id/textv_time1"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="데모 2020-03-12 12:30" />

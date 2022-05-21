@@ -36,9 +36,8 @@ com/example/RunToU/ExpandableListAdapter.java
  com.example.RunToU.ExpandableListAdapter$Item
  com.example.RunToU.ExpandableListAdapter$ListChildViewHolder
  com.example.RunToU.ExpandableListAdapter$ListHeaderViewHolder
-com/example/RunToU/ChatRoomActivity2.java
- com.example.RunToU.ChatRoomActivity2
- com.example.RunToU.ChatRoomActivity2$1
+androidx/databinding/DataBindingComponent.java
+ androidx.databinding.DataBindingComponent
 com/example/RunToU/jobAdapter.java
  com.example.RunToU.jobAdapter
  com.example.RunToU.jobAdapter$1
@@ -89,11 +88,6 @@ com/example/RunToU/DataBinderMapperImpl.java
  com.example.RunToU.DataBinderMapperImpl$InnerLayoutIdLookup
 com/example/RunToU/databinding/FragmentNoticeBinding.java
  com.example.RunToU.databinding.FragmentNoticeBinding
-com/example/RunToU/ChatAdpater.java
- com.example.RunToU.ChatAdpater
- com.example.RunToU.ChatAdpater$CenterViewHolder
- com.example.RunToU.ChatAdpater$LeftViewHolder
- com.example.RunToU.ChatAdpater$RightViewHolder
 com/example/RunToU/databinding/FragmentWorkBinding.java
  com.example.RunToU.databinding.FragmentWorkBinding
 com/example/RunToU/databinding/ActivitySettingBinding.java
@@ -148,6 +142,8 @@ com/example/RunToU/workAdapter.java
  com.example.RunToU.workAdapter
  com.example.RunToU.workAdapter$1
  com.example.RunToU.workAdapter$CustomViewHolder
+com/example/RunToU/databinding/MsgListBinding.java
+ com.example.RunToU.databinding.MsgListBinding
 com/example/RunToU/databinding/ItemWorkBinding.java
  com.example.RunToU.databinding.ItemWorkBinding
 com/example/RunToU/databinding/ItemJobBinding.java
@@ -164,6 +160,8 @@ com/example/RunToU/Dataitem.java
  com.example.RunToU.Dataitem
 com/example/RunToU/workData.java
  com.example.RunToU.workData
+com/example/RunToU/databinding/RoomHeaderItemBinding.java
+ com.example.RunToU.databinding.RoomHeaderItemBinding
 com/example/RunToU/reviewActivity.java
  com.example.RunToU.reviewActivity
  com.example.RunToU.reviewActivity$1
@@ -181,5 +179,11 @@ com/example/RunToU/edit_introduceActivity.java
  com.example.RunToU.edit_introduceActivity
  com.example.RunToU.edit_introduceActivity$1
  com.example.RunToU.edit_introduceActivity$2
-androidx/databinding/DataBindingComponent.java
- androidx.databinding.DataBindingComponent
+com/example/RunToU/ChatRoomActivity2.java
+ com.example.RunToU.ChatRoomActivity2
+ com.example.RunToU.ChatRoomActivity2$1
+ com.example.RunToU.ChatRoomActivity2$2
+ com.example.RunToU.ChatRoomActivity2$3
+ com.example.RunToU.ChatRoomActivity2$4
+ com.example.RunToU.ChatRoomActivity2$5
+ com.example.RunToU.ChatRoomActivity2$6

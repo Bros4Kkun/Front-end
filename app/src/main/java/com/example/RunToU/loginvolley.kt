@@ -14,7 +14,7 @@ import kotlin.collections.HashMap
 class loginvolley {
 
     object loginvolley{
-
+        var userindex : Int = 0
         val url = "http://3.39.87.103/api/user/signin"
         fun loginvolley(
             context: Context,
@@ -36,8 +36,9 @@ class loginvolley {
                 logJson,
                 Response.Listener<JSONObject> {response ->
                     print(response)
-                    success(true)
 
+                    userindex = response.getInt("userPk")
+                    success(true)
 
                 },
                 Response.ErrorListener { error ->
@@ -57,7 +58,6 @@ class loginvolley {
                     val cookie = cookiesinfo.get("Set-Cookie")
                     println(cookie)
                     SessionControl.SessionControl.sess=cookie
-                    println("TEST!!!!!!!!: ${SessionControl.SessionControl.sess}")
                     return super.parseNetworkResponse(response)
 
 

@@ -1,69 +1,134 @@
 package com.example.RunToU
 
-import com.gmail.bishoybasily.stomp.lib.Event
-import com.gmail.bishoybasily.stomp.lib.StompClient
+import android.annotation.SuppressLint
+import android.os.Handler
+
+import com.example.stompclient2.Event
+
+
+
+
 import io.reactivex.disposables.Disposable
-import okhttp3.OkHttpClient
+import okhttp3.*
+
+import java.util.*
 import java.util.concurrent.TimeUnit
-import java.util.logging.Level
+
 import java.util.logging.Logger
 
-class Stompclass {
-    object Stomclass {
-        lateinit var stompConnection: Disposable
-        lateinit var topic: Disposable
+import com.example.stompclient2.StompClient
 
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
+import okhttp3.internal.http2.Http2Reader
+import java.lang.Exception
+
+
+class Stompclass: WebSocketListener() {
+    object Stomclass : WebSocketListener() {
+        lateinit var stompConnection: Disposable
+
+        var resultString: String? =""
+
+        val handler : Handler = MyHandler()
         val logger = Logger.getLogger("STOMP")
         val url1 = "ws://3.39.87.103/ws-stomp"
-        val intervalMillis = 1000L
+        val intervalMillis = 100L
         val client = OkHttpClient.Builder()
-            .readTimeout(10, TimeUnit.SECONDS)
-            .writeTimeout(10, TimeUnit.SECONDS)
-            .connectTimeout(1000, TimeUnit.SECONDS)
+            .addInterceptor {
+                it.proceed(
+                    it.request().newBuilder()
+                        .header("Authentication", "Bearer " + SessionControl.SessionControl.token)
+                        .build()
+                )
+            }
+            .addInterceptor {
+                it.proceed(
+                    it.request().newBuilder().header("accept-version", "1.0,1.1,1.2").build()
+                )
+            }
+            .addInterceptor {
+                it.proceed(
+                    it.request().newBuilder().header("heart-beat", "6000,0").build()
+                )
+            }
+            .readTimeout(1, TimeUnit.MINUTES)
+            .writeTimeout(1, TimeUnit.MINUTES)
+            .connectTimeout(1, TimeUnit.MINUTES)
             .build()
-        val stomp = StompClient(client, intervalMillis).apply { this@apply.url = url1 }
 
-        fun connect(msg : String) {
-            stompConnection = stomp.connect().subscribe() {
+        val stomp = StompClient(client, intervalMillis,handler).apply { this@apply.url = url1 }
+
+        fun connect(api : String,int: Int) {
+            stompConnection = stomp.connect().subscribe() {   //연결
                 when (it.type) {
                     Event.Type.OPENED -> {
+                        print("connected succcccc!")
+                        stomp.join(api + int.toString(),) // 응답받기 위한 구독
+                            .subscribe {
+                                chatRecieve.chatRecieve.recivemsg = it.toString()
+                            }
 
 
                     }
-                    Event.Type.CLOSED -> {
+                    Event.Type.CLOSED -> { // log보고 반복메시지 보내는 이유 분석
 
                     }
                     Event.Type.ERROR -> {
 
                     }
-                }
-                topic = stomp.join("/topic/greetings")
-                    .subscribe { logger.log(Level.INFO, it)
-
-                        chatRecieve.chatRecieve.recieveMsg = it
-
-                    }
-                stomp.send("/app/hello-msg-mapping", msg).subscribe(){echo ->
-
-                    if(echo){
-                        println("test!!!!!!!!!!"+echo.toString())
-
-                    }
 
                 }
+
 
             }
 
+        }
+        @SuppressLint("CheckResult")
+        fun send(msg: String?,api: String, int: Int){
+            if(!msg.isNullOrEmpty()){
+                try {
+                    stomp.send(
+                        api + int.toString(),
+                        msg.toString(),
+                        "Bearer " + SessionControl.SessionControl.token
+                    ).subscribe() { echo -> // send
+
+                        if (echo) {
+                            println("test!!!!!!!3!!!" + msg + int.toString())
+
+
+                        }
+                    }
+                }catch(e:Exception){
+                    println("fuckingError!"+e.toString())
+                }
+            }
+        }
+
+        fun subscribe(topic : String,int: Int) {
+            CoroutineScope(Dispatchers.IO).async {
+                val def = async {
+                    val join = stomp.join(topic + int.toString(),) // 응답받기 위한 구독
+                        .subscribe {
+                            chatRecieve.chatRecieve.recivemsg = it.toString()
+                        }
+
+                }
+
+
+            }
+
+        }
+
+
+
+
+
 
 
         }
-        fun subscribe(){
-
-        }
-
-        fun send() {
 
 
-        }
     }
-}

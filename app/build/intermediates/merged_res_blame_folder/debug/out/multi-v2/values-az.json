@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\whdal\\AndroidStudioProjects\\runtyou\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-az\\values-az.xml",
+            "outputFile": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-az\\values-az.xml",
             "map": [
                 {
                     "source": "C:\\Users\\whdal\\.gradle\\caches\\transforms-3\\c13a50edc7b3c32f2ed07308bcc34012\\transformed\\jetified-play-services-basement-18.0.0\\res\\values-az\\values.xml",
