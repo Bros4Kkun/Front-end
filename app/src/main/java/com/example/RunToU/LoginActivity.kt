@@ -5,7 +5,10 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
+import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
+import com.example.RunToU.profileVolley.nick
+import com.example.RunToU.profileVolley.selfintro
 import kotlinx.android.synthetic.main.activity_login.*
 
 
@@ -17,10 +20,12 @@ class LoginActivity : AppCompatActivity() {
     private val SET_COOKIE_KEY = "Set-Cookie"
     private val COOKIE_KEY = "Cookie"
     private val SESSION_COOKIE = "JSESSIONID"
-    var login_hashMap = HashMap<String,Any>()
+    var login_hashMap = HashMap<String, Any>()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        val ac: ActionBar? = supportActionBar
+        ac?.setTitle("로그인")
         setTheme(R.style.Theme_Runtyou)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -39,11 +44,20 @@ class LoginActivity : AppCompatActivity() {
                 ) { success ->
                     if (success) {
                         user = 1
-                        chatRecieve.chatRecieve.loginID=userid.toString()
+                        chatRecieve.chatRecieve.loginID = userid.toString()
                         Toast.makeText(this@LoginActivity, "수행자 로그인 성공", Toast.LENGTH_SHORT).show()
                         jwtVolley.jwtVolley.jwtvolley(context = this@LoginActivity)
                         matchCheckVolley.matchCheckVolley.matchsucVolley(this@LoginActivity)
-                        Stompclass.Stomclass.connect("none",3)
+                        Stompclass.Stomclass.connect("none", 3)
+                        profileVolley.profileVolley(this@LoginActivity,chatRecieve.chatRecieve.loginID){
+                            if(it){
+
+                                println("success!")
+
+                            }
+                            else{}
+                        }
+
                         val intent1 = Intent(this@LoginActivity, MainActivity::class.java)
 
 
@@ -81,13 +95,24 @@ class LoginActivity : AppCompatActivity() {
                 ) { success ->
                     if (success) {
                         user = 1
-                        chatRecieve.chatRecieve.loginID=userid.toString()
+                        chatRecieve.chatRecieve.loginID = userid.toString()
                         Toast.makeText(this@LoginActivity, "요청자 로그인 성공", Toast.LENGTH_SHORT).show()
                         jwtVolley.jwtVolley.jwtvolley(context = this@LoginActivity)
-                        Stompclass.Stomclass.connect("/queue/orderer/",loginvolley.loginvolley.userindex) // 로그인시 구독
+                        Stompclass.Stomclass.connect(
+                            "/queue/orderer/",
+                            loginvolley.loginvolley.userindex
+                        ) // 로그인시 구독
                         val intent1 = Intent(this@LoginActivity, MainActivity::class.java)
                         matchCheckVolley.matchCheckVolley.matchsucVolley(this@LoginActivity)
                         chatRoomAdapter.requester = true
+                        profileVolley.profileVolley(this@LoginActivity,chatRecieve.chatRecieve.loginID){
+                            if(it){
+
+                                println("success!")
+
+                            }
+                            else{}
+                        }
                         startActivity(intent1)
 
                         finish()

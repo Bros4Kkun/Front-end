@@ -100,6 +100,10 @@
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rounded_cor.xml.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\src\\main\\res\\drawable\\rounded_cor.xml"
+    },
+    {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_msg.xml.flat",
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\src\\main\\res\\layout\\fragment_msg.xml"
     },
@@ -130,6 +134,10 @@
     {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\res\\merged\\debug\\drawable_gotopurchase_text.png.flat",
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\src\\main\\res\\drawable\\gotopurchase_text.png"
+    },
+    {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rounded_corner.xml.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\src\\main\\res\\drawable\\rounded_corner.xml"
     },
     {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_selector_bottom_navi_home_icon.png.flat",
@@ -300,12 +308,12 @@
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\src\\main\\res\\drawable-v24\\titlebg.jpg"
     },
     {
-        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_arrow_upward_black_24dp.png.flat",
-        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_arrow_upward_black_24dp.png"
-    },
-    {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_del123_background.png.flat",
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\del123_background.png"
+    },
+    {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_arrow_upward_black_24dp.png.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_arrow_upward_black_24dp.png"
     },
     {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_arrow_upward_black_24dp.png.flat",
@@ -448,24 +456,24 @@
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\src\\main\\res\\drawable\\cate_clean.jpg"
     },
     {
-        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
-    },
-    {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_del123_background.xml.flat",
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\del123_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\res\\merged\\debug\\drawable_selector_bottom_navi_msg_icon.png.flat",
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\src\\main\\res\\drawable\\selector_bottom_navi_msg_icon.png"
     },
     {
-        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_rectangle_1.xml.flat",
-        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\rectangle_1.xml"
-    },
-    {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_del123_background.png.flat",
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\del123_background.png"
+    },
+    {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_rectangle_1.xml.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\rectangle_1.xml"
     },
     {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_review.xml.flat",
@@ -530,6 +538,10 @@
     {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\res\\merged\\debug\\drawable_plus.jpg.flat",
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\src\\main\\res\\drawable\\plus.jpg"
+    },
+    {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_popup.xml.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\src\\main\\res\\layout\\activity_popup.xml"
     },
     {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_del123.png.flat",

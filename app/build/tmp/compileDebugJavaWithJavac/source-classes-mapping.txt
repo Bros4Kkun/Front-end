@@ -8,14 +8,6 @@ com/example/RunToU/databinding/FragmentMsgBinding.java
  com.example.RunToU.databinding.FragmentMsgBinding
 androidx/databinding/library/baseAdapters/BR.java
  androidx.databinding.library.baseAdapters.BR
-com/example/RunToU/my_profileFragment.java
- com.example.RunToU.my_profileFragment
- com.example.RunToU.my_profileFragment$1
- com.example.RunToU.my_profileFragment$2
- com.example.RunToU.my_profileFragment$3
- com.example.RunToU.my_profileFragment$4
- com.example.RunToU.my_profileFragment$5
- com.example.RunToU.my_profileFragment$6
 com/example/RunToU/databinding/ItemVerificationBinding.java
  com.example.RunToU.databinding.ItemVerificationBinding
 com/example/RunToU/jsonData.java
@@ -128,6 +120,8 @@ com/example/RunToU/databinding/ActivityReviewBinding.java
  com.example.RunToU.databinding.ActivityReviewBinding
 com/example/RunToU/BuildConfig.java
  com.example.RunToU.BuildConfig
+com/example/RunToU/databinding/ActivityPopupBinding.java
+ com.example.RunToU.databinding.ActivityPopupBinding
 com/example/RunToU/databinding/FragmentShortJobrecBinding.java
  com.example.RunToU.databinding.FragmentShortJobrecBinding
 com/example/RunToU/databinding/FragmentLogBinding.java

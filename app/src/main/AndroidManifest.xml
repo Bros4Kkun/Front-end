@@ -19,7 +19,7 @@
 
 
         <activity android:name="com.example.RunToU.LoginActivity"
-            android:theme="@style/SplashTheme"
+            android:theme="@style/Theme.Runtyou"
 
             android:exported="true">
            <intent-filter>
@@ -53,6 +53,9 @@
             android:theme="@style/Theme.Runtyou"/>
         <activity android:name=".ChatRoomActivity2"
             android:theme="@style/Theme.Runtyou"/>
+        <activity android:name=".popupActivity"
+            android:theme="@android:style/Theme.Dialog"
+/>
 
     </application>
 

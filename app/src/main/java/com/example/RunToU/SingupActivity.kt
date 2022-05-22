@@ -3,10 +3,10 @@ package com.example.RunToU
 import android.os.Bundle
 import android.view.View
 import android.widget.*
+import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
-import com.example.RunToU.volleyService.VolleyService.signVolley
 import com.example.RunToU.idvolley.idvolley.idcheckVolley
-
+import com.example.RunToU.volleyService.VolleyService.signVolley
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthOptions
@@ -15,7 +15,6 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_singup.*
 import java.util.concurrent.TimeUnit
-
 
 
 class SingupActivity : AppCompatActivity() {
@@ -50,23 +49,25 @@ class SingupActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_singup)
-
+        val ac: ActionBar? = supportActionBar
+        ac?.setTitle("회원가입")
 
 
 
 
 
         val but1 = si_ch as Button
-        but1.setOnClickListener (object :View.OnClickListener{
+        but1.setOnClickListener(object : View.OnClickListener {
             override fun onClick(p0: View?) {
-                realName=si_real.toString()
+                realName = si_real.toString()
                 sid = si_id.text.toString()
-                idcheckVolley(this@SingupActivity,sid){duplicatedAccountId ->
-                    if(duplicatedAccountId){
+                idcheckVolley(this@SingupActivity, sid) { duplicatedAccountId ->
+                    if (duplicatedAccountId) {
                         Toast.makeText(this@SingupActivity, "중복된 ID입니다.", Toast.LENGTH_SHORT).show()
                     } else {
-                        Toast.makeText(this@SingupActivity, "사용 가능한 ID입니다.", Toast.LENGTH_SHORT).show()
-                        idcheckbool=1
+                        Toast.makeText(this@SingupActivity, "사용 가능한 ID입니다.", Toast.LENGTH_SHORT)
+                            .show()
+                        idcheckbool = 1
                     }
 
                 }
@@ -74,15 +75,20 @@ class SingupActivity : AppCompatActivity() {
             }
         })
         val butt1 = si_ni_ch as Button
-        butt1.setOnClickListener (object : View.OnClickListener{
+        butt1.setOnClickListener(object : View.OnClickListener {
             override fun onClick(p0: View?) {
-                nick=si_nick.text.toString()
-                nickvolley.nickvolley.nickcheckVolley(this@SingupActivity,nick){duplicatedNickname ->
-                    if(duplicatedNickname){
-                        Toast.makeText(this@SingupActivity, "중복된 닉네임입니다.", Toast.LENGTH_SHORT).show()
+                nick = si_nick.text.toString()
+                nickvolley.nickvolley.nickcheckVolley(
+                    this@SingupActivity,
+                    nick
+                ) { duplicatedNickname ->
+                    if (duplicatedNickname) {
+                        Toast.makeText(this@SingupActivity, "중복된 닉네임입니다.", Toast.LENGTH_SHORT)
+                            .show()
                     } else {
-                        Toast.makeText(this@SingupActivity, "사용 가능한 닉네임입니다.", Toast.LENGTH_SHORT).show()
-                        nickcheckbool=1
+                        Toast.makeText(this@SingupActivity, "사용 가능한 닉네임입니다.", Toast.LENGTH_SHORT)
+                            .show()
+                        nickcheckbool = 1
                     }
                 }
             }
@@ -107,40 +113,46 @@ class SingupActivity : AppCompatActivity() {
             }
         })
         val but3 = si_ve_ch as Button
-        but3!!.setOnClickListener (object : View.OnClickListener {
-                override fun onClick(p0: View?) {
-                    ph_nu= si_ve_nu.text.toString()
-                    val callbacks = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
-                        override fun onVerificationCompleted(credential: PhoneAuthCredential) { }
-                        override fun onVerificationFailed(e: FirebaseException) { }
-                        override fun onCodeSent(verificationId: String, token: PhoneAuthProvider.ForceResendingToken){
-                            this@SingupActivity.verificationId= verificationId
+        but3!!.setOnClickListener(object : View.OnClickListener {
+            override fun onClick(p0: View?) {
+                ph_nu = si_ve_nu.text.toString()
+                val callbacks = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+                    override fun onVerificationCompleted(credential: PhoneAuthCredential) {}
+                    override fun onVerificationFailed(e: FirebaseException) {}
+                    override fun onCodeSent(
+                        verificationId: String,
+                        token: PhoneAuthProvider.ForceResendingToken
+                    ) {
+                        this@SingupActivity.verificationId = verificationId
 
-                        }
                     }
-
-                    val optionsCompat = PhoneAuthOptions.newBuilder(auth)
-                        .setPhoneNumber("+82"+ph_nu.substring(1))
-                        .setTimeout(60L, TimeUnit.SECONDS)
-                        .setActivity(this@SingupActivity)
-                        .setCallbacks(callbacks)
-                        .build()
-
-                    PhoneAuthProvider.verifyPhoneNumber(optionsCompat)
-                    auth.setLanguageCode("kr")
-                    Toast.makeText(this@SingupActivity,"코드가 전송됐습니다..",Toast.LENGTH_SHORT).show()
                 }
-            })
+
+                val optionsCompat = PhoneAuthOptions.newBuilder(auth)
+                    .setPhoneNumber("+82" + ph_nu.substring(1))
+                    .setTimeout(60L, TimeUnit.SECONDS)
+                    .setActivity(this@SingupActivity)
+                    .setCallbacks(callbacks)
+                    .build()
+
+                PhoneAuthProvider.verifyPhoneNumber(optionsCompat)
+                auth.setLanguageCode("kr")
+                Toast.makeText(this@SingupActivity, "코드가 전송됐습니다..", Toast.LENGTH_SHORT).show()
+            }
+        })
 
         val but5 = si_ve_check as Button
-        but5!!.setOnClickListener (object : View.OnClickListener{
-                override fun onClick(p0: View?) {
-                    val credential = PhoneAuthProvider.getCredential(verificationId, si_ve_code.text.toString())
-                    signInWithPhoneAuthCredential(credential)
-                    Toast.makeText(this@SingupActivity,"SMS인증이 완료됐습니다.",Toast.LENGTH_SHORT).show()
+        but5!!.setOnClickListener(object : View.OnClickListener {
+            override fun onClick(p0: View?) {
+                val credential = PhoneAuthProvider.getCredential(
+                    verificationId,
+                    si_ve_code.text.toString()
+                )
+                signInWithPhoneAuthCredential(credential)
+                Toast.makeText(this@SingupActivity, "SMS인증이 완료됐습니다.", Toast.LENGTH_SHORT).show()
 
-                }
-            })
+            }
+        })
 
 
         val but4 = si_com_bt as Button
@@ -150,37 +162,44 @@ class SingupActivity : AppCompatActivity() {
         but4.setOnClickListener(object : View.OnClickListener {
 
 
-                override fun onClick(p0: View?) {
-                    if(nickcheckbool ==1 && idcheckbool ==1 && pw_check==1) {
+            override fun onClick(p0: View?) {
+                if (nickcheckbool == 1 && idcheckbool == 1 && pw_check == 1) {
 
 
-                        signVolley(
-                            this@SingupActivity,
-                            sid,
-                            realName,
-                            nick,
-                            pw,
-                            ph_nu,
-                            "2134243"
-                        ) { success ->
-                            if (success) {
-                                Toast.makeText(this@SingupActivity, "회원가입에 성공했습니다.", Toast.LENGTH_SHORT).show()
-                                finish()
-                            } else {
-                                Toast.makeText(
-                                    this@SingupActivity,
-                                    "네트워크 연결을 확인해주세요",
-                                    Toast.LENGTH_SHORT
-                                ).show()
-                            }
+                    signVolley(
+                        this@SingupActivity,
+                        sid,
+                        realName,
+                        nick,
+                        pw,
+                        ph_nu,
+                        "2134243"
+                    ) { success ->
+                        if (success) {
+                            Toast.makeText(
+                                this@SingupActivity,
+                                "회원가입에 성공했습니다.",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                            finish()
+                        } else {
+                            Toast.makeText(
+                                this@SingupActivity,
+                                "네트워크 연결을 확인해주세요",
+                                Toast.LENGTH_SHORT
+                            ).show()
                         }
                     }
-                    else{
-                        Toast.makeText(this@SingupActivity, "중복확인과 비밀번호 확인을 먼저 체크해주세요", Toast.LENGTH_SHORT).show()
-                    }
-                    }
+                } else {
+                    Toast.makeText(
+                        this@SingupActivity,
+                        "중복확인과 비밀번호 확인을 먼저 체크해주세요",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            }
 
-            })
+        })
 
             }
 

@@ -31,7 +31,7 @@
         <activity
             android:name="com.example.RunToU.LoginActivity"
             android:exported="true"
-            android:theme="@style/SplashTheme" >
+            android:theme="@style/Theme.Runtyou" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -73,6 +73,9 @@
         <activity
             android:name="com.example.RunToU.ChatRoomActivity2"
             android:theme="@style/Theme.Runtyou" />
+        <activity
+            android:name="com.example.RunToU.popupActivity"
+            android:theme="@android:style/Theme.Dialog" />
 
         <service
             android:name="com.google.firebase.components.ComponentDiscoveryService"

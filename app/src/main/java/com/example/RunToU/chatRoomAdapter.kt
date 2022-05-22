@@ -14,4 +14,5 @@ object chatRoomAdapter {
     var matchrein : Int =398
     var matchsucin :Int = 1
     var requester : Boolean = false
+    var cost : Int =0
 }

@@ -9,21 +9,14 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="vertical"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:gravity="center_horizontal"
-
-            android:text="회원가입"
-            android:textColor="@color/teal_700"
-            android:textSize="40sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -42,9 +35,9 @@
             <EditText
                 android:id="@+id/si_real"
                 android:layout_width="match_parent"
-                android:layout_marginRight="100dp"
                 android:layout_height="40dp"
                 android:layout_marginLeft="15dp"
+                android:layout_marginRight="100dp"
 
                 android:background="@drawable/edittext"
                 android:hint=" 본인 실명"
@@ -53,6 +46,7 @@
 
 
         </LinearLayout>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -64,7 +58,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_marginTop="0dp"
             android:orientation="horizontal">
 
@@ -101,7 +95,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_marginBottom="5dp"
             android:orientation="horizontal">
 
@@ -118,8 +112,8 @@
                 android:id="@+id/si_ni_ch"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginRight="15dp"
                 android:layout_marginLeft="5dp"
+                android:layout_marginRight="15dp"
 
                 android:text="@string/idcheck"
                 app:backgroundTint="@color/teal_700" />
@@ -142,7 +136,7 @@
 
             <EditText
                 android:id="@+id/si_pw"
-                android:layout_width="291dp"
+                android:layout_width="230dp"
                 android:layout_height="40dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="90dp"
@@ -160,20 +154,19 @@
 
             <EditText
                 android:id="@+id/si_pwch"
-                android:layout_width="200dp"
+                android:layout_width="230dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="15dp"
-                android:layout_weight="3"
                 android:background="@drawable/edittext"
                 android:hint=" 비밀번호 확인"
                 android:inputType="textPassword" />
 
             <Button
                 android:id="@+id/si_pwch_bu"
-                android:layout_width="wrap_content"
+                android:layout_width="120dp"
                 android:layout_height="40dp"
-                android:layout_marginRight="15dp"
                 android:layout_marginLeft="5dp"
+                android:layout_marginRight="15dp"
                 android:text="@string/signup_pwch"
                 app:backgroundTint="@color/teal_700" />
 
@@ -189,9 +182,9 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="5dp">
+            android:layout_height="50dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
 
             <EditText
                 android:id="@+id/si_ve_nu"
@@ -206,8 +199,8 @@
                 android:id="@+id/si_ve_ch"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginRight="15dp"
                 android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
                 android:text="@string/si_ve_se"
                 app:backgroundTint="@color/teal_700" />
         </LinearLayout>
@@ -229,12 +222,12 @@
                 android:hint=" 인증번호" />
 
             <Button
-                android:layout_marginLeft="20dp"
                 android:id="@+id/si_ve_check"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:backgroundTint="@color/teal_700"
-                android:text="인증번호 확인" />
+                android:layout_marginLeft="20dp"
+                android:text="인증번호 확인"
+                app:backgroundTint="@color/teal_700" />
 
         </LinearLayout>
 
