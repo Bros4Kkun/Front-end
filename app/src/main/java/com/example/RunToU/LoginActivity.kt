@@ -42,6 +42,8 @@ class LoginActivity : AppCompatActivity() {
                         chatRecieve.chatRecieve.loginID=userid.toString()
                         Toast.makeText(this@LoginActivity, "수행자 로그인 성공", Toast.LENGTH_SHORT).show()
                         jwtVolley.jwtVolley.jwtvolley(context = this@LoginActivity)
+                        matchCheckVolley.matchCheckVolley.matchsucVolley(this@LoginActivity)
+                        Stompclass.Stomclass.connect("none",3)
                         val intent1 = Intent(this@LoginActivity, MainActivity::class.java)
 
 
@@ -82,8 +84,10 @@ class LoginActivity : AppCompatActivity() {
                         chatRecieve.chatRecieve.loginID=userid.toString()
                         Toast.makeText(this@LoginActivity, "요청자 로그인 성공", Toast.LENGTH_SHORT).show()
                         jwtVolley.jwtVolley.jwtvolley(context = this@LoginActivity)
-                        Stompclass.Stomclass.connect("/queue/orderer/",loginvolley.loginvolley.userindex)
+                        Stompclass.Stomclass.connect("/queue/orderer/",loginvolley.loginvolley.userindex) // 로그인시 구독
                         val intent1 = Intent(this@LoginActivity, MainActivity::class.java)
+                        matchCheckVolley.matchCheckVolley.matchsucVolley(this@LoginActivity)
+                        chatRoomAdapter.requester = true
                         startActivity(intent1)
 
                         finish()

@@ -9,8 +9,9 @@ object chatRoomAdapter {
 
     //임시
     var nicksend : String = ""
-    var chatindex : Int =1
+    var chatindex : Int =302 // TODO
     var userindex : Int=1
-    var matchrein : Int =1
+    var matchrein : Int =398
     var matchsucin :Int = 1
+    var requester : Boolean = false
 }

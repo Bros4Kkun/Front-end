@@ -17,11 +17,11 @@ class matchRequestVolley {
     object matchRequestVolley{
         var responseJson = JSONObject()
         val url = "http://3.39.87.103/api/match/chatroom/"
-
+        var num : Int = 0
         fun matchRequestVolley(
             context:Context,
             int : Int,
-
+            success:(Boolean) ->Unit
         ){
 
 
@@ -32,15 +32,15 @@ class matchRequestVolley {
                 url + int.toString(),
                 null,
                 Response.Listener<JSONObject> { response ->
-                    print(response)
-                    chatRoomAdapter.matchrein = response.getInt("matchRequestId")
-
+                    println(response)
+                    num = response.getInt("matchRequestId") // 매칭요청 pk
+success(true)
 
 
                 },
                 Response.ErrorListener { error ->
                     println("Error : $error")
-
+success(false)
                 }
             ) {
                 override fun getHeaders(): Map<String, String> {

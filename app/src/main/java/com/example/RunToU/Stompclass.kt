@@ -65,12 +65,13 @@ class Stompclass: WebSocketListener() {
                 when (it.type) {
                     Event.Type.OPENED -> {
                         print("connected succcccc!")
-                        stomp.join(api + int.toString(),) // 응답받기 위한 구독
-                            .subscribe {
-                                chatRecieve.chatRecieve.recivemsg = it.toString()
-                            }
+                        if(api != "none") {
+                            stomp.join(api + int.toString(),) // 응답받기 위한 구독
+                                .subscribe {
+                                    chatRecieve.chatRecieve.recivemsg = it.toString()
+                                }
 
-
+                        }
                     }
                     Event.Type.CLOSED -> { // log보고 반복메시지 보내는 이유 분석
 

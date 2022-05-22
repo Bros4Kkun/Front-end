@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
                 for(i in 0..jsonarray.length()-1) {
                     jobject= jsonarray.getJSONObject(i)
                     var index = jobject.getInt("chatRoomPk")
-                    Stompclass.Stomclass.connect("/topic/chatroom/",index)
+                    Stompclass.Stomclass.subscribe("/topic/chatroom/",index)
                     println(index.toString()+"was subscribed!")}
 
 
@@ -93,15 +93,22 @@ class MainActivity : AppCompatActivity() {
                     println("don'twork??2")
                 }
                 MSG_DO_SOMETHING3 ->{
+                    var inputmsg:String=chatRecieve.chatRecieve.recivemsg
+                    var jObjects: JSONObject = JSONObject(inputmsg)
+                    chatRoomAdapter.matchrein = jObjects.getInt("matchRequestId")
                     println("don'twork??3")
                 }
                 MSG_DO_SOMETHING4 -> {
                     var inputmsg: String = chatRecieve.chatRecieve.recivemsg
                     var jObject : JSONObject =JSONObject(inputmsg)
-                    matchObjcet.matchingPk = jObject.getInt("machingId")
-
+                    matchObjcet.matchingPk = jObject.getInt("matchingId")
+                    println("zzzzzzzzzz"+matchObjcet.matchingPk)
+                    println("dontwork??4")
                 }
                 MSG_DO_SOMETHING5 -> {
+                    var inputmsg: String = chatRecieve.chatRecieve.recivemsg
+                    var jObject : JSONObject =JSONObject(inputmsg)
+                    chatRoomAdapter.matchsucin = jObject.getInt("matchingId")
                     println("don'twork??5")
                 }
             }

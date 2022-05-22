@@ -12,35 +12,36 @@ import org.json.JSONObject
 import java.util.*
 import kotlin.collections.HashMap
 
-class matchsucVolley {
-    object matchsucVolley{
-        var responseJson = JSONObject()
-        val url = "http://3.39.87.103/api/match/request/"
+class matchCheckVolley {
+    object matchCheckVolley{
+        var responseJson = JSONArray()
+        val url = "http://3.39.87.103/api/match"
 
         fun matchsucVolley(
             context: Context,
-            int : Int,
-            success:(Boolean) ->Unit
+
             ){
 
 
 
 
-            val request = object : JsonObjectRequest(
-                Request.Method.POST,
-                url + int.toString(),
+            val request = object : JsonArrayRequest(
+                Request.Method.GET,
+                url ,
                 null,
-                Response.Listener<JSONObject> { response ->
+                Response.Listener<JSONArray> { response ->
                     print(response)
-                    chatRoomAdapter.matchsucin = response.getInt("matchingId")
-                    println("machsuccess!" + chatRoomAdapter.matchsucin.toString())
-                    success(true)
+                    /*
+                    matchObjcet.matchingPk=response.getJSONObject(0).getInt("id")
+                    chatRoomAdapter.matchsucin=response.getJSONObject(0).getInt("id")
+                    println(matchObjcet.matchingPk.toString()+"dhodksehoa")
+*/
 
 
                 },
                 Response.ErrorListener { error ->
                     println("Error : $error")
-                    success(false)
+
                 }
             ) {
                 override fun getHeaders(): Map<String, String> {

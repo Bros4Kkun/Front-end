@@ -179,11 +179,3 @@ com/example/RunToU/edit_introduceActivity.java
  com.example.RunToU.edit_introduceActivity
  com.example.RunToU.edit_introduceActivity$1
  com.example.RunToU.edit_introduceActivity$2
-com/example/RunToU/ChatRoomActivity2.java
- com.example.RunToU.ChatRoomActivity2
- com.example.RunToU.ChatRoomActivity2$1
- com.example.RunToU.ChatRoomActivity2$2
- com.example.RunToU.ChatRoomActivity2$3
- com.example.RunToU.ChatRoomActivity2$4
- com.example.RunToU.ChatRoomActivity2$5
- com.example.RunToU.ChatRoomActivity2$6
