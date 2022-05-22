@@ -14,12 +14,6 @@
         android:textColor="#4A4A4A"
         android:text="Chatting" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="테스트!!"
-        android:id="@+id/testbutton"
-        />
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyvlerv"
         android:layout_marginTop="15dp"

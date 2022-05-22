@@ -13,18 +13,20 @@ import kotlin.collections.HashMap
 class chatroomVolley { //채팅룸 생성
     object chatroomVolley{
 
-        val url = "http://3.39.87.103/api/chatroom/ordersheet/620"
+        val url = "http://3.39.87.103/api/chatroom/ordersheet/"
         fun chatroomVolley(
             context:Context,
+            index :String,
         success:(Boolean) ->Unit
         ){
             var responseJson = JSONObject()
 
 
 
+
             val request = object : JsonObjectRequest(
                 Request.Method.POST,
-                url,
+                url+index,
                 null,
                 Response.Listener<JSONObject> { response ->
                     print(response)

@@ -22,9 +22,6 @@ class chatlistVolley {
             success:(Boolean) ->Unit
         ){
 
-
-
-
             val request = object : JsonArrayRequest(
                 Request.Method.GET,
                 url,

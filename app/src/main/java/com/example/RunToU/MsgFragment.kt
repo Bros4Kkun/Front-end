@@ -49,20 +49,6 @@ class MsgFragment : Fragment(){
                 Toast.makeText(requireContext(), "네트워크 연결이 좋지 않습니다. 다시 시도해 주세요", Toast.LENGTH_SHORT).show()
             }
         }
-        val but1 = testbutton as Button
-        but1.setOnClickListener(object : View.OnClickListener{
-            override fun onClick(p0: View?) {
-               chatroomVolley.chatroomVolley.chatroomVolley(mainAC){it->
-                   if(it){
-                       chatRoomAdapter.chatindex = chatRoomAdapter.chRo
-                       val intent =Intent(mainAC, ChatRoomActivity2::class.java)
-                       startActivity(intent)
-                   }
-
-
-               }
-            }
-        })
 
 
 

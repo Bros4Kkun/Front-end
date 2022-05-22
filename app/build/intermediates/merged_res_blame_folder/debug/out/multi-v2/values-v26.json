@@ -1,10 +1,29 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v26\\values-v26.xml",
+            "outputFile": "C:\\teamFile\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v26\\values-v26.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\whdal\\.gradle\\caches\\transforms-3\\98c823a81c1707eb817cec53d81160dd\\transformed\\appcompat-1.4.1\\res\\values-v26\\values-v26.xml",
+                    "source": "C:\\Users\\YoungseoJeon\\.gradle\\caches\\transforms-3\\64ec81c9ee7f6e7efadd169becaa38fe\\transformed\\jetified-iamport-android-v1.3.4\\res\\values-v26\\values-v26.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "14",
+                        "endColumns": "12",
+                        "endOffsets": "552"
+                    },
+                    "to": {
+                        "startLines": "17",
+                        "startColumns": "4",
+                        "startOffsets": "989",
+                        "endLines": "29",
+                        "endColumns": "12",
+                        "endOffsets": "1486"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\YoungseoJeon\\.gradle\\caches\\transforms-3\\7084fe755e21245ad78e7da12ea81ad0\\transformed\\appcompat-1.4.1\\res\\values-v26\\values-v26.xml",
                     "from": {
                         "startLines": "2,3,4,8,12,16",
                         "startColumns": "4,4,4,4,4,4",
