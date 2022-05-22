@@ -79,6 +79,7 @@
                         android:id="@+id/order_time"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
                         android:text="25시 61분"
                         android:textSize="12dp"
                         />
@@ -97,6 +98,7 @@
                         android:id="@+id/order_cost"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
                         android:text="404원"
                         android:textSize="12dp"
                         />
@@ -122,6 +124,22 @@
                 android:text=""/>
 
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/address_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="15dp"
+            android:textStyle="bold"
+            android:text="안알랴줌"/>
+
+        <RelativeLayout
+            android:id="@+id/map_view"
+            android:layout_width="320dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"/>
 
     </LinearLayout>
 

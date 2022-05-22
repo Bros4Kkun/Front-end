@@ -1,11 +1,15 @@
 package com.example.RunToU;
 
 import android.content.Intent;
+import android.location.Address;
+import android.location.Geocoder;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.util.Log;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,21 +26,38 @@ import com.android.volley.toolbox.DiskBasedCache;
 import com.android.volley.toolbox.HurlStack;
 import com.android.volley.toolbox.JsonObjectRequest;
 
+import net.daum.mf.map.api.MapPOIItem;
+import net.daum.mf.map.api.MapPoint;
+import net.daum.mf.map.api.MapView;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLEncoder;
+import java.nio.charset.Charset;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+
 
 public class ordersheetActivity extends AppCompatActivity {
 
     private RequestQueue queue;
 
-    String title, time, num, cate, destination, content;
-    int cost;
+    String title, time, num, cate, destination, content, address;
 
-    TextView order_cost, order_title, order_time, order_num, order_content;
+    int cost;
+    double lat, lon;
+
+    TextView order_cost, order_title, order_time, order_num, order_content, address_order;
     ImageView order_cate;
     String sheetId;
 
@@ -51,24 +72,60 @@ public class ordersheetActivity extends AppCompatActivity {
         order_cate = findViewById(R.id.order_cate);
         order_num = findViewById(R.id.order_num);
         order_content = findViewById(R.id.order_content);
+        address_order = findViewById(R.id.address_order);
 
         Intent intent = getIntent();
         sheetId = intent.getStringExtra("sheetId");
+        address = intent.getStringExtra("address");
 
         order_num.setText(sheetId);
 
         String url = "http://3.39.87.103/api/ordersheet/" + sheetId;
-        Log.d("what","url : " + url);
+        Log.d("what", "url : " + url);
 
+        final Geocoder geocoder = new Geocoder(getApplication());
+        List<Address> list = null;
+        try {
+            list = geocoder.getFromLocationName(address, 10);
+        }catch(IOException e){
+            Log.e("test","입출력 오류 - 서버에서 주소변환시 에러발생");
+        }
+
+        if(list != null){
+            if(list.size() == 0){
+                Log.d("Tag", "집에가자");
+            }else{
+                Address addr = list.get(0);
+                lat = addr.getLatitude();
+                lon = addr.getLongitude();
+                Log.d("Tag", "sample : " + lat + ", "+lon);
+
+            }
+        }
+
+        MapView mapView = new MapView(this);
+        ViewGroup mapViewContainer = (ViewGroup) findViewById(R.id.map_view);
+
+        MapPoint mapPoint = MapPoint.mapPointWithGeoCoord(lat, lon);
+        mapView.setMapCenterPoint(mapPoint, false);
+        mapViewContainer.addView(mapView);
+
+        MapPOIItem marker = new MapPOIItem();
+        marker.setItemName("Perform Marker");
+        marker.setTag(0);
+        marker.setMapPoint(mapPoint);
+        marker.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
+        marker.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
+        mapView.addPOIItem(marker);
 
         final JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
-                Log.d("what", "response : "+response.toString());
+                Log.d("what", "response : " + response.toString());
 
-                try{
+                try {
                     JSONObject jsonObject = new JSONObject(String.valueOf(response));
-                    Log.d("what", "jsonObject : "+jsonObject.toString());
+                    Log.d("what", "jsonObject : " + jsonObject.toString());
                     jsonObject = jsonObject.getJSONObject("orderSheetItem");
 
                     title = jsonObject.getString("title");
@@ -79,38 +136,38 @@ public class ordersheetActivity extends AppCompatActivity {
                     time = jsonObject.getString("wishedDeadLine");
                     num = jsonObject.getString("orderSheetId");
 
-                    String[] str = destination.split(",");//주소가져오기 카카오 지도?
+                    //String[] str = destination.split(",");
 
-                    String d_temp = time.substring(0,10);
+                    String d_temp = time.substring(0, 10);
                     String d_arr[] = d_temp.split("-");
 
-                    String t_temp = time.substring(11,18);
+                    String t_temp = time.substring(11, 18);
                     String t_arr[] = t_temp.split(":");
 
-                    String w_temp = d_arr[0]+"년 " + d_arr[1] + "월 " + d_arr[2] + "일 " + t_arr[0] + "시 " + t_arr[1] + "분";
+                    String w_temp = d_arr[0] + "년 " + d_arr[1] + "월 " + d_arr[2] + "일 " + t_arr[0] + "시 " + t_arr[1] + "분";
 
-                    order_cost.setText(cost+"원");
-                    order_num.setText("No."+num);
+                    order_cost.setText(cost + "원");
+                    order_num.setText("No." + num);
                     order_title.setText(title);
                     order_time.setText(w_temp);
                     order_content.setText(content);
+                    address_order.setText(destination);
 
-                    if(cate.equals("DELIVERY_AND_SHOPPING")){
+                    if (cate.equals("DELIVERY_AND_SHOPPING")) {
                         order_cate.setImageResource(R.drawable.cate_deli);
-                    }else if(cate.equals("CLEANING_AND_HOUSEWORK")){
+                    } else if (cate.equals("CLEANING_AND_HOUSEWORK")) {
                         order_cate.setImageResource(R.drawable.cate_clean);
-                    }else if(cate.equals("DELIVERY_AND_INSTALLATION")){
+                    } else if (cate.equals("DELIVERY_AND_INSTALLATION")) {
                         order_cate.setImageResource(R.drawable.cate_help);
-                    }else if(cate.equals("ACCOMPANY")){
+                    } else if (cate.equals("ACCOMPANY")) {
                         order_cate.setImageResource(R.drawable.cate_help);
-                    }else if(cate.equals("ANTI_BUG")){
+                    } else if (cate.equals("ANTI_BUG")) {
                         order_cate.setImageResource(R.drawable.cate_bug);
-                    }else if(cate.equals("ROLE_ACTING")){
+                    } else if (cate.equals("ROLE_ACTING")) {
                         order_cate.setImageResource(R.drawable.cate_help);
-                    }else{
+                    } else {
                         order_cate.setImageResource(R.drawable.cate_all);
                     }
-
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -125,7 +182,7 @@ public class ordersheetActivity extends AppCompatActivity {
             public Map<String, String> getHeaders() throws AuthFailureError {
                 Map<String, String> headers = new HashMap<>();
                 headers.put("Cookie", SessionControl.SessionControl.INSTANCE.getSess());
-                headers.put("Content-Type","application/json");
+                headers.put("Content-Type", "application/json");
                 return headers;
             }
         };

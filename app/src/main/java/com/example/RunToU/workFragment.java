@@ -24,11 +24,14 @@ import com.android.volley.toolbox.BasicNetwork;
 import com.android.volley.toolbox.DiskBasedCache;
 import com.android.volley.toolbox.HurlStack;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.iamport.sdk.domain.core.Iamport;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -177,13 +180,18 @@ public class workFragment extends Fragment {
                             @Override
                             public void onItemClick(View v, int position) {
                                 sheetId  = arrayList.get(position).getTxtNum();
+                                destination = arrayList.get(position).getTv_Far();
+                                String[] str = destination.split(",");
+
                                 Intent intent = new Intent(getContext(), ordersheetActivity.class);
                                 intent.putExtra("sheetId",sheetId);
+                                intent.putExtra("address", str[0]);
                                 startActivity(intent);
+                                Log.d("Tag", "for check");
                             }
                         });
 
-                        Log.d("check", workAdapter.toString());
+                        Log.d("Tag", workAdapter.toString());
 
                     }
                 } catch (JSONException e) {

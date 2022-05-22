@@ -20,8 +20,18 @@ com/example/RunToU/databinding/ItemVerificationBinding.java
  com.example.RunToU.databinding.ItemVerificationBinding
 com/example/RunToU/jsonData.java
  com.example.RunToU.jsonData
-androidx/databinding/DataBindingComponent.java
- androidx.databinding.DataBindingComponent
+com/example/RunToU/workFragment.java
+ com.example.RunToU.workFragment
+ com.example.RunToU.workFragment$1
+ com.example.RunToU.workFragment$2
+ com.example.RunToU.workFragment$3
+ com.example.RunToU.workFragment$4
+ com.example.RunToU.workFragment$5
+ com.example.RunToU.workFragment$6
+ com.example.RunToU.workFragment$7
+ com.example.RunToU.workFragment$7$1
+ com.example.RunToU.workFragment$8
+ com.example.RunToU.workFragment$9
 com/example/RunToU/databinding/ActivityJobrecBinding.java
  com.example.RunToU.databinding.ActivityJobrecBinding
 com/example/RunToU/databinding/ActivityDetailsBinding.java
@@ -49,15 +59,12 @@ com/example/RunToU/verificationActivity.java
  com.example.RunToU.verificationActivity
 com/example/RunToU/jobData.java
  com.example.RunToU.jobData
-com/example/RunToU/purchaseActivity.java
- com.example.RunToU.purchaseActivity
- com.example.RunToU.purchaseActivity$1
- com.example.RunToU.purchaseActivity$2
- com.example.RunToU.purchaseActivity$3
- com.example.RunToU.purchaseActivity$4
- com.example.RunToU.purchaseActivity$5
-com/example/RunToU/settingActivity.java
- com.example.RunToU.settingActivity
+com/example/RunToU/edit_introduceActivity.java
+ com.example.RunToU.edit_introduceActivity
+ com.example.RunToU.edit_introduceActivity$1
+ com.example.RunToU.edit_introduceActivity$2
+com/example/RunToU/NetworkStatus.java
+ com.example.RunToU.NetworkStatus
 com/example/RunToU/databinding/RoomRightListItemsBinding.java
  com.example.RunToU.databinding.RoomRightListItemsBinding
 com/example/RunToU/databinding/FragmentIntroduceBinding.java
@@ -69,10 +76,8 @@ com/example/RunToU/reviewAdapter.java
  com.example.RunToU.reviewAdapter
  com.example.RunToU.reviewAdapter$1
  com.example.RunToU.reviewAdapter$CustomViewHolder
-com/example/RunToU/edit_introduceActivity.java
- com.example.RunToU.edit_introduceActivity
- com.example.RunToU.edit_introduceActivity$1
- com.example.RunToU.edit_introduceActivity$2
+androidx/databinding/DataBindingComponent.java
+ androidx.databinding.DataBindingComponent
 com/example/RunToU/databinding/ItemReviewBinding.java
  com.example.RunToU.databinding.ItemReviewBinding
 com/example/RunToU/databinding/ListHeaderBinding.java
@@ -167,19 +172,17 @@ com/example/RunToU/Dataitem.java
  com.example.RunToU.Dataitem
 com/example/RunToU/workData.java
  com.example.RunToU.workData
-com/example/RunToU/writeActivity.java
- com.example.RunToU.writeActivity
- com.example.RunToU.writeActivity$1
- com.example.RunToU.writeActivity$2
- com.example.RunToU.writeActivity$2$1
- com.example.RunToU.writeActivity$2$2
- com.example.RunToU.writeActivity$2$3
- com.example.RunToU.writeActivity$3
- com.example.RunToU.writeActivity$4
+com/example/RunToU/ordersheetActivity.java
+ com.example.RunToU.ordersheetActivity
+ com.example.RunToU.ordersheetActivity$1
+ com.example.RunToU.ordersheetActivity$2
+ com.example.RunToU.ordersheetActivity$3
 com/example/RunToU/reviewActivity.java
  com.example.RunToU.reviewActivity
  com.example.RunToU.reviewActivity$1
  com.example.RunToU.reviewActivity$2
+com/iamport/sdk/BR.java
+ com.iamport.sdk.BR
 com/example/RunToU/databinding/ActivityPurchaseBinding.java
  com.example.RunToU.databinding.ActivityPurchaseBinding
 com/example/RunToU/recyclerAdapter.java
@@ -189,22 +192,35 @@ com/example/RunToU/jobrecActivity.java
  com.example.RunToU.jobrecActivity
  com.example.RunToU.jobrecActivity$1
  com.example.RunToU.jobrecActivity$2
-com/example/RunToU/NetworkStatus.java
- com.example.RunToU.NetworkStatus
-com/example/RunToU/ordersheetActivity.java
- com.example.RunToU.ordersheetActivity
- com.example.RunToU.ordersheetActivity$1
- com.example.RunToU.ordersheetActivity$2
- com.example.RunToU.ordersheetActivity$3
-com/example/RunToU/workFragment.java
- com.example.RunToU.workFragment
- com.example.RunToU.workFragment$1
- com.example.RunToU.workFragment$2
- com.example.RunToU.workFragment$3
- com.example.RunToU.workFragment$4
- com.example.RunToU.workFragment$5
- com.example.RunToU.workFragment$6
- com.example.RunToU.workFragment$7
- com.example.RunToU.workFragment$7$1
- com.example.RunToU.workFragment$8
- com.example.RunToU.workFragment$9
+com/example/RunToU/writeActivity.java
+ com.example.RunToU.writeActivity
+ com.example.RunToU.writeActivity$1
+ com.example.RunToU.writeActivity$1$1
+ com.example.RunToU.writeActivity$1$1$1
+ com.example.RunToU.writeActivity$1$1$2
+ com.example.RunToU.writeActivity$1$1$3
+ com.example.RunToU.writeActivity$2
+ com.example.RunToU.writeActivity$3
+ com.example.RunToU.writeActivity$4
+ com.example.RunToU.writeActivity$5
+ com.example.RunToU.writeActivity$6
+com/example/RunToU/purchaseActivity.java
+ com.example.RunToU.purchaseActivity
+ com.example.RunToU.purchaseActivity$1
+ com.example.RunToU.purchaseActivity$1$1
+ com.example.RunToU.purchaseActivity$1$1$1
+ com.example.RunToU.purchaseActivity$1$1$2
+ com.example.RunToU.purchaseActivity$1$1$3
+ com.example.RunToU.purchaseActivity$1$2
+ com.example.RunToU.purchaseActivity$1$2$1
+ com.example.RunToU.purchaseActivity$1$2$2
+ com.example.RunToU.purchaseActivity$1$2$3
+ com.example.RunToU.purchaseActivity$1$3
+ com.example.RunToU.purchaseActivity$1$4
+ com.example.RunToU.purchaseActivity$1$5
+ com.example.RunToU.purchaseActivity$2
+ com.example.RunToU.purchaseActivity$3
+ com.example.RunToU.purchaseActivity$4
+com/example/RunToU/settingActivity.java
+ com.example.RunToU.settingActivity
+ com.example.RunToU.settingActivity$1

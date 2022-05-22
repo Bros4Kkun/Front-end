@@ -34,14 +34,20 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.AuthFailureError;
+import com.android.volley.Cache;
+import com.android.volley.Network;
 import com.android.volley.NetworkResponse;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.BasicNetwork;
+import com.android.volley.toolbox.DiskBasedCache;
+import com.android.volley.toolbox.HurlStack;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.iamport.sdk.domain.core.Iamport;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -58,9 +64,6 @@ import net.daum.mf.map.api.MapView;
 public class writeActivity extends AppCompatActivity {
     //왜인진 모르겠으나 fragment로 했을 때는 오류가나고 안넘어감 -> (activity로 만들었음)
 
-    private static final int SEARCH_ADDRESS_ACTIVITY = 10000;
-    //곧 삭제
-
     private Spinner cateSpinner;
     private ArrayAdapter cateAdapter;
 
@@ -74,6 +77,7 @@ public class writeActivity extends AppCompatActivity {
     String date;
     String time;
     String cate = null;
+    int point = 1500;
 
     Button btnDate, btnTime;
     TextView address_write;
@@ -92,6 +96,8 @@ public class writeActivity extends AppCompatActivity {
         setTitle("요청서 작성");
         setViews();
         InitializeListener();
+        Iamport.INSTANCE.init(this);
+
 
         int status = NetworkStatus.getConnectivityStatus(getApplicationContext());
 
@@ -107,7 +113,128 @@ public class writeActivity extends AppCompatActivity {
         btnTime = findViewById(R.id.btnTime);
         btnGotopur = findViewById(R.id.btnGotopur);
 
-        // 터치 안되게 막기
+        String pointCheck = "http://3.39.87.103/api/user/point";
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, pointCheck, null, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                try {
+                    point = response.getInt("point");
+                    Log.d("Tag", "point : " + point);
+
+                    btnGotopur.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            try {
+                                int price = Integer.parseInt(price_write.getText().toString());
+                                if(point >= price){
+
+                                    String date = getDate();
+                                    String time = getTime();
+                                    Log.d("time" , "Time :" + time);
+                                    deadLine = LocalDateTime.parse(date + " " + time + ":10", formatter);
+
+                                    if (title_write.getText().toString().length() <= 4) {
+                                        Toast.makeText(getApplication(), "제목을 5자 이상 작성해주세요", Toast.LENGTH_SHORT).show();
+                                    } else if (cateSpinner.getSelectedItem().toString().equals("--선택--")) {
+                                        Toast.makeText(getApplication(), "카테고리를 선택해주세요.", Toast.LENGTH_SHORT).show();
+                                    } else if (price <= 0 || price > 100001) {
+                                        Toast.makeText(getApplication(), "금액을 정확히 작성해주세요.", Toast.LENGTH_SHORT).show();
+                                    } else if(deadLine.isBefore(nowTime)){
+                                        Toast.makeText(getApplication(), "시간을 정확히 작성해주세요.", Toast.LENGTH_SHORT).show();
+                                    } else {
+
+                                        Intent intent = new Intent(view.getContext(), purchaseActivity.class);
+                                        intent.putExtra("cost", price);
+
+                                        if(cateSpinner.getSelectedItem().toString().equals("배달 및 장보기")){
+                                            cate="DELIVERY_AND_SHOPPING";
+                                        }else if(cateSpinner.getSelectedItem().toString().equals("청소 및 집안일")){
+                                            cate="CLEANING_AND_HOUSEWORK";
+                                        }else if(cateSpinner.getSelectedItem().toString().equals("설치 조립 운반")){
+                                            cate="DELIVERY_AND_INSTALLATION";
+                                        }else if(cateSpinner.getSelectedItem().toString().equals("동행 및 돌봄")){
+                                            cate="ACCOMPANY";
+                                        }else if(cateSpinner.getSelectedItem().toString().equals("벌레 퇴치")){
+                                            cate="ANTI_BUG";
+                                        }else if(cateSpinner.getSelectedItem().toString().equals("역할 대행")){
+                                            cate="ROLE_ACTING";
+                                        }else if(cateSpinner.getSelectedItem().toString().equals("기타")){
+                                            cate="ETC";
+                                        }
+
+                                        final JSONObject object = new JSONObject();
+                                        object.put("title", title_write.getText().toString());
+                                        object.put("content", context_write.getText().toString());
+                                        object.put("category", cate);
+                                        object.put("destination", doro_write.getText().toString()+","+address_write.getText().toString());
+                                        object.put("cost", Integer.parseInt(price_write.getText().toString()));
+                                        object.put("wishedDeadline", deadLine);
+
+                                        final JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, url, object, new Response.Listener<JSONObject>() {
+                                            @Override
+                                            public void onResponse(JSONObject response) {
+                                                Log.d("onResponse", "OK");
+                                            }
+                                        }, new Response.ErrorListener() {
+                                            @Override
+                                            public void onErrorResponse(VolleyError error) {
+                                                Log.d("onError", "errrrrrrr");
+                                            }
+                                        }) {
+                                            @Override
+                                            public Map<String, String> getHeaders() throws AuthFailureError {
+                                                Map<String, String> headers = new HashMap<>();
+                                                headers.put("Cookie", SessionControl.SessionControl.INSTANCE.getSess());
+                                                headers.put("Content-Type", "application/json");
+                                                return headers;
+                                            }
+                                        };
+
+                                        request.setShouldCache(false);
+                                        queue.add(request);
+                                        startActivity(intent);
+                                        finish();
+                                    }
+                                }else if(point < price || point == 0){
+                                    Intent intent = new Intent(getApplication(), purchaseActivity.class);
+                                    startActivity(intent);
+                                }
+                            } catch (NumberFormatException | JSONException e) {
+                                Toast.makeText(getApplication(), "요청서를 다시 확인해주세요.", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.e("Error", "Error : " + error.toString());
+            }
+        }) {
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                Map<String, String> headers = new HashMap<>();
+                headers.put("Cookie", SessionControl.SessionControl.INSTANCE.getSess());
+                headers.put("Content-Type", "application/json");
+                return headers;
+            }
+        };
+
+        Cache cache = new DiskBasedCache(getApplication().getCacheDir(), 1024 * 1024);
+        // Set up the network to use HttpURLConnection as the HTTP client.
+        Network network = new BasicNetwork(new HurlStack());
+        // Instantiate the RequestQueue with the cache and network.
+        queue = new RequestQueue(cache, network);
+        // Start the queue
+        queue.start();
+
+        request.setShouldCache(false);
+        queue.add(request);
+
+        // 터치 안되게 막기 <- 이게ㅐ 뭔소리지?
         doro_write.setFocusable(false);
         doro_write.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -123,84 +250,7 @@ public class writeActivity extends AppCompatActivity {
             }
         });
 
-        btnGotopur.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-                try {
-                    int price = Integer.parseInt(price_write.getText().toString());
-                    //
-                    if (title_write.getText().toString().length() <= 4) {
-                        Toast.makeText(getApplication(), "제목을 5자 이상 작성해주세요", Toast.LENGTH_SHORT).show();
-                    } else if (cateSpinner.getSelectedItem().toString().equals("--선택--")) {
-                        Toast.makeText(getApplication(), "카테고리를 선택해주세요.", Toast.LENGTH_SHORT).show();
-                    } else if (price <= 0 || price > 100001) {
-                        Toast.makeText(getApplication(), "금액을 정확히 작성해주세요.", Toast.LENGTH_SHORT).show();
-                    } else {
-                        Intent intent = new Intent(view.getContext(), purchaseActivity.class);
-                        intent.putExtra("cost", price);
-
-                        String date = getDate();
-                        String time = getTime();
-                        Log.d("time" , "Time :" + time);
-                        deadLine = LocalDateTime.parse(date + " " + time + ":10", formatter);
-
-                        if(cateSpinner.getSelectedItem().toString().equals("배달 및 장보기")){
-                            cate="DELIVERY_AND_SHOPPING";
-                        }else if(cateSpinner.getSelectedItem().toString().equals("청소 및 집안일")){
-                            cate="CLEANING_AND_HOUSEWORK";
-                        }else if(cateSpinner.getSelectedItem().toString().equals("설치 조립 운반")){
-                            cate="DELIVERY_AND_INSTALLATION";
-                        }else if(cateSpinner.getSelectedItem().toString().equals("동행 및 돌봄")){
-                            cate="ACCOMPANY";
-                        }else if(cateSpinner.getSelectedItem().toString().equals("벌레 퇴치")){
-                            cate="ANTI_BUG";
-                        }else if(cateSpinner.getSelectedItem().toString().equals("역할 대행")){
-                            cate="ROLE_ACTING";
-                        }else if(cateSpinner.getSelectedItem().toString().equals("기타")){
-                            cate="ETC";
-                        }
-
-                        final JSONObject object = new JSONObject();
-                        object.put("title", title_write.getText().toString());
-                        object.put("content", context_write.getText().toString());
-                        object.put("category", cate);
-                        object.put("destination", doro_write.getText().toString()+","+address_write.getText().toString());
-                        object.put("cost", Integer.parseInt(price_write.getText().toString()));
-                        object.put("wishedDeadline", deadLine);
-
-                        final JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, url, object, new Response.Listener<JSONObject>() {
-                            @Override
-                            public void onResponse(JSONObject response) {
-                                Log.d("onResponse", "OK");
-                            }
-                        }, new Response.ErrorListener() {
-                            @Override
-                            public void onErrorResponse(VolleyError error) {
-                                Log.d("onError", "errrrrrrr");
-                            }
-                        }) {
-                            @Override
-                            public Map<String, String> getHeaders() throws AuthFailureError {
-                                Map<String, String> headers = new HashMap<>();
-                                headers.put("Cookie", SessionControl.SessionControl.INSTANCE.getSess());
-                                headers.put("Content-Type", "application/json");
-                                return headers;
-                            }
-                        };
-
-                        request.setShouldCache(false);
-                        queue.add(request);
-                        startActivity(intent);
-                        finish();
-
-                    }
-                } catch (NumberFormatException | JSONException e) {
-                    Toast.makeText(getApplication(), "요청서를 다시 확인해주세요.", Toast.LENGTH_SHORT).show();
-
-                }
-            }
-        });
 
         if (status == NetworkStatus.TYPE_MOBILE || status == NetworkStatus.TYPE_WIFI) {
             activityResultLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
@@ -298,6 +348,12 @@ public class writeActivity extends AppCompatActivity {
 
     public void setTime(String time) {
         this.time = time;
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Iamport.INSTANCE.close();
     }
 
 }

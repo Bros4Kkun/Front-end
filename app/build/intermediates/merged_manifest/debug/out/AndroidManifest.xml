@@ -5,20 +5,82 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="19"
+        android:minSdkVersion="21"
         android:targetSdkVersion="31" />
 
-    <uses-permission android:name="android.permission.INTERNET" >
-    </uses-permission>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
-    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <queries>
+
+        <!-- 간편결제 -->
+        <package android:name="finance.chai.app" /> <!-- 차이페이 -->
+        <package android:name="com.nhnent.payapp" /> <!-- 페이코 -->
+        <package android:name="com.lottemembers.android" /> <!-- LPAY -->
+        <package android:name="com.ssg.serviceapp.android.egiftcertificate" /> <!-- SSGPAY -->
+        <package android:name="com.inicis.kpay" /> <!-- KPAY -->
+        <package android:name="com.tmoney.tmpay" /> <!-- 티머니페이 -->
+        <package android:name="viva.republica.toss" /> <!-- 토스페이 -->
+        <package android:name="com.samsung.android.spay" /> <!-- 삼성페이 -->
+        <package android:name="com.kakao.talk" /> <!-- 카카오페이 -->
+        <package android:name="com.nhn.android.search" /> <!-- 네이버 -->
+        <package android:name="com.mysmilepay.app" /> <!-- 스마일페이 -->
+        <!-- 카드 -->
+        <package android:name="kvp.jjy.MispAndroid320" /> <!-- ISP페이북 -->
+        <package android:name="com.kbcard.cxh.appcard" /> <!-- KBPay -->
+        <package android:name="com.kbstar.liivbank" /> <!-- liivbank -->
+        <package android:name="com.kbstar.reboot" /> <!-- newliiv -->
+        <package android:name="com.samsung.android.spaylite" /> <!-- 삼성페이니 -->
+        <package android:name="com.nhnent.payapp" /> <!-- 페이코 -->
+        <package android:name="com.lge.lgpay" /> <!-- 엘지페이 -->
+        <package android:name="com.hanaskcard.paycla" /> <!-- 하나 -->
+        <package android:name="kr.co.hanamembers.hmscustomer" /> <!-- 하나멤버스 -->
+        <package android:name="com.hanaskcard.rocomo.potal" /> <!-- 하나공인인증 -->
+        <package android:name="com.citibank.cardapp" /> <!-- 씨티 -->
+        <package android:name="kr.co.citibank.citimobile" /> <!-- 씨티모바일 -->
+        <package android:name="com.lcacApp" /> <!-- 롯데 -->
+        <package android:name="kr.co.samsungcard.mpocket" /> <!-- 삼성 -->
+        <package android:name="com.shcard.smartpay" /> <!-- 신한 -->
+        <package android:name="com.shinhancard.smartshinhan" /> <!-- 신한(ARS/일반/smart) -->
+        <package android:name="com.hyundaicard.appcard" /> <!-- 현재 -->
+        <package android:name="nh.smart.nhallonepay" /> <!-- 농협 -->
+        <package android:name="kr.co.citibank.citimobile" /> <!-- 씨티 -->
+        <package android:name="com.wooricard.smartapp" /> <!-- 우리WON카드 -->
+        <package android:name="com.wooribank.smart.npib" /> <!-- 우리WON뱅킹 -->
+        <!-- 백신 -->
+        <package android:name="com.TouchEn.mVaccine.webs" /> <!-- TouchEn -->
+        <package android:name="com.ahnlab.v3mobileplus" /> <!-- V3 -->
+        <package android:name="kr.co.shiftworks.vguardweb" /> <!-- vguard -->
+        <!-- 신용카드 공인인증 -->
+        <package android:name="com.hanaskcard.rocomo.potal" /> <!-- 하나 -->
+        <package android:name="com.lumensoft.touchenappfree" /> <!-- 현대 -->
+        <!-- 계좌이체 -->
+        <package android:name="com.kftc.bankpay.android" /> <!-- 뱅크페이 -->
+        <package android:name="kr.co.kfcc.mobilebank" /> <!-- MG 새마을금고 -->
+        <package android:name="com.kbstar.liivbank" /> <!-- 뱅크페이 -->
+        <package android:name="com.nh.cashcardapp" /> <!-- 뱅크페이 -->
+        <package android:name="com.knb.psb" /> <!-- BNK경남은행 -->
+        <package android:name="com.lguplus.paynow" /> <!-- 페이나우 -->
+        <package android:name="com.kbankwith.smartbank" /> <!-- 케이뱅크 -->
+        <!-- 해외결제 -->
+        <package android:name="com.eg.android.AlipayGphone" /> <!-- 페이나우 -->
+        <!-- 기타 -->
+        <package android:name="com.sktelecom.tauth" /> <!-- PASS -->
+        <package android:name="com.lguplus.smartotp" /> <!-- PASS -->
+        <package android:name="com.kt.ktauth" /> <!-- PASS -->
+        <package android:name="kr.danal.app.damoum" /> <!-- 다날 다모음 -->
+    </queries>
+
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" /> <!-- Include required permissions for Advertising Id -->
     <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
-        android:name="androidx.multidex.MultiDexApplication"
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
@@ -79,6 +141,19 @@
         <activity
             android:name="com.example.RunToU.ordersheetActivity"
             android:theme="@style/Theme.Runtyou" />
+
+        <service
+            android:name="com.iamport.sdk.domain.service.ChaiService"
+            android:enabled="true" />
+
+        <activity
+            android:name="com.iamport.sdk.presentation.activity.WebViewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" >
+        </activity>
 
         <service
             android:name="com.google.firebase.components.ComponentDiscoveryService"
@@ -209,7 +284,124 @@
             <meta-data
                 android:name="androidx.lifecycle.ProcessLifecycleInitializer"
                 android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+                android:value="androidx.startup" />
         </provider>
+        <provider
+            android:name="androidx.work.impl.WorkManagerInitializer"
+            android:authorities="com.example.RunToU.workmanager-init"
+            android:directBootAware="false"
+            android:exported="false"
+            android:multiprocess="true" />
+
+        <service
+            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+            android:directBootAware="false"
+            android:enabled="@bool/enable_system_alarm_service_default"
+            android:exported="false" />
+        <service
+            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+            android:directBootAware="false"
+            android:enabled="@bool/enable_system_job_service_default"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name="androidx.work.impl.foreground.SystemForegroundService"
+            android:directBootAware="false"
+            android:enabled="@bool/enable_system_foreground_service_default"
+            android:exported="false" />
+
+        <receiver
+            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+            android:directBootAware="false"
+            android:enabled="true"
+            android:exported="false" />
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+            android:directBootAware="false"
+            android:enabled="false"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+            android:directBootAware="false"
+            android:enabled="false"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY" />
+                <action android:name="android.intent.action.BATTERY_LOW" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+            android:directBootAware="false"
+            android:enabled="false"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+            android:directBootAware="false"
+            android:enabled="false"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+            android:directBootAware="false"
+            android:enabled="false"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+            android:directBootAware="false"
+            android:enabled="@bool/enable_system_alarm_service_default"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+            android:directBootAware="false"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.DUMP" >
+            <intent-filter>
+                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:directBootAware="true"
+            android:exported="false" />
+
+        <receiver
+            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+            android:directBootAware="false"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.DUMP" >
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
