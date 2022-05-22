@@ -8,14 +8,6 @@ com/example/RunToU/databinding/FragmentMsgBinding.java
  com.example.RunToU.databinding.FragmentMsgBinding
 androidx/databinding/library/baseAdapters/BR.java
  androidx.databinding.library.baseAdapters.BR
-com/example/RunToU/my_profileFragment.java
- com.example.RunToU.my_profileFragment
- com.example.RunToU.my_profileFragment$1
- com.example.RunToU.my_profileFragment$2
- com.example.RunToU.my_profileFragment$3
- com.example.RunToU.my_profileFragment$4
- com.example.RunToU.my_profileFragment$5
- com.example.RunToU.my_profileFragment$6
 com/example/RunToU/databinding/ItemVerificationBinding.java
  com.example.RunToU.databinding.ItemVerificationBinding
 com/example/RunToU/jsonData.java
@@ -146,6 +138,8 @@ com/example/RunToU/databinding/ActivityReviewBinding.java
  com.example.RunToU.databinding.ActivityReviewBinding
 com/example/RunToU/BuildConfig.java
  com.example.RunToU.BuildConfig
+com/example/RunToU/databinding/ActivityPopupBinding.java
+ com.example.RunToU.databinding.ActivityPopupBinding
 com/example/RunToU/databinding/FragmentShortJobrecBinding.java
  com.example.RunToU.databinding.FragmentShortJobrecBinding
 com/example/RunToU/databinding/FragmentLogBinding.java
@@ -203,15 +197,16 @@ com/example/RunToU/NetworkStatus.java
 com/example/RunToU/writeActivity.java
  com.example.RunToU.writeActivity
  com.example.RunToU.writeActivity$1
- com.example.RunToU.writeActivity$1$1
- com.example.RunToU.writeActivity$1$1$1
- com.example.RunToU.writeActivity$1$1$2
- com.example.RunToU.writeActivity$1$1$3
  com.example.RunToU.writeActivity$2
+ com.example.RunToU.writeActivity$2$1
+ com.example.RunToU.writeActivity$2$1$1
+ com.example.RunToU.writeActivity$2$1$2
+ com.example.RunToU.writeActivity$2$1$3
  com.example.RunToU.writeActivity$3
  com.example.RunToU.writeActivity$4
  com.example.RunToU.writeActivity$5
  com.example.RunToU.writeActivity$6
+ com.example.RunToU.writeActivity$7
 com/example/RunToU/workFragment.java
  com.example.RunToU.workFragment
  com.example.RunToU.workFragment$1

@@ -92,6 +92,10 @@
         "source": "C:\\teamFile\\app\\src\\main\\res\\drawable\\cate_clean.jpg"
     },
     {
+        "merged": "C:\\teamFile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rounded_cor.xml.flat",
+        "source": "C:\\teamFile\\app\\src\\main\\res\\drawable\\rounded_cor.xml"
+    },
+    {
         "merged": "C:\\teamFile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_edit_introduce_bg.jpg.flat",
         "source": "C:\\teamFile\\app\\src\\main\\res\\drawable\\edit_introduce_bg.jpg"
     },
@@ -288,8 +292,16 @@
         "source": "C:\\teamFile\\app\\src\\main\\res\\layout\\activity_setting.xml"
     },
     {
+        "merged": "C:\\teamFile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_popup.xml.flat",
+        "source": "C:\\teamFile\\app\\src\\main\\res\\layout\\activity_popup.xml"
+    },
+    {
         "merged": "C:\\teamFile\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_short_jobrec.xml.flat",
         "source": "C:\\teamFile\\app\\src\\main\\res\\layout\\fragment_short_jobrec.xml"
+    },
+    {
+        "merged": "C:\\teamFile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rounded_corner.xml.flat",
+        "source": "C:\\teamFile\\app\\src\\main\\res\\drawable\\rounded_corner.xml"
     },
     {
         "merged": "C:\\teamFile\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_del123_round.png.flat",

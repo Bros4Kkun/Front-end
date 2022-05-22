@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:2:1-57:12
-INJECTED from C:\teamFile\app\src\main\AndroidManifest.xml:2:1-57:12
-INJECTED from C:\teamFile\app\src\main\AndroidManifest.xml:2:1-57:12
-INJECTED from C:\teamFile\app\src\main\AndroidManifest.xml:2:1-57:12
+ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:2:1-61:12
+INJECTED from C:\teamFile\app\src\main\AndroidManifest.xml:2:1-61:12
+INJECTED from C:\teamFile\app\src\main\AndroidManifest.xml:2:1-61:12
+INJECTED from C:\teamFile\app\src\main\AndroidManifest.xml:2:1-61:12
 MERGED from [com.github.iamport:iamport-android:v1.3.4] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\64ec81c9ee7f6e7efadd169becaa38fe\transformed\jetified-iamport-android-v1.3.4\AndroidManifest.xml:2:1-92:12
 MERGED from [androidx.databinding:databinding-adapters:7.0.2] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\db7aec53a8d58e5fb4658717e34513ee\transformed\databinding-adapters-7.0.2\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.databinding:databinding-ktx:7.0.2] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\f78420aced88d867bf04d299b99d13cd\transformed\jetified-databinding-ktx-7.0.2\AndroidManifest.xml:17:1-22:12
@@ -118,20 +118,20 @@ MERGED from [androidx.sqlite:sqlite-framework:2.1.0] C:\Users\YoungseoJeon\.grad
 MERGED from [androidx.sqlite:sqlite:2.1.0] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\6b38c599a4db1d472b3c128824e5b266\transformed\sqlite-2.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\82005da861055b46f5da5c4830a35c5f\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.github.ybq:Android-SpinKit:1.4.0] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\1c4a78667a84c9f0bc759155557de18a\transformed\jetified-Android-SpinKit-1.4.0\AndroidManifest.xml:2:1-9:12
-INJECTED from C:\teamFile\app\src\main\AndroidManifest.xml:2:1-57:12
-INJECTED from C:\teamFile\app\src\main\AndroidManifest.xml:2:1-57:12
-INJECTED from C:\teamFile\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from C:\teamFile\app\src\main\AndroidManifest.xml:2:1-61:12
+INJECTED from C:\teamFile\app\src\main\AndroidManifest.xml:2:1-61:12
+INJECTED from C:\teamFile\app\src\main\AndroidManifest.xml:2:1-61:12
 	package
 		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:3:5-33
 		INJECTED from C:\teamFile\app\src\main\AndroidManifest.xml
 		INJECTED from C:\teamFile\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\teamFile\app\src\main\AndroidManifest.xml
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:2:1-57:12
+		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:2:1-61:12
 		INJECTED from C:\teamFile\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\teamFile\app\src\main\AndroidManifest.xml
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:2:1-57:12
+		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:2:1-61:12
 		INJECTED from C:\teamFile\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:2:11-69
@@ -162,7 +162,7 @@ ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:7:5-81
 	android:name
 		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:7:22-78
 application
-ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:9:5-55:19
+ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:9:5-59:19
 MERGED from [com.github.iamport:iamport-android:v1.3.4] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\64ec81c9ee7f6e7efadd169becaa38fe\transformed\jetified-iamport-android-v1.3.4\AndroidManifest.xml:74:5-90:19
 MERGED from [com.github.iamport:iamport-android:v1.3.4] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\64ec81c9ee7f6e7efadd169becaa38fe\transformed\jetified-iamport-android-v1.3.4\AndroidManifest.xml:74:5-90:19
 MERGED from [com.google.firebase:firebase-analytics-ktx:20.1.0] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\50f9c3af5764db58443266b96945b821\transformed\jetified-firebase-analytics-ktx-20.1.0\AndroidManifest.xml:7:5-15:19
@@ -258,7 +258,7 @@ ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:18:9-27:20
 	android:exported
 		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:20:13-36
 	android:theme
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:19:13-47
+		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:19:13-49
 	android:name
 		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:18:19-66
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
@@ -338,17 +338,23 @@ ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:48:9-49:51
 	android:name
 		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:48:19-52
 activity#com.example.RunToU.addressActivity
-ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:50:9-51:51
+ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:51:9-52:51
 	android:theme
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:51:13-49
+		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:52:13-49
 	android:name
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:50:19-68
+		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:51:19-68
 activity#com.example.RunToU.ordersheetActivity
-ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:52:9-53:51
+ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:53:9-54:51
 	android:theme
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:53:13-49
+		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:54:13-49
 	android:name
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:52:19-71
+		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:53:19-71
+activity#com.example.RunToU.popupActivity
+ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:56:9-57:62
+	android:theme
+		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:57:13-60
+	android:name
+		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:56:19-48
 uses-sdk
 INJECTED from C:\teamFile\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\teamFile\app\src\main\AndroidManifest.xml

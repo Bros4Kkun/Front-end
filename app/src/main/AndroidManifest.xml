@@ -16,7 +16,7 @@
 
 
         <activity android:name="com.example.RunToU.LoginActivity"
-            android:theme="@style/SplashTheme"
+            android:theme="@style/Theme.Runtyou"
             android:exported="true">
            <intent-filter>
 
@@ -47,10 +47,14 @@
             android:theme="@style/Theme.Runtyou"/>
         <activity android:name=".ChatRoomActivity2"
             android:theme="@style/Theme.Runtyou"/>
+
         <activity android:name="com.example.RunToU.addressActivity"
             android:theme="@style/Theme.Runtyou"/>
         <activity android:name="com.example.RunToU.ordersheetActivity"
             android:theme="@style/Theme.Runtyou"/>
+
+        <activity android:name=".popupActivity"
+            android:theme="@style/Theme.AppCompat.DayNight"/>
 
     </application>
 

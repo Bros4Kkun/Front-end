@@ -34,7 +34,7 @@
             android:padding="6dp"
             android:inputType="textMultiLine|textNoSuggestions"
             android:layout_width="0dp"
-            android:layout_weight="4"
+            android:layout_weight="9"
             android:textSize="30dp"
             android:layout_height="wrap_content"/>
         <ImageButton
@@ -49,29 +49,35 @@
             android:layout_gravity="center_horizontal"/>
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_cor">
+
         <Button
+            android:id="@+id/matchingok"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="매칭 요청"
-            android:id="@+id/matchingok"/>
+            android:text="매칭 요청" />
+
         <Button
+            android:id="@+id/gomatching"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="매칭 수락"
-            android:id="@+id/gomatching"/>
+            android:text="매칭 수락" />
+
         <Button
+            android:id="@+id/btn_check"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id = "@+id/btn_check"
-            android:text="완료처리"/>
+            android:text="완료처리" />
+
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/com"
-            android:text="완료"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="완료" />
     </LinearLayout>
 
 </RelativeLayout>

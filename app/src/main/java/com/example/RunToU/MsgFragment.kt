@@ -38,6 +38,7 @@ class MsgFragment : Fragment(){
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        datalist.clear()
         chatlistVolley.chatlistVolley.chatroomExsitVolley(requireContext()){
             it->
             if(it){
@@ -49,7 +50,6 @@ class MsgFragment : Fragment(){
                 Toast.makeText(requireContext(), "네트워크 연결이 좋지 않습니다. 다시 시도해 주세요", Toast.LENGTH_SHORT).show()
             }
         }
-
 
 
 

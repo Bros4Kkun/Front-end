@@ -93,7 +93,7 @@
         <activity
             android:name="com.example.RunToU.LoginActivity"
             android:exported="true"
-            android:theme="@style/SplashTheme" >
+            android:theme="@style/Theme.Runtyou" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -141,6 +141,9 @@
         <activity
             android:name="com.example.RunToU.ordersheetActivity"
             android:theme="@style/Theme.Runtyou" />
+        <activity
+            android:name="com.example.RunToU.popupActivity"
+            android:theme="@style/Theme.AppCompat.DayNight" />
 
         <service
             android:name="com.iamport.sdk.domain.service.ChaiService"

@@ -98,7 +98,6 @@ public class writeActivity extends AppCompatActivity {
         InitializeListener();
         Iamport.INSTANCE.init(this);
 
-
         int status = NetworkStatus.getConnectivityStatus(getApplicationContext());
 
         queue = Volley.newRequestQueue(this);
@@ -113,36 +112,30 @@ public class writeActivity extends AppCompatActivity {
         btnTime = findViewById(R.id.btnTime);
         btnGotopur = findViewById(R.id.btnGotopur);
         price_rec = findViewById(R.id.price_rec);
-
-        String pointCheck = "http://3.39.87.103/api/user/point";
-        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, pointCheck, null, new Response.Listener<JSONObject>() {
+        price_rec.setOnClickListener(new View.OnClickListener() { //가격버튼
             @Override
-            public void onResponse(JSONObject response) {
-                try {
-                    point = response.getInt("point");
-                    Log.d("Tag", "point : " + point);
-
-                    price_rec.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            if(cateSpinner.getSelectedItem().toString().equals("배달 및 장보기")){
-                                cate="delivery-shopping";
-                            }else if(cateSpinner.getSelectedItem().toString().equals("청소 및 집안일")){
-                                cate="cleaning-housework";
-                            }else if(cateSpinner.getSelectedItem().toString().equals("설치 조립 운반")){
-                                cate="delivery-installation";
-                            }else if(cateSpinner.getSelectedItem().toString().equals("동행 및 돌봄")){
-                                cate="accompany-role-acting";
-                            }else if(cateSpinner.getSelectedItem().toString().equals("역할 대행")){
-                                cate="accompany-role-acting";
-                            }
-                            cate = "http://3.39.87.103/api/ordersheet/" + cate + "/cost";
-
-                            JSONObject object = new JSONObject();
-                            object.put("distance", -1);
-                            object.put("minutes", 54);
-                            object.put("cost", 54);
-
+            public void onClick(View v) {
+                if(cateSpinner.getSelectedItem().toString().equals("배달 및 장보기")){
+                    cate="delivery-shopping";
+                }else if(cateSpinner.getSelectedItem().toString().equals("청소 및 집안일")){
+                    cate="cleaning-housework";
+                }else if(cateSpinner.getSelectedItem().toString().equals("설치 조립 운반")){
+                    cate="delivery-installation";
+                }else if(cateSpinner.getSelectedItem().toString().equals("동행 및 돌봄")){
+                    cate="accompany-role-acting";
+                }else if(cateSpinner.getSelectedItem().toString().equals("역할 대행")){
+                    cate="accompany-role-acting";
+                }
+                Intent intent = new Intent(getApplication(), popupActivity.class);
+                if(cate!=null) {
+                    intent.putExtra("cate", cate);
+                    intent.putExtra("cost", price_write.getText().toString());
+                    Log.d("Tag", "Cost : " + price_write.getText().toString());
+                    startActivity(intent);
+                }else
+                {
+                    Toast.makeText(getApplication(),"카테고리를 선택해 주세요.",Toast.LENGTH_SHORT).show();
+                }/*
                             JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, cate, null, new Response.Listener<JSONObject>() {
                                 @Override
                                 public void onResponse(JSONObject response) {
@@ -162,9 +155,19 @@ public class writeActivity extends AppCompatActivity {
                                     return headers;
                                 }
                             };
+*/
+            }
+        });
 
-                        }
-                    });
+        String pointCheck = "http://3.39.87.103/api/user/point";
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, pointCheck, null, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                try {
+                    point = response.getInt("point");
+                    Log.d("Tag", "point : " + point);
+
+
 
                     btnGotopur.setOnClickListener(new View.OnClickListener() {
                         @Override
