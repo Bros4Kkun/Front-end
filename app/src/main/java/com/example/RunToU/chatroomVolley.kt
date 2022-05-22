@@ -13,7 +13,7 @@ import kotlin.collections.HashMap
 class chatroomVolley { //채팅룸 생성
     object chatroomVolley{
 
-        val url = "http://3.39.87.103/api/chatroom/ordersheet/514"
+        val url = "http://3.39.87.103/api/chatroom/ordersheet/620"
         fun chatroomVolley(
             context:Context,
         success:(Boolean) ->Unit

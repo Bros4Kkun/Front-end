@@ -53,7 +53,7 @@ class ChatRoomActivity2 : Activity() {
         but1.setOnClickListener {
             ChatRoomActivity2.Companion.chtmsg = chatmsg.text.toString()
             chatmsg.text = ""
-            ChatRoomActivity2.Companion.rightData(ChatRoomActivity2.Companion.chtmsg)
+            
             send(
                 ChatRoomActivity2.Companion.chtmsg,
                 "/app/chat/chatroom/",

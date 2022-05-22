@@ -108,6 +108,10 @@
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_background.png"
     },
     {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_del123_background.png.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\del123_background.png"
+    },
+    {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\res\\merged\\debug\\layout_room2.xml.flat",
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\src\\main\\res\\layout\\room2.xml"
     },
@@ -228,10 +232,6 @@
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\src\\main\\res\\drawable\\jobrec.jpg"
     },
     {
-        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_submit.jpg.flat",
-        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\src\\main\\res\\drawable-v24\\submit.jpg"
-    },
-    {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_del123.png.flat",
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\del123.png"
     },
@@ -280,6 +280,10 @@
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\del123_foreground.png"
     },
     {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_del123_background.png.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\del123_background.png"
+    },
+    {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\res\\merged\\debug\\drawable_gotopurchase.jpg.flat",
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\src\\main\\res\\drawable\\gotopurchase.jpg"
     },
@@ -298,6 +302,10 @@
     {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_arrow_upward_black_24dp.png.flat",
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_arrow_upward_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_del123_background.png.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\del123_background.png"
     },
     {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_arrow_upward_black_24dp.png.flat",
@@ -404,6 +412,10 @@
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\src\\main\\res\\layout\\activity_jobrec.xml"
     },
     {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_del123_background.png.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\del123_background.png"
+    },
+    {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_job.xml.flat",
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\src\\main\\res\\layout\\item_job.xml"
     },
@@ -440,12 +452,20 @@
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_del123_background.xml.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\del123_background.xml"
+    },
+    {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\res\\merged\\debug\\drawable_selector_bottom_navi_msg_icon.png.flat",
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\src\\main\\res\\drawable\\selector_bottom_navi_msg_icon.png"
     },
     {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_rectangle_1.xml.flat",
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\rectangle_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_del123_background.png.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\del123_background.png"
     },
     {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_review.xml.flat",
@@ -494,6 +514,10 @@
     {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_background.png.flat",
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_del123_background.png.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\del123_background.png"
     },
     {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_review.xml.flat",
@@ -594,6 +618,10 @@
     {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_rectangle_2.png.flat",
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\rectangle_2.png"
+    },
+    {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_submit.png.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\src\\main\\res\\drawable-xxhdpi\\submit.png"
     },
     {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\Front-end1\\app\\build\\intermediates\\res\\merged\\debug\\drawable_writebg.jpg.flat",
