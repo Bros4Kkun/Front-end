@@ -36,6 +36,7 @@ class Stompclass: WebSocketListener() {
         val url1 = "ws://3.39.87.103/ws-stomp"
         val intervalMillis = 100L
         val client = OkHttpClient.Builder()
+            .retryOnConnectionFailure(true)
             .addInterceptor {
                 it.proceed(
                     it.request().newBuilder()
@@ -53,7 +54,9 @@ class Stompclass: WebSocketListener() {
                     it.request().newBuilder().header("heart-beat", "6000,0").build()
                 )
             }
-            .readTimeout(1, TimeUnit.MINUTES)
+
+            .pingInterval(10L, TimeUnit.SECONDS)
+        .readTimeout(1, TimeUnit.MINUTES)
             .writeTimeout(1, TimeUnit.MINUTES)
             .connectTimeout(1, TimeUnit.MINUTES)
             .build()

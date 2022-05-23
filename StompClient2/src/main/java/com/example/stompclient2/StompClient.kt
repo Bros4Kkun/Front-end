@@ -114,7 +114,7 @@ class StompClient(private val okHttpClient: OkHttpClient,
 
     private fun reconnect() {
         if (shouldBeConnected) {
-            close()
+
             Thread.sleep(reconnectAfter)
             open()
         }
