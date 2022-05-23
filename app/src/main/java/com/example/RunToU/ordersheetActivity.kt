@@ -106,7 +106,7 @@ class ordersheetActivity : AppCompatActivity() {
                     destination = jsonObject.getString("destination")
                     cost = jsonObject.getInt("cost")
                     var time: String = jsonObject.getString("wishedDeadLine")
-                    var num: String = jsonObject.getString("orderSheetId")
+                    var num: Int = jsonObject.getInt("orderSheetId")
 
                     //String[] str = destination.split(",");
                     btnChat.setOnClickListener(View.OnClickListener {
@@ -116,6 +116,7 @@ class ordersheetActivity : AppCompatActivity() {
                             if(it){
                                 chatRoomAdapter.chatindex = chatRoomAdapter.chRo
                                 val intent = Intent(this,ChatRoomActivity2::class.java)
+                                Stompclass.Stomclass.subscribe("/topic/chatroom/",chatRoomAdapter.chRo)
                                 startActivity(intent)
                             }
 

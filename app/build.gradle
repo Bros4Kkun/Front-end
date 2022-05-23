@@ -73,7 +73,7 @@ dependencies {
     implementation files('libs/libDaumMapAndroid.jar')
     implementation 'com.android.volley:volley:1.1.0'
     implementation "com.squareup.okhttp3:okhttp-urlconnection:4.9.1"
-
+    implementation 'androidx.work:work-runtime-ktx:2.7.0'
     // stomp
     implementation 'com.github.FaithDeveloper:stomp-kotlin:2.0.5'
 

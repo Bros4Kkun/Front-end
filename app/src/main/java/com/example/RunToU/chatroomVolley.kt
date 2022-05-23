@@ -7,6 +7,7 @@ import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
 import org.json.JSONObject
+import java.sql.DriverManager.println
 import java.util.*
 import kotlin.collections.HashMap
 
@@ -16,20 +17,20 @@ class chatroomVolley { //채팅룸 생성
         val url = "http://3.39.87.103/api/chatroom/ordersheet/"
         fun chatroomVolley(
             context:Context,
-            index :String,
+            index :Int,
         success:(Boolean) ->Unit
         ){
             var responseJson = JSONObject()
 
-
+            var json = JSONObject()
 
 
             val request = object : JsonObjectRequest(
                 Request.Method.POST,
-                url+index,
+                url+index.toString(),
                 null,
                 Response.Listener<JSONObject> { response ->
-                    print(response)
+
                     responseJson=response
                     chatRoomAdapter.orPK = responseJson.getInt("ordererPk")
                     chatRoomAdapter.prPK=responseJson.getInt("performerPk")

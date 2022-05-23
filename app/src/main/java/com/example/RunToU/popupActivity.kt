@@ -47,21 +47,24 @@ class popupActivity : AppCompatActivity() {
                     ) {
                         if (it) {
                             Log.d("Tag" , "cost : " +chatRoomAdapter.cost.toString() )
-
+                            Toast.makeText(
+                                applicationContext,
+                                "추천하는 가격은" + chatRoomAdapter.cost.toString() + "원 입니다.",
+                                Toast.LENGTH_LONG).show()
                         }
                     }
                 }
                     else if(cate=="cleaning-housework"){
 
                         cleaningVolley.cleaningVolley.cleaningVolley(applicationContext, minute, level) {
-                            println("??????????????")
+
                             if (it) {
 
                                 Toast.makeText(
                                     applicationContext,
-                                    "추천하는 가격은" + chatRoomAdapter.cost.toString() + "입니다.",
+                                    "추천하는 가격은" + chatRoomAdapter.cost.toString() + "원 입니다.",
                                     Toast.LENGTH_LONG).show()
-                                println("!!!!!!!!!!!!!!!!!!!!!")
+
                             }
                         }
                     }else if(cate=="delivery-installation"){
@@ -69,7 +72,7 @@ class popupActivity : AppCompatActivity() {
                             if (it) {
                                 Toast.makeText(
                                     applicationContext,
-                                    "추천하는 가격은" + chatRoomAdapter.cost.toString() + "입니다.",
+                                    "추천하는 가격은" + chatRoomAdapter.cost.toString() + "원 입니다.",
                                     Toast.LENGTH_LONG).show()
                             }
                         }
@@ -80,7 +83,7 @@ class popupActivity : AppCompatActivity() {
                             if (it) {
                                 Toast.makeText(
                                     applicationContext,
-                                    "추천하는 가격은" + chatRoomAdapter.cost.toString() + "입니다.",
+                                    "추천하는 가격은" + chatRoomAdapter.cost.toString() + "원 입니다.",
                                     Toast.LENGTH_LONG).show()
                             }
                         }
