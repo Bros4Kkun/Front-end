@@ -125,6 +125,9 @@ class Stompclass: WebSocketListener() {
             }
 
         }
+        fun disconnect(){
+            stompConnection.dispose()
+        }
 
 
 

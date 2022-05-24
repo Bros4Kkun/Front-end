@@ -10,6 +10,7 @@ import android.view.View
 import android.widget.RelativeLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.example.RunToU.chatRecieve.chatRecieve.recivemsg
+import com.example.RunToU.chatRoomAdapter.requester
 import kotlinx.android.synthetic.main.activity_main.*
 import org.json.JSONArray
 import org.json.JSONException
@@ -43,6 +44,24 @@ class MainActivity : AppCompatActivity() {
             else{
                 print("multi subscribe error!")}
         }
+        matchExistVolley.matchExsitVolley(this){
+            if(it){
+                var jsonArray:JSONArray
+                var jObject : JSONObject
+                jsonArray = chatroomExistVolley.responseJson
+                for(i in 0..jsonArray.length()-1){
+                    jObject= jsonArray.getJSONObject(i)
+                    if(jObject.getBoolean("completionRequest") == false) {
+                        println("completion?")
+                        if(requester) {
+                            var index = jObject.getInt("id")
+                            Stompclass.Stomclass.subscribe("/topic/match/done/", index)
+
+                        }
+                    }
+                }
+            }
+        }
 
 
         configureBottomNavigation()
@@ -68,14 +87,16 @@ class MainActivity : AppCompatActivity() {
                     runOnUiThread(Runnable {
                         ChatRoomActivity2.leftData(
                             jObject.getString("content").replace("\n", ""),
-                            jObject.getString("writerAccountId")
+                            jObject.getString("writerAccountId"),
+                            jObject.getString("createdDate")
                         )
                     })
                 }
                 else{
                     runOnUiThread(Runnable {
                         ChatRoomActivity2.rightData(
-                            jObject.getString("content").replace("\n","")
+                            jObject.getString("content").replace("\n","") ,
+                                    jObject.getString("createdDate")
                         )
                     })
                 }

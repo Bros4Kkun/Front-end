@@ -41,10 +41,10 @@ class chatlogVolley {
                         var content = jsonArray1.getJSONObject(i).getString("content")
                         var NICK = jsonArray1.getJSONObject(i).getString("writerNickname")
                         if(IDCHECK!=chatRecieve.chatRecieve.loginID){
-                        ChatRoomActivity2.leftData(content.replace("\n", ""),NICK)
+                        ChatRoomActivity2.leftData(content.replace("\n", ""),NICK,"2022-05-24")
                         } else {
 
-                        ChatRoomActivity2.rightData(content.replace("\n", ""))
+                        ChatRoomActivity2.rightData(content.replace("\n", "",),"2022-05-24")
 
                         }
                     }

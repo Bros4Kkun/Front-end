@@ -12,18 +12,10 @@ com/example/RunToU/databinding/ItemVerificationBinding.java
  com.example.RunToU.databinding.ItemVerificationBinding
 com/example/RunToU/jsonData.java
  com.example.RunToU.jsonData
-com/example/RunToU/workFragment.java
- com.example.RunToU.workFragment
- com.example.RunToU.workFragment$1
- com.example.RunToU.workFragment$2
- com.example.RunToU.workFragment$3
- com.example.RunToU.workFragment$4
- com.example.RunToU.workFragment$5
- com.example.RunToU.workFragment$6
- com.example.RunToU.workFragment$7
- com.example.RunToU.workFragment$7$1
- com.example.RunToU.workFragment$8
- com.example.RunToU.workFragment$9
+com/example/RunToU/edit_introduceActivity.java
+ com.example.RunToU.edit_introduceActivity
+ com.example.RunToU.edit_introduceActivity$1
+ com.example.RunToU.edit_introduceActivity$2
 com/example/RunToU/databinding/ActivityJobrecBinding.java
  com.example.RunToU.databinding.ActivityJobrecBinding
 com/example/RunToU/databinding/ActivityDetailsBinding.java
@@ -88,19 +80,8 @@ com/example/RunToU/reviewAdapter.java
  com.example.RunToU.reviewAdapter
  com.example.RunToU.reviewAdapter$1
  com.example.RunToU.reviewAdapter$CustomViewHolder
-com/example/RunToU/writeActivity.java
- com.example.RunToU.writeActivity
- com.example.RunToU.writeActivity$1
- com.example.RunToU.writeActivity$2
- com.example.RunToU.writeActivity$2$1
- com.example.RunToU.writeActivity$2$1$1
- com.example.RunToU.writeActivity$2$1$2
- com.example.RunToU.writeActivity$2$1$3
- com.example.RunToU.writeActivity$3
- com.example.RunToU.writeActivity$4
- com.example.RunToU.writeActivity$5
- com.example.RunToU.writeActivity$6
- com.example.RunToU.writeActivity$7
+androidx/databinding/DataBindingComponent.java
+ androidx.databinding.DataBindingComponent
 com/example/RunToU/databinding/ItemReviewBinding.java
  com.example.RunToU.databinding.ItemReviewBinding
 com/example/RunToU/databinding/ListHeaderBinding.java
@@ -190,8 +171,8 @@ com/example/RunToU/databinding/ActivitySingupBinding.java
  com.example.RunToU.databinding.ActivitySingupBinding
 com/example/RunToU/databinding/ActivityReportBinding.java
  com.example.RunToU.databinding.ActivityReportBinding
-com/example/RunToU/Dataitem.java
- com.example.RunToU.Dataitem
+com/example/RunToU/NetworkStatus.java
+ com.example.RunToU.NetworkStatus
 com/example/RunToU/workData.java
  com.example.RunToU.workData
 com/example/RunToU/databinding/RoomHeaderItemBinding.java
@@ -211,11 +192,30 @@ com/example/RunToU/jobrecActivity.java
  com.example.RunToU.jobrecActivity
  com.example.RunToU.jobrecActivity$1
  com.example.RunToU.jobrecActivity$2
-com/example/RunToU/NetworkStatus.java
- com.example.RunToU.NetworkStatus
-com/example/RunToU/edit_introduceActivity.java
- com.example.RunToU.edit_introduceActivity
- com.example.RunToU.edit_introduceActivity$1
- com.example.RunToU.edit_introduceActivity$2
-androidx/databinding/DataBindingComponent.java
- androidx.databinding.DataBindingComponent
+com/example/RunToU/writeActivity.java
+ com.example.RunToU.writeActivity
+ com.example.RunToU.writeActivity$1
+ com.example.RunToU.writeActivity$2
+ com.example.RunToU.writeActivity$2$1
+ com.example.RunToU.writeActivity$2$1$1
+ com.example.RunToU.writeActivity$2$1$2
+ com.example.RunToU.writeActivity$2$1$3
+ com.example.RunToU.writeActivity$3
+ com.example.RunToU.writeActivity$4
+ com.example.RunToU.writeActivity$5
+ com.example.RunToU.writeActivity$6
+ com.example.RunToU.writeActivity$7
+com/example/RunToU/workFragment.java
+ com.example.RunToU.workFragment
+ com.example.RunToU.workFragment$1
+ com.example.RunToU.workFragment$2
+ com.example.RunToU.workFragment$3
+ com.example.RunToU.workFragment$4
+ com.example.RunToU.workFragment$5
+ com.example.RunToU.workFragment$6
+ com.example.RunToU.workFragment$7
+ com.example.RunToU.workFragment$7$1
+ com.example.RunToU.workFragment$8
+ com.example.RunToU.workFragment$9
+com/example/RunToU/Dataitem.java
+ com.example.RunToU.Dataitem

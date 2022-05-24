@@ -43,6 +43,12 @@ class LoginActivity : AppCompatActivity() {
                     "PERFORMER"
                 ) { success ->
                     if (success) {
+                        try{
+                        Stompclass.Stomclass.disconnect()}
+                        catch(e:Exception){
+                            println(e)
+
+                        }
                         user = 1
                         chatRecieve.chatRecieve.loginID = userid.toString()
                         Toast.makeText(this@LoginActivity, "수행자 로그인 성공", Toast.LENGTH_SHORT).show()
@@ -93,7 +99,11 @@ class LoginActivity : AppCompatActivity() {
                     userpw.toString(),
                     "ORDERER"
                 ) { success ->
-                    if (success) {
+                    if (success) {try{
+                        Stompclass.Stomclass.disconnect()}
+                    catch (e : Exception){
+                        println(e)
+                    }
                         user = 1
                         chatRecieve.chatRecieve.loginID = userid.toString()
                         Toast.makeText(this@LoginActivity, "요청자 로그인 성공", Toast.LENGTH_SHORT).show()

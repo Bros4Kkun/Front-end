@@ -45,6 +45,7 @@ class ChatAdpater(nickname : String, dataList: ArrayList<Dataitem>?) :
             }
         } else {
             (viewHolder as RightViewHolder).textv_msg.text = myDatalist!![position].getContent()
+            viewHolder.textv_time.text = myDatalist!![position].datetime()
         }
 
     }

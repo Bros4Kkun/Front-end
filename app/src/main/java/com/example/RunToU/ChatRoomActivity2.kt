@@ -1,11 +1,13 @@
 package com.example.RunToU
 
 import android.app.Activity
+import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
+import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.RunToU.Stompclass.Stomclass.send
@@ -79,7 +81,7 @@ class ChatRoomActivity2 : Activity() {
 
         }
         match_com.setOnClickListener {
-            matchsucVolley.matchsucVolley.matchsucVolley(
+            matchsucVolley.matchsucVolley.matchsucVolley( // 요청자
                 baseContext,
                 matchrein
             ){
@@ -123,9 +125,10 @@ class ChatRoomActivity2 : Activity() {
         )
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     private fun initData() {
         datalist.clear()
-        datalist.add(Dataitem("채팅에 입장했습니다.", null, Code.ViewType.CENTER_CONTENT))
+        datalist.add(Dataitem("채팅에 입장했습니다.", null, Code.ViewType.CENTER_CONTENT,"1"))
         chatlogVolley(chatindex, this)
     }
 
@@ -137,13 +140,15 @@ class ChatRoomActivity2 : Activity() {
         var chatAdpater = ChatAdpater(opponick, datalist)
         var msg1 = ""
         var ID1 = ""
-        fun leftData(msg1: String?, nickname1: String?) {
-            datalist.add(Dataitem(msg1, nickname1, Code.ViewType.LEFT_CONTENT))
+        @RequiresApi(Build.VERSION_CODES.O)
+        fun leftData(msg1: String?, nickname1: String?, date : String) {
+            datalist.add(Dataitem(msg1, nickname1, Code.ViewType.LEFT_CONTENT,date))
             chatAdpater.notifyDataSetChanged()
         }
 
-        fun rightData(msg: String?) {
-            datalist.add(Dataitem(msg, null, Code.ViewType.RIGHT_CONTENT))
+        @RequiresApi(Build.VERSION_CODES.O)
+        fun rightData(msg: String?, dat2:String) {
+            datalist.add(Dataitem(msg, null, Code.ViewType.RIGHT_CONTENT,dat2))
             chatAdpater.notifyDataSetChanged()
         }
 

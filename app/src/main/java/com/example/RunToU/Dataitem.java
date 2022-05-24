@@ -15,20 +15,23 @@ public class Dataitem {
     public int viewType;
     public String date;
     @RequiresApi(Build.VERSION_CODES.O)
+    /*
     public String datetime() {
         LocalDateTime localDateTime = LocalDateTime.now();
         DateTimeFormatter formater = DateTimeFormatter.ofPattern("yyyy-MM-dd HH-mm");
         date = localDateTime.format(formater);
         return date;
-    }
-    public Dataitem(String content, String name, int viewType) {
+    }*/
+    public Dataitem(String content, String name, int viewType, String data) {
         this.content=content;
         this.viewType=viewType;
         this.name=name;
+        this.date = data;
     }
 
     public String getContent() {return content;}
     public String getName() {return name;}
     public int getViewType() { return viewType;}
+    public String datetime(){return date;}
 
 }
