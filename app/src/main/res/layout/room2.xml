@@ -12,7 +12,9 @@
         android:id="@+id/recyvlerv"
         android:layout_above="@+id/layout1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+
+        >
 
     </androidx.recyclerview.widget.RecyclerView>
 

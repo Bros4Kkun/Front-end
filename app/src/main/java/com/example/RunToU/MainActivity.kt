@@ -2,13 +2,18 @@ package com.example.RunToU
 
 
 import android.app.Activity
-import android.os.Bundle
-import android.os.Handler
-import android.os.HandlerThread
-import android.os.Message
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.content.Context
+import android.os.*
 import android.view.View
 import android.widget.RelativeLayout
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.NotificationCompat
+import androidx.core.app.NotificationManagerCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.RunToU.chatRecieve.chatRecieve.recivemsg
 import com.example.RunToU.chatRoomAdapter.requester
 import kotlinx.android.synthetic.main.activity_main.*
@@ -18,8 +23,24 @@ import org.json.JSONObject
 
 
 class MainActivity : AppCompatActivity() {
+    private fun createNotificationChannel() {
+         val channelId = "RunToU"
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val name = "RunToU"
+            val descriptionText = "RunToU"
+            val importance = NotificationManager.IMPORTANCE_DEFAULT
+            val channel = NotificationChannel(channelId, name, importance).apply {
+                description = descriptionText
+            }
+
+            val notificationManager: NotificationManager =
+                getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+            notificationManager.createNotificationChannel(channel)
+        }
+    }
 
 
+    lateinit var  builder: NotificationCompat.Builder
     override fun onCreate(savedInstanceState: Bundle?) {
 
 
@@ -51,10 +72,10 @@ class MainActivity : AppCompatActivity() {
                 jsonArray = chatroomExistVolley.responseJson
                 for(i in 0..jsonArray.length()-1){
                     jObject= jsonArray.getJSONObject(i)
-                    if(jObject.getBoolean("completionRequest") == false) {
+                    if(jObject.getBoolean("matched") == false) {
                         println("completion?")
                         if(requester) {
-                            var index = jObject.getInt("id")
+                            var index = jObject.getJSONObject("performerInfo").getInt("id")
                             Stompclass.Stomclass.subscribe("/topic/match/done/", index)
 
                         }
@@ -77,9 +98,11 @@ class MainActivity : AppCompatActivity() {
             val MSG_DO_SOMETHING4 = 4
         val MSG_DO_SOMETHING5=5
 
+        @RequiresApi(Build.VERSION_CODES.O)
         override fun handleMessage(msg: Message) {
             when (msg.what) {
             MSG_DO_SOMETHING1 -> {
+
                 var inputmsg: String = chatRecieve.chatRecieve.recivemsg
                 var jObject: JSONObject = JSONObject(inputmsg)
 
@@ -90,7 +113,11 @@ class MainActivity : AppCompatActivity() {
                             jObject.getString("writerAccountId"),
                             jObject.getString("createdDate")
                         )
-                    })
+
+
+                    }
+                    )
+
                 }
                 else{
                     runOnUiThread(Runnable {
@@ -98,10 +125,15 @@ class MainActivity : AppCompatActivity() {
                             jObject.getString("content").replace("\n","") ,
                                     jObject.getString("createdDate")
                         )
+
                     })
+
                 }
 
-                    println("don'twork??")
+
+
+
+                println("don'twork??")
 
 
             }

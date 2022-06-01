@@ -33,9 +33,9 @@ import kotlin.collections.HashMap
                 null,
                 Response.Listener<JSONObject> { response ->
                     print(response)
-                    response.getString("nickname")
-                    response.getString("selfIntroduction")
-
+                    nick = response.getString("nickname")
+                    selfintro = response.getString("selfIntroduction")
+success(true)
 
                 },
                 Response.ErrorListener { error ->

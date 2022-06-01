@@ -202,128 +202,128 @@
 81-->[androidx.work:work-runtime:2.7.0] C:\Users\whdal\.gradle\caches\transforms-3\d8bca38d157ed1989704d63879151b09\transformed\work-runtime-2.7.0\AndroidManifest.xml:27:22-78
 82
 83    <application
-83-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:9:5-59:19
+83-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:9:5-60:19
 84        android:allowBackup="true"
-84-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:10:9-35
+84-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:11:9-35
 85        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 85-->[androidx.core:core:1.7.0] C:\Users\whdal\.gradle\caches\transforms-3\9980619adbe985320fb1b253f1cc28fd\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
 86        android:debuggable="true"
 87        android:icon="@mipmap/ic_launcher"
-87-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:11:9-43
+87-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:12:9-43
 88        android:label="@string/app_name"
-88-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:12:9-41
+88-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:13:9-41
 89        android:roundIcon="@mipmap/ic_launcher_round"
-89-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:13:9-54
+89-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:14:9-54
 90        android:supportsRtl="true"
-90-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:14:9-35
+90-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:15:9-35
 91        android:testOnly="true"
 92        android:usesCleartextTraffic="true" >
-92-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:15:9-44
+92-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:16:9-44
 93        <activity
-93-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:18:9-27:20
+93-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:19:9-28:20
 94            android:name="com.example.RunToU.LoginActivity"
-94-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:18:19-66
+94-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:19:19-66
 95            android:exported="true"
-95-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:20:13-36
+95-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:21:13-36
 96            android:theme="@style/Theme.Runtyou" >
-96-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:19:13-49
+96-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:20:13-49
 97            <intent-filter>
-97-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:21:12-26:29
+97-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:22:12-27:29
 98                <action android:name="android.intent.action.MAIN" />
-98-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:23:17-69
-98-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:23:25-66
+98-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:24:17-69
+98-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:24:25-66
 99
 100                <category android:name="android.intent.category.LAUNCHER" />
-100-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:25:17-77
-100-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:25:27-74
+100-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:26:17-77
+100-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:26:27-74
 101            </intent-filter>
 102        </activity>
 103        <activity
-103-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:29:9-30:51
+103-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:30:9-31:51
 104            android:name="com.example.RunToU.MainActivity"
-104-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:29:19-47
+104-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:30:19-47
 105            android:theme="@style/Theme.Runtyou" />
-105-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:30:13-49
+105-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:31:13-49
 106        <activity
-106-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:31:9-32:52
+106-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:32:9-33:52
 107            android:name="com.example.RunToU.SingupActivity"
-107-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:31:19-67
+107-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:32:19-67
 108            android:theme="@style/Theme.Runtyou" />
-108-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:32:13-49
+108-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:33:13-49
 109
 110        <meta-data
-110-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:33:9-106
+110-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:34:9-106
 111            android:name="com.kakao.sdk.AppKey"
-111-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:33:20-55
+111-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:34:20-55
 112            android:value="e65891468706ac7d59680f5e0202bfff" />
-112-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:33:56-104
+112-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:34:56-104
 113
 114        <activity
-114-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:34:9-35:51
+114-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:35:9-36:51
 115            android:name="com.example.RunToU.reviewActivity"
-115-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:34:19-67
+115-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:35:19-67
 116            android:theme="@style/Theme.Runtyou" />
-116-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:35:13-49
+116-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:36:13-49
 117        <activity
-117-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:36:9-37:51
+117-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:37:9-38:51
 118            android:name="com.example.RunToU.settingActivity"
-118-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:36:19-68
+118-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:37:19-68
 119            android:theme="@style/Theme.Runtyou" />
-119-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:37:13-49
+119-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:38:13-49
 120        <activity
-120-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:38:9-39:51
+120-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:39:9-40:51
 121            android:name="com.example.RunToU.purchaseActivity"
-121-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:38:19-69
+121-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:39:19-69
 122            android:theme="@style/Theme.Runtyou" />
-122-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:39:13-49
+122-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:40:13-49
 123        <activity
-123-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:40:9-41:51
+123-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:41:9-42:51
 124            android:name="com.example.RunToU.edit_introduceActivity"
-124-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:40:19-75
+124-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:41:19-75
 125            android:theme="@style/Theme.Runtyou" />
-125-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:41:13-49
+125-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:42:13-49
 126        <activity
-126-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:42:9-43:51
+126-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:43:9-44:51
 127            android:name="com.example.RunToU.writeActivity"
-127-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:42:19-66
+127-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:43:19-66
 128            android:theme="@style/Theme.Runtyou" />
-128-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:43:13-49
+128-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:44:13-49
 129        <activity
-129-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:44:9-45:51
+129-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:45:9-46:51
 130            android:name="com.example.RunToU.verificationActivity"
-130-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:44:19-73
+130-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:45:19-73
 131            android:theme="@style/Theme.Runtyou" />
-131-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:45:13-49
+131-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:46:13-49
 132        <activity
-132-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:46:9-47:51
+132-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:47:9-48:51
 133            android:name="com.example.RunToU.jobrecActivity"
-133-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:46:19-67
+133-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:47:19-67
 134            android:theme="@style/Theme.Runtyou" />
-134-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:47:13-49
+134-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:48:13-49
 135        <activity
-135-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:48:9-49:51
+135-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:49:9-50:51
 136            android:name="com.example.RunToU.ChatRoomActivity2"
-136-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:48:19-52
+136-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:49:19-52
 137            android:theme="@style/Theme.Runtyou" />
-137-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:49:13-49
+137-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:50:13-49
 138        <activity
-138-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:51:9-52:51
+138-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:52:9-53:51
 139            android:name="com.example.RunToU.addressActivity"
-139-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:51:19-68
+139-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:52:19-68
 140            android:theme="@style/Theme.Runtyou" />
-140-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:52:13-49
+140-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:53:13-49
 141        <activity
-141-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:53:9-54:51
+141-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:54:9-55:51
 142            android:name="com.example.RunToU.ordersheetActivity"
-142-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:53:19-71
+142-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:54:19-71
 143            android:theme="@style/Theme.Runtyou" />
-143-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:54:13-49
+143-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:55:13-49
 144        <activity
-144-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:56:9-57:62
+144-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:57:9-58:62
 145            android:name="com.example.RunToU.popupActivity"
-145-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:56:19-48
+145-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:57:19-48
 146            android:theme="@style/Theme.AppCompat.DayNight" />
-146-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:57:13-60
+146-->C:\Users\whdal\AndroidStudioProjects\tea\app\src\main\AndroidManifest.xml:58:13-60
 147
 148        <service
 148-->[com.github.iamport:iamport-android:v1.3.4] C:\Users\whdal\.gradle\caches\transforms-3\64ec81c9ee7f6e7efadd169becaa38fe\transformed\jetified-iamport-android-v1.3.4\AndroidManifest.xml:78:9-80:38
@@ -510,27 +510,27 @@
 245            </intent-filter>
 246        </service>
 247
-248        <provider
-248-->[com.google.firebase:firebase-common:20.0.0] C:\Users\whdal\.gradle\caches\transforms-3\956e92c92c607b75a71659e4b24463c8\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:26:9-31:39
-249            android:name="com.google.firebase.provider.FirebaseInitProvider"
-249-->[com.google.firebase:firebase-common:20.0.0] C:\Users\whdal\.gradle\caches\transforms-3\956e92c92c607b75a71659e4b24463c8\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:27:13-77
-250            android:authorities="com.example.RunToU.firebaseinitprovider"
-250-->[com.google.firebase:firebase-common:20.0.0] C:\Users\whdal\.gradle\caches\transforms-3\956e92c92c607b75a71659e4b24463c8\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:28:13-72
-251            android:directBootAware="true"
-251-->[com.google.firebase:firebase-common:20.0.0] C:\Users\whdal\.gradle\caches\transforms-3\956e92c92c607b75a71659e4b24463c8\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:29:13-43
-252            android:exported="false"
-252-->[com.google.firebase:firebase-common:20.0.0] C:\Users\whdal\.gradle\caches\transforms-3\956e92c92c607b75a71659e4b24463c8\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:30:13-37
-253            android:initOrder="100" />
-253-->[com.google.firebase:firebase-common:20.0.0] C:\Users\whdal\.gradle\caches\transforms-3\956e92c92c607b75a71659e4b24463c8\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:31:13-36
-254
-255        <activity
-255-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\whdal\.gradle\caches\transforms-3\2192a94135b0c5524862021f01d98a51\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
-256            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-256-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\whdal\.gradle\caches\transforms-3\2192a94135b0c5524862021f01d98a51\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+248        <activity
+248-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\whdal\.gradle\caches\transforms-3\2192a94135b0c5524862021f01d98a51\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+249            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+249-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\whdal\.gradle\caches\transforms-3\2192a94135b0c5524862021f01d98a51\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+250            android:exported="false"
+250-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\whdal\.gradle\caches\transforms-3\2192a94135b0c5524862021f01d98a51\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+251            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+251-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\whdal\.gradle\caches\transforms-3\2192a94135b0c5524862021f01d98a51\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+252
+253        <provider
+253-->[com.google.firebase:firebase-common:20.0.0] C:\Users\whdal\.gradle\caches\transforms-3\956e92c92c607b75a71659e4b24463c8\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:26:9-31:39
+254            android:name="com.google.firebase.provider.FirebaseInitProvider"
+254-->[com.google.firebase:firebase-common:20.0.0] C:\Users\whdal\.gradle\caches\transforms-3\956e92c92c607b75a71659e4b24463c8\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:27:13-77
+255            android:authorities="com.example.RunToU.firebaseinitprovider"
+255-->[com.google.firebase:firebase-common:20.0.0] C:\Users\whdal\.gradle\caches\transforms-3\956e92c92c607b75a71659e4b24463c8\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:28:13-72
+256            android:directBootAware="true"
+256-->[com.google.firebase:firebase-common:20.0.0] C:\Users\whdal\.gradle\caches\transforms-3\956e92c92c607b75a71659e4b24463c8\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:29:13-43
 257            android:exported="false"
-257-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\whdal\.gradle\caches\transforms-3\2192a94135b0c5524862021f01d98a51\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
-258            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-258-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\whdal\.gradle\caches\transforms-3\2192a94135b0c5524862021f01d98a51\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+257-->[com.google.firebase:firebase-common:20.0.0] C:\Users\whdal\.gradle\caches\transforms-3\956e92c92c607b75a71659e4b24463c8\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:30:13-37
+258            android:initOrder="100" />
+258-->[com.google.firebase:firebase-common:20.0.0] C:\Users\whdal\.gradle\caches\transforms-3\956e92c92c607b75a71659e4b24463c8\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:31:13-36
 259
 260        <receiver
 260-->[com.google.android.gms:play-services-measurement:20.1.0] C:\Users\whdal\.gradle\caches\transforms-3\7d2ff0ab15feafeff8b13b5e0aa9d9a3\transformed\jetified-play-services-measurement-20.1.0\AndroidManifest.xml:29:9-33:20

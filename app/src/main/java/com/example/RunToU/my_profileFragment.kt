@@ -1,5 +1,6 @@
 package com.example.RunToU
 
+import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
@@ -15,11 +16,12 @@ import kotlinx.android.synthetic.main.fragment_introduce.*
 class my_profileFragment : Fragment() {
     lateinit var nick : TextView
     lateinit var intro : TextView
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
+        val mainAC = context as MainActivity
         val rootView = inflater.inflate(R.layout.fragment_my_profile, container, false) as ViewGroup
         val btnIntroduce: Button
         val btnRevRec: Button
@@ -29,7 +31,7 @@ class my_profileFragment : Fragment() {
         val btnMyList: ImageButton
         val btnSetting: ImageButton
         nick = rootView.findViewById(R.id.Nickname)
-        nick.text=profileVolley.nick
+
 
         btnIntroduce = rootView.findViewById(R.id.btnIntroduce)
         btnRevRec = rootView.findViewById(R.id.btnRevRec)
@@ -38,19 +40,45 @@ class my_profileFragment : Fragment() {
         btnJob = rootView.findViewById(R.id.btnJob)
         btnMyList = rootView.findViewById(R.id.btnMyList)
         btnSetting = rootView.findViewById(R.id.btnSetting)
-        intro = rootView.findViewById(R.id.tvIntroduce)
+        profileVolley.profileVolley(mainAC,chatRecieve.chatRecieve.loginID){
+            if(it){
+
+                println("it is profile")
+                intro = rootView.findViewById(R.id.tvIntroduce)
+                intro.text = profileVolley.selfintro
+                nick.text = profileVolley.nick
+
+            }
+            else{
+                println("it is profilenot")
+
+            }
+        }
 
         btnIntroduce.setOnClickListener {
-            val fragment = Fragment(R.layout.fragment_introduce) // 객체 생성
 
-            requireFragmentManager().beginTransaction().add(R.id.infoFrag, fragment).commit()
-            tvIntroduce.text = profileVolley.selfintro
-            btnIntroduce.setBackgroundColor(Color.parseColor("#6EB943"))
-            btnJobRec.setBackgroundColor(Color.WHITE)
-            btnRevRec.setBackgroundColor(Color.WHITE)
-            btnIntroduce.setTextColor(Color.WHITE)
-            btnJobRec.setTextColor(Color.BLACK)
-            btnRevRec.setTextColor(Color.BLACK)
+            profileVolley.profileVolley(mainAC,chatRecieve.chatRecieve.loginID){
+                if(it){
+                    intro = rootView.findViewById(R.id.tvIntroduce)
+                    intro.text = profileVolley.selfintro
+                    val fragment = Fragment(R.layout.fragment_introduce) // 객체 생성
+                    println("it is profile")
+                    requireFragmentManager().beginTransaction().add(R.id.infoFrag, fragment).commit()
+
+                    btnIntroduce.setBackgroundColor(Color.parseColor("#6EB943"))
+                    btnJobRec.setBackgroundColor(Color.WHITE)
+                    btnRevRec.setBackgroundColor(Color.WHITE)
+                    btnIntroduce.setTextColor(Color.WHITE)
+                    btnJobRec.setTextColor(Color.BLACK)
+                    btnRevRec.setTextColor(Color.BLACK)
+
+                }
+                else{
+                    println("it is profilenot")
+
+                }
+            }
+
         }
         btnJobRec.setOnClickListener {
             val fragment = Fragment(R.layout.fragment_short_jobrec) // 객체 생성

@@ -104,6 +104,10 @@
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\tea\\app\\src\\main\\res\\drawable\\rectangle_2.xml"
     },
     {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\tea\\app\\build\\intermediates\\res\\merged\\debug\\drawable_round_corner_log.xml.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\tea\\app\\src\\main\\res\\drawable\\round_corner_log.xml"
+    },
+    {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\tea\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_report.xml.flat",
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\tea\\app\\src\\main\\res\\layout\\activity_report.xml"
     },
@@ -386,6 +390,10 @@
     {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\tea\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_chat_bubble.xml.flat",
         "source": "C:\\Users\\whdal\\AndroidStudioProjects\\tea\\app\\src\\main\\res\\drawable-v24\\chat_bubble.xml"
+    },
+    {
+        "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\tea\\app\\build\\intermediates\\res\\merged\\debug\\layout_maplist.xml.flat",
+        "source": "C:\\Users\\whdal\\AndroidStudioProjects\\tea\\app\\src\\main\\res\\layout\\maplist.xml"
     },
     {
         "merged": "C:\\Users\\whdal\\AndroidStudioProjects\\tea\\app\\build\\intermediates\\res\\merged\\debug\\drawable_plus.jpg.flat",

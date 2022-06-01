@@ -53,6 +53,10 @@ public class edit_introduceActivity extends AppCompatActivity {
         btnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                introducechangeVolley.INSTANCE.introducechangeVolley(getApplicationContext(),editIntroduce.getText().toString());
+                EditText editText = view.findViewById(R.id.tvIntroduce);
+                editText.setText(editIntroduce.getText());
+                finish();
 
             }
         });

@@ -12,20 +12,14 @@ com/example/RunToU/databinding/ItemVerificationBinding.java
  com.example.RunToU.databinding.ItemVerificationBinding
 com/example/RunToU/jsonData.java
  com.example.RunToU.jsonData
-com/example/RunToU/edit_introduceActivity.java
- com.example.RunToU.edit_introduceActivity
- com.example.RunToU.edit_introduceActivity$1
- com.example.RunToU.edit_introduceActivity$2
+com/example/RunToU/NetworkStatus.java
+ com.example.RunToU.NetworkStatus
+com/example/RunToU/databinding/MaplistBinding.java
+ com.example.RunToU.databinding.MaplistBinding
 com/example/RunToU/databinding/ActivityJobrecBinding.java
  com.example.RunToU.databinding.ActivityJobrecBinding
 com/example/RunToU/databinding/ActivityDetailsBinding.java
  com.example.RunToU.databinding.ActivityDetailsBinding
-com/example/RunToU/ExpandableListAdapter.java
- com.example.RunToU.ExpandableListAdapter
- com.example.RunToU.ExpandableListAdapter$1
- com.example.RunToU.ExpandableListAdapter$Item
- com.example.RunToU.ExpandableListAdapter$ListChildViewHolder
- com.example.RunToU.ExpandableListAdapter$ListHeaderViewHolder
 com/example/RunToU/jobAdapter.java
  com.example.RunToU.jobAdapter
  com.example.RunToU.jobAdapter$1
@@ -112,8 +106,10 @@ com/example/RunToU/databinding/ActivityVerificationBinding.java
  com.example.RunToU.databinding.ActivityVerificationBinding
 com/example/RunToU/databinding/Room2Binding.java
  com.example.RunToU.databinding.Room2Binding
-com/example/RunToU/introduceFragment.java
- com.example.RunToU.introduceFragment
+com/example/RunToU/jobrecActivity.java
+ com.example.RunToU.jobrecActivity
+ com.example.RunToU.jobrecActivity$1
+ com.example.RunToU.jobrecActivity$2
 com/example/RunToU/databinding/ActivityMainBinding.java
  com.example.RunToU.databinding.ActivityMainBinding
 com/example/RunToU/databinding/WebviewWriteBinding.java
@@ -171,8 +167,8 @@ com/example/RunToU/databinding/ActivitySingupBinding.java
  com.example.RunToU.databinding.ActivitySingupBinding
 com/example/RunToU/databinding/ActivityReportBinding.java
  com.example.RunToU.databinding.ActivityReportBinding
-com/example/RunToU/NetworkStatus.java
- com.example.RunToU.NetworkStatus
+com/example/RunToU/Dataitem.java
+ com.example.RunToU.Dataitem
 com/example/RunToU/workData.java
  com.example.RunToU.workData
 com/example/RunToU/databinding/RoomHeaderItemBinding.java
@@ -188,10 +184,8 @@ com/example/RunToU/databinding/ActivityPurchaseBinding.java
 com/example/RunToU/recyclerAdapter.java
  com.example.RunToU.recyclerAdapter
  com.example.RunToU.recyclerAdapter$ItemViewHolder
-com/example/RunToU/jobrecActivity.java
- com.example.RunToU.jobrecActivity
- com.example.RunToU.jobrecActivity$1
- com.example.RunToU.jobrecActivity$2
+com/example/RunToU/introduceFragment.java
+ com.example.RunToU.introduceFragment
 com/example/RunToU/writeActivity.java
  com.example.RunToU.writeActivity
  com.example.RunToU.writeActivity$1
@@ -217,5 +211,7 @@ com/example/RunToU/workFragment.java
  com.example.RunToU.workFragment$7$1
  com.example.RunToU.workFragment$8
  com.example.RunToU.workFragment$9
-com/example/RunToU/Dataitem.java
- com.example.RunToU.Dataitem
+com/example/RunToU/edit_introduceActivity.java
+ com.example.RunToU.edit_introduceActivity
+ com.example.RunToU.edit_introduceActivity$1
+ com.example.RunToU.edit_introduceActivity$2

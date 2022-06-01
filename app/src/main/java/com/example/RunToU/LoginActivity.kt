@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.RunToU.profileVolley.nick
 import com.example.RunToU.profileVolley.selfintro
 import kotlinx.android.synthetic.main.activity_login.*
+import kotlinx.android.synthetic.main.fragment_introduce.*
 
 
 class LoginActivity : AppCompatActivity() {
@@ -55,18 +56,9 @@ class LoginActivity : AppCompatActivity() {
                         jwtVolley.jwtVolley.jwtvolley(context = this@LoginActivity)
                         matchCheckVolley.matchCheckVolley.matchsucVolley(this@LoginActivity)
                         Stompclass.Stomclass.connect("none", 3)
-                        profileVolley.profileVolley(this@LoginActivity,chatRecieve.chatRecieve.loginID){
-                            if(it){
-
-                                println("success!")
-
-                            }
-                            else{}
-                        }
+                        chatRoomAdapter.requester = false
 
                         val intent1 = Intent(this@LoginActivity, MainActivity::class.java)
-
-
 
                         startActivity(intent1)
 
@@ -115,16 +107,9 @@ class LoginActivity : AppCompatActivity() {
                         val intent1 = Intent(this@LoginActivity, MainActivity::class.java)
                         matchCheckVolley.matchCheckVolley.matchsucVolley(this@LoginActivity)
                         chatRoomAdapter.requester = true
-                        profileVolley.profileVolley(this@LoginActivity,chatRecieve.chatRecieve.loginID){
-                            if(it){
 
-                                println("success!")
 
-                            }
-                            else{}
-                        }
                         startActivity(intent1)
-
                         finish()
                     } else {
                         Toast.makeText(

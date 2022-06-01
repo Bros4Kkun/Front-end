@@ -1,6 +1,8 @@
 package com.example.RunToU
 
 import android.content.Context
+import android.os.Build
+import androidx.annotation.RequiresApi
 import com.android.volley.NetworkResponse
 import com.android.volley.Request
 import com.android.volley.Response
@@ -27,7 +29,8 @@ class chatlogVolley {
 
 
 
-            val request = object : JsonObjectRequest(
+            val request = @RequiresApi(Build.VERSION_CODES.O)
+            object : JsonObjectRequest(
                 Request.Method.GET,
                 url + index.toString(),
                 null,
@@ -40,11 +43,12 @@ class chatlogVolley {
                         var IDCHECK = jsonArray1.getJSONObject(i).getString("writerAccountId")
                         var content = jsonArray1.getJSONObject(i).getString("content")
                         var NICK = jsonArray1.getJSONObject(i).getString("writerNickname")
+                        var time = jsonArray1.getJSONObject(i).getString("createdDate")
                         if(IDCHECK!=chatRecieve.chatRecieve.loginID){
-                        ChatRoomActivity2.leftData(content.replace("\n", ""),NICK,"2022-05-24")
+                        ChatRoomActivity2.leftData(content.replace("\n", ""),NICK,time)
                         } else {
 
-                        ChatRoomActivity2.rightData(content.replace("\n", "",),"2022-05-24")
+                        ChatRoomActivity2.rightData(content.replace("\n", "",),time)
 
                         }
                     }

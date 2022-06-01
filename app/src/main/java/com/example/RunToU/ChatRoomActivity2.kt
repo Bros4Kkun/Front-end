@@ -31,6 +31,7 @@ class ChatRoomActivity2 : Activity() {
             = 0
     var num4 = 0
     var num5 = 0
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedinstanceState: Bundle?) {
         super.onCreate(savedinstanceState)
         setContentView(R.layout.room2)
@@ -40,6 +41,7 @@ class ChatRoomActivity2 : Activity() {
         val com: Button
         val match_com: Button
         val com_com: Button
+        val recyvlerv: RecyclerView = findViewById(R.id.recyvlerv)
         initData()
         num = chatindex
         if (requester) {
@@ -60,6 +62,10 @@ class ChatRoomActivity2 : Activity() {
                 ChatRoomActivity2.Companion.chtmsg,
                 "/app/chat/chatroom/",
                 num
+            )
+            Handler().postDelayed(
+                { recyvlerv.scrollToPosition(recyvlerv.adapter!!.itemCount - 1) },
+                200
             )
         }
         match.setOnClickListener { // 수행자
@@ -115,7 +121,7 @@ class ChatRoomActivity2 : Activity() {
                 num5
             ) // 요청자
         }
-        val recyvlerv: RecyclerView = findViewById(R.id.recyvlerv)
+
         val manager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
         recyvlerv.layoutManager = manager
         recyvlerv.adapter = ChatRoomActivity2.Companion.chatAdpater
@@ -123,6 +129,7 @@ class ChatRoomActivity2 : Activity() {
             { recyvlerv.scrollToPosition(recyvlerv.adapter!!.itemCount - 1) },
             200
         )
+
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
@@ -133,6 +140,7 @@ class ChatRoomActivity2 : Activity() {
     }
 
     companion object {
+
         var datalist = ArrayList<Dataitem>()
         var index = 0
         var chtmsg = String()
@@ -140,16 +148,19 @@ class ChatRoomActivity2 : Activity() {
         var chatAdpater = ChatAdpater(opponick, datalist)
         var msg1 = ""
         var ID1 = ""
+
         @RequiresApi(Build.VERSION_CODES.O)
         fun leftData(msg1: String?, nickname1: String?, date : String) {
             datalist.add(Dataitem(msg1, nickname1, Code.ViewType.LEFT_CONTENT,date))
             chatAdpater.notifyDataSetChanged()
+
         }
 
         @RequiresApi(Build.VERSION_CODES.O)
         fun rightData(msg: String?, dat2:String) {
             datalist.add(Dataitem(msg, null, Code.ViewType.RIGHT_CONTENT,dat2))
             chatAdpater.notifyDataSetChanged()
+
         }
 
         fun getMsg(msg: String, nickname: String): Boolean {
