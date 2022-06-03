@@ -7,14 +7,22 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:679119704395:android:eb530d5312f620e5b7d8ce",
+        "mobilesdk_app_id": "1:679119704395:android:c68104a3e265f350b7d8ce",
         "android_client_info": {
           "package_name": "com.example.RunToU"
         }
       },
       "oauth_client": [
         {
-          "client_id": "679119704395-kt9i5tdv63c0sb4ac6iehpdefdej8bta.apps.googleusercontent.com",
+          "client_id": "679119704395-oc22fu21rug3ooci7isvornifud8an4l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.RunToU",
+            "certificate_hash": "6795d4eb25e4907ff46edb708042f9ceeaaa2d82"
+          }
+        },
+        {
+          "client_id": "679119704395-rci5d07jsd4f2lsj1lo1m5c90b4g0at4.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.RunToU",
