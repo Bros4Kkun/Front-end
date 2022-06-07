@@ -56,7 +56,7 @@ import java.util.List;
 import java.util.Map;
 
 
-public class LogFragment extends Fragment {
+public class LogFragment extends Fragment{
 
     private FragmentLogBinding binding;
     private RequestQueue queue;
@@ -86,7 +86,7 @@ public class LogFragment extends Fragment {
     public void onResume() {
         super.onResume();
         Log.d("Tag", "onResume - LogFragment");
-        
+
             ViewGroup mapViewContainer = getView().findViewById(R.id.map_view);
             MapView mapView = new MapView(getContext());
             content = binding.content;

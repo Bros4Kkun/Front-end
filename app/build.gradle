@@ -10,7 +10,8 @@ android {
     compileSdkVersion 31
     buildToolsVersion "30.0.3"
     buildFeatures{
-        viewBinding = true
+        viewBinding true
+        dataBinding true
     }
     defaultConfig {
         applicationId "com.example.RunToU"
@@ -21,10 +22,6 @@ android {
         multiDexEnabled true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-
-        dataBinding {
-            enabled = true
-        }
 
     }
 

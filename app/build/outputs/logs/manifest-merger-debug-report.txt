@@ -1,16 +1,16 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:2:1-61:12
-INJECTED from C:\teamFile\app\src\main\AndroidManifest.xml:2:1-61:12
-INJECTED from C:\teamFile\app\src\main\AndroidManifest.xml:2:1-61:12
-INJECTED from C:\teamFile\app\src\main\AndroidManifest.xml:2:1-61:12
+ADDED from C:\final\app\src\main\AndroidManifest.xml:2:1-61:12
+INJECTED from C:\final\app\src\main\AndroidManifest.xml:2:1-61:12
+INJECTED from C:\final\app\src\main\AndroidManifest.xml:2:1-61:12
+INJECTED from C:\final\app\src\main\AndroidManifest.xml:2:1-61:12
 MERGED from [com.github.iamport:iamport-android:v1.3.4] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\64ec81c9ee7f6e7efadd169becaa38fe\transformed\jetified-iamport-android-v1.3.4\AndroidManifest.xml:2:1-92:12
 MERGED from [androidx.databinding:databinding-adapters:7.0.2] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\db7aec53a8d58e5fb4658717e34513ee\transformed\databinding-adapters-7.0.2\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.databinding:databinding-ktx:7.0.2] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\f78420aced88d867bf04d299b99d13cd\transformed\jetified-databinding-ktx-7.0.2\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.databinding:databinding-runtime:7.0.2] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\37704a296402b8e2e3d613c663ad3af0\transformed\databinding-runtime-7.0.2\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.databinding:viewbinding:7.0.2] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\ca9c9c4c1082892dc88b85fdee0a0760\transformed\jetified-viewbinding-7.0.2\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-analytics-ktx:20.1.0] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\50f9c3af5764db58443266b96945b821\transformed\jetified-firebase-analytics-ktx-20.1.0\AndroidManifest.xml:2:1-17:12
-MERGED from [:StompClient2] C:\teamFile\StompClient2\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [:StompClient2] C:\final\StompClient2\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [io.insert-koin:koin-android-compat:3.1.2] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\cd20b7fd5674f58f02708bcf55eeacef\transformed\jetified-koin-android-compat-3.1.2\AndroidManifest.xml:2:1-9:12
 MERGED from [io.insert-koin:koin-androidx-workmanager:3.1.2] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\b9f6924c9b5c6d05dbd45c299ea110be\transformed\jetified-koin-androidx-workmanager-3.1.2\AndroidManifest.xml:2:1-9:12
 MERGED from [io.insert-koin:koin-androidx-compose:3.1.2] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\4faf745012664bcd07e5970de4bb3935\transformed\jetified-koin-androidx-compose-3.1.2\AndroidManifest.xml:2:1-7:12
@@ -118,25 +118,25 @@ MERGED from [androidx.sqlite:sqlite-framework:2.1.0] C:\Users\YoungseoJeon\.grad
 MERGED from [androidx.sqlite:sqlite:2.1.0] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\6b38c599a4db1d472b3c128824e5b266\transformed\sqlite-2.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\82005da861055b46f5da5c4830a35c5f\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.github.ybq:Android-SpinKit:1.4.0] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\1c4a78667a84c9f0bc759155557de18a\transformed\jetified-Android-SpinKit-1.4.0\AndroidManifest.xml:2:1-9:12
-INJECTED from C:\teamFile\app\src\main\AndroidManifest.xml:2:1-61:12
-INJECTED from C:\teamFile\app\src\main\AndroidManifest.xml:2:1-61:12
-INJECTED from C:\teamFile\app\src\main\AndroidManifest.xml:2:1-61:12
+INJECTED from C:\final\app\src\main\AndroidManifest.xml:2:1-61:12
+INJECTED from C:\final\app\src\main\AndroidManifest.xml:2:1-61:12
+INJECTED from C:\final\app\src\main\AndroidManifest.xml:2:1-61:12
 	package
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:3:5-33
-		INJECTED from C:\teamFile\app\src\main\AndroidManifest.xml
-		INJECTED from C:\teamFile\app\src\main\AndroidManifest.xml
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:3:5-33
+		INJECTED from C:\final\app\src\main\AndroidManifest.xml
+		INJECTED from C:\final\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\teamFile\app\src\main\AndroidManifest.xml
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:2:1-61:12
-		INJECTED from C:\teamFile\app\src\main\AndroidManifest.xml
+		INJECTED from C:\final\app\src\main\AndroidManifest.xml
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:2:1-61:12
+		INJECTED from C:\final\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\teamFile\app\src\main\AndroidManifest.xml
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:2:1-61:12
-		INJECTED from C:\teamFile\app\src\main\AndroidManifest.xml
+		INJECTED from C:\final\app\src\main\AndroidManifest.xml
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:2:1-61:12
+		INJECTED from C:\final\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:5:5-66
+ADDED from C:\final\app\src\main\AndroidManifest.xml:5:5-66
 MERGED from [com.github.iamport:iamport-android:v1.3.4] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\64ec81c9ee7f6e7efadd169becaa38fe\transformed\jetified-iamport-android-v1.3.4\AndroidManifest.xml:10:5-67
 MERGED from [com.github.iamport:iamport-android:v1.3.4] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\64ec81c9ee7f6e7efadd169becaa38fe\transformed\jetified-iamport-android-v1.3.4\AndroidManifest.xml:10:5-67
 MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\e3d4dae8ccc68be623af1fd9635826f8\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:23:5-67
@@ -152,17 +152,17 @@ MERGED from [com.google.android.gms:play-services-measurement-impl:20.1.0] C:\Us
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.0] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\976b3b2f8a6763b8ae86c2757463a28a\transformed\jetified-play-services-measurement-sdk-api-20.1.0\AndroidManifest.xml:23:5-67
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.0] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\976b3b2f8a6763b8ae86c2757463a28a\transformed\jetified-play-services-measurement-sdk-api-20.1.0\AndroidManifest.xml:23:5-67
 	android:name
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:5:22-64
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:5:22-64
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:6:5-78
+ADDED from C:\final\app\src\main\AndroidManifest.xml:6:5-78
 	android:name
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:6:22-76
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:6:22-76
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:7:5-81
+ADDED from C:\final\app\src\main\AndroidManifest.xml:7:5-81
 	android:name
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:7:22-78
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:7:22-78
 application
-ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:9:5-59:19
+ADDED from C:\final\app\src\main\AndroidManifest.xml:9:5-59:19
 MERGED from [com.github.iamport:iamport-android:v1.3.4] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\64ec81c9ee7f6e7efadd169becaa38fe\transformed\jetified-iamport-android-v1.3.4\AndroidManifest.xml:74:5-90:19
 MERGED from [com.github.iamport:iamport-android:v1.3.4] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\64ec81c9ee7f6e7efadd169becaa38fe\transformed\jetified-iamport-android-v1.3.4\AndroidManifest.xml:74:5-90:19
 MERGED from [com.google.firebase:firebase-analytics-ktx:20.1.0] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\50f9c3af5764db58443266b96945b821\transformed\jetified-firebase-analytics-ktx-20.1.0\AndroidManifest.xml:7:5-15:19
@@ -242,123 +242,123 @@ MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\YoungseoJeon\.grad
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.7.0] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\9980619adbe985320fb1b253f1cc28fd\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:14:9-35
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:14:9-35
 	android:label
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:12:9-41
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:12:9-41
 	android:roundIcon
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:13:9-54
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:13:9-54
 	android:icon
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:11:9-43
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:11:9-43
 	android:allowBackup
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:10:9-35
 	android:usesCleartextTraffic
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:15:9-44
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:15:9-44
 activity#com.example.RunToU.LoginActivity
-ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:18:9-27:20
+ADDED from C:\final\app\src\main\AndroidManifest.xml:18:9-27:20
 	android:exported
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:20:13-36
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:20:13-36
 	android:theme
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:19:13-49
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:19:13-49
 	android:name
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:18:19-66
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:18:19-66
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:21:12-26:29
+ADDED from C:\final\app\src\main\AndroidManifest.xml:21:12-26:29
 action#android.intent.action.MAIN
-ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:23:17-69
+ADDED from C:\final\app\src\main\AndroidManifest.xml:23:17-69
 	android:name
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:23:25-66
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:23:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:25:17-77
+ADDED from C:\final\app\src\main\AndroidManifest.xml:25:17-77
 	android:name
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:25:27-74
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:25:27-74
 activity#com.example.RunToU.MainActivity
-ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:29:9-30:51
+ADDED from C:\final\app\src\main\AndroidManifest.xml:29:9-30:51
 	android:theme
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:30:13-49
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:30:13-49
 	android:name
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:29:19-47
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:29:19-47
 activity#com.example.RunToU.SingupActivity
-ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:31:9-32:52
+ADDED from C:\final\app\src\main\AndroidManifest.xml:31:9-32:52
 	android:theme
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:32:13-49
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:32:13-49
 	android:name
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:31:19-67
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:31:19-67
 meta-data#com.kakao.sdk.AppKey
-ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:33:9-106
+ADDED from C:\final\app\src\main\AndroidManifest.xml:33:9-106
 	android:value
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:33:56-104
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:33:56-104
 	android:name
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:33:20-55
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:33:20-55
 activity#com.example.RunToU.reviewActivity
-ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:34:9-35:51
+ADDED from C:\final\app\src\main\AndroidManifest.xml:34:9-35:51
 	android:theme
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:35:13-49
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:35:13-49
 	android:name
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:34:19-67
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:34:19-67
 activity#com.example.RunToU.settingActivity
-ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:36:9-37:51
+ADDED from C:\final\app\src\main\AndroidManifest.xml:36:9-37:51
 	android:theme
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:37:13-49
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:37:13-49
 	android:name
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:36:19-68
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:36:19-68
 activity#com.example.RunToU.purchaseActivity
-ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:38:9-39:51
+ADDED from C:\final\app\src\main\AndroidManifest.xml:38:9-39:51
 	android:theme
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:39:13-49
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:39:13-49
 	android:name
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:38:19-69
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:38:19-69
 activity#com.example.RunToU.edit_introduceActivity
-ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:40:9-41:51
+ADDED from C:\final\app\src\main\AndroidManifest.xml:40:9-41:51
 	android:theme
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:41:13-49
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:41:13-49
 	android:name
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:40:19-75
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:40:19-75
 activity#com.example.RunToU.writeActivity
-ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:42:9-43:51
+ADDED from C:\final\app\src\main\AndroidManifest.xml:42:9-43:51
 	android:theme
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:43:13-49
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:43:13-49
 	android:name
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:42:19-66
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:42:19-66
 activity#com.example.RunToU.verificationActivity
-ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:44:9-45:51
+ADDED from C:\final\app\src\main\AndroidManifest.xml:44:9-45:51
 	android:theme
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:45:13-49
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:45:13-49
 	android:name
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:44:19-73
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:44:19-73
 activity#com.example.RunToU.jobrecActivity
-ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:46:9-47:51
+ADDED from C:\final\app\src\main\AndroidManifest.xml:46:9-47:51
 	android:theme
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:47:13-49
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:47:13-49
 	android:name
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:46:19-67
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:46:19-67
 activity#com.example.RunToU.ChatRoomActivity2
-ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:48:9-49:51
+ADDED from C:\final\app\src\main\AndroidManifest.xml:48:9-49:51
 	android:theme
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:49:13-49
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:49:13-49
 	android:name
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:48:19-52
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:48:19-52
 activity#com.example.RunToU.addressActivity
-ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:51:9-52:51
+ADDED from C:\final\app\src\main\AndroidManifest.xml:51:9-52:51
 	android:theme
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:52:13-49
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:52:13-49
 	android:name
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:51:19-68
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:51:19-68
 activity#com.example.RunToU.ordersheetActivity
-ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:53:9-54:51
+ADDED from C:\final\app\src\main\AndroidManifest.xml:53:9-54:51
 	android:theme
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:54:13-49
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:54:13-49
 	android:name
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:53:19-71
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:53:19-71
 activity#com.example.RunToU.popupActivity
-ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:56:9-57:62
+ADDED from C:\final\app\src\main\AndroidManifest.xml:56:9-57:62
 	android:theme
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:57:13-60
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:57:13-60
 	android:name
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml:56:19-48
+		ADDED from C:\final\app\src\main\AndroidManifest.xml:56:19-48
 uses-sdk
-INJECTED from C:\teamFile\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\teamFile\app\src\main\AndroidManifest.xml
-INJECTED from C:\teamFile\app\src\main\AndroidManifest.xml
+INJECTED from C:\final\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\final\app\src\main\AndroidManifest.xml
+INJECTED from C:\final\app\src\main\AndroidManifest.xml
 MERGED from [com.github.iamport:iamport-android:v1.3.4] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\64ec81c9ee7f6e7efadd169becaa38fe\transformed\jetified-iamport-android-v1.3.4\AndroidManifest.xml:5:5-7:41
 MERGED from [com.github.iamport:iamport-android:v1.3.4] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\64ec81c9ee7f6e7efadd169becaa38fe\transformed\jetified-iamport-android-v1.3.4\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.databinding:databinding-adapters:7.0.2] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\db7aec53a8d58e5fb4658717e34513ee\transformed\databinding-adapters-7.0.2\AndroidManifest.xml:20:5-44
@@ -371,8 +371,8 @@ MERGED from [androidx.databinding:viewbinding:7.0.2] C:\Users\YoungseoJeon\.grad
 MERGED from [androidx.databinding:viewbinding:7.0.2] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\ca9c9c4c1082892dc88b85fdee0a0760\transformed\jetified-viewbinding-7.0.2\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-analytics-ktx:20.1.0] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\50f9c3af5764db58443266b96945b821\transformed\jetified-firebase-analytics-ktx-20.1.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-analytics-ktx:20.1.0] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\50f9c3af5764db58443266b96945b821\transformed\jetified-firebase-analytics-ktx-20.1.0\AndroidManifest.xml:5:5-44
-MERGED from [:StompClient2] C:\teamFile\StompClient2\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
-MERGED from [:StompClient2] C:\teamFile\StompClient2\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:StompClient2] C:\final\StompClient2\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:StompClient2] C:\final\StompClient2\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [io.insert-koin:koin-android-compat:3.1.2] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\cd20b7fd5674f58f02708bcf55eeacef\transformed\jetified-koin-android-compat-3.1.2\AndroidManifest.xml:5:5-44
 MERGED from [io.insert-koin:koin-android-compat:3.1.2] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\cd20b7fd5674f58f02708bcf55eeacef\transformed\jetified-koin-android-compat-3.1.2\AndroidManifest.xml:5:5-44
 MERGED from [io.insert-koin:koin-androidx-workmanager:3.1.2] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\b9f6924c9b5c6d05dbd45c299ea110be\transformed\jetified-koin-androidx-workmanager-3.1.2\AndroidManifest.xml:5:5-44
@@ -587,16 +587,16 @@ MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\Youngse
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\82005da861055b46f5da5c4830a35c5f\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.github.ybq:Android-SpinKit:1.4.0] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\1c4a78667a84c9f0bc759155557de18a\transformed\jetified-Android-SpinKit-1.4.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.github.ybq:Android-SpinKit:1.4.0] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\1c4a78667a84c9f0bc759155557de18a\transformed\jetified-Android-SpinKit-1.4.0\AndroidManifest.xml:5:5-7:41
-INJECTED from C:\teamFile\app\src\main\AndroidManifest.xml
-INJECTED from C:\teamFile\app\src\main\AndroidManifest.xml
+INJECTED from C:\final\app\src\main\AndroidManifest.xml
+INJECTED from C:\final\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\teamFile\app\src\main\AndroidManifest.xml
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml
-		INJECTED from C:\teamFile\app\src\main\AndroidManifest.xml
+		INJECTED from C:\final\app\src\main\AndroidManifest.xml
+		ADDED from C:\final\app\src\main\AndroidManifest.xml
+		INJECTED from C:\final\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\teamFile\app\src\main\AndroidManifest.xml
-		ADDED from C:\teamFile\app\src\main\AndroidManifest.xml
-		INJECTED from C:\teamFile\app\src\main\AndroidManifest.xml
+		INJECTED from C:\final\app\src\main\AndroidManifest.xml
+		ADDED from C:\final\app\src\main\AndroidManifest.xml
+		INJECTED from C:\final\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
 ADDED from [com.github.iamport:iamport-android:v1.3.4] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\64ec81c9ee7f6e7efadd169becaa38fe\transformed\jetified-iamport-android-v1.3.4\AndroidManifest.xml:9:5-80
 	android:name

@@ -6,19 +6,19 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
-8-->C:\teamFile\app\src\main\AndroidManifest.xml
+8-->C:\final\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="31" />
-9-->C:\teamFile\app\src\main\AndroidManifest.xml
+9-->C:\final\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->C:\teamFile\app\src\main\AndroidManifest.xml:5:5-66
-11-->C:\teamFile\app\src\main\AndroidManifest.xml:5:22-64
+11-->C:\final\app\src\main\AndroidManifest.xml:5:5-66
+11-->C:\final\app\src\main\AndroidManifest.xml:5:22-64
 12    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-12-->C:\teamFile\app\src\main\AndroidManifest.xml:6:5-78
-12-->C:\teamFile\app\src\main\AndroidManifest.xml:6:22-76
+12-->C:\final\app\src\main\AndroidManifest.xml:6:5-78
+12-->C:\final\app\src\main\AndroidManifest.xml:6:22-76
 13    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-13-->C:\teamFile\app\src\main\AndroidManifest.xml:7:5-81
-13-->C:\teamFile\app\src\main\AndroidManifest.xml:7:22-78
+13-->C:\final\app\src\main\AndroidManifest.xml:7:5-81
+13-->C:\final\app\src\main\AndroidManifest.xml:7:22-78
 14    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 14-->[com.github.iamport:iamport-android:v1.3.4] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\64ec81c9ee7f6e7efadd169becaa38fe\transformed\jetified-iamport-android-v1.3.4\AndroidManifest.xml:9:5-80
 14-->[com.github.iamport:iamport-android:v1.3.4] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\64ec81c9ee7f6e7efadd169becaa38fe\transformed\jetified-iamport-android-v1.3.4\AndroidManifest.xml:9:22-77
@@ -202,128 +202,128 @@
 81-->[androidx.work:work-runtime:2.5.0] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\a98777386317b1c868766f356681487b\transformed\work-runtime-2.5.0\AndroidManifest.xml:27:22-78
 82
 83    <application
-83-->C:\teamFile\app\src\main\AndroidManifest.xml:9:5-59:19
+83-->C:\final\app\src\main\AndroidManifest.xml:9:5-59:19
 84        android:allowBackup="true"
-84-->C:\teamFile\app\src\main\AndroidManifest.xml:10:9-35
+84-->C:\final\app\src\main\AndroidManifest.xml:10:9-35
 85        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 85-->[androidx.core:core:1.7.0] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\9980619adbe985320fb1b253f1cc28fd\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
 86        android:debuggable="true"
 87        android:icon="@mipmap/ic_launcher"
-87-->C:\teamFile\app\src\main\AndroidManifest.xml:11:9-43
+87-->C:\final\app\src\main\AndroidManifest.xml:11:9-43
 88        android:label="@string/app_name"
-88-->C:\teamFile\app\src\main\AndroidManifest.xml:12:9-41
+88-->C:\final\app\src\main\AndroidManifest.xml:12:9-41
 89        android:roundIcon="@mipmap/ic_launcher_round"
-89-->C:\teamFile\app\src\main\AndroidManifest.xml:13:9-54
+89-->C:\final\app\src\main\AndroidManifest.xml:13:9-54
 90        android:supportsRtl="true"
-90-->C:\teamFile\app\src\main\AndroidManifest.xml:14:9-35
+90-->C:\final\app\src\main\AndroidManifest.xml:14:9-35
 91        android:testOnly="true"
 92        android:usesCleartextTraffic="true" >
-92-->C:\teamFile\app\src\main\AndroidManifest.xml:15:9-44
+92-->C:\final\app\src\main\AndroidManifest.xml:15:9-44
 93        <activity
-93-->C:\teamFile\app\src\main\AndroidManifest.xml:18:9-27:20
+93-->C:\final\app\src\main\AndroidManifest.xml:18:9-27:20
 94            android:name="com.example.RunToU.LoginActivity"
-94-->C:\teamFile\app\src\main\AndroidManifest.xml:18:19-66
+94-->C:\final\app\src\main\AndroidManifest.xml:18:19-66
 95            android:exported="true"
-95-->C:\teamFile\app\src\main\AndroidManifest.xml:20:13-36
+95-->C:\final\app\src\main\AndroidManifest.xml:20:13-36
 96            android:theme="@style/Theme.Runtyou" >
-96-->C:\teamFile\app\src\main\AndroidManifest.xml:19:13-49
+96-->C:\final\app\src\main\AndroidManifest.xml:19:13-49
 97            <intent-filter>
-97-->C:\teamFile\app\src\main\AndroidManifest.xml:21:12-26:29
+97-->C:\final\app\src\main\AndroidManifest.xml:21:12-26:29
 98                <action android:name="android.intent.action.MAIN" />
-98-->C:\teamFile\app\src\main\AndroidManifest.xml:23:17-69
-98-->C:\teamFile\app\src\main\AndroidManifest.xml:23:25-66
+98-->C:\final\app\src\main\AndroidManifest.xml:23:17-69
+98-->C:\final\app\src\main\AndroidManifest.xml:23:25-66
 99
 100                <category android:name="android.intent.category.LAUNCHER" />
-100-->C:\teamFile\app\src\main\AndroidManifest.xml:25:17-77
-100-->C:\teamFile\app\src\main\AndroidManifest.xml:25:27-74
+100-->C:\final\app\src\main\AndroidManifest.xml:25:17-77
+100-->C:\final\app\src\main\AndroidManifest.xml:25:27-74
 101            </intent-filter>
 102        </activity>
 103        <activity
-103-->C:\teamFile\app\src\main\AndroidManifest.xml:29:9-30:51
+103-->C:\final\app\src\main\AndroidManifest.xml:29:9-30:51
 104            android:name="com.example.RunToU.MainActivity"
-104-->C:\teamFile\app\src\main\AndroidManifest.xml:29:19-47
+104-->C:\final\app\src\main\AndroidManifest.xml:29:19-47
 105            android:theme="@style/Theme.Runtyou" />
-105-->C:\teamFile\app\src\main\AndroidManifest.xml:30:13-49
+105-->C:\final\app\src\main\AndroidManifest.xml:30:13-49
 106        <activity
-106-->C:\teamFile\app\src\main\AndroidManifest.xml:31:9-32:52
+106-->C:\final\app\src\main\AndroidManifest.xml:31:9-32:52
 107            android:name="com.example.RunToU.SingupActivity"
-107-->C:\teamFile\app\src\main\AndroidManifest.xml:31:19-67
+107-->C:\final\app\src\main\AndroidManifest.xml:31:19-67
 108            android:theme="@style/Theme.Runtyou" />
-108-->C:\teamFile\app\src\main\AndroidManifest.xml:32:13-49
+108-->C:\final\app\src\main\AndroidManifest.xml:32:13-49
 109
 110        <meta-data
-110-->C:\teamFile\app\src\main\AndroidManifest.xml:33:9-106
+110-->C:\final\app\src\main\AndroidManifest.xml:33:9-106
 111            android:name="com.kakao.sdk.AppKey"
-111-->C:\teamFile\app\src\main\AndroidManifest.xml:33:20-55
+111-->C:\final\app\src\main\AndroidManifest.xml:33:20-55
 112            android:value="e65891468706ac7d59680f5e0202bfff" />
-112-->C:\teamFile\app\src\main\AndroidManifest.xml:33:56-104
+112-->C:\final\app\src\main\AndroidManifest.xml:33:56-104
 113
 114        <activity
-114-->C:\teamFile\app\src\main\AndroidManifest.xml:34:9-35:51
+114-->C:\final\app\src\main\AndroidManifest.xml:34:9-35:51
 115            android:name="com.example.RunToU.reviewActivity"
-115-->C:\teamFile\app\src\main\AndroidManifest.xml:34:19-67
+115-->C:\final\app\src\main\AndroidManifest.xml:34:19-67
 116            android:theme="@style/Theme.Runtyou" />
-116-->C:\teamFile\app\src\main\AndroidManifest.xml:35:13-49
+116-->C:\final\app\src\main\AndroidManifest.xml:35:13-49
 117        <activity
-117-->C:\teamFile\app\src\main\AndroidManifest.xml:36:9-37:51
+117-->C:\final\app\src\main\AndroidManifest.xml:36:9-37:51
 118            android:name="com.example.RunToU.settingActivity"
-118-->C:\teamFile\app\src\main\AndroidManifest.xml:36:19-68
+118-->C:\final\app\src\main\AndroidManifest.xml:36:19-68
 119            android:theme="@style/Theme.Runtyou" />
-119-->C:\teamFile\app\src\main\AndroidManifest.xml:37:13-49
+119-->C:\final\app\src\main\AndroidManifest.xml:37:13-49
 120        <activity
-120-->C:\teamFile\app\src\main\AndroidManifest.xml:38:9-39:51
+120-->C:\final\app\src\main\AndroidManifest.xml:38:9-39:51
 121            android:name="com.example.RunToU.purchaseActivity"
-121-->C:\teamFile\app\src\main\AndroidManifest.xml:38:19-69
+121-->C:\final\app\src\main\AndroidManifest.xml:38:19-69
 122            android:theme="@style/Theme.Runtyou" />
-122-->C:\teamFile\app\src\main\AndroidManifest.xml:39:13-49
+122-->C:\final\app\src\main\AndroidManifest.xml:39:13-49
 123        <activity
-123-->C:\teamFile\app\src\main\AndroidManifest.xml:40:9-41:51
+123-->C:\final\app\src\main\AndroidManifest.xml:40:9-41:51
 124            android:name="com.example.RunToU.edit_introduceActivity"
-124-->C:\teamFile\app\src\main\AndroidManifest.xml:40:19-75
+124-->C:\final\app\src\main\AndroidManifest.xml:40:19-75
 125            android:theme="@style/Theme.Runtyou" />
-125-->C:\teamFile\app\src\main\AndroidManifest.xml:41:13-49
+125-->C:\final\app\src\main\AndroidManifest.xml:41:13-49
 126        <activity
-126-->C:\teamFile\app\src\main\AndroidManifest.xml:42:9-43:51
+126-->C:\final\app\src\main\AndroidManifest.xml:42:9-43:51
 127            android:name="com.example.RunToU.writeActivity"
-127-->C:\teamFile\app\src\main\AndroidManifest.xml:42:19-66
+127-->C:\final\app\src\main\AndroidManifest.xml:42:19-66
 128            android:theme="@style/Theme.Runtyou" />
-128-->C:\teamFile\app\src\main\AndroidManifest.xml:43:13-49
+128-->C:\final\app\src\main\AndroidManifest.xml:43:13-49
 129        <activity
-129-->C:\teamFile\app\src\main\AndroidManifest.xml:44:9-45:51
+129-->C:\final\app\src\main\AndroidManifest.xml:44:9-45:51
 130            android:name="com.example.RunToU.verificationActivity"
-130-->C:\teamFile\app\src\main\AndroidManifest.xml:44:19-73
+130-->C:\final\app\src\main\AndroidManifest.xml:44:19-73
 131            android:theme="@style/Theme.Runtyou" />
-131-->C:\teamFile\app\src\main\AndroidManifest.xml:45:13-49
+131-->C:\final\app\src\main\AndroidManifest.xml:45:13-49
 132        <activity
-132-->C:\teamFile\app\src\main\AndroidManifest.xml:46:9-47:51
+132-->C:\final\app\src\main\AndroidManifest.xml:46:9-47:51
 133            android:name="com.example.RunToU.jobrecActivity"
-133-->C:\teamFile\app\src\main\AndroidManifest.xml:46:19-67
+133-->C:\final\app\src\main\AndroidManifest.xml:46:19-67
 134            android:theme="@style/Theme.Runtyou" />
-134-->C:\teamFile\app\src\main\AndroidManifest.xml:47:13-49
+134-->C:\final\app\src\main\AndroidManifest.xml:47:13-49
 135        <activity
-135-->C:\teamFile\app\src\main\AndroidManifest.xml:48:9-49:51
+135-->C:\final\app\src\main\AndroidManifest.xml:48:9-49:51
 136            android:name="com.example.RunToU.ChatRoomActivity2"
-136-->C:\teamFile\app\src\main\AndroidManifest.xml:48:19-52
+136-->C:\final\app\src\main\AndroidManifest.xml:48:19-52
 137            android:theme="@style/Theme.Runtyou" />
-137-->C:\teamFile\app\src\main\AndroidManifest.xml:49:13-49
+137-->C:\final\app\src\main\AndroidManifest.xml:49:13-49
 138        <activity
-138-->C:\teamFile\app\src\main\AndroidManifest.xml:51:9-52:51
+138-->C:\final\app\src\main\AndroidManifest.xml:51:9-52:51
 139            android:name="com.example.RunToU.addressActivity"
-139-->C:\teamFile\app\src\main\AndroidManifest.xml:51:19-68
+139-->C:\final\app\src\main\AndroidManifest.xml:51:19-68
 140            android:theme="@style/Theme.Runtyou" />
-140-->C:\teamFile\app\src\main\AndroidManifest.xml:52:13-49
+140-->C:\final\app\src\main\AndroidManifest.xml:52:13-49
 141        <activity
-141-->C:\teamFile\app\src\main\AndroidManifest.xml:53:9-54:51
+141-->C:\final\app\src\main\AndroidManifest.xml:53:9-54:51
 142            android:name="com.example.RunToU.ordersheetActivity"
-142-->C:\teamFile\app\src\main\AndroidManifest.xml:53:19-71
+142-->C:\final\app\src\main\AndroidManifest.xml:53:19-71
 143            android:theme="@style/Theme.Runtyou" />
-143-->C:\teamFile\app\src\main\AndroidManifest.xml:54:13-49
+143-->C:\final\app\src\main\AndroidManifest.xml:54:13-49
 144        <activity
-144-->C:\teamFile\app\src\main\AndroidManifest.xml:56:9-57:62
+144-->C:\final\app\src\main\AndroidManifest.xml:56:9-57:62
 145            android:name="com.example.RunToU.popupActivity"
-145-->C:\teamFile\app\src\main\AndroidManifest.xml:56:19-48
+145-->C:\final\app\src\main\AndroidManifest.xml:56:19-48
 146            android:theme="@style/Theme.AppCompat.DayNight" />
-146-->C:\teamFile\app\src\main\AndroidManifest.xml:57:13-60
+146-->C:\final\app\src\main\AndroidManifest.xml:57:13-60
 147
 148        <service
 148-->[com.github.iamport:iamport-android:v1.3.4] C:\Users\YoungseoJeon\.gradle\caches\transforms-3\64ec81c9ee7f6e7efadd169becaa38fe\transformed\jetified-iamport-android-v1.3.4\AndroidManifest.xml:78:9-80:38

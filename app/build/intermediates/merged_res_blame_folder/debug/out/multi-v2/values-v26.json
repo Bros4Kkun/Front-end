@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\teamFile\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v26\\values-v26.xml",
+            "outputFile": "C:\\final\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v26\\values-v26.xml",
             "map": [
                 {
                     "source": "C:\\Users\\YoungseoJeon\\.gradle\\caches\\transforms-3\\64ec81c9ee7f6e7efadd169becaa38fe\\transformed\\jetified-iamport-android-v1.3.4\\res\\values-v26\\values-v26.xml",
