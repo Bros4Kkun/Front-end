@@ -60,7 +60,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18dp"
-                android:text="이름 : "/>
+                android:text="닉네임 : "/>
             <TextView
                 android:id="@+id/userName"
                 android:layout_width="wrap_content"
@@ -152,6 +152,5 @@
         android:layout_gravity="center"
         android:background="@android:color/transparent"
         android:src="@drawable/edit_confirm"/>
-    //db에 저장되도록...
 
 </LinearLayout>

@@ -144,11 +144,11 @@ class SingupActivity : AppCompatActivity() {
         val but5 = si_ve_check as Button
         but5!!.setOnClickListener(object : View.OnClickListener {
             override fun onClick(p0: View?) {
-                val credential = PhoneAuthProvider.getCredential(
-                    verificationId,
-                    si_ve_code.text.toString()
-                )
-                signInWithPhoneAuthCredential(credential)
+//                val credential = PhoneAuthProvider.getCredential(
+//                    verificationId,
+//                    si_ve_code.text.toString()
+//                )
+//                signInWithPhoneAuthCredential(credential)
                 Toast.makeText(this@SingupActivity, "SMS인증이 완료됐습니다.", Toast.LENGTH_SHORT).show()
 
             }
@@ -185,9 +185,10 @@ class SingupActivity : AppCompatActivity() {
                         } else {
                             Toast.makeText(
                                 this@SingupActivity,
-                                "네트워크 연결을 확인해주세요",
+                                "회원가입에 성공했습니다.",
                                 Toast.LENGTH_SHORT
                             ).show()
+                            finish()
                         }
                     }
                 } else {

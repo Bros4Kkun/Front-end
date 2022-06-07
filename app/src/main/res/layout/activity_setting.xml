@@ -46,9 +46,10 @@
         android:background="@drawable/settingbg"
         android:orientation="vertical">
         <Button
+            android:id="@+id/btnPoint"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="내 동네 설정"
+            android:text="포인트 충전"
             android:textSize="20sp"
             android:background="#00ff0000"/>
         <Button

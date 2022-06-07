@@ -12,7 +12,7 @@ import java.sql.DriverManager.println
 class accompanyVolley {
     object accompanyVolley{
         val url =  "http://3.39.87.103/api/ordersheet/accompany-role-acting/cost"
-        fun accompanyVolley(context: Context, int1 : Int,int2 : Int, duplicatedNickname: (Boolean) -> Unit)
+        fun accompanyVolley(context: Context, int1 : Int,int2 : Int, it: (Boolean) -> Unit)
         {
 
             val Json = JSONObject()
@@ -23,18 +23,18 @@ class accompanyVolley {
 
 
             val request = object : JsonObjectRequest(
-                Request.Method.GET,
+                Request.Method.POST,
                 url ,
                 Json,
                 Response.Listener<JSONObject> { response ->
                     print(response)
                     chatRoomAdapter.cost=response.getInt("recommendCost")
-
+                    it(true)
 
                 },
                 Response.ErrorListener { error ->
                     kotlin.io.println("Error : $error")
-
+                    it(false)
                 }
             ) {
                 override fun getHeaders(): Map<String, String> {

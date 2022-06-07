@@ -7,6 +7,7 @@
     android:background="#FAFAFA"
     android:orientation="vertical"
     android:weightSum="8"
+    android:id="@+id/myProfile"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -46,7 +47,7 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:id="@+id/Nickname"
+                    android:id="@+id/nickname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="noname"
@@ -119,7 +120,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="이력"
+                    android:text="이력 설정"
                     android:textColor="@color/black"
                     android:textSize="15sp" />
             </LinearLayout>
@@ -130,7 +131,7 @@
                 android:orientation="vertical">
 
                 <ImageButton
-                    android:id="@+id/btnMyList"
+                    android:id="@+id/btnReviewList"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
@@ -142,7 +143,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="관심 목록"
+                    android:text="리뷰 목록"
                     android:textColor="@color/black"
                     android:textSize="15sp" />
             </LinearLayout>
@@ -150,24 +151,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-
-                <ImageButton
-                    android:id="@+id/btnSetting"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="20dp"
-                    android:paddingRight="20dp"
-                    android:layout_gravity="center"
-                    android:background="@android:color/transparent"
-                    android:src="@drawable/setting" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="설정"
-                    android:layout_gravity="center"
-                    android:textColor="@color/black"
-                    android:textSize="15sp" />
             </LinearLayout>
         </LinearLayout>
 

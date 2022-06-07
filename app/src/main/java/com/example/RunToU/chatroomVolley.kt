@@ -1,30 +1,30 @@
 package com.example.RunToU
 
 import android.content.Context
-import com.android.volley.NetworkResponse
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
 import org.json.JSONObject
-import java.util.*
 import kotlin.collections.HashMap
 
 class chatroomVolley { //채팅룸 생성
     object chatroomVolley{
 
-        val url = "http://3.39.87.103/api/chatroom/ordersheet/620"
+        val url = "http://3.39.87.103/api/chatroom/ordersheet/"
         fun chatroomVolley(
             context:Context,
-        success:(Boolean) ->Unit
+            index: Int,
+            success:(Boolean) ->Unit
         ){
             var responseJson = JSONObject()
 
 
 
+
             val request = object : JsonObjectRequest(
                 Request.Method.POST,
-                url,
+                url+index,
                 null,
                 Response.Listener<JSONObject> { response ->
                     print(response)

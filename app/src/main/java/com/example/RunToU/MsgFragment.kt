@@ -54,8 +54,6 @@ class MsgFragment : Fragment(){
 
 
 
-
-
        /*val but2 = materialButton2 as Button?
         but2?.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {

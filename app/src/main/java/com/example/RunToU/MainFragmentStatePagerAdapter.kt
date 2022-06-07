@@ -11,7 +11,7 @@ class MainFragmentStatePagerAdapter(fm : FragmentManager, val fragmentCount : In
             0 -> return workFragment()
             1 -> return LogFragment()
             2 -> return MsgFragment()
-            3 -> return my_profileFragment()
+            3 -> return myProfileFragment()
 
             else -> return workFragment()
         }

@@ -2,10 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="70dp"
-    android:background="#ffffff"
     android:elevation="5dp"
     android:orientation="horizontal">
-/* 바텀 내비게이션 디자인 코드 */
+    /* 바텀 내비게이션 디자인 코드 */
+
     <RelativeLayout
         android:id="@+id/btn_bottom_navi_home_tab"
         android:layout_width="match_parent"
@@ -15,14 +15,17 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
             android:src="@drawable/selector_bottom_navi_home_icon" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:text="심부름"/>
+            android:layout_marginBottom="10dp"
+            android:text="심부름" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -30,17 +33,21 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1">
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
             android:src="@drawable/selectorbottom_navi_search_icon" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:text="현황"/>
+            android:layout_marginBottom="10dp"
+            android:text="현황" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -48,17 +55,21 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1">
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
             android:src="@drawable/selector_bottom_navi_msg_icon" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:text="메세지"/>
+            android:layout_marginBottom="10dp"
+            android:text="메세지" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -66,20 +77,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1">
+
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_centerInParent="true"
-            android:src="@drawable/avatar"
-           />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:text="프로필"/>
+            android:layout_marginTop="20dp"
+            android:src="@drawable/avatar" />
     </RelativeLayout>
-
 
 
 </LinearLayout>

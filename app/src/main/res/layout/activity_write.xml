@@ -45,53 +45,83 @@
 
         <EditText
             android:id="@+id/title_write"
-            android:layout_width="250dp"
-            android:layout_height="50dp"
+            android:layout_width="270dp"
+            android:layout_height="48dp"
             android:layout_marginLeft="60dp"
-            android:layout_marginTop="5dp"
             android:hint="5글자 이상으로 작성"
             android:background="@null"
             />
         <Spinner
             android:id="@+id/cate_write"
-            android:layout_width="250dp"
-            android:layout_height="50dp"
+            android:layout_width="270dp"
+            android:layout_height="45dp"
             android:layout_marginLeft="60dp"
-            android:background="@null"
-            />
-        <EditText
-            android:id="@+id/price_write"
-            android:layout_width="250dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="60dp"
-            android:hint="최대 10만원 이하"
             android:background="@null"
             />
 
         <LinearLayout
-            android:layout_width="250dp"
-            android:layout_height="50dp"
+            android:layout_width="270dp"
+            android:layout_height="40dp"
             android:layout_marginLeft="60dp"
-            android:gravity="right"
-            android:orientation="horizontal">
-            <TextView
-                android:id="@+id/address_write"
-                android:text=""
-                android:textSize="12sp"
-                android:layout_gravity="center"
-                android:layout_margin="10dp"
+            android:orientation="horizontal"
+            >
+
+            <EditText
+                android:id="@+id/price_write"
+                android:layout_width="180dp"
+                android:layout_height="match_parent"
+                android:hint="최대 10만원 이하"
+                android:background="@null"
+                android:inputType="number"
+                />
+            <Button
+                android:id="@+id/price_rec"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:text="가격 추천"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="270dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="60dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btnDate"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:onClick="d_OnClickHandler"
+                android:text="날짜 선택"
+                android:textSize="10sp"/>
+            <Button
+                android:id="@+id/btnTime"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:onClick="t_OnClickHandler"
+                android:text="시간 선택"
+                android:textSize="10sp"/>
 
         </LinearLayout>
 
         <EditText
-            android:id="@+id/detail_write"
-            android:layout_width="250dp"
-            android:layout_height="50dp"
+            android:id="@+id/doro_write"
+            android:layout_width="270dp"
+            android:layout_height="40dp"
             android:layout_marginLeft="60dp"
             android:background="@null"
-            android:hint="상세주소 입력"
+            android:hint="도로명 주소 입력"
+            />
+
+        <EditText
+            android:id="@+id/address_write"
+            android:layout_width="270dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="60dp"
+            android:background="@null"
+            android:hint="주소를 입력해주세요!"
             />
 
         <LinearLayout
@@ -101,7 +131,7 @@
             android:background="@drawable/writepartbg">
             <EditText
                 android:id="@+id/context_write"
-                android:layout_width="wrap_content"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:background="@null"

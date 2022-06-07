@@ -8,7 +8,7 @@
 <string name ="login_text">LOG-IN</string>
 <string name ="or_login">요청자로 로그인</string>
 <string name ="pe_login">수행자로 로그인</string>
-<string name = "login_guess">아직 계정이 없으십니까?</string>
+<string name = "login_guess">아직 계정이\n없으십니까?</string>
     <string name="sign_up">회원가입</string>
     <string name="signup">SIGN-UP</string>
     <string name = "signup_id">ID</string>

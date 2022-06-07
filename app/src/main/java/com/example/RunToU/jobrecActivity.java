@@ -21,10 +21,8 @@ public class jobrecActivity extends AppCompatActivity {
     private LinearLayoutManager linearLayoutManager;
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_jobrec);
-
+    protected void onResume() {
+        super.onResume();
         recyclerView = findViewById(R.id.rvJob);
         linearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
@@ -57,5 +55,12 @@ public class jobrecActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_jobrec);
+
     }
 }
