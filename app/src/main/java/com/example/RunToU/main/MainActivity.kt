@@ -1,0 +1,142 @@
+package com.example.RunToU.main
+
+
+import android.os.Bundle
+import android.os.Handler
+import android.os.Message
+import android.view.View
+import android.widget.RelativeLayout
+import androidx.appcompat.app.AppCompatActivity
+import com.example.RunToU.R
+import com.example.RunToU.stomp_handler.stompClass
+import com.example.RunToU.chat_match.chatRecieve
+import com.example.RunToU.chat_match.chatroomActivity
+import com.example.RunToU.chat_match.listtochatData
+import com.example.RunToU.chat_match.matchObjcet
+import com.example.RunToU.volley.chatroomExistVolley
+import kotlinx.android.synthetic.main.activity_main.*
+import org.json.JSONArray
+import org.json.JSONObject
+
+
+class MainActivity : AppCompatActivity() {
+
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+
+
+
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        chatroomExistVolley.chatroomExsitVolley(this){ it->
+            if(it){
+                var jsonarray : JSONArray
+                var jobject : JSONObject
+                jsonarray = chatroomExistVolley.responseJson
+                for(i in 0..jsonarray.length()-1) {
+                    jobject= jsonarray.getJSONObject(i)
+                    var index = jobject.getInt("chatRoomPk")
+                    stompClass.stompclass.subscribe("/topic/chatroom/", index)
+                    println(index.toString()+"was subscribed!")}
+
+
+            }
+            else{
+                print("multi subscribe error!")}
+        }
+
+
+        configureBottomNavigation()
+
+
+    }
+    inner class leftHanlder : Handler() {
+
+            val TAG = "MyHandler"
+            val MSG_DO_SOMETHING1 = 1
+        val MSG_DO_SOMETHING2 = 2
+            val MSG_DO_SOMETHING3 = 3
+            val MSG_DO_SOMETHING4 = 4
+        val MSG_DO_SOMETHING5=5
+
+        override fun handleMessage(msg: Message) {
+            when (msg.what) {
+            MSG_DO_SOMETHING1 -> {
+                var inputmsg: String = chatRecieve.chatRecieve.recivemsg
+                var jObject: JSONObject = JSONObject(inputmsg)
+
+                if (jObject.getString("writerAccountId") != chatRecieve.chatRecieve.loginID) {
+                    runOnUiThread(Runnable {
+                        chatroomActivity.leftData(
+                            jObject.getString("content").replace("\n", ""),
+                            jObject.getString("writerAccountId")
+                        )
+                    })
+                }
+                else{
+                    runOnUiThread(Runnable {
+                        chatroomActivity.rightData(
+                            jObject.getString("content").replace("\n","")
+                        )
+                    })
+                }
+
+                    println("don'twork??")
+
+
+            }
+                MSG_DO_SOMETHING2 -> {
+                    var inputmsg: String = chatRecieve.chatRecieve.recivemsg
+                    var jObject: JSONObject = JSONObject(inputmsg)
+
+                        matchObjcet.chatRoomPk = jObject.getInt("chatRoomPk") // queue/orderer
+                    stompClass.stompclass.subscribe("/topic/match/chatroom/", matchObjcet.chatRoomPk)
+
+
+                    println("don'twork??2")
+                }
+                MSG_DO_SOMETHING3 ->{
+                    var inputmsg:String= chatRecieve.chatRecieve.recivemsg
+                    var jObjects: JSONObject = JSONObject(inputmsg)
+                    listtochatData.matchrein = jObjects.getInt("matchRequestId")
+                    println("don'twork??3")
+                }
+                MSG_DO_SOMETHING4 -> {
+                    var inputmsg: String = chatRecieve.chatRecieve.recivemsg
+                    var jObject : JSONObject =JSONObject(inputmsg)
+                    matchObjcet.matchingPk = jObject.getInt("matchingId")
+                    println("zzzzzzzzzz"+ matchObjcet.matchingPk)
+                    println("dontwork??4")
+                }
+                MSG_DO_SOMETHING5 -> {
+                    var inputmsg: String = chatRecieve.chatRecieve.recivemsg
+                    var jObject : JSONObject =JSONObject(inputmsg)
+                    listtochatData.matchsucin = jObject.getInt("matchingId")
+                    println("don'twork??5")
+                }
+            }
+        }
+    }
+
+    private fun configureBottomNavigation(){
+
+        vp_ac_main_frag_pager.adapter = mainfragmentAdapter(supportFragmentManager, 4)
+
+        tl_ac_main_bottom_menu.setupWithViewPager(vp_ac_main_frag_pager)
+
+        val bottomNaviLayout: View = this.layoutInflater.inflate(
+            R.layout.bottom_navigation_tab,
+            null,
+            false
+        )
+
+        tl_ac_main_bottom_menu.getTabAt(0)!!.customView = bottomNaviLayout.findViewById(R.id.btn_bottom_navi_home_tab) as RelativeLayout
+        tl_ac_main_bottom_menu.getTabAt(1)!!.customView = bottomNaviLayout.findViewById(R.id.btn_bottom_navi_search_tab) as RelativeLayout
+        tl_ac_main_bottom_menu.getTabAt(2)!!.customView = bottomNaviLayout.findViewById(R.id.btn_bottom_navi_add_tab) as RelativeLayout
+        tl_ac_main_bottom_menu.getTabAt(3)!!.customView = bottomNaviLayout.findViewById(R.id.btn_bottom_navi_like_tab) as RelativeLayout
+    }
+
+
+
+}
+

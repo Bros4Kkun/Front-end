@@ -15,7 +15,7 @@
         android:usesCleartextTraffic="true">
 
 
-        <activity android:name="com.example.RunToU.LoginActivity"
+        <activity android:name="com.example.RunToU.login.loginActivity"
             android:theme="@style/Theme.Runtyou"
             android:exported="true">
            <intent-filter>
@@ -26,34 +26,34 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MainActivity"
+        <activity android:name=".main.MainActivity"
             android:theme="@style/Theme.Runtyou"/>
-        <activity android:name="com.example.RunToU.SingupActivity"
+        <activity android:name="com.example.RunToU.signup.signupActivity"
             android:theme="@style/Theme.Runtyou" />
         <meta-data android:name="com.kakao.sdk.AppKey" android:value="e65891468706ac7d59680f5e0202bfff"/>
-        <activity android:name="com.example.RunToU.reviewActivity"
+        <activity android:name="com.example.RunToU.profile.reviewActivity"
             android:theme="@style/Theme.Runtyou"/>
-        <activity android:name="com.example.RunToU.settingActivity"
+        <activity android:name="com.example.RunToU.profile.settingActivity"
             android:theme="@style/Theme.Runtyou"/>
-        <activity android:name="com.example.RunToU.purchaseActivity"
+        <activity android:name="com.example.RunToU.purchase.purchaseActivity"
             android:theme="@style/Theme.Runtyou"/>
-        <activity android:name="com.example.RunToU.edit_introduceActivity"
+        <activity android:name="com.example.RunToU.profile.edit_introduceActivity"
             android:theme="@style/Theme.Runtyou"/>
-        <activity android:name="com.example.RunToU.writeActivity"
+        <activity android:name="com.example.RunToU.ordersheet.writeActivity"
             android:theme="@style/Theme.Runtyou"/>
-        <activity android:name="com.example.RunToU.verificationActivity"
+        <activity android:name="com.example.RunToU.profile.verificationActivity"
             android:theme="@style/Theme.Runtyou"/>
-        <activity android:name="com.example.RunToU.jobrecActivity"
+        <activity android:name="com.example.RunToU.profile.jobrecActivity"
             android:theme="@style/Theme.Runtyou"/>
-        <activity android:name=".ChatRoomActivity2"
-            android:theme="@style/Theme.Runtyou"/>
-
-        <activity android:name="com.example.RunToU.addressActivity"
-            android:theme="@style/Theme.Runtyou"/>
-        <activity android:name="com.example.RunToU.ordersheetActivity"
+        <activity android:name=".chat_match.chatroomActivity"
             android:theme="@style/Theme.Runtyou"/>
 
-        <activity android:name=".popupActivity"
+        <activity android:name="com.example.RunToU.ordersheet.addressActivity"
+            android:theme="@style/Theme.Runtyou"/>
+        <activity android:name="com.example.RunToU.ordersheet.ordersheetActivity"
+            android:theme="@style/Theme.Runtyou"/>
+
+        <activity android:name=".ordersheet.popupActivity"
             android:theme="@style/Theme.AppCompat.DayNight"/>
 
     </application>

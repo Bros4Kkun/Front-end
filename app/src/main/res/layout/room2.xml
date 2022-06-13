@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#c6ea80"
-    tools:context=".ChatRoomActivity2">
+    tools:context=".chat_match.chatroomActivity">
 
 
     <androidx.recyclerview.widget.RecyclerView

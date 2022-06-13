@@ -7,7 +7,7 @@
     android:background="#FAFAFA"
     android:orientation="vertical"
     android:weightSum="8"
-    tools:context=".MainActivity"
+    tools:context=".main.MainActivity"
     android:id="@+id/profileLayout">
 
     <LinearLayout
@@ -184,7 +184,7 @@
             android:layout_gravity="center">
             <fragment
                 android:id="@+id/infoFrag"
-                android:name="com.example.RunToU.introduceFragment"
+                android:name="com.example.RunToU.profile.introduceFragment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </FrameLayout>
